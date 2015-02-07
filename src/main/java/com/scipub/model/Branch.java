@@ -19,4 +19,28 @@ public class Branch {
     
     @ManyToOne
     private Branch parentBranch;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Branch getParentBranch() {
+        return parentBranch;
+    }
+
+    public void setParentBranch(Branch parentBranch) {
+        this.parentBranch = parentBranch;
+    }
 }

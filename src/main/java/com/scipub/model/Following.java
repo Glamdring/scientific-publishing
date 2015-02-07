@@ -10,18 +10,18 @@ import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 @Entity
-public class PaperVote {
+public class Following {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private long id;
-
+    
     @ManyToOne
-    private Paper paper;
-
+    private User followed;
+    
     @ManyToOne
-    private User voter;
-
+    private User follower;
+    
     @Type(type = "com.scipub.util.PersistentDateTime")
     private DateTime created;
 
@@ -33,20 +33,20 @@ public class PaperVote {
         this.id = id;
     }
 
-    public Paper getPaper() {
-        return paper;
+    public User getFollowed() {
+        return followed;
     }
 
-    public void setPaper(Paper paper) {
-        this.paper = paper;
+    public void setFollowed(User followed) {
+        this.followed = followed;
     }
 
-    public User getVoter() {
-        return voter;
+    public User getFollower() {
+        return follower;
     }
 
-    public void setVoter(User voter) {
-        this.voter = voter;
+    public void setFollower(User follower) {
+        this.follower = follower;
     }
 
     public DateTime getCreated() {
