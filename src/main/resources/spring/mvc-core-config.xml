@@ -56,7 +56,6 @@
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="formatters">
             <set>
-                <bean class="org.springframework.samples.petclinic.web.PetTypeFormatter"/>
             </set>
         </property>
     </bean>
