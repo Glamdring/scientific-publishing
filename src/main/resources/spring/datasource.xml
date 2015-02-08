@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
-       xmlns:jee="http://www.springframework.org/schema/jee"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd
          http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context.xsd
@@ -15,17 +13,28 @@
 
     <!-- ========================= DATASOURCE DEFINITION ========================= -->
 
-    <!-- DataSource configuration for the tomcat jdbc connection pool 
-    See here for more details on commons-dbcp versus tomcat-jdbc: 
-    http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/-->
-    <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
-          p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}"
-          p:username="${jdbc.username}" p:password="${jdbc.password}"/>
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${database.url}" />
+        <property name="user" value="${database.username}" />
+        <property name="password" value="${database.password}" />
+        <property name="driverClass" value="${database.driver}" />
+        <property name="testConnectionOnCheckin" value="true" />
+        <property name="testConnectionOnCheckout" value="true" />
+        <property name="acquireRetryAttempts" value="10" />
+        <property name="acquireIncrement" value="5" />
+        <property name="idleConnectionTestPeriod" value="540" />
+        <property name="initialPoolSize" value="20" />
+        <property name="maxPoolSize" value="100" />
+        <property name="maxIdleTime" value="30" />
+        <property name="maxStatements" value="50" />
+        <property name="minPoolSize" value="10" />
+    </bean>
 
     <!-- Database initializer. If any of the script fails, the initialization stops. -->
     <!-- As an alternative, for embedded databases see <jdbc:embedded-database/>. -->
     <jdbc:initialize-database data-source="dataSource">
-        <jdbc:script location="${jdbc.initLocation}"/>
-        <jdbc:script location="${jdbc.dataLocation}"/>
+        <jdbc:script location="${jdbc.initLocation}" />
+        <jdbc:script location="${jdbc.dataLocation}" />
     </jdbc:initialize-database>
 </beans>
