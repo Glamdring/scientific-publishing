@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    - DispatcherServlet application context for PetClinic's web tier.
+    - DispatcherServlet application context for the web tier.
 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -14,13 +14,31 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <import resource="mvc-view-config.xml"/>
+    <!--
+    - The ContentNegotiatingViewResolver delegates to the InternalResourceViewResolver and BeanNameViewResolver,
+    - and uses the requested media type (determined by the path extension) to pick a matching view. 
+    - When the media type is 'text/html', it will delegate to the InternalResourceViewResolver's JstlView, 
+    - otherwise to the BeanNameViewResolver.
+    -->
+    <mvc:view-resolvers>
+        <mvc:content-negotiation use-not-acceptable="true">
+            <mvc:default-views>             
+                <bean class="org.springframework.web.servlet.view.JstlView">
+                    <property name="url" value="" />
+                </bean>
+            </mvc:default-views>
+        </mvc:content-negotiation>
+    
+        <!-- Registering BeanNameViewResolver and InternalViewResolver -->
+        <mvc:bean-name />
+        <mvc:jsp prefix="/WEB-INF/jsp/" suffix=".jsp"/>
+    </mvc:view-resolvers>
 
     <!--
         - POJOs labeled with the @Controller and @Service annotations are auto-detected.
     -->
     <context:component-scan
-            base-package="org.springframework.samples.petclinic.web"/>
+            base-package="com.scipub.web"/>
 
     <mvc:annotation-driven conversion-service="conversionService"/>
 
@@ -30,8 +48,6 @@
 
     <!-- uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (Bootstrap, jQuery...) -->
     <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
-
-    <mvc:view-controller path="/" view-name="welcome" />
 
     <!-- serve static resources (*.html, ...) from src/main/webapp/ 
     Required when both servlet-mapping is '/' and static resources need to be served -->
