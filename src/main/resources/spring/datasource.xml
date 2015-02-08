@@ -30,11 +30,4 @@
         <property name="maxStatements" value="50" />
         <property name="minPoolSize" value="10" />
     </bean>
-
-    <!-- Database initializer. If any of the script fails, the initialization stops. -->
-    <!-- As an alternative, for embedded databases see <jdbc:embedded-database/>. -->
-    <jdbc:initialize-database data-source="dataSource">
-        <jdbc:script location="${jdbc.initLocation}" />
-        <jdbc:script location="${jdbc.dataLocation}" />
-    </jdbc:initialize-database>
 </beans>

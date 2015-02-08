@@ -49,10 +49,20 @@
         <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
             p:dataSource-ref="dataSource">
             <property name="jpaVendorAdapter">
-                <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" p:database="${jpa.database}"
-                    p:showSql="${jpa.showSql}" />
                 <!-- the 'database' parameter refers to the database dialect being used. By default, Hibernate will use a 
                     'HSQL' dialect because 'jpa.database' has been set to 'HSQL' inside file spring/data-access.properties -->
+                <bean class="com.scipub.util.HibernateExtendedJpaVendorAdapter" p:database="${jpa.database}"
+                    p:showSql="${jpa.showSql}">
+                    <property name="generateDdl" value="${hibernate.generateDDL}" />
+                    <property name="hibernate.hbm2ddl.import_files" value="/sql/science_branches.sql" />
+                    <!-- custom properties -->
+                    <property name="vendorProperties">
+                        <util:map>
+                            <entry key="hibernate.generate_statistics" value="${hibernate.statistics.enabled}" />
+                            <entry key="net.sf.ehcache.configurationResourceName" value="ehcache.xml" />
+                        </util:map>
+                    </property>
+                </bean>
             </property>
             <!-- BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit will win -->
             <property name="persistenceUnitName" value="scipub" />
