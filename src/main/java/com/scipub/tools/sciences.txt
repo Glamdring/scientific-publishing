@@ -1,5 +1,5 @@
 [[Natural sciences]]
-*[[Physical science]] – branch of natural science that studies non-living systems, in contrast to the biological sciences. It in turn has many branches, each referred to as a "physical science", together called the "physical sciences". However, the term "physical" creates an unintended, somewhat arbitrary distinction, since many branches of physical science also study biological phenomena (organic chemistry, for example).
+* [[Physical science]] – branch of natural science that studies non-living systems, in contrast to the biological sciences. It in turn has many branches, each referred to as a "physical science", together called the "physical sciences". However, the term "physical" creates an unintended, somewhat arbitrary distinction, since many branches of physical science also study biological phenomena (organic chemistry, for example).
 ** [[Physics]] – physical science that studies matter and its motion through space-time, and related concepts such as energy and force
 *** [[Acoustics]] – study of mechanical waves in solids, liquids, and gases (such as vibration and sound)
 *** [[Agrophysics]] – study of physics applied to [[agroecosystems]]
@@ -79,12 +79,12 @@
 *** [[Statics]] – branch of mechanics concerned with the analysis of loads (force, torque/moment) on physical systems in static equilibrium, that is, in a state where the relative positions of subsystems do not vary over time, or where components and structures are at a constant velocity.
 *** [[Solid state physics]] – study of rigid matter, or solids, through methods such as quantum mechanics, crystallography, electromagnetism, and metallurgy.
 *** [[Vehicle dynamics]] – dynamics of vehicles, here assumed to be ground vehicles.
-**[[Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions
+** [[Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions
 *** [[Analytical chemistry]] – study of the separation, identification, and quantification of the chemical components of natural and artificial materials.
 *** [[Astrochemistry]] – study of the abundance and reactions of chemical elements and molecules in the universe, and their interaction with radiation.
 **** [[Cosmochemistry]] – study of the chemical composition of matter in the universe and the processes that led to those compositions
 *** [[Atmospheric chemistry]] – branch of atmospheric science in which the chemistry of the Earth's atmosphere and that of other planets is studied. It is a multidisciplinary field of research and draws on environmental chemistry, physics, meteorology, computer modeling, oceanography, geology and volcanology and other disciplines
-***[[Biochemistry]] – study of chemical processes in living organisms, including, but not limited to, living matter. Biochemistry governs all living organisms and living processes.
+*** [[Biochemistry]] – study of chemical processes in living organisms, including, but not limited to, living matter. Biochemistry governs all living organisms and living processes.
 **** [[Agrochemistry]] – study of both chemistry and biochemistry which are important in agricultural production, the processing of raw products into foods and beverages, and in environmental monitoring and remediation.
 **** [[Bioinorganic chemistry]] – examines the role of metals in biology.
 **** [[Bioorganic chemistry]] – rapidly growing scientific discipline that combines organic chemistry and biochemistry.
@@ -109,7 +109,7 @@
 *** [[Inorganic chemistry]] – branch of chemistry concerned with the properties and behavior of inorganic compounds.
 *** [[Nuclear chemistry]] – subfield of chemistry dealing with radioactivity, nuclear processes and nuclear properties.
 **** [[Radiochemistry]] – chemistry of radioactive materials, where radioactive isotopes of elements are used to study the properties and chemical reactions of non-radioactive isotopes (often within radiochemistry the absence of radioactivity leads to a substance being described as being inactive as the isotopes are stable).
-***[[Organic chemistry]] – study of the structure, properties, composition, reactions, and preparation (by synthesis or by other means) of carbon-based compounds, hydrocarbons, and their derivatives.
+*** [[Organic chemistry]] – study of the structure, properties, composition, reactions, and preparation (by synthesis or by other means) of carbon-based compounds, hydrocarbons, and their derivatives.
 **** [[Petrochemistry]] – branch of chemistry that studies the transformation of crude oil (petroleum) and natural gas into useful products or raw materials.
 *** [[Organometallic chemistry]] – study of chemical compounds containing bonds between carbon and a metal.
 *** [[Photochemistry]] – study of chemical reactions that proceed with the absorption of light by atoms or molecules..
@@ -136,9 +136,16 @@
 **** [[Chemical physics]] – branch of physics that studies chemical processes from the point of view of physics.
 **** [[Materials science]] – interdisciplinary field applying the properties of matter to various areas of science and engineering.
 **** [[Nanotechnology]] – study of manipulating matter on an atomic and molecular scale
-TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
+***** [[Green nanotechnology]] – use of nanotechnology to enhance the environmental-sustainability of processes currently producing negative externalities. It also refers to the use of the products of nanotechnology to enhance sustainability.
+***** [[Nanoengineering]] – practice of engineering on the nanoscale.
+***** [[Wet nanotechnology]] – involves working up to large masses from small ones.
+***** [[Nanobiotechnology]] – intersection of nanotechnology and biology.[3]
+***** [[Ceramic engineering]] 
 ***** [[Nanoeletronics]]
 ****** [[Molecular electronics]]
+****** [[Nanolithography]]
+***** [[Nanomechanics]]
+***** [[Nanophotonics]] – study of the behavior of light on the nanometer scale. 
 ***** [[Nanometrology]]
 **** [[Oenology]] – science and study of all aspects of wine and winemaking except vine-growing and grape-harvesting, which is a subfield called viticulture.
 **** [[Spectroscopy]] – study of the interaction between matter and radiated energy
@@ -187,7 +194,7 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[Topography]] – study of surface shape and features of the Earth and other observable astronomical objects including planets, moons, and asteroids.
 *** [[Volcanology]] – study of volcanoes, lava, magma, and related geological, geophysical and geochemical phenomena.
 ** [[Environmental science]] – an integrated, quantitative, and interdisciplinary approach to the study of environmental systems.
-***[[Ecology]] – scientific study of the distribution and abundance of living organisms and how the distribution and abundance are affected by interactions between the organisms and their environment.
+*** [[Ecology]] – scientific study of the distribution and abundance of living organisms and how the distribution and abundance are affected by interactions between the organisms and their environment.
 **** [[Freshwater biology]] – scientific biological study of freshwater ecosystems and is a branch of Limnology
 **** [[Marine biology]] – scientific study of organisms in the ocean or other marine or brackish bodies of water
 **** [[Parasitology]] – Parasitology is the study of parasites, their hosts, and the relationship between them.
@@ -235,16 +242,24 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 **** [[Conservation ecology]] – which studies how to reduce the risk of species extinction;
 **** [[Deep ecology]] –
 **** [[Restoration ecology]] – which attempts to understand the ecological basis needed to restore impaired or damaged ecosystems;
-***[[Environmental soil science]] – Environmental soil science is the study of the interaction of humans with the pedosphere as well as critical aspects of the biosphere, the lithosphere, the hydrosphere, and the atmosphere.
-***[[Environmental geology]] – Environmental geology, like hydrogeology, is an applied science concerned with the practical application of the principles of geology in the solving of environmental problems.
-***[[Toxicology]] – branch of biology, chemistry, and medicine concerned with the study of the adverse effects of chemicals on living organisms.
-*[[Outline of biology|Biology]] – study of living organisms.
+*** [[Environmental soil science]] – Environmental soil science is the study of the interaction of humans with the pedosphere as well as critical aspects of the biosphere, the lithosphere, the hydrosphere, and the atmosphere.
+*** [[Environmental geology]] – Environmental geology, like hydrogeology, is an applied science concerned with the practical application of the principles of geology in the solving of environmental problems.
+*** [[Toxicology]] – branch of biology, chemistry, and medicine concerned with the study of the adverse effects of chemicals on living organisms.
+* [[Biology]] – study of living organisms.
 ** [[Aerobiology]] – study of airborne organic particles
-** [[Outline of agriculture|Agriculture]] – study of producing crops from the land, with an emphasis on practical applications
+** [[Agriculture]] – study of producing crops from the land, with an emphasis on practical applications
 ** [[Anatomy]] – study of form and function, in plants, animals, and other organisms, or specifically in humans
-*** [[Outline of human anatomy|Human anatomy]] – scientific study of the morphology of the adult human.
+*** [[Human anatomy]] – scientific study of the morphology of the adult human.
+**** [[Gross anatomy]]
+**** [[Microscopic anatomy]]
+***** [[Cytology]]
+***** [[Histology]]
 ** [[Astrobiology]] – study of evolution, distribution, and future of life in the universe—also known as [[exobiology]], [[exopaleontology]], and [[bioastronomy]]
-** [[Outline of biochemistry|Biochemistry]] – study of the chemical reactions required for life to exist and function, usually a focus on the cellular level
+** [[Biochemistry]] – study of the chemical reactions required for life to exist and function, usually a focus on the cellular level
+*** [[Animal Biochemistry]]
+*** [[Plant Biochemistry]]
+*** [[Metabolism]]
+*** [[Enzymology]]
 ** [[Bioengineering]] – study of biology through the means of engineering with an emphasis on applied knowledge and especially related to biotechnology
 ** [[Biogeography]] – study of the distribution of species spatially and temporally
 ** [[Bioinformatics]] – use of information technology for the study, collection, and storage of genomic and other biological data
@@ -254,15 +269,32 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 ** [[Biophysics]] – study of biological processes through physics, by applying the theories and methods traditionally used in the physical sciences
 ** [[Biotechnology]] – new and sometimes controversial branch of biology that studies the manipulation of living matter, including genetic modification and [[synthetic biology]]
 ** [[Building biology]] – study of the indoor living environment
-** [[Outline of botany|Botany]] – study of plants
-** [[Outline of cell biology|Cell biology]] – study of the cell as a complete unit, and the molecular and chemical interactions that occur within a living cell
+** [[Botany]] – study of plants
+*** [[Agronomy]]
+*** [[Bryology]] (mosses and liverworts)
+*** [[Dendrology]]
+*** [[Ethnobotany]]
+*** [[Lichenology]] (lichens)
+*** [[Mycology]]  (fungi)
+*** [[Paleobotany]]
+*** [[Palynology]] (spores and pollen)
+*** [[Phycology]] (algae)
+*** [[Phytosociology]]
+*** [[Plant anatomy]]
+*** [[Plant ecology]]
+*** [[Plant evolution]]
+*** [[Plant morphology]]
+*** [[Plant pathology]]
+*** [[Plant physiology]]
+*** [[Plant taxonomy]]
+*** [[Pteridology]] (ferns)
+** [[Cell biology]] – study of the cell as a complete unit, and the molecular and chemical interactions that occur within a living cell
 ** [[Conservation Biology]] – study of the preservation, protection, or restoration of the natural environment, natural ecosystems, vegetation, and wildlife
 ** [[Chronobiology]] – field of biology that examines periodic (cyclic) phenomena in living organisms and their adaptation to solar- and lunar-related rhythms.
 ** [[Cryobiology]] – study of the effects of lower than normally preferred temperatures on living beings.
 ** [[Developmental biology]] – study of the processes through which an organism forms, from zygote to full structure
 *** [[Embryology]] – study of the development of embryo (from fecundation to birth). See also topobiology.
 *** [[Gerontology]] – study of aging processes.
-** [[Outline of ecology|Ecology]] – study of the interactions of living organisms with one another and with the non-living elements of their environment
 ** [[Environmental Biology]] – study of the natural world, as a whole or in a particular area, especially as affected by human activity
 ** [[Epidemiology]] – major component of public health research, studying factors affecting the health of populations
 ** [[Evolution]] – any change across successive generations in the heritable characteristics of biological populations.
@@ -270,10 +302,32 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 **** [[Evolutionary developmental biology]] – field of biology that compares the developmental processes of different organisms to determine the ancestral relationship between them, and to discover how developmental processes evolved.
 *** [[Paleobiology]] – discipline which combines the methods and findings of the natural science biology with the methods and findings of the earth science paleontology.
 **** [[Paleontology]] – study of fossils and sometimes geographic evidence of prehistoric life
-** [[Outline of genetics|Genetics]] – study of genes and heredity
+** [[Genetics]] – study of genes and heredity
+*** [[Epigenetics]] – study of heritable changes in gene expression or cellular phenotype caused by mechanisms other than changes in the underlying DNA sequence
+*** [[Evolutionary genetics]]
 *** [[Genomics]] – discipline in genetics concerned with the study of the genomes of organisms.
 *** [[Proteomics]] – large-scale study of proteins, particularly their structures and functions
-***[[Population genetics]] – study of changes in gene frequencies in
+*** [[Population genetics]] – study of changes in gene frequencies in
+*** [[Behavioural genetics]]
+*** [[Classical genetics]]
+*** [[Developmental genetics]]
+*** [[Conservation genetics]]
+*** [[Ecological genetics]]
+*** [[Genetic engineering]]
+**** [[Metagenics]]
+*** [[Genetics of intelligence]]
+*** [[Human genetics]]
+**** [[Human evolutionary genetics]]
+**** [[Human mitochondrial genetics]]
+*** [[Medical genetics]]
+*** [[Microbial genetics]]
+*** [[Molecular genetics]]
+*** [[Statistical genetics]]
+*** [[Genetic epidemiology]]
+**** [[Archaeogenetics]]
+***** [[Archaeogenetics of the Near East]]
+*** [[Psychiatric genetics]]
+*** [[Quantitative genetics]]
 ** [[Histology]] – study of cells and tissues, a microscopic branch of anatomy
 ** [[Integrative biology]] – study of whole organisms
 ** [[Limnology]] – study of inland waters
@@ -288,16 +342,68 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 ** [[Oceanography]] – study of the ocean, including ocean life, environment, geography, weather, and other aspects influencing the ocean
 ** [[Oncology]] – study of cancer processes, including virus or [[mutation]] [[oncogenesis]], [[angiogenesis]] and tissues remoldings
 ** [[Population biology]] – study of groups of conspecific organisms, including
-***[[Population ecology]] – study of how population dynamics and extinction
-***[[Population genetics]] – study of changes in gene frequencies in populations of organisms
+*** [[Population ecology]] – study of how population dynamics and extinction
+*** [[Population genetics]] – study of changes in gene frequencies in populations of organisms
 ** [[Pathobiology or pathology]] – study of diseases, and the causes, processes, nature, and development of disease
 ** [[Parasitology]] – study of parasites and parasitism
 ** [[Pharmacology]] – study and practical application of preparation, use, and effects of drugs and synthetic medicines
 ** [[Physiology]] – study of the functioning of living organisms and the organs and parts of living organisms
-*** [[Outline of immunology|Immunology]] – following outline is provided as an overview of and topical guide to immunology:
+*** [[Immunology]] – following outline is provided as an overview of and topical guide to immunology:
+**** [[Classical immunology]]
+**** [[Clinical immunology]]
+**** [[Computational immunology]]
+**** [[Diagnostic immunology]]
+**** [[Evolutionary immunology]]
+**** [[Systems immunology]]
+**** [[Immunomics]]
+**** [[Immunoproteomics]]
+**** [[Immunophysics]]
+**** [[Immunochemistry]]
+**** [[Ecoimmunology]]
+**** [[Immunopathology]]
+**** [[Nutritional immunology]]
+**** [[Psychoneuroimmunology]]
+**** [[Reproductive immunology]]
+**** [[Circadian immunology]]
+**** [[Immunotoxicology]]
+**** [[Palaeoimmunology]]
+**** [[Tissue-based immunology]]
+***** [[Testicular immunology]] - [[Testes]]
+***** [[Immunodermatology]] - [[Skin]]
+***** [[Intravascular immunology]] - [[Blood]]
+***** [[Osteoimmunology]] - [[Bone]]
+***** [[Mucosal immunology]] - [[Mucosal surfaces]]
+****** [[Respiratory tract antimicrobial defense system]] - [[Respiratory tract]]
+***** [[Neuroimmunology]] - [[Neuroimmune system]] in the [[Central nervous system]]
+***** [[Ocularimmunology]] - [[Ocular immune system]] in the [[Eye]]
+***** [[Cancer immunology]]/[[Immunooncology]] - [[Tumor]]
 *** [[Kinesiology]] – Kinesiology, also known as human kinetics, is the scientific study of human movement
 *** [[Neurobiology]] – study of the nervous system, including anatomy, physiology and pathology
-**** [[Outline of neuroscience|Neuroscience]] – interdisciplinary science that studies the nervous system
+**** [[Neuroscience]] – interdisciplinary science that studies the nervous system
+***** [[Neurophysiology]]
+****** [[Electrophysiology]]
+****** [[Extracellular recording]]
+****** [[Intracellular recording]]
+****** [[Brain stimulation]]
+****** [[Electroencephalography]]
+****** [[Neurophysiology]]
+***** [[Neuroanatomy]]
+****** [[Immunostaining]]
+****** [[Neuroanatomy]]
+***** [[Neuropharmacology]]
+***** [[Behavioral neuroscience]]
+****** [[Neuroethology]]
+***** [[Developmental neuroscience
+***** [[Cognitive neuroscience]]
+****** [[Neurolinguistics]]
+****** [[Neuroimaging]]
+****** [[functional Magnetic Resonance Imaging]]
+****** [[Positron emission tomography]]
+***** [[Systems neuroscience]]
+****** [[Neural oscillation]]
+***** [[Molecular neuroscience]]
+****** [[Nutritional neuroscience]]
+****** [[Neurochemistry]]
 *** [[Histology]] –
 ** [[Phytopathology]] – study of plant diseases (also called Plant Pathology)
 ** [[Psychobiology]] – study of the biological bases of [[psychology]]
@@ -324,10 +430,10 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[Nematology]] – scientific discipline concerned with the study of nematodes, or roundworms
 *** [[Ornithology]] – study of birds
 [[Formal sciences]
-* [[Outline of computer science|Computer science]] – study of the theoretical foundations of information and computation and their implementation and application in computer systems. ''(See also [[Outline of computer science#Branches|Branches of Computer Science]] and ACM [http://www.acm.org/class/ Computing Classification System])''
+* [[Computer science]] – study of the theoretical foundations of information and computation and their implementation and application in computer systems. ''(See also [[Outline of computer science#Branches|Branches of Computer Science]] and ACM [http://www.acm.org/class/ Computing Classification System])''
 ** [[Theory of computation]] – branch that deals with whether and how efficiently problems can be solved on a model of computation, using an algorithm
 *** [[Automata theory]] – study of mathematical objects called abstract machines or automata and the computational problems that can be solved using them.
-****[[Formal languages]] – set of strings of symbols.
+**** [[Formal languages]] – set of strings of symbols.
 *** [[Computability theory]] – branch of mathematical logic and computer science that originated in the 1930s with the study of computable functions and Turing degrees.
 *** [[Computational complexity theory]] – branch of the theory of computation in theoretical computer science and mathematics that focuses on classifying computational problems according to their inherent difficulty, and relating those classes to each other
 *** [[Concurrency theory]] – In computer science, concurrency is a property of systems in which several computations are executing simultaneously, and potentially interacting with each other
@@ -347,7 +453,12 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 **** [[Mobile computing]] – form of human–computer interaction by which a computer is expected to be transported during normal usage.
 ** [[Computer security]] – branch of computer technology known as information security as applied to computers and networks.
 *** [[High availability]] – system design approach and associated service implementation that ensures a prearranged level of operational performance will be met during a contractual measurement period.
-*** [[Outline of cryptography|Cryptography]] – practice and study of hiding information.
+*** [[Cryptography]] – practice and study of hiding information.
+**** [[Cryptographic engineering]]
+**** [[Multivariate cryptography]]
+**** [[Quantum cryptography]]
+**** [[Steganography]]
+**** [[Visual cryptography]]
 *** [[Fault-tolerant computing]] – property that enables a system (often computer-based) to continue operating properly in the event of the failure of (or one or more faults within) some of its components
 ** [[Distributed computing]] – field of computer science that studies distributed systems
 *** [[Grid computing]] – federation of computer resources from multiple administrative domains to reach a common goal
@@ -358,9 +469,9 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[Image processing]] – any form of signal processing for which the input is an image, such as a photograph or video frame; the output of image processing may be either an image or a set of characteristics or parameters related to the image
 *** [[Scientific visualization]] – interdisciplinary branch of science according to Friendly (2008) "primarily concerned with the visualization of three-dimensional phenomena (architectural, meteorological, medical, biological, etc.), where the emphasis is on realistic renderings of volumes, surfaces, illumination sources, and so forth, perhaps with a dynamic (time) component".
 *** [[Computational geometry]] – branch of computer science devoted to the study of algorithms which can be stated in terms of geometry
-** [[Outline of software engineering|Software engineering]] – application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software; that is the application of engineering to software
+** [[Software engineering]] – application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software; that is the application of engineering to software
 *** [[Formal methods]] – particular kind of mathematically based techniques for the specification, development and verification of software and hardware systems
-****[[Formal verification]] – act of proving or disproving the correctness of intended algorithms underlying a system with respect to a certain formal specification or property, using formal methods of mathematics
+**** [[Formal verification]] – act of proving or disproving the correctness of intended algorithms underlying a system with respect to a certain formal specification or property, using formal methods of mathematics
 ** [[Programming languages]] – artificial language designed to communicate instructions to a machine, particularly a computer
 *** [[Programming paradigms]] – fundamental style of computer programming
 **** [[Object-oriented programming]] – programming paradigm using "objects" – data structures consisting of data fields and methods together with their interactions – to design applications and computer programs
@@ -378,7 +489,7 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[hypermedia]] – computer-based information retrieval system that enables a user to gain or provide access to texts, audio and video recordings, photographs and computer graphics related to a particular subject.
 *** [[Data mining]] – process that results in the discovery of new patterns in large data sets
 *** [[Information retrieval]] – area of study concerned with searching for documents, for information within documents, and for metadata about documents, as well as that of searching structured storage, relational databases, and the World Wide Web.
-** [[Outline of artificial intelligence|Artificial intelligence]] – branch of computer science that deals with intelligent behavior, learning, and adaptation in machines.
+** [[Artificial intelligence]] – branch of computer science that deals with intelligent behavior, learning, and adaptation in machines.
 *** [[Automated reasoning]] – area of computer science and mathematical logic dedicated to understand different aspects of reasoning.
 *** [[Computer vision]] – field that includes methods for acquiring, processing, analysing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions.
 *** [[Machine learning]] – scientific discipline concerned with the design and development of algorithms that allow computers to evolve behaviors based on empirical data, such as from sensor data or databases
@@ -386,13 +497,33 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[Natural language processing]] – field of computer science, artificial intelligence (also called machine learning), and linguistics concerned with the interactions between computers and human (natural) languages.
 **** [[Computational linguistics]] – interdisciplinary field dealing with the statistical or rule-based modeling of natural language from a computational perspective.
 *** [[Expert systems]] – computer system that emulates the decision-making ability of a human expert
+**** [[Symbolic artificial intelligence]]
+**** [[Good Old Fashioned AI]]
+*** [[Sub-symbolic]]
+**** [[Artificial intelligence#Cybernetics and brain simulation|Early cybernetics and brain simulation]]
+**** [[Behavior based AI]]
+***** [[Subsumption architecture]]
+**** [[Nouvelle AI]]
+**** [[Computational intelligence|Computational intelligence (CI)]]
+***** [[Computational creativity]]
+***** [[Neural networks]]
+****** [[Hybrid neural network]]
+****** [[Recurrent neural network]]
+***** [[Fuzzy system]]s &ndash;
+***** [[Evolutionary computation]], 
+****** [[Evolutionary algorithms]]
+******* [[Genetic algorithm]]
+****** [[Brain Emotional Learning Based Intelligent Controller]]
+****** [[Swarm intelligence]]
+******* [[Ant colony optimization]]
+*** [[Statistical AI]]
 *** [[Outline of robotics|Robotics]] – branch of technology that deals with the design, construction, operation, structural disposition, manufacture and application of robots
 ** [[Human-computer interaction]] – study, planning, and design of the interaction between people (users) and computers.
+** [[Scientific computing]] –
 *** [[Numerical analysis]] – study of algorithms that use numerical approximation (as opposed to general symbolic manipulations) for the problems of mathematical analysis (as distinguished from discrete mathematics).
 *** [[Symbolic computation]] – relates to algorithms and software for manipulating mathematical expressions and equations in symbolic form, as opposed to manipulating the approximations of specific numerical quantities represented by those symbols. Software applications that perform symbolic calculations are called computer algebra systems.
 *** [[Computational number theory]] – study of algorithms for performing number theoretic computations
 *** [[Computational mathematics]] – involves mathematical research in areas of science where computing plays a central and essential role, emphasizing algorithms, numerical methods, and symbolic methods
-*** [[Scientific computing]] –
 *** [[Computational biology]] – involves the development and application of data-analytical and theoretical methods, mathematical modeling and computational simulation techniques to the study of biological, behavioral, and social systems.
 *** [[Computational science]] – subfield of computer science concerned with constructing mathematical models and quantitative analysis techniques and using computers to analyze and solve scientific problems
 *** [[Computational chemistry]] – branch of chemistry that uses principles of computer science to assist in solving chemical problems
@@ -409,8 +540,8 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[Outline of information technology|Information technology]] –
 *** [[Management information systems]] – provides information that is needed to manage organizations efficiently and effectively
 *** [[Health informatics]] – discipline at the intersection of information science, computer science, and health care.
-* [[Outline of mathematics|Mathematics]] – search for fundamental truths in pattern, quantity, and change. ''(See also [[list of mathematics lists#Fields of mathematics|Branches of Mathematics]] and AMS [http://www.ams.org/msc/ Mathematics Subject Classification])''
-**[[Outline of algebra|Algebra]] – one of the main branches of mathematics, it concerns the study of structure, relation and quantity.
+* [[Mathematics]] – search for fundamental truths in pattern, quantity, and change. ''(See also [[list of mathematics lists#Fields of mathematics|Branches of Mathematics]] and AMS [http://www.ams.org/msc/ Mathematics Subject Classification])''
+** [[Algebra]] – one of the main branches of mathematics, it concerns the study of structure, relation and quantity.
 *** [[Group theory]] – studies the algebraic structures known as groups.
 **** [[Group representation]] – describe abstract groups in terms of linear transformations of vector spaces
 *** [[Ring theory]] – study of ring–algebraic structures in which addition and multiplication are defined and have similar properties to those familiar from the integers
@@ -427,98 +558,137 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[Lattice theory]] – partially ordered set in which any two elements have a unique supremum (also called a least upper bound or join) and a unique infimum (also called a greatest lower bound or meet).
 **** [[Order theory]] – branch of mathematics which investigates our intuitive notion of order using binary relations.
 *** [[Differential algebra]] – algebras equipped with a derivation, which is a unary function that is linear and satisfies the Leibniz product rule.
-**[[Mathematical analysis]] – branch of pure mathematics that includes the theories of differentiation, integration and measure, limits, infinite series, and analytic functions
-***[[Real analysis]] – branch of mathematical analysis dealing with the set of real numbers and functions of a real variable.
-****[[Outline of calculus|Calculus]] – branch of mathematics focused on limits, functions, derivatives, integrals, and infinite series.
-***[[Complex analysis]] – branch of mathematical analysis that investigates functions of complex numbers
-***[[Functional analysis]] – branch of mathematical analysis, the core of which is formed by the study of vector spaces endowed with some kind of limit-related structure (e.g. inner product, norm, topology, etc.) and the linear operators acting upon these spaces and respecting these structures in a suitable sense
+** [[Mathematical analysis]] – branch of pure mathematics that includes the theories of differentiation, integration and measure, limits, infinite series, and analytic functions
+*** [[Real analysis]] – branch of mathematical analysis dealing with the set of real numbers and functions of a real variable.
+**** [[Outline of calculus|Calculus]] – branch of mathematics focused on limits, functions, derivatives, integrals, and infinite series.
+*** [[Complex analysis]] – branch of mathematical analysis that investigates functions of complex numbers
+*** [[Functional analysis]] – branch of mathematical analysis, the core of which is formed by the study of vector spaces endowed with some kind of limit-related structure (e.g. inner product, norm, topology, etc.) and the linear operators acting upon these spaces and respecting these structures in a suitable sense
 **** [[Operator theory]] – branch of functional analysis that focuses on bounded linear operators, but which includes closed operators and nonlinear operators.
-***[[Non-standard analysis]] – branch of classical mathematics that formulates analysis using a rigorous notion of an infinitesimal number.
-***[[Harmonic analysis]] – branch of mathematics concerned with the representation of functions or signals as the superposition of basic waves, and the study of and generalization of the notions of Fourier series and Fourier transforms.
-***[[p-adic analysis]] – branch of number theory that deals with the mathematical analysis of functions of p-adic numbers.
-***[[Ordinary differential equations]] – ordinary differential equation (ODE) is an equation in which there is only one independent variable and one or more derivatives of a dependent variable with respect to the independent variable, so that all the derivatives occurring in the equation are ordinary derivatives.
-***[[Partial differential equations]] – differential equation that contains unknown multivariable functions and their partial derivatives.
-**[[Probability theory]] – branch of mathematics concerned with probability, the analysis of random phenomena.
-***[[Measure theory]] – systematic way to assign a number to each suitable subset of that set, intuitively interpreted as its size.
-***[[Ergodic theory]] – branch of mathematics that studies dynamical systems with an invariant measure and related problems.
-***[[Stochastic process]] – collection of random variables; this is often used to represent the evolution of some random value, or system, over time.
-**[[Outline of geometry|Geometry]] – branch of mathematics concerned with questions of shape, size, relative position of figures, and the properties of space. Geometry is one of the oldest mathematical sciences.
+*** [[Non-standard analysis]] – branch of classical mathematics that formulates analysis using a rigorous notion of an infinitesimal number.
+*** [[Harmonic analysis]] – branch of mathematics concerned with the representation of functions or signals as the superposition of basic waves, and the study of and generalization of the notions of Fourier series and Fourier transforms.
+*** [[p-adic analysis]] – branch of number theory that deals with the mathematical analysis of functions of p-adic numbers.
+*** [[Ordinary differential equations]] – ordinary differential equation (ODE) is an equation in which there is only one independent variable and one or more derivatives of a dependent variable with respect to the independent variable, so that all the derivatives occurring in the equation are ordinary derivatives.
+*** [[Partial differential equations]] – differential equation that contains unknown multivariable functions and their partial derivatives.
+** [[Probability theory]] – branch of mathematics concerned with probability, the analysis of random phenomena.
+*** [[Measure theory]] – systematic way to assign a number to each suitable subset of that set, intuitively interpreted as its size.
+*** [[Ergodic theory]] – branch of mathematics that studies dynamical systems with an invariant measure and related problems.
+*** [[Stochastic process]] – collection of random variables; this is often used to represent the evolution of some random value, or system, over time.
+** [[Geometry]] – branch of mathematics concerned with questions of shape, size, relative position of figures, and the properties of space. Geometry is one of the oldest mathematical sciences.
 *** [[Topology]] – major area of mathematics concerned with properties that are preserved under continuous deformations of objects, such as deformations that involve stretching, but no tearing or gluing.
-***[[General topology]] – branch of topology which studies properties of topological spaces and structures defined on them.
-***[[Algebraic topology]] – branch of mathematics which uses tools from abstract algebra to study topological spaces
-***[[Geometric topology]] – study of manifolds and maps between them, particularly embeddings of one manifold into another.
-***[[Differential topology]] – field dealing with differentiable functions on differentiable manifolds
-***[[Algebraic geometry]] – branch of mathematics which combines techniques of abstract algebra, especially commutative algebra, with the language and the problems of geometry
-***[[Differential geometry]] – mathematical discipline that uses the techniques of differential calculus and integral calculus, as well as linear algebra and multilinear algebra, to study problems in geometry
-***[[Projective geometry]] – study of geometric properties that are invariant under projective transformations
-***[[Affine geometry]] – study of geometric properties which remain unchanged by affine transformations
-***[[Non-Euclidean geometry]] – either of two specific geometries that are, loosely speaking, obtained by negating the Euclidean parallel postulate, namely hyperbolic and elliptic geometry.
-***[[Convex geometry]] – branch of geometry studying convex sets, mainly in Euclidean space.
-***[[Discrete geometry]] – branch of geometry that studies combinatorial properties and constructive methods of discrete geometric objects.
-**[[Outline of trigonometry|Trigonometry]] –
-**[[Number theory]] – branch of pure mathematics devoted primarily to the study of the integers
-***[[Analytic number theory]] – branch of number theory that uses methods from mathematical analysis to solve problems about the integers
-***[[Algebraic number theory]] – major branch of number theory which studies algebraic structures related to algebraic integers
-***[[Geometric number theory]] – studies convex bodies and integer vectors in n-dimensional space
-**[[Mathematical logic]] 
-**[[Foundations of mathematics]] – subfield of mathematics with close connections to the foundations of mathematics, theoretical computer science and philosophical logic.
-***[[Set theory]] – branch of mathematics that studies sets, which are collections of objects
-***[[Proof theory]] – branch of mathematical logic that represents proofs as formal mathematical objects, facilitating their analysis by mathematical techniques
-***[[Model theory]] – study of (classes of) mathematical structures (e.g. groups, fields, graphs, universes of set theory) using tools from mathematical logic
-***[[Recursion theory]] – branch of mathematical logic and computer science that originated in the 1930s with the study of computable functions and Turing degrees
-***[[Modal logic]] – type of formal logic primarily developed in the 1960s that extends classical propositional and predicate logic to include operators expressing modality
-***[[Intuitionistic logic]] – symbolic logic system differing from classical logic in its definition of the meaning of a statement being true
-**[[Applied mathematics]] – branch of mathematics that concerns itself with mathematical methods that are typically used in science, engineering, business, and industry.
-***[[Mathematical statistics]] – study of statistics from a mathematical standpoint, using probability theory as well as other branches of mathematics such as linear algebra and analysis
-****[[Outline of probability|Probability]] – likelihood or chance that something is the case or will happen
-****[[Econometrics]] – application of mathematics and statistical methods to economic data
-****[[Outline of actuarial science|Actuarial science]] – discipline that applies mathematical and statistical methods to assess risk in the insurance and finance industries.
-****[[Demography]] – statistical study of human populations and sub-populations.
-***[[Approximation theory]] – study of how functions can best be approximated with simpler functions, and with quantitatively characterizing the errors introduced thereby.
-***[[Numerical analysis]] – study of algorithms that use numerical approximation (as opposed to general symbolic manipulations) for the problems of mathematical analysis (as distinguished from discrete mathematics).
-***[[Optimization (mathematics))]] – selection of a best element from some set of available alternatives.
-****[[Operations research]] – study of the application of advanced analytical methods to help make better decisions
-****[[Linear programming]] – mathematical method for determining a way to achieve the best outcome (such as maximum profit or lowest cost) in a given mathematical model for some list of requirements represented as linear relationships
-***[[Dynamical systems]] – concept in mathematics where a fixed rule describes the time dependence of a point in a geometrical space
-****[[Chaos theory]] – study of the behavior of dynamical systems that are highly sensitive to initial conditions, an effect which is popularly referred to as the butterfly effect.
-****[[Fractal geometry]] – mathematical set that has a fractal dimension that usually exceeds its topological dimension and may fall between the integers.
-***[[Mathematical physics]] – development of mathematical methods for application to problems in physics
-****[[Quantum field theory]] – theoretical framework for constructing quantum mechanical models of systems classically parametrized (represented) by an infinite number of degrees of freedom, that is, fields and (in a condensed matter context) many-body systems.
-****[[Statistical mechanics]] – branch of physics that applies probability theory, which contains mathematical tools for dealing with large populations, to the study of the thermodynamic behavior of systems composed of a large number of particles.
-***[[Information theory]] – branch of applied mathematics and electrical engineering involving the quantification of information.
-***[[Outline of cryptography|Cryptography]] – study of means of obscuring information, such as codes and ciphers
-***[[Combinatorics]] – branch of mathematics concerning the study of finite or countable discrete structures
-****[[Coding theory]] – study of the properties of codes and their fitness for a specific application
-***[[Graph theory]] – study of graphs, mathematical structures used to model pairwise relations between objects from a certain collection
-***[[Game theory]] – study of strategic decision making. More formally, it is "the study of mathematical models of conflict and cooperation between intelligent rational decision-makers."
-* [[Outline of statistics|Statistics]] – collection, analysis, interpretation, and presentation of data.
+*** [[General topology]] – branch of topology which studies properties of topological spaces and structures defined on them.
+*** [[Algebraic topology]] – branch of mathematics which uses tools from abstract algebra to study topological spaces
+*** [[Geometric topology]] – study of manifolds and maps between them, particularly embeddings of one manifold into another.
+*** [[Differential topology]] – field dealing with differentiable functions on differentiable manifolds
+*** [[Algebraic geometry]] – branch of mathematics which combines techniques of abstract algebra, especially commutative algebra, with the language and the problems of geometry
+*** [[Differential geometry]] – mathematical discipline that uses the techniques of differential calculus and integral calculus, as well as linear algebra and multilinear algebra, to study problems in geometry
+*** [[Projective geometry]] – study of geometric properties that are invariant under projective transformations
+*** [[Affine geometry]] – study of geometric properties which remain unchanged by affine transformations
+*** [[Non-Euclidean geometry]] – either of two specific geometries that are, loosely speaking, obtained by negating the Euclidean parallel postulate, namely hyperbolic and elliptic geometry.
+*** [[Convex geometry]] – branch of geometry studying convex sets, mainly in Euclidean space.
+*** [[Discrete geometry]] – branch of geometry that studies combinatorial properties and constructive methods of discrete geometric objects.
+*** [[Analytic geometry]] —
+*** [[Euclidean geometry]] —
+*** [[Riemannian geometry]] —
+*** [[Absolute geometry]]
+*** [[Archimedes' use of infinitesimals]]
+*** [[Birational geometry]]
+*** [[Complex geometry]]
+*** [[Combinatorial geometry]]
+*** [[Computational geometry]]
+*** [[Conformal geometry]]
+*** [[Constructive solid geometry]]
+*** [[Contact geometry]]
+*** [[Digital geometry]]
+*** [[Distance geometry]]
+*** [[Elliptic geometry]]
+*** [[Enumerative geometry]]
+*** [[Epipolar geometry]]
+*** [[Finite geometry]]
+*** [[Geometry of numbers]]
+*** [[Hyperbolic geometry]]
+*** [[Information geometry]]
+*** [[Integral geometry]]
+*** [[Inversive geometry]]
+*** [[Klein geometry]]
+*** [[Lie sphere geometry]]
+*** [[Numerical computational geometry]]
+*** [[Ordered geometry]]
+*** [[Parabolic geometry]]
+*** [[Euclidean plane geometry]]
+*** [[Quantum geometry]]
+*** [[Ruppeiner geometry]]
+*** [[Spherical geometry]]
+*** [[Symplectic geometry]]
+*** [[Synthetic geometry]]
+*** [[Systolic geometry]]
+*** [[Taxicab geometry]]
+*** [[Toric geometry]]
+*** [[Transformation geometry]]
+*** [[Tropical geometry]]
+** [[Trigonometry]] –
+** [[Number theory]] – branch of pure mathematics devoted primarily to the study of the integers
+*** [[Analytic number theory]] – branch of number theory that uses methods from mathematical analysis to solve problems about the integers
+*** [[Algebraic number theory]] – major branch of number theory which studies algebraic structures related to algebraic integers
+*** [[Geometric number theory]] – studies convex bodies and integer vectors in n-dimensional space
+** [[Mathematical logic]] 
+** [[Foundations of mathematics]] – subfield of mathematics with close connections to the foundations of mathematics, theoretical computer science and philosophical logic.
+*** [[Set theory]] – branch of mathematics that studies sets, which are collections of objects
+*** [[Proof theory]] – branch of mathematical logic that represents proofs as formal mathematical objects, facilitating their analysis by mathematical techniques
+*** [[Model theory]] – study of (classes of) mathematical structures (e.g. groups, fields, graphs, universes of set theory) using tools from mathematical logic
+*** [[Recursion theory]] – branch of mathematical logic and computer science that originated in the 1930s with the study of computable functions and Turing degrees
+*** [[Modal logic]] – type of formal logic primarily developed in the 1960s that extends classical propositional and predicate logic to include operators expressing modality
+*** [[Intuitionistic logic]] – symbolic logic system differing from classical logic in its definition of the meaning of a statement being true
+** [[Applied mathematics]] – branch of mathematics that concerns itself with mathematical methods that are typically used in science, engineering, business, and industry.
+*** [[Mathematical statistics]] – study of statistics from a mathematical standpoint, using probability theory as well as other branches of mathematics such as linear algebra and analysis
+**** [[Probability]] – likelihood or chance that something is the case or will happen
+**** [[Econometrics]] – application of mathematics and statistical methods to economic data
+**** [[Actuarial science]] – discipline that applies mathematical and statistical methods to assess risk in the insurance and finance industries.
+**** [[Demography]] – statistical study of human populations and sub-populations.
+*** [[Approximation theory]] – study of how functions can best be approximated with simpler functions, and with quantitatively characterizing the errors introduced thereby.
+*** [[Numerical analysis]] – study of algorithms that use numerical approximation (as opposed to general symbolic manipulations) for the problems of mathematical analysis (as distinguished from discrete mathematics).
+*** [[Optimization (mathematics))]] – selection of a best element from some set of available alternatives.
+**** [[Operations research]] – study of the application of advanced analytical methods to help make better decisions
+**** [[Linear programming]] – mathematical method for determining a way to achieve the best outcome (such as maximum profit or lowest cost) in a given mathematical model for some list of requirements represented as linear relationships
+*** [[Dynamical systems]] – concept in mathematics where a fixed rule describes the time dependence of a point in a geometrical space
+**** [[Chaos theory]] – study of the behavior of dynamical systems that are highly sensitive to initial conditions, an effect which is popularly referred to as the butterfly effect.
+**** [[Fractal geometry]] – mathematical set that has a fractal dimension that usually exceeds its topological dimension and may fall between the integers.
+*** [[Mathematical physics]] – development of mathematical methods for application to problems in physics
+**** [[Quantum field theory]] – theoretical framework for constructing quantum mechanical models of systems classically parametrized (represented) by an infinite number of degrees of freedom, that is, fields and (in a condensed matter context) many-body systems.
+**** [[Statistical mechanics]] – branch of physics that applies probability theory, which contains mathematical tools for dealing with large populations, to the study of the thermodynamic behavior of systems composed of a large number of particles.
+*** [[Information theory]] – branch of applied mathematics and electrical engineering involving the quantification of information.
+*** [[Outline of cryptography|Cryptography]] – study of means of obscuring information, such as codes and ciphers
+*** [[Combinatorics]] – branch of mathematics concerning the study of finite or countable discrete structures
+**** [[Coding theory]] – study of the properties of codes and their fitness for a specific application
+*** [[Graph theory]] – study of graphs, mathematical structures used to model pairwise relations between objects from a certain collection
+*** [[Game theory]] – study of strategic decision making. More formally, it is "the study of mathematical models of conflict and cooperation between intelligent rational decision-makers."
+* [[Statistics]] – collection, analysis, interpretation, and presentation of data.
 ** [[Computational statistics]] – interface between statistics and computer science.
-***[[Data mining]] – process that results in the discovery of new patterns in large data sets
-***[[Regression analysis]] – estimates the conditional expectation of the dependent variable given the independent variables – that is, the average value of the dependent variable when the independent variables are held fixed.
-***[[Simulation]] – Simulation is the imitation of the operation of a real-world process or system over time. The act of simulating something first requires that a model be developed; this model represents the key characteristics or behaviors of the selected physical or abstract system or process. The model represents the system itself, whereas the simulation represents the operation of the system over time.
-****[[Bootstrap (statistics)]] – method for assigning measures of accuracy to sample estimates (Efron and Tibshirani 1993).
+*** [[Data mining]] – process that results in the discovery of new patterns in large data sets
+*** [[Regression analysis]] – estimates the conditional expectation of the dependent variable given the independent variables – that is, the average value of the dependent variable when the independent variables are held fixed.
+*** [[Simulation]] – Simulation is the imitation of the operation of a real-world process or system over time. The act of simulating something first requires that a model be developed; this model represents the key characteristics or behaviors of the selected physical or abstract system or process. The model represents the system itself, whereas the simulation represents the operation of the system over time.
+**** [[Bootstrap (statistics)]] – method for assigning measures of accuracy to sample estimates (Efron and Tibshirani 1993).
 ** [[Design of experiments]] – design of any information-gathering exercises where variation is present, whether under the full control of the experimenter or not
-***[[Block design]] – set together with a family of subsets (repeated subsets are allowed at times) whose members are chosen to satisfy some set of properties that are deemed useful for a particular application.
+*** [[Block design]] – set together with a family of subsets (repeated subsets are allowed at times) whose members are chosen to satisfy some set of properties that are deemed useful for a particular application.
 *** [[Analysis of variance]] – collection of statistical models, and their associated procedures, in which the observed variance in a particular variable is partitioned into components attributable to different sources of variation.
-***[[Response surface methodology]] – explores the relationships between several explanatory variables and one or more response variables.
+*** [[Response surface methodology]] – explores the relationships between several explanatory variables and one or more response variables.
 ** [[Engineering statistics]] – Engineering statistics combines engineering and statistics
 ** [[Spatial statistics]] – any of the formal techniques which study entities using their topological, geometric, or geographic properties.
 ** [[Social statistics]] – use of statistical measurement systems to study human behavior in a social environment
 ** [[Statistical model]]ling – formalization of relationships between variables in the form of mathematical equations
 *** [[Biostatistics]] – application of statistics to a wide range of topics in biology.
 **** [[Epidemiology]] – study of the distribution and patterns of health-events, health-characteristics and their causes or influences in well-defined populations.
-***[[Multivariate analysis]] – observation and analysis of more than one statistical variable at a time.
+*** [[Multivariate analysis]] – observation and analysis of more than one statistical variable at a time.
 **** [[Structural equation model]] – statistical technique for testing and estimating causal relations using a combination of statistical data and qualitative causal assumptions.
-****[[Time series]] – sequence of data points, measured typically at successive time instants spaced at uniform time intervals.
+**** [[Time series]] – sequence of data points, measured typically at successive time instants spaced at uniform time intervals.
 *** [[Reliability theory]] – describes the probability of a system completing its expected function during an interval of time.
 *** [[Quality control]] – process by which entities review the quality of all factors involved in production.
 ** [[Statistical theory]] – provides a basis for the whole range of techniques, in both study design and data analysis, that are used within applications of statistics.
-***[[Decision theory]] – identifies the values, uncertainties and other issues relevant in a given decision, its rationality, and the resulting optimal decision.
-***[[Mathematical statistics]] – study of statistics from a mathematical standpoint, using probability theory as well as other branches of mathematics such as linear algebra and analysis.
-****[[Outline of probability|Probability]] – likelihood or chance that something is the case or will happen.
+*** [[Decision theory]] – identifies the values, uncertainties and other issues relevant in a given decision, its rationality, and the resulting optimal decision.
+*** [[Mathematical statistics]] – study of statistics from a mathematical standpoint, using probability theory as well as other branches of mathematics such as linear algebra and analysis.
+**** [[Outline of probability|Probability]] – likelihood or chance that something is the case or will happen.
 ** [[Survey Sampling]] – process of selecting a sample of elements from a target population in order to conduct a survey.
-***[[Sampling theory]] – study of the collection, organization, analysis, and interpretation of data.
-***[[Survey methodology]] – field that studies the sampling of individuals from a population with a view towards making statistical inferences about the population using the sample.
+*** [[Sampling theory]] – study of the collection, organization, analysis, and interpretation of data.
+*** [[Survey methodology]] – field that studies the sampling of individuals from a population with a view towards making statistical inferences about the population using the sample.
 * [[Systems science]] – interdisciplinary field of science that studies the nature of complex systems in nature, society, and science.
 ** [[Chaos theory]] – field of study in mathematics, with applications in several disciplines including physics, engineering, economics, biology, and philosophy; studies the behavior of dynamical systems that are highly sensitive to initial conditions.
 ** [[Complex systems]] and Complexity Theory – studies how relationships between parts give rise to the collective behaviors of a system and how the system interacts and forms relationships with its environment.
@@ -547,10 +717,27 @@ TODO https://en.wikipedia.org/wiki/Outline_of_nanotechnology
 *** [[Systems neuroscience]] – subdiscipline of neuroscience and systems biology that studies the function of neural circuits and systems.
 *** [[Systems psychology]] – branch of applied psychology that studies human behaviour and experience in complex systems.
 Social sciences
-* [[Anthropology]] &ndash; study of humans, past and present, that draws and builds upon knowledge from the social sciences and biological sciences, as well as the humanities and the natural sciences.
+* [[Anthropology]] - study of humans, past and present, that draws and builds upon knowledge from the social sciences and biological sciences, as well as the humanities and the natural sciences.
 ** [[Anthropology of religion]] – study of religious institutions in relation to other social institutions, and the comparison of religious beliefs and practices across cultures
 ** [[Applied anthropology]] – application of the method and theory of anthropology to the analysis and solution of practical problems.
-** [[Outline of archaeology|Archaeology]] – overview of and topical guide to archaeology
+** [[Archaeology]] – overview of and topical guide to archaeology
+*** [[Archaeological practice]]
+**** [[Cultural Resources Management]]
+**** [[Archaeological ethics]]
+**** [[Urban archaeology]]
+*** [[Archaeological science]]
+**** [[Archaeometry]]
+**** [[Dendrochronology]]
+**** [[Isotope analysis]]
+**** [[Palynology]]
+**** [[Radiocarbon dating]]
+**** [[Zooarchaeology]]
+**** [[Geoarchaeology]]
+**** [[Bioarchaeology]]
+**** [[Archaeogenetics]]
+**** [[Computational archaeology]]
+**** [[Ethnoarchaeology]]
+**** [[Taphonomy]]
 ** [[Cultural anthropology]] – branch of anthropology focused on the study of cultural variation among humans, collecting data about the impact of global economic and political processes on local cultural realities.
 ** [[Ethnobiology]] – scientific study of dynamic relationships between peoples, biota, and environments, from the distant past to the immediate present.
 ** [[Ethnography]] – Archaeology Biological anthropology Cultural anthropology Linguistic anthropology Social anthropology
@@ -666,41 +853,41 @@ Social sciences
 * [[Legal management]] – social sciences discipline that is designed for students interested in the study of State and its elements, Law, Law Practice, Legal Research and Jurisprudence, legal Philosophy, Criminal Justice, Governance, Government structure, Political history and theories, Business Organization and Management, Entrepreneurship, Public Administration and Human Resource Development.
 ** [[Paralegal studies]] – social sciences discipline that is designed for students interested in the study of State and its elements, Law, Law Practice, Legal Research and Jurisprudence, legal Philosophy, Criminal Justice, Governance, Government structure, Political history and theories, Business Organization and Management, Entrepreneurship, Public Administration and Human Resource Development.
 * [[Outline of library science|Library science]] – study of issues related to libraries and the information fields.
-*[[Outline of linguistics|Linguistics]] – scientific study of natural language.
-**[[Anthropological linguistics]] – study of the relations between language and culture and the relations between human biology, cognition and language.
-**[[Applied linguistics]] – interdisciplinary field of study that identifies, investigates, and offers solutions to language-related real-life problems.
-**[[Biolinguistics]] – study of the biology and evolution of language.
-**[[Clinical linguistics]] and [[speech and language pathology]] – sub-discipline of linguistics which involves the application of linguistic theory to the field of Speech-Language Pathology.
-**[[Cognitive linguistics]] – branch of linguistics that interprets language in terms of the concepts, sometimes universal, sometimes specific to a particular tongue, which underlie its forms.
-**[[Comparative linguistics]] – branch of historical linguistics that is concerned with comparing languages to establish their historical relatedness.
-**[[Computational linguistics]] – interdisciplinary field dealing with the statistical or rule-based modeling of natural language from a computational perspective.
-**[[Developmental linguistics]] – study of the development of linguistic ability in an individual, particularly the acquisition of language in childhood.
+* [[Outline of linguistics|Linguistics]] – scientific study of natural language.
+** [[Anthropological linguistics]] – study of the relations between language and culture and the relations between human biology, cognition and language.
+** [[Applied linguistics]] – interdisciplinary field of study that identifies, investigates, and offers solutions to language-related real-life problems.
+** [[Biolinguistics]] – study of the biology and evolution of language.
+** [[Clinical linguistics]] and [[speech and language pathology]] – sub-discipline of linguistics which involves the application of linguistic theory to the field of Speech-Language Pathology.
+** [[Cognitive linguistics]] – branch of linguistics that interprets language in terms of the concepts, sometimes universal, sometimes specific to a particular tongue, which underlie its forms.
+** [[Comparative linguistics]] – branch of historical linguistics that is concerned with comparing languages to establish their historical relatedness.
+** [[Computational linguistics]] – interdisciplinary field dealing with the statistical or rule-based modeling of natural language from a computational perspective.
+** [[Developmental linguistics]] – study of the development of linguistic ability in an individual, particularly the acquisition of language in childhood.
 **** [[language acquisition]] –  the process by which humans acquire the capacity to perceive and comprehend language, as well as to produce and use words to communicate.
-**[[Dialectology]]  – scientific study of linguistic dialect, a sub-field of sociolinguistics.
+** [[Dialectology]]  – scientific study of linguistic dialect, a sub-field of sociolinguistics.
 *** [[dialectometry]] – the study of high levels of structure in geographical dialect networks.
-**[[Discourse analysis]] – general term for a number of approaches to analyzing written, spoken, signed language use or any significant semiotic event.
-**[[Etymology]] – study of the history of words, their origins, and how their form and meaning have changed over time.
-**[[Evolutionary linguistics]] – the scientific study of both the origins and development of language as well as the cultural evolution of languages.
-**[[Forensic linguistics]] – application of linguistic knowledge, methods and insights to the forensic context of law, language, crime investigation, trial, and judicial procedure.
-**[[Geolinguistics]] – branch of human geography that studies the geographic distribution of language or its constituent elements.
-**[[Historical linguistics]] – study of language change.
-**[[Lexis]] – total vocabulary or lexicon having items of lexical, rather than grammatical, meaning.
-**[[Linguistic typology]] – subfield of linguistics that studies and classifies languages according to their structural features.
-**[[Morphology]] – identification, analysis and description of the structure of a given language's morphemes and other linguistic units, such as words, affixes, parts of speech, intonation/stress, or implied context (words in a lexicon are the subject matter of lexicology).
-**[[Neurolinguistics]] – study of the neural mechanisms in the human brain that control the comprehension, production, and acquisition of language.
-**[[Philology]] – study of language in written historical sources; it is a combination of literary studies, history and linguistics.
-**[[Phonetics]] – branch of linguistics that comprises the study of the sounds of human speech, orthe equivalent aspects of sign.
-**[[Phonology]] – branch of linguistics concerned with the systematic organization of sounds in languages.
-**[[Phraseology]] – study of set or fixed expressions, such as idioms, phrasal verbs, and other types of multi-word lexical units (often collectively referred to as phrasemes), in which the component parts of the expression take on a meaning more specific than or otherwise not predictable from the sum of their meanings when used independently.
-**[[Pragmatics]] – subfield of linguistics which studies the ways in which context contributes to meaning.
-**[[Psycholinguistics]] – study of the psychological and neurobiological factors that enable humans to acquire, use, comprehend and produce language.
-**[[Sociolinguistics]] – descriptive study of the effect of any and all aspects of society, including cultural norms, expectations, and context, on the way language is used, and the effects of language use on society.
-**[[Speech science]] – Speech science refers to the study of production, transmission and perception of speech. Speech science involves anatomy, in particular the anatomy of the oro-facial region and neuroanatomy, physiology, and acoustics.
-**[[Stylistics]] – study and interpretation of texts from a linguistic perspective.
-**[[Syntax]] – "the study of the principles and processes by which sentences are constructed in particular languages."
-**[[Semantics]] – study of meaning.
-**[[Writing systems]] 
-**[[Orthography]] – representation of language in a textual medium through the use of a set of signs or symbols (known as a writing system).
+** [[Discourse analysis]] – general term for a number of approaches to analyzing written, spoken, signed language use or any significant semiotic event.
+** [[Etymology]] – study of the history of words, their origins, and how their form and meaning have changed over time.
+** [[Evolutionary linguistics]] – the scientific study of both the origins and development of language as well as the cultural evolution of languages.
+** [[Forensic linguistics]] – application of linguistic knowledge, methods and insights to the forensic context of law, language, crime investigation, trial, and judicial procedure.
+** [[Geolinguistics]] – branch of human geography that studies the geographic distribution of language or its constituent elements.
+** [[Historical linguistics]] – study of language change.
+** [[Lexis]] – total vocabulary or lexicon having items of lexical, rather than grammatical, meaning.
+** [[Linguistic typology]] – subfield of linguistics that studies and classifies languages according to their structural features.
+** [[Morphology]] – identification, analysis and description of the structure of a given language's morphemes and other linguistic units, such as words, affixes, parts of speech, intonation/stress, or implied context (words in a lexicon are the subject matter of lexicology).
+** [[Neurolinguistics]] – study of the neural mechanisms in the human brain that control the comprehension, production, and acquisition of language.
+** [[Philology]] – study of language in written historical sources; it is a combination of literary studies, history and linguistics.
+** [[Phonetics]] – branch of linguistics that comprises the study of the sounds of human speech, orthe equivalent aspects of sign.
+** [[Phonology]] – branch of linguistics concerned with the systematic organization of sounds in languages.
+** [[Phraseology]] – study of set or fixed expressions, such as idioms, phrasal verbs, and other types of multi-word lexical units (often collectively referred to as phrasemes), in which the component parts of the expression take on a meaning more specific than or otherwise not predictable from the sum of their meanings when used independently.
+** [[Pragmatics]] – subfield of linguistics which studies the ways in which context contributes to meaning.
+** [[Psycholinguistics]] – study of the psychological and neurobiological factors that enable humans to acquire, use, comprehend and produce language.
+** [[Sociolinguistics]] – descriptive study of the effect of any and all aspects of society, including cultural norms, expectations, and context, on the way language is used, and the effects of language use on society.
+** [[Speech science]] – Speech science refers to the study of production, transmission and perception of speech. Speech science involves anatomy, in particular the anatomy of the oro-facial region and neuroanatomy, physiology, and acoustics.
+** [[Stylistics]] – study and interpretation of texts from a linguistic perspective.
+** [[Syntax]] – "the study of the principles and processes by which sentences are constructed in particular languages."
+** [[Semantics]] – study of meaning.
+** [[Writing systems]] 
+** [[Orthography]] – representation of language in a textual medium through the use of a set of signs or symbols (known as a writing system).
 * [[Outline of business management|Management]] – act of getting people together to accomplish desired goals and objectives using available resources efficiently and effectively.
 * [[Media studies]] – academic discipline and field of study that deals with the content, history and effects of various media; in particular, the 'mass media'.
 ** [[Communication studies]] – academic field that deals with processes of human communication, commonly defined as the sharing of symbols to create meaning.
@@ -733,7 +920,7 @@ Social sciences
 *** [[International politics]] – study of relationships between countries, including the roles of states, inter-governmental organizations (IGOs), international nongovernmental organizations (INGOs), non-governmental organizations (NGOs) and multinational corporations (MNCs).
 ** [[International relations theory]] – study of international relations from a theoretical perspective; it attempts to provide a conceptual framework upon which international relations can be analyzed.
 * [[Outline of psychology|Psychology]] – science of behavior and mental processes
-**[[Applied psychology]] – use of psychological principles and theories to overcome problems in other areas, such as mental health, business management, education, health, product design, ergonomics, and law.
+** [[Applied psychology]] – use of psychological principles and theories to overcome problems in other areas, such as mental health, business management, education, health, product design, ergonomics, and law.
 *** [[Psychological testing]] – field characterized by the use of samples of behavior in order to assess psychological construct(s), such as cognitive and emotional functioning, about a given individual.
 *** [[Clinical psychology]] – integration of science, theory and clinical knowledge for the purpose of understanding, preventing, and relieving psychologically based distress or dysfunction and to promote subjective well-being and personal development.
 *** [[Community psychology]] – Sense of community Social capital
@@ -835,8 +1022,8 @@ Applied sciences
 *** [[Anatomy]] – branch of biology and medicine that is the consideration of the structure of living things.
 **** [[Outline of human anatomy|Human anatomy]] – scientific study of the morphology of the adult human.
 *** [[Dermatology]] – branch of medicine dealing with the skin and its diseases, a unique specialty with both medical and surgical aspects.
-***[[Cardiology]] – medical specialty dealing with disorders of the heart (specifically the human heart).
-***[[Endocrinology]] - medical specialty dealing with the endocrine system, its diseases, and its specific secretions (hormones), and the interactions of these with all aspects of bodily functioning
+*** [[Cardiology]] – medical specialty dealing with disorders of the heart (specifically the human heart).
+*** [[Endocrinology]] - medical specialty dealing with the endocrine system, its diseases, and its specific secretions (hormones), and the interactions of these with all aspects of bodily functioning
 *** [[Gastroenterology]] – branch of medicine whereby the digestive system and its disorders are studied.
 *** [[Gynecology]] – medical practice dealing with the health of the female reproductive system (uterus, vagina, and ovaries).
 *** [[Outline of immunology|Immunology]] – study of the immune system.
