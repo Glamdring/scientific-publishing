@@ -176,6 +176,15 @@
 *** [[Geophysics]] – physics of the Earth and its environment in space; also the study of the Earth using quantitative physical methods.
 *** [[Glaciology]] – study of glaciers, or more generally ice and natural phenomena that involve ice.
 *** [[Hydrology]] – study of the movement, distribution, and quality of water on Earth and other planets, including the hydrologic cycle, water resources and environmental watershed sustainability.
+**** [[Hydrometry]] – the measurement of the different components of the hydrologic cycle
+**** [[Chemical hydrology]] – the study of the chemical characteristics of water
+**** [[Ecohydrology]] – the study of interactions between organisms and the hydrologic cycle
+**** [[Hydrogeology]] – the study of the presence and movement of water in aquifers
+**** [[Hydroinformatics]] – the adaptation of information technology to hydrology and water resources applications
+**** [[Hydrometeorology]] – the study of the transfer of water and energy between land and water body surfaces and the lower atmosphere
+**** [[Isotope hydrology]] – the study of the isotopic signatures of water
+**** [[Surface hydrology]] – the study of hydrologic processes that operate at or near the Earth's surface
+**** [[Catchment hydrology]] – study of the governing processes in a given hydrologically-defined catchment
 *** [[Mineralogy]] – study of chemistry, crystal structure, and physical (including optical) properties of minerals.
 **** [[Gemology]]
 **** [[Mineral physics]]
@@ -509,7 +518,7 @@
 ***** [[Neural networks]]
 ****** [[Hybrid neural network]]
 ****** [[Recurrent neural network]]
-***** [[Fuzzy system]]s &ndash;
+***** [[Fuzzy systems]]
 ***** [[Evolutionary computation]], 
 ****** [[Evolutionary algorithms]]
 ******* [[Genetic algorithm]]
@@ -517,7 +526,73 @@
 ****** [[Swarm intelligence]]
 ******* [[Ant colony optimization]]
 *** [[Statistical AI]]
-*** [[Outline of robotics|Robotics]] – branch of technology that deals with the design, construction, operation, structural disposition, manufacture and application of robots
+*** [[Robotics]] – branch of technology that deals with the design, construction, operation, structural disposition, manufacture and application of robots
+**** [[Adaptive control]]  control method used by a controller which must adapt to a controlled system with parameters which vary, or are initially uncertain. For example, as an aircraft flies, its mass will slowly decrease as a result of fuel consumption; a control law is needed that adapts itself to such changing conditions.
+**** [[Aerial robotics]]  development of unmanned aerial vehicles (UAVs), commonly known as drones, aircraft without a human pilot aboard. Their flight is controlled either autonomously by onboard computers or by the remote control of a pilot on the ground or in another vehicle.
+**** [[Anthrobotics]]  science of developing and studying robots that are either entirely or in some way human-like.
+**** [[Artificial intelligence]]  the [[intelligence]] of machines and the branch of [[computer science]] that aims to create it.
+**** [[Autonomous car]]  an autonomous vehicle capable of fulfilling the human transportation capabilities of a traditional car
+**** [[Autonomous research robotics]] 
+**** [[Bayesian network]] 
+**** [[BEAM robotics]]  a style of robotics that primarily uses simple analogue circuits instead of a microprocessor in order to produce an unusually simple design (in comparison to traditional mobile robots) that trades flexibility for robustness and efficiency in performing the task for which it was designed.
+**** [[Behavior-based robotics]]  the branch of robotics that incorporates modular or [[behavior based AI]] (BBAI).
+**** [[Biomimetic]]   see Bionics.
+**** [[Biomorphic robotics]]  a sub-discipline of robotics focused upon emulating the mechanics, sensor systems, computing structures and methodologies used by animals.
+**** [[Bionics]] also known as biomimetics, biognosis, biomimicry, or bionical creativity engineering is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
+**** [[Biorobotics]]  a study of how to make robots that emulate or simulate living biological organisms mechanically or even chemically.
+**** [[Cloud robotics]]  is a field of robotics that attempts to invoke cloud technologies such as cloud computing, cloud storage, and other Internet technologies centered around the benefits of converged infrastructure and shared services for robotics.
+**** [[Cognitive robotics]]  views animal [[cognition]] as a starting point for the development of robotic information processing, as opposed to more traditional [[Artificial Intelligence]] techniques.
+**** [[Computer clustering]] 
+**** [[Computational neuroscience]]  study of brain function in terms of the information processing properties of the structures that make up the nervous system.
+**** [[Robot control]]  a study of controlling robots
+**** [[Robotics conventions]] 
+**** [[Data mining]] Techniques 
+**** [[Degrees of freedom (mechanics)]]  in mechanics, the degree of freedom (DOF) of a mechanical system is the number of independent parameters that define its configuration. It is the number of parameters that determine the state of a physical system and is important to the analysis of systems of bodies in mechanical engineering, aeronautical engineering, robotics, and structural engineering.
+**** [[Developmental Robotics]]  a methodology that uses metaphors from neural development and developmental psychology to develop the mind for autonomous robots
+**** [[Digital control]]  a branch of control theory that uses digital computers to act as system controllers.
+**** [[Digital image processing]]  the use of computer algorithms to perform image processing on digital images.
+**** [[Dimensionality reduction]]  the process of reducing the number of random variables under consideration, and can be divided into feature selection and feature extraction.
+**** [[Distributed robotics]] 
+**** [[Electronic Stability Control]]  is a computerized technology that improves the safety of a vehicle's stability by detecting and reducing loss of traction (skidding).
+**** [[Evolutionary computation]] 
+**** [[Evolutionary robotics]]  a methodology that uses evolutionary computation to develop controllers for autonomous robots
+**** [[Extended Kalman filter]] 
+**** [[Flexible Distribution functions]] 
+**** [[Feedback control]] and Regulation 
+**** [[Human–computer interaction]]   a study, planning and design of the interaction between people (users) and computers
+**** [[Human robot interaction]]  a study of interactions between humans and robots
+**** [[Robot kinematics]]   study of [[Motion (physics)|motion]], as applied to robots. This includes both the design of linkages to perform motion, their power, control and stability; also their planning, such as choosing a sequence of movements to achieve a broader task.
+**** [[Laboratory robotics]]  the act of using robots in biology or chemistry labs
+**** [[Robot learning]]  learning to perform tasks such as obstacle avoidance, control and various other motion-related tasks
+**** [[Manifold learning]] 
+**** [[Direct manipulation interface]]  In computer science, direct manipulation is a human–computer interaction style which involves continuous representation of objects of interest and rapid, reversible, and incremental actions and feedback. The intention is to allow a user to directly manipulate objects presented to them, using actions that correspond at least loosely to the physical world.
+**** [[Robotic mapping]]  the goal for an autonomous robot to be able to construct (or use ) a map or floor plan and to localize itself in it
+**** [[Microrobotics]]  a field of miniature robotics, in particular mobile robots with characteristic dimensions less than 1&nbsp;mm
+**** [[Motion planning]]  (a.k.a., the "navigation problem", the "piano mover's problem") is a term used in robotics for the process of detailing a task into discrete motions.
+**** [[Motor control]]  information processing related activities carried out by the central nervous system that organize the musculoskeletal system to create coordinated movements and skilled actions. 
+**** [[Nanorobotics]]  the emerging technology field creating machines or robots whose components are at or close to the scale of a nanometer (10−9 meters).
+**** [[Artificial neural network]]s  a mathematical model inspired by biological neural networks. 
+**** [[Passive dynamics]]  refers to the dynamical behavior of actuators, robots, or organisms when not drawing energy from a supply (e.g., batteries, fuel, ATP). 
+**** [[Reinforcement learning]]  an area of machine learning in computer science, concerned with how an agent ought to take actions in an environment so as to maximize some notion of cumulative reward. 
+**** [[Programming by Demonstration]]  an End-user development technique for teaching a computer or a robot new behaviors by demonstrating the task to transfer directly instead of programming it through machine commands.
+**** [[Robot kinematics]]  applies geometry to the study of the movement of multi-degree of freedom kinematic chains that form the structure of robotic systems.
+**** [[Robot locomotion]]  collective name for the various methods that robots use to transport themselves from place to place.
+**** [[Rapid prototyping]]  automatic construction of physical objects via additive manufacturing from virtual models in computer aided design (CAD) software, transforming them into thin, virtual, horizontal cross-sections and then producing successive layers until the items are complete.  As of June 2011, used for making models, prototype parts, and production-quality parts in relatively small numbers.
+**** [[Robot programming]] 
+**** [[Sensors]]  (also called detector) is a converter that measures a physical quantity and converts it into a signal which can be read by an observer or by an (today mostly electronic) instrument.
+**** [[Simultaneous localization and mapping]]  a technique used by robots and autonomous vehicles to build up a map within an unknown environment (without a priori knowledge), or to update a map within a known environment (with a priori knowledge from a given map), while at the same time keeping track of their current location.
+**** [[Software engineering]]  the application of a systematic, disciplined, quantifiable approach to the design, development, operation, and maintenance of software, and the study of these approaches; that is, the application of engineering to software.
+**** [[Speech processing]]  study of speech signals and the processing methods of these signals. The signals are usually processed in a digital representation, so speech processing can be regarded as a special case of digital signal processing, applied to speech signal.[clarification needed] Aspects of speech processing includes the acquisition, manipulation, storage, transfer and output of digital speech signals.
+**** [[Support vector machine]]s  supervised learning models with associated learning algorithms that analyze data and recognize patterns, used for classification and regression analysis. 
+**** [[Robotic surgery]]  computer-assisted surgery, and robotically-assisted surgery are terms for technological developments that use robotic systems to aid in surgical procedures.
+***** [[Remote surgery]]  (also known as telesurgery) is the ability for a doctor to perform surgery on a patient even though they are not physically in the same location.
+***** [[Robot-assisted heart surgery]] 
+**** [[Swarm robotics]]    involves large numbers of mostly simple physical robots. Their actions may seek to incorporate [[emergent behavior]] observed in social insects ([[swarm intelligence]]).
+***** [[Ant robotics]]  swarm robots that can communicate via markings, similar to ants that lay and follow pheromone trails.
+**** [[Telepresence]]  refers to a set of technologies which allow a person to feel as if they were present, to give the appearance of being present, or to have an effect, via telerobotics, at a place other than their true location.
+**** [[Intelligent vehicle technologies]]  comprise electronic, electromechanical, and electromagnetic devices - usually silicon micromachined components operating in conjunction with computer controlled devices and radio transceivers to provide precision repeatability functions (such as in robotics artificial intelligence systems) emergency warning validation performance reconstruction.
+**** [[Computer vision]]
+***** [[Machine vision]]
 ** [[Human-computer interaction]] – study, planning, and design of the interaction between people (users) and computers.
 ** [[Scientific computing]] –
 *** [[Numerical analysis]] – study of algorithms that use numerical approximation (as opposed to general symbolic manipulations) for the problems of mathematical analysis (as distinguished from discrete mathematics).
@@ -537,7 +612,7 @@
 *** [[Digital Humanities]] – area of research, teaching, and creation concerned with the intersection of computing and the disciplines of the humanities
 ** [[Information systems]] – study of complementary networks of hardware and software that people and organizations use to collect, filter, process, create, and distribute data
 *** [[Business informatics]] – discipline combining information technology (IT), informatics and management concepts.
-*** [[Outline of information technology|Information technology]] –
+*** [[Information technology]] –
 *** [[Management information systems]] – provides information that is needed to manage organizations efficiently and effectively
 *** [[Health informatics]] – discipline at the intersection of information science, computer science, and health care.
 * [[Mathematics]] – search for fundamental truths in pattern, quantity, and change. ''(See also [[list of mathematics lists#Fields of mathematics|Branches of Mathematics]] and AMS [http://www.ams.org/msc/ Mathematics Subject Classification])''
@@ -560,7 +635,9 @@
 *** [[Differential algebra]] – algebras equipped with a derivation, which is a unary function that is linear and satisfies the Leibniz product rule.
 ** [[Mathematical analysis]] – branch of pure mathematics that includes the theories of differentiation, integration and measure, limits, infinite series, and analytic functions
 *** [[Real analysis]] – branch of mathematical analysis dealing with the set of real numbers and functions of a real variable.
-**** [[Outline of calculus|Calculus]] – branch of mathematics focused on limits, functions, derivatives, integrals, and infinite series.
+**** [[Calculus]] – branch of mathematics focused on limits, functions, derivatives, integrals, and infinite series.
+***** [[Differential calculus]]
+***** [[Integral calculus]]
 *** [[Complex analysis]] – branch of mathematical analysis that investigates functions of complex numbers
 *** [[Functional analysis]] – branch of mathematical analysis, the core of which is formed by the study of vector spaces endowed with some kind of limit-related structure (e.g. inner product, norm, topology, etc.) and the linear operators acting upon these spaces and respecting these structures in a suitable sense
 **** [[Operator theory]] – branch of functional analysis that focuses on bounded linear operators, but which includes closed operators and nonlinear operators.
@@ -656,7 +733,6 @@
 **** [[Quantum field theory]] – theoretical framework for constructing quantum mechanical models of systems classically parametrized (represented) by an infinite number of degrees of freedom, that is, fields and (in a condensed matter context) many-body systems.
 **** [[Statistical mechanics]] – branch of physics that applies probability theory, which contains mathematical tools for dealing with large populations, to the study of the thermodynamic behavior of systems composed of a large number of particles.
 *** [[Information theory]] – branch of applied mathematics and electrical engineering involving the quantification of information.
-*** [[Outline of cryptography|Cryptography]] – study of means of obscuring information, such as codes and ciphers
 *** [[Combinatorics]] – branch of mathematics concerning the study of finite or countable discrete structures
 **** [[Coding theory]] – study of the properties of codes and their fitness for a specific application
 *** [[Graph theory]] – study of graphs, mathematical structures used to model pairwise relations between objects from a certain collection
@@ -685,7 +761,7 @@
 ** [[Statistical theory]] – provides a basis for the whole range of techniques, in both study design and data analysis, that are used within applications of statistics.
 *** [[Decision theory]] – identifies the values, uncertainties and other issues relevant in a given decision, its rationality, and the resulting optimal decision.
 *** [[Mathematical statistics]] – study of statistics from a mathematical standpoint, using probability theory as well as other branches of mathematics such as linear algebra and analysis.
-**** [[Outline of probability|Probability]] – likelihood or chance that something is the case or will happen.
+**** [[Probability]] – likelihood or chance that something is the case or will happen.
 ** [[Survey Sampling]] – process of selecting a sample of elements from a target population in order to conduct a survey.
 *** [[Sampling theory]] – study of the collection, organization, analysis, and interpretation of data.
 *** [[Survey methodology]] – field that studies the sampling of individuals from a population with a view towards making statistical inferences about the population using the sample.
@@ -759,7 +835,7 @@ Social sciences
 * [[Cultural studies]] – academic field grounded in critical theory and literary criticism.
 * [[Demography]] – statistical study of human populations and sub-populations.
 * [[Development studies]] – multidisciplinary branch of social science which addresses issues of concern to developing countries.
-* [[Outline of economics|Economics]] – analyzes the production, distribution, and consumption of goods and services. Not considered a science by some thinkers <ref>http://www.thecrimson.com/article/2013/12/13/economics-science-wang/</ref> It aims to explain how economies work and how economic agents interact.
+* [[Economics]] – analyzes the production, distribution, and consumption of goods and services. Not considered a science by some thinkers <ref>http://www.thecrimson.com/article/2013/12/13/economics-science-wang/</ref> It aims to explain how economies work and how economic agents interact.
 ** [[Macroeconomics]] – branch of economics dealing with the performance, structure, behavior, and decision-making of the whole economy
 ** [[Microeconomics]] – branch of economics that studies the behavior of individual households and firms in making decisions on the allocation of limited resources
 ** [[Behavioural economics]] – Behavioral economics and the related field, behavioral finance, study the effects of social, cognitive and emotional factors on the economic decisions of individuals and institutions and the consequences for market prices, returns and the resource allocation.
@@ -802,11 +878,18 @@ Social sciences
 **** [[Economic statistics]] – topic in applied statistics that concerns the collection, processing, compilation, dissemination, and analysis of economic data.
 ***** [[Time series]] – sequence of data points, measured typically at successive time instants spaced at uniform time intervals.
 *** [[Experimental economics]] – application of experimental methods to study economic questions.
-* [[Outline of education|Education]] –  in the general sense is any act or experience that has a formative effect on the mind, character, or physical ability of an individual. In its technical sense, education is the process by which society deliberately transmits its accumulated knowledge, skills, and values from one generation to another.
-* [[Outline of environmental studies|Environmental studies]] – interdisciplinary academic field which systematically studies human interaction with the environment.
+* [[Education]] –  in the general sense is any act or experience that has a formative effect on the mind, character, or physical ability of an individual. In its technical sense, education is the process by which society deliberately transmits its accumulated knowledge, skills, and values from one generation to another.
+** [[Preschool education]]
+** [[Primary education]]
+** [[Secondary education]]
+** [[Vocational education and training]]
+** [[Higher education]]
+** [[Autodidacticism]]
+* [[Environmental studies]] – interdisciplinary academic field which systematically studies human interaction with the environment.
 * [[Gender studies]] – field of interdisciplinary study and academic field devoted to gender identity and gendered representation as central categories of analysis.
-* [[Outline of geography|Geography]] – study of the lands, features, inhabitants, and phenomena of Earth.
-** [[Outline of cartography|Cartography]] – study and practice of making maps or globes.
+* [[Geography]] – study of the lands, features, inhabitants, and phenomena of Earth.
+** [[Cartography]] – study and practice of making maps or globes.
+*** [[Planetary cartography]]
 ** [[Human geography]] – branch of the social sciences that studies the world, its people, communities, and cultures with an emphasis on relations of and across space and place.
 *** [[Critical geography]] – takes a critical theory (Frankfurt School) approach to the study and analysis of geography.
 *** [[Cultural geography]] – study of cultural products and norms and their variations across and relations to spaces and places.
@@ -834,7 +917,16 @@ Social sciences
 *** [[Coastal geography]] – study of the dynamic interface between the ocean and the land, incorporating both the physical geography (i.e. coastal geomorphology, geology and oceanography) and the human geography (sociology and history) of the coast.
 *** [[Geomorphology]] – scientific study of landforms and the processes that shape them.
 *** [[Geodesy]] – scientific discipline that deals with the measurement and representation of the Earth, including its gravitational field, in a three-dimensional time-varying space.
-*** [[Outline of hydrology|Hydrology]] – study of the movement, distribution, and quality of water on Earth and other planets, including the hydrologic cycle, water resources and environmental watershed sustainability.
+*** [[Hydrology]] – study of the movement, distribution, and quality of water on Earth and other planets, including the hydrologic cycle, water resources and environmental watershed sustainability.
+**** [[Hydrometry]] – the measurement of the different components of the hydrologic cycle
+**** [[Chemical hydrology]] – the study of the chemical characteristics of water
+**** [[Ecohydrology]] – the study of interactions between organisms and the hydrologic cycle
+**** [[Hydrogeology]] – the study of the presence and movement of water in aquifers
+**** [[Hydroinformatics]] – the adaptation of information technology to hydrology and water resources applications
+**** [[Hydrometeorology]] – the study of the transfer of water and energy between land and water body surfaces and the lower atmosphere
+**** [[Isotope hydrology]] – the study of the isotopic signatures of water
+**** [[Surface hydrology]] – the study of hydrologic processes that operate at or near the Earth's surface
+**** [[Catchment hydrology]] – study of the governing processes in a given hydrologically-defined catchment
 *** [[Hydrography]] – mapping (charting) of water topographic features through the measurement of the depths, the tides and currents of a body of water and establishment of the sea, river or lake bed topography and morphology.
 *** [[Glaciology]] – study of glaciers, or more generally ice and natural phenomena that involve ice.
 *** [[Limnology]] – study of inland waters.
@@ -843,9 +935,27 @@ Social sciences
 *** [[Palaeogeography]] – study of what the geography was in times past.
 ** [[Regional geography]] – study of world regions.
 * [[Gerontology]] – study of the social, psychological and biological aspects of aging.
-* [[Outline of history|History]] – discovery, collection, organization, and presentation of information about past events. History can also mean the period of time after writing was invented.
-* [[Outline of geography|Geography]] – science that studies the lands, features, inhabitants, and phenomena of Earth.
-** [[Human geography]] – branch of the social sciences that studies the world, its people, communities, and cultures with an emphasis on relations of and across space and place.
+* [[History]] – discovery, collection, organization, and presentation of information about past events. History can also mean the period of time after writing was invented.
+** [[Archaeology]] – study of past human cultures through the recovery, documentation and analysis of material remains and environmental data
+** [[Archontology]] – study of historical offices and important positions in state, international, political, religious and other organizations and societies
+** [[Art history]] – the study of changes in and social context of art
+** [[Chronology]] – locating events in time
+*** [[Cultural history]] – the study of culture in the past
+** [[History of science]] – the study of the emergence and development of scientific inquiry
+** [[Economic history]] – the study of economies in the past
+** [[Environmental history]] – study of natural history and the human relationship with the natural world
+** [[Futurology]] – study of the future: researches the medium to long-term future of societies and of the physical world
+** [[History painting]] – the painting of works of art having historical motifs or depicting great events
+** [[Military history]] – the study of warfare and wars in history
+** [[Natural history]] – history of the natural world, now usually referred to as science
+** [[Naval history]] – the branch of military history devoted to warfare at sea or in bodies of water
+** [[Paleography]] – the study of ancient texts
+** [[Political history]] – the study of past political events, ideas, movements, and leaders
+** [[Public history]] – the presentation of history to public audiences and other areas typically outside academia
+** [[Psychohistory]] – study of the psychological motivations of historical events
+** [[Social history]] – the study of societies and social trends in the past
+** [[Urban history]] - the historical nature of cities and towns, and the process of urbanization
+** [[World history]] – the study of global historical trends and dynamics
 * [[Industrial relations]] – multidisciplinary field that studies the employment relationship.
 * [[Information science]] –  interdisciplinary field primarily concerned with the analysis, collection, classification, manipulation, storage, retrieval and dissemination of information.
 * [[International studies]] – study of the major political, economic, social, cultural and sacral issues that dominate the international agenda
@@ -1062,7 +1172,7 @@ Applied sciences
 ** [[Military history]] – humanities discipline within the scope of general historical recording of armed conflict in the history of humanity, and its impact on the societies, their cultures, economies and changing intra and international relationships.
 ** [[Military technology and equipment|Military Engineering]] – collection of equipment, vehicles, structures and communication systems that are designed for use in warfare.
 ** [[Military Strategy and Tactics]] – set of ideas implemented by military organizations to pursue desired strategic goals
-* [[Spatial science]] &ndash; academic discipline incorporating fields such as surveying, geographic information systems, hydrography and cartography. Spatial science is typically concerned with the measurement, management, analysis and display of spatial information describing the Earth, its physical features and the built environment.
+* [[Spatial science]]  academic discipline incorporating fields such as surveying, geographic information systems, hydrography and cartography. Spatial science is typically concerned with the measurement, management, analysis and display of spatial information describing the Earth, its physical features and the built environment.
 ** [[GIS]] – geographic information system is a system designed to capture, store, manipulate, analyze, manage, and present all types of geographical data.
 ** [[Remote sensing]] – acquisition of information about an object or phenomenon, without making physical contact with the object.
 ** [[Photogrammetry]] – practice of determining the geometric properties of objects from photographic images.
