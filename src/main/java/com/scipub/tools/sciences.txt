@@ -1,11 +1,19 @@
 [[Natural sciences]]
 *[[Physical science]] – branch of natural science that studies non-living systems, in contrast to the biological sciences. It in turn has many branches, each referred to as a "physical science", together called the "physical sciences". However, the term "physical" creates an unintended, somewhat arbitrary distinction, since many branches of physical science also study biological phenomena (organic chemistry, for example).
-** [[Outline of physics|Physics]] – physical science that studies matter and its motion through space-time, and related concepts such as energy and force
+** [[Physics]] – physical science that studies matter and its motion through space-time, and related concepts such as energy and force
 *** [[Acoustics]] – study of mechanical waves in solids, liquids, and gases (such as vibration and sound)
 *** [[Agrophysics]] – study of physics applied to [[agroecosystems]]
 **** [[Soil physics]] – study of soil physical properties and processes.
-*** [[Astrophysics]] – study of the physical aspects of celestial objects
-***[[Outline of astronomy|Astronomy]] – studies the universe beyond Earth, including its formation and development, and the evolution, physics, chemistry, meteorology, and motion of celestial objects (such as galaxies, planets, etc.) and phenomena that originate outside the atmosphere of Earth (such as the cosmic background radiation).
+*** [[Astronomy]] – studies the universe beyond Earth, including its formation and development, and the evolution, physics, chemistry, meteorology, and motion of celestial objects (such as galaxies, planets, etc.) and phenomena that originate outside the atmosphere of Earth (such as the cosmic background radiation).
+**** [[Astrophysics]] – study of the physical aspects of celestial objects
+***** [[Compact objects]] – this subdiscipline studies very dense matter in white dwarfs and neutron stars and their effects on environments including accretion.
+***** [[Physical cosmology]] – origin and evolution of the universe as a whole. The study of cosmology is theoretical astrophysics at its largest scale.
+***** [[High energy astrophysics]] – studies phenomena occurring at high energies including active galactic nuclei, supernovae, gamma-ray bursts, quasars, and shocks.
+***** [[Interstellar astrophysics]] – study of the interstellar medium, intergalactic medium and dust.
+***** [[Plasma astrophysics]] – studies properties of plasma in outer space.
+***** [[Relativistic astrophysics]] – studies effects of special relativity and general relativity in astrophysical contexts including gravitational waves, gravitational lensing and black holes.
+***** [[Solar physics]] – Sun and its interaction with the remainder of the Solar System and interstellar space.
+**** [[Astrobiology]]
 **** [[Astrodynamics]] – application of ballistics and celestial mechanics to the practical problems concerning the motion of rockets and other spacecraft.
 **** [[Astrometry]] – branch of astronomy that involves precise measurements of the positions and movements of stars and other celestial bodies.
 **** [[Cosmology]] – discipline that deals with the nature of the Universe as a whole.
@@ -14,6 +22,25 @@
 **** [[Physical cosmology]] – study of the largest-scale structures and dynamics of the universe and is concerned with fundamental questions about its formation and evolution.
 **** [[Planetary science]] – scientific study of planets (including Earth), moons, and planetary systems, in particular those of the Solar System and the processes that form them.
 **** [[Stellar astronomy]] – natural science that deals with the study of celestial objects (such as stars, planets, comets, nebulae, star clusters and galaxies) and phenomena that originate outside the atmosphere of Earth (such as cosmic background radiation)
+**** [[Planetary Science]] – study of the planets of the Solar System.
+***** [[Exoplanetology]] – various planets outside of the Solar System
+***** [[Planetary formation]] – formation of planets and moons in the context of the formation and evolution of the Solar System.
+***** [[Planetary rings]] – dynamics, stability, and composition of planetary rings
+***** [[Magnetospheres]] – magnetic fields of planets and moons
+***** [[Planetary surfaces]] – surface geology of planets and moons
+***** [[Planetary interiors]] – interior composition of planets and moons
+***** [[Small Solar System bodies]] – smallest gravitationally bound bodies, including asteroids, comets, and Kuiper belt objects.
+**** [[Observational astronomy]]
+***** [[Radio astronomy]] – Above 300 µm
+***** [[Submillimetre astronomy]] – 200 µm to 1 mm
+***** [[Infrared astronomy]] – 0.7–350 µm
+***** [[Optical astronomy]] – 380–750 nm
+***** [[Ultraviolet astronomy]] – 10–320 nm
+***** [[X-ray astronomy]] – 0.01–10 nm
+***** [[Gamma-ray astronomy]] – Below 0.01 nm
+***** [[Cosmic ray astronomy]] – Cosmic rays, including plasma
+***** [[Neutrino astronomy]] – Neutrinos
+***** [[Gravitational wave astronomy]] – Gravitons
 *** [[Atmospheric physics]] – study of the application of physics to the atmosphere
 *** [[Atomic, molecular, and optical physics]] – study of how matter and light interact
 *** [[Biophysics]] – study of physical processes relating to biology
@@ -30,10 +57,15 @@
 *** [[Materials physics]] – use of physics to describe materials in many different ways such as force, heat, light and mechanics.
 *** [[Mathematical physics]] – application of mathematics to problems in physics and the development of mathematical methods for such applications and for the formulation of physical theories.
 *** [[Mechanics]] – branch of physics concerned with the behavior of physical bodies when subjected to forces or displacements, and the subsequent effects of the bodies on their environment.
+**** [[Aerodynamics]]
 **** [[Biomechanics]] – study of the structure and function of biological systems such as humans, animals, plants, organs, and cells by means of the methods of mechanics.
 **** [[Classical mechanics]] – one of the two major sub-fields of mechanics, which is concerned with the set of physical laws describing the motion of bodies under the action of a system of forces.
+***** [[Kinematics]]
 **** [[Continuum mechanics]] – branch of mechanics that deals with the analysis of the kinematics and the mechanical behavior of materials modeled as a continuous mass rather than as discrete particles.
 **** [[Fluid mechanics]] – study of fluids and the forces on them.
+***** [[Fluid statics]]
+***** [[Fluid kinematics]]
+***** [[Fluid dynamics]]
 **** [[Quantum mechanics]] – branch of physics dealing with physical phenomena where the action is on the order of the Planck constant.
 **** [[Thermodynamics]] – branch of physical science concerned with heat and its relation to other forms of energy and work.
 *** [[Nuclear physics]] – field of physics that studies the building blocks and interactions of atomic nuclei.
@@ -47,12 +79,12 @@
 *** [[Statics]] – branch of mechanics concerned with the analysis of loads (force, torque/moment) on physical systems in static equilibrium, that is, in a state where the relative positions of subsystems do not vary over time, or where components and structures are at a constant velocity.
 *** [[Solid state physics]] – study of rigid matter, or solids, through methods such as quantum mechanics, crystallography, electromagnetism, and metallurgy.
 *** [[Vehicle dynamics]] – dynamics of vehicles, here assumed to be ground vehicles.
-**[[Outline of chemistry|Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions
+**[[Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions
 *** [[Analytical chemistry]] – study of the separation, identification, and quantification of the chemical components of natural and artificial materials.
 *** [[Astrochemistry]] – study of the abundance and reactions of chemical elements and molecules in the universe, and their interaction with radiation.
 **** [[Cosmochemistry]] – study of the chemical composition of matter in the universe and the processes that led to those compositions
 *** [[Atmospheric chemistry]] – branch of atmospheric science in which the chemistry of the Earth's atmosphere and that of other planets is studied. It is a multidisciplinary field of research and draws on environmental chemistry, physics, meteorology, computer modeling, oceanography, geology and volcanology and other disciplines
-***[[Outline of biochemistry|Biochemistry]] – study of chemical processes in living organisms, including, but not limited to, living matter. Biochemistry governs all living organisms and living processes.
+***[[Biochemistry]] – study of chemical processes in living organisms, including, but not limited to, living matter. Biochemistry governs all living organisms and living processes.
 **** [[Agrochemistry]] – study of both chemistry and biochemistry which are important in agricultural production, the processing of raw products into foods and beverages, and in environmental monitoring and remediation.
 **** [[Bioinorganic chemistry]] – examines the role of metals in biology.
 **** [[Bioorganic chemistry]] – rapidly growing scientific discipline that combines organic chemistry and biochemistry.
@@ -77,7 +109,7 @@
 *** [[Inorganic chemistry]] – branch of chemistry concerned with the properties and behavior of inorganic compounds.
 *** [[Nuclear chemistry]] – subfield of chemistry dealing with radioactivity, nuclear processes and nuclear properties.
 **** [[Radiochemistry]] – chemistry of radioactive materials, where radioactive isotopes of elements are used to study the properties and chemical reactions of non-radioactive isotopes (often within radiochemistry the absence of radioactivity leads to a substance being described as being inactive as the isotopes are stable).
-***[[Outline of organic chemistry|Organic chemistry]] – study of the structure, properties, composition, reactions, and preparation (by synthesis or by other means) of carbon-based compounds, hydrocarbons, and their derivatives.
+***[[Organic chemistry]] – study of the structure, properties, composition, reactions, and preparation (by synthesis or by other means) of carbon-based compounds, hydrocarbons, and their derivatives.
 **** [[Petrochemistry]] – branch of chemistry that studies the transformation of crude oil (petroleum) and natural gas into useful products or raw materials.
 *** [[Organometallic chemistry]] – study of chemical compounds containing bonds between carbon and a metal.
 *** [[Photochemistry]] – study of chemical reactions that proceed with the absorption of light by atoms or molecules..
@@ -97,7 +129,7 @@
 *** [[Phytochemistry]] – strict sense of the word the study of phytochemicals.
 *** [[Polymer chemistry]] – multidisciplinary science that deals with the chemical synthesis and chemical properties of polymers or macromolecules.
 *** [[Solid-state chemistry]] – study of the synthesis, structure, and properties of solid phase materials, particularly, but not necessarily exclusively of, non-molecular solids
-*** Multidisciplinary fields involving chemistry
+*** [[Multidisciplinary fields involving chemistry]]
 **** [[Chemical biology]] – scientific discipline spanning the fields of chemistry and biology that involves the application of chemical techniques and tools, often compounds produced through synthetic chemistry, to the study and manipulation of biological systems.
 **** [[Chemical engineering]] – branch of engineering that deals with physical science (e.g., chemistry and physics), and life sciences (e.g., biology, microbiology and biochemistry) with mathematics and economics, to the process of converting raw materials or chemicals into more useful or valuable forms.
 **** [[Chemical oceanography]] – study of the behavior of the chemical elements within the Earth's oceans.
@@ -107,25 +139,40 @@
 **** [[Oenology]] – science and study of all aspects of wine and winemaking except vine-growing and grape-harvesting, which is a subfield called viticulture.
 **** [[Spectroscopy]] – study of the interaction between matter and radiated energy
 **** [[Surface science]] – Surface science is the study of physical and chemical phenomena that occur at the interface of two phases, including solid–liquid interfaces, solid–gas interfaces, solid–vacuum interfaces, and liquid–gas interfaces.
-** [[Outline of earth science|Earth science]] – all-embracing term for the sciences related to the planet Earth. Earth science, and all of its branches, are branches of physical science.
+** [[Earth science]] – all-embracing term for the sciences related to the planet Earth. Earth science, and all of its branches, are branches of physical science.
 *** [[Atmospheric sciences]] –  umbrella term for the study of the atmosphere, its processes, the effects other systems have on the atmosphere, and the effects of the atmosphere on these other systems.
 *** [[Biogeography]] – study of the distribution of species (biology), organisms, and ecosystems in geographic space and through geological time.
-*** [[Outline of cartography|Cartography]] – study and practice of making maps or globes.
+*** [[Cartography]] – study and practice of making maps or globes.
 *** [[Climatology]] – study of climate, scientifically defined as weather conditions averaged over a period of time
 *** [[Coastal geography]] – study of the dynamic interface between the ocean and the land, incorporating both the physical geography (i.e. coastal geomorphology, geology and oceanography) and the human geography (sociology and history) of the coast.
 *** [[Geodesy]] – scientific discipline that deals with the measurement and representation of the Earth, including its gravitational field, in a three-dimensional time-varying space
-*** [[Outline of geography|Geography]] – science that studies the lands, features, inhabitants, and phenomena of Earth
+*** [[Geography]] – science that studies the lands, features, inhabitants, and phenomena of Earth
 *** [[Geoinformatics]] – science and the technology which develops and uses information science infrastructure to address the problems of geography, geosciences and related branches of engineering.
-*** [[Outline of geology|Geology]] – study of the Earth, with the general exclusion of present-day life, flow within the ocean, and the atmosphere.
+*** [[Geology]] – study of the Earth, with the general exclusion of present-day life, flow within the ocean, and the atmosphere.
 **** [[Planetary geology]] – planetary science discipline concerned with the geology of the celestial bodies such as the planets and their moons, asteroids, comets, and meteorites.
+**** [[Hydrogeology]] – area of geology that deals with the distribution and movement of groundwater in the soil and rocks of the Earth's crust (commonly in aquifers).
+**** [[Economic geology]]
+**** [[Engineering geology]]
+**** [[Environmental geology]]
+**** [[Quaternary geology]]
+**** [[Planetary geology]]
+**** [[Petroleum geology]]
+**** [[Historical geology]]
+**** [[Hydrogeology]]
+**** [[Structural geology]]
 *** [[Geomorphology]] – scientific study of landforms and the processes that shape them
 *** [[Geostatistics]] – branch of statistics focusing on spatial or spatiotemporal datasets
 *** [[Geophysics]] – physics of the Earth and its environment in space; also the study of the Earth using quantitative physical methods.
 *** [[Glaciology]] – study of glaciers, or more generally ice and natural phenomena that involve ice.
 *** [[Hydrology]] – study of the movement, distribution, and quality of water on Earth and other planets, including the hydrologic cycle, water resources and environmental watershed sustainability.
-*** [[Hydrogeology]] – area of geology that deals with the distribution and movement of groundwater in the soil and rocks of the Earth's crust (commonly in aquifers).
 *** [[Mineralogy]] – study of chemistry, crystal structure, and physical (including optical) properties of minerals.
-*** [[Outline of meteorology|Meteorology]] – interdisciplinary scientific study of the atmosphere which explains and forecasts weather events.
+**** [[Gemology]]
+**** [[Mineral physics]]
+**** [[Mining]]
+*** [[Meteorology]] – interdisciplinary scientific study of the atmosphere which explains and forecasts weather events.
+**** [[Microscale meteorology]] – the study of atmospheric phenomena about 1 km or less, smaller than mesoscale, including small and generally fleeting cloud "puffs" and other small cloud features
+**** [[Mesoscale meteorology]] – the study of weather systems about 5 kilometers to several hundred kilometers, smaller than synoptic scale systems but larger than microscale and storm-scale cumulus systems, such as sea breezes, squall lines, and mesoscale convective complexes
+**** [[Synoptic scale meteorology]]
 *** [[Oceanography]] – branch of Earth science that studies the ocean
 *** [[Paleoclimatology]] – study of changes in climate taken on the scale of the entire history of Earth
 *** [[Paleontology]] – study of prehistoric life
@@ -136,11 +183,54 @@
 *** [[Topography]] – study of surface shape and features of the Earth and other observable astronomical objects including planets, moons, and asteroids.
 *** [[Volcanology]] – study of volcanoes, lava, magma, and related geological, geophysical and geochemical phenomena.
 ** [[Environmental science]] – an integrated, quantitative, and interdisciplinary approach to the study of environmental systems.
-***[[Outline of ecology|Ecology]] – scientific study of the distribution and abundance of living organisms and how the distribution and abundance are affected by interactions between the organisms and their environment.
+***[[Ecology]] – scientific study of the distribution and abundance of living organisms and how the distribution and abundance are affected by interactions between the organisms and their environment.
 **** [[Freshwater biology]] – scientific biological study of freshwater ecosystems and is a branch of Limnology
 **** [[Marine biology]] – scientific study of organisms in the ocean or other marine or brackish bodies of water
 **** [[Parasitology]] – Parasitology is the study of parasites, their hosts, and the relationship between them.
 **** [[Population dynamics]] – Population dynamics is the branch of life sciences that studies short-term and long-term changes in the size and age composition of populations, and the biological and environmental processes influencing those changes.
+**** [[Ecophysiology/Behavioral ecology]] – examine adaptations of the individual to its environment.
+**** [[Population ecology (or autoecology)]] – studies the dynamics of populations of a single species.
+**** [[Community ecology (or synecology)]] – focuses on the interactions between species within an ecological community.
+**** [[Ecosystem ecology]] – studies the flows of energy and matter through the biotic and abiotic components of ecosystems.
+**** [[Systems ecology]] – is an interdisciplinary field focusing on the study, development, and organization of ecological systems from a holistic perspective.
+**** [[Landscape ecology]] – examines processes and relationship across multiple ecosystems or very large geographic areas.
+**** [[Animal ecology]] –
+**** [[Biogeography]] – the study of the geographic distributions of species ;
+**** [[Insect ecology]] –
+**** [[Microbial ecology]] – the ecology of micro-organisms;
+**** [[Paleoecology]] – which seeks to understand the relationships between species in fossil assemblages;
+**** [[Plant ecology]] –
+**** [[Benthic ecology]] – study of sea-floor organisms, and their interaction with each other and with the environment
+**** [[Desert ecology]] –
+**** [[Forest ecology]] –
+**** [[Grassland ecology]] –
+**** [[Urban ecology]] – the study of ecosystems in urban areas.
+**** [[Arctic ecology]] –
+**** [[Polar ecology]] –
+**** [[Tropical ecology]] –
+**** [[Global ecology]] – which examines ecological phenomena at the largest possible scale, addressing macroecological questions;
+**** [[Landscape limnology]] – the spatially explicit study of aquatic ecosystems (e.g., rivers, lakes, and wetlands) as they interact with the aquatic, terrestrial, and human components of landscapes to determine the effects of pattern on ecosystem processes across spatial scales;
+**** [[Spatial ecology]] – which identifies spatial patterns and their relationships to ecological events;
+**** [[Macroecology]] – the study of large-scale phenomena;
+**** [[Microecology]] – the study of small-scale phenomena;
+**** [[Microbial ecology]] –
+**** [[Molecular ecology]] –
+**** [[Chemical ecology]] – which deals with the ecological role of biological chemicals used in a wide range of areas including defense against predators and attraction of mates;
+**** [[Ecophysiology]] – which studies the interaction of physiological traits with the abiotic environment;
+**** [[Ecotoxicology]] – which looks at the ecological role of toxic chemicals (often pollutants, but also naturally occurring compounds);
+**** [[Evolutionary ecology]] – or ecoevolution which looks at evolutionary changes in the context of the populations and communities in which the organisms exist;
+**** [[Fire ecology]] – which looks at the role of fire in the environment of plants and animals and its effect on ecological communities;
+**** [[Functional ecology]] – the study of the roles, or functions, that certain species (or groups thereof) play in an ecosystem;
+**** [[Genetic ecology]] –
+**** [[Soil ecology]] – the ecology of the pedosphere;
+**** [[Field ecology]] –
+**** [[Quantitative ecology]] –
+**** [[Theoretical ecology]] – the development of ecological theory, usually with mathematical, statistical and/or computer modeling tools;
+**** [[Ecosophy]] –
+**** [[Applied ecology]] – the practice of employing ecological principles and understanding to solve real world problems (includes agroecology and conservation biology);
+**** [[Conservation ecology]] – which studies how to reduce the risk of species extinction;
+**** [[Deep ecology]] –
+**** [[Restoration ecology]] – which attempts to understand the ecological basis needed to restore impaired or damaged ecosystems;
 ***[[Environmental soil science]] – Environmental soil science is the study of the interaction of humans with the pedosphere as well as critical aspects of the biosphere, the lithosphere, the hydrosphere, and the atmosphere.
 ***[[Environmental geology]] – Environmental geology, like hydrogeology, is an applied science concerned with the practical application of the principles of geology in the solving of environmental problems.
 ***[[Toxicology]] – branch of biology, chemistry, and medicine concerned with the study of the adverse effects of chemicals on living organisms.
@@ -559,7 +649,6 @@ Social sciences
 *** [[Limnology]] – study of inland waters.
 *** [[Oceanography]] – branch of Earth science that studies the ocean.
 *** [[Pedology (soil study)|Pedology]] – study of soils in their natural environment.
-*** [[Landscape ecology]] – science of studying and improving relationships between ecological processes in the environment and particular ecosystems.
 *** [[Palaeogeography]] – study of what the geography was in times past.
 ** [[Regional geography]] – study of world regions.
 * [[Gerontology]] – study of the social, psychological and biological aspects of aging.
@@ -759,7 +848,11 @@ Applied sciences
 *** [[Radiology]] – medical specialty that employs the use of imaging to both diagnose and treat disease visualised within the human body.
 *** [[Toxicology]] – branch of biology, chemistry, and medicine concerned with the study of the adverse effects of chemicals on living organisms.
 *** [[Urology]] – medical and surgical specialty that focuses on the urinary tracts of males and females, and on the reproductive system of males.
-** [[Outline of nutrition|Nutrition]] – studies the relationship between diet and states of health and disease.
+** [[Nutrition]] – studies the relationship between diet and states of health and disease.
+*** [[Nutrigenomics]]
+*** [[Nutrition physiology]]
+*** [[Prenatal nutrition]]
+*** [[Sports nutrition]]
 ** [[Nursing]] – Nursing is a healthcare profession focused on the care of individuals, families, and communities so they may attain, maintain, or recover optimal health and quality of life.
 ** [[Pharmacology]] – branch of medicine and biology concerned with the study of drug action
 ** [[Physical therapy]] – Military Physical Therapists working with patients on balance problems, orthopedic/musculoskeletal injuries, amputee, compression wrapping to control edema, and during evaluation/assessment of strength, flexibility, and joint range of motion, massages, etc. .
