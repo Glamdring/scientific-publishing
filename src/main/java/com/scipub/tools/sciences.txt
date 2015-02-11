@@ -1476,7 +1476,7 @@ practices of various schools of thought.
 ** [[Social philosophy]] – is the study of questions about social behavior and interpretations of society and social institutions in terms of ethical values rather than empirical relations.
 ** [[Philosophy of mathematics]] –  is the branch of philosophy that studies the philosophical assumptions, foundations, and implications of mathematics. The aim of the philosophy of mathematics is to provide an account of the nature and methodology of mathematics and to understand the place of mathematics in people's lives. 
 ** [[Philosophy of education]] –  Philosophy of education can refer to either the academic field of applied philosophy or to one of any educational philosophies that promote a specific type or vision of education, and/or which examine the definition, goals and meaning of education.
-* [[Outline of political science|Political science]] – social science discipline concerned with the study of the state, government, and politics.
+* [[Political science]] – social science discipline concerned with the study of the state, government, and politics.
 ** [[Comparative politics]] – field and a method used in political science, characterized by an empirical approach based on the comparative method.
 ** [[Game theory]] – study of strategic decision making.
 ** [[Geopolitics]] – theory that describes the relation between politics and territory whether on local or international scale.
@@ -1491,7 +1491,8 @@ practices of various schools of thought.
 *** Local government studies – form of public administration which in a majority of contexts, exists as the lowest tier of administration within the a given state.
 *** [[International politics]] – study of relationships between countries, including the roles of states, inter-governmental organizations (IGOs), international nongovernmental organizations (INGOs), non-governmental organizations (NGOs) and multinational corporations (MNCs).
 ** [[International relations theory]] – study of international relations from a theoretical perspective; it attempts to provide a conceptual framework upon which international relations can be analyzed.
-* [[Outline of psychology|Psychology]] – science of behavior and mental processes
+** [[Political theory]]
+* [[Psychology]] – science of behavior and mental processes
 ** [[Applied psychology]] – use of psychological principles and theories to overcome problems in other areas, such as mental health, business management, education, health, product design, ergonomics, and law.
 *** [[Psychological testing]] – field characterized by the use of samples of behavior in order to assess psychological construct(s), such as cognitive and emotional functioning, about a given individual.
 *** [[Clinical psychology]] – integration of science, theory and clinical knowledge for the purpose of understanding, preventing, and relieving psychologically based distress or dysfunction and to promote subjective well-being and personal development.
@@ -1535,24 +1536,184 @@ practices of various schools of thought.
 ** [[Sensation and perception psychology]] –
 * [[Public administration]] – houses the implementation of government policy and an academic discipline that studies this implementation and that prepares civil servants for this work.
 * [[Social work]] – professional and academic discipline that seeks to improve the quality of life and wellbeing of an individual, group, or community by intervening through research, policy, community organizing, direct practice, and teaching on behalf of those afflicted with poverty or any real or perceived social injustices and violations of their human rights.
-* [[Outline of sociology|Sociology]] – studies society using various methods of empirical investigation and critical analysis to understand human social activity, from the micro level of individual agency and interaction to the macro level of systems and social structure.
-** [[Criminology]] – study of the nature, extent, causes, and control of criminal behavior in both the individual and in society.
-** [[Demography]] – statistical study of human populations and sub-populations.
-
-Applied sciences
+* [[Sociology]] – studies society using various methods of empirical investigation and critical analysis to understand human social activity, from the micro level of individual agency and interaction to the macro level of systems and social structure.
+** [[Analytical sociology]]
+** [[Applied sociology]]
+** [[Architectural sociology]]
+** [[Behavioral sociology]]
+** [[Chinese sociology]]
+** [[Collective behavior]]
+** [[Comparative sociology]]
+** [[Computational sociology]]
+** [[Critical sociology]]
+** [[Cultural sociology]]
+** [[Dramaturgical sociology]]
+** [[Economic sociology]]
+** [[Educational sociology]]
+** [[Empirical sociology]]
+** [[Environmental sociology]]
+** [[Evolutionary sociology]]
+** [[Feminist sociology]]
+** [[Figurational sociology]]
+** [[Historical sociology]]
+** [[Humanistic sociology]]
+** [[Industrial sociology]]
+** [[Internet sociology]]
+** [[Interpretive sociology]]
+** [[Jealousy sociology]]
+** [[Macrosociology]]
+** [[Marxist sociology]]
+** [[Mathematical sociology]]
+** [[Medical sociology]]
+** [[Mesosociology]]
+** [[Microsociology]]
+** [[Military sociology]]
+** [[Natural resource sociology]]
+** [[Phenomenological sociology]]
+** [[Policy sociology]]
+** [[Polish sociology]]
+** [[Political sociology]]
+** [[Psychoanalytic sociology]]
+** [[Public sociology]]
+** [[Pure sociology]]
+** [[Rural sociology]]
+** [[Social inequality]]
+** [[Social psychology (sociology)]]
+** [[Sociology of aging]]
+** [[Sociology of agriculture]]
+** [[Sociology of architecture]]
+** [[Sociology of art]]
+** [[Sociology of autism]]
+** [[Sociology of childhood]]
+** [[Sociology of conflict]]
+** [[Sociology of culture]]
+** [[Sociology of cyberspace]]
+** [[Sociology of deviance]]
+** [[Sociology of development]]
+** [[Sociology of disaster]]
+** [[Sociology of education]]
+** [[Sociology of emotions]]
+** [[Sociology of the family]]
+** [[Sociology of fatherhood]]
+** [[Sociology of film]]
+** [[Sociology of finance]]
+** [[Sociology of food]]
+** [[Sociology of gender]]
+** [[Sociology of generations]]
+** [[Sociology of globalization]]
+** [[Sociology of government]]
+** [[Sociology of health and illness]]
+** [[Sociology of human consciousness]]
+** [[Sociology of immigration]]
+** [[Sociology of knowledge]]
+** [[Sociology of language]]
+** [[Sociology of law]]
+** [[Sociology of leisure]]
+** [[Sociology of literature]]
+** [[Sociology of markets]]
+** [[Sociology of marriage]]
+** [[Sociology of motherhood]]
+** [[Sociology of music]]
+** [[Sociology of organizations]]
+** [[Sociology of peace, war, and social conflict]]
+** [[Sociology of punishment]]
+** [[Sociology of race and ethnic relations]]
+** [[Sociology of religion]]
+** [[Sociology of risk]]
+** [[Sociology of science]]
+** [[Sociology of scientific knowledge]]
+** [[Sociology of social change]]
+** [[Sociology of social movements]]
+** [[Sociology of space]]
+** [[Sociology of sport]]
+** [[Sociology of technology]]
+** [[Sociology of terrorism]]
+** [[Sociology of the body]]
+** [[Sociology of the family]]
+** [[Sociology of the history of science]]
+** [[Sociology of the Internet]]
+** [[Sociology of work]]
+** [[Sociography]]
+** [[Structural sociology]]
+** [[Theoretical sociology]]
+** [[Urban sociology]]
+** [[Visual sociology]]}}
+** [[Agnotology]]
+** [[Agrarian studies]]
+** [[Anthrozoology]]
+** [[Area studies]]
+** [[Behavioral economics]]
+** [[Communication studies]]
+** [[Community informatics]]
+** [[Criminology]]
+** [[Cultural studies]]
+** [[Demography]]
+** [[Development studies]]
+** [[Disability studies]]
+** [[Environmental studies]]
+** [[Food studies]]
+** [[Gender studies]]
+** [[Geodemography]]
+** [[Global studies]]
+** [[Gerontology]]
+** [[Human ecology]]
+** [[Political ecology]]
+** [[Science studies]]
+** [[Science, technology and society]]
+** [[Social architecture]]
+** [[Social epistemology]]
+** [[Social geography]]
+** [[Social informatics]]
+** [[Social philosophy]]
+** [[Social studies of finance]]
+** [[Social theory]]
+** [[Sociobiology]]
+** [[Sociomapping]]
+** [[Sociometry]]
+** [[Sociomusicology]]
+** [[Systems theory]]
+** [[Urban studies]]
+** [[Victimology]]
+** [[World-systems theory]]
+[[Applied sciences]]
 * [[Agronomy]] – science and technology of producing and using plants for food, fuel, feed, fiber, and reclamation.
 ** [[Animal husbandry]] – agricultural practice of breeding and raising livestock.
 ** [[Aquaculture]] – also known as '''aquafarming''', is the farming of aquatic organisms such as fish, [[crustacean]]s, [[mollusc]]s and [[aquatic plant]]s.<ref name="providence1">[http://www.providence.edu/polisci/students/aquaculture/EnvironmentalImpact.html Environmental Impact of Aquaculture]</ref><ref>Aquaculture's growth continuing: improved management techniques can reduce environmental effects of the practice.(UPDATE)." Resource: Engineering & Technology for a Sustainable World 16.5 (2009): 20–22. Gale Expanded Academic ASAP. Web. 1 October 2009. <http://find.galegroup.com/‌gtx/‌start.do?prodId=EAIM.>.</ref>
 *** [[Algaculture]] – form of aquaculture involving the farming of species of algae.
 *** [[Mariculture]] – cultivation of marine organisms for food and other products in the open ocean, an enclosed section of the ocean, or in tanks, ponds or raceways which are filled with seawater.
-** [[Outline of agriculture|Agriculture]] – science of farming
+** [[Agriculture]] – science of farming
 *** [[Cuniculture]] – also known as rabbit farming, is the breeding and raising domestic rabbits, usually for their meat or fur.
 *** [[Fungiculture]] –  process of producing food, medicine, and other products by the cultivation of mushrooms and other fungi.
 *** [[Heliciculture]] – also called snail farming, is the process of farming or raising land snails specifically for human consumption, and more recently, to obtain snail slime for cosmetics use.
 *** [[Olericulture]] – science of vegetable growing, dealing with the culture of non-woody (herbaceous) plants for food.
 *** [[Sericulture]] – also called silk farming, is the rearing of silkworms for the production of silk. Although there are several commercial species of silkworms, Bombyx mori is the most widely used and intensively studied.
 ** [[Food science]] – study concerned with all technical aspects of foods, beginning with harvesting or slaughtering, and ending with its cooking and consumption, an ideology commonly referred to as "from field to fork".
-** [[Outline of forestry|Forestry]] – art and science of managing forests, tree plantations, and related natural resources.
+** [[Forestry]] – art and science of managing forests, tree plantations, and related natural resources.
+*** [[Agroforestry]] &ndash; integration of forests into agricultural systems in order to optimize the production and positive effects within the system and minimize negative side effects of farming
+*** [[Boreal forestry]] &ndash; analyzes the particular challenges of forestry in the world's [[Taiga|boreal]] regions
+*** [[Dendrology]] &ndash; involves the study and identification of economically useful tree species
+*** [[Ecological forestry]]<ref>{{cite web|url=http://www.forestguild.org/efi-definitions.html |title=Ecological Forestry Definitions |publisher=forestguild.org |date= |accessdate=2014-03-14}}</ref>
+*** [[Energy forestry]] &ndash; includes specifically managing for the production of energy from biomass or biofuel derived from a fast-growing species of tree or woody shrub
+*** [[Forest ecology]] &ndash; studies the patterns and processes of a forest ecosystem
+*** [[Forest economics]] &ndash; studies the impact of economics on forest management decisions
+*** [[Forest hydrology]] &ndash; embodies the effects of changes in forest land use on the movement, distribution, and quality of water in the ecosystem
+*** [[Forest mensuration]] &ndash; incorporates quantitative measurements of the forest [[Stand level modelling|stand]] to determine stand timber volume and productivity/health, and provides a basis off which management decisions can be made
+*** [[Forest pathology]] &ndash; research of both biotic and abiotic maladies affecting the health of the forest or tree, primarily fungal pathogens and their insect vectors
+*** [[Silviculture]] &ndash; is the art and science of controlling the establishment, growth, composition, health, and quality of forests to meet specific objectives
+*** [[Social forestry]] &ndash; addresses human-forest interactions, and the importance of community-based [[natural resource management]]
+*** [[Sustainable forestry]] &ndash; emphasizes forest management for long-term environmental, social, and economic [[sustainability]]
+*** [[Tropical forestry]] &ndash; is particularly concerned with management and conservation of forests in the [[tropics]]
+*** [[Urban forestry]] &ndash; entails the care and management of urban tree populations for the purpose of improving the urban environment
+*** [[World forestry]] &ndash; examines forest conservation at a global level
+*** [[Forest management]]
+**** [[Analog forestry]] &ndash; a management focus that seeks to establish a tree-dominated ecosystem that is similar in architectural structure and ecological function to the naturally occurring climax and sub-climax vegetation community
+**** [[Community forestry]] &ndash; combination of  forest conservation with rural development and poverty reduction objectives, accomplished through instating a legal framework that favors profitable and sustainable forest management
+**** [[Ecoforestry]] &ndash; emphasizes practices which strive to protect and restore ecosystems
+**** [[Hardwood timber production]] &ndash; process of managing stands of deciduous trees to maximize woody output
+***** [[Tree breeding]] &ndash; method of genetically modifying/selecting forest stock for improved growth or vigor characteristics
+**** [[Short rotation forestry]] &ndash; managing a forest that utilizes fast-growing species as a bio-based [[energy crop]] for use in power stations, alone or in combination with other fuels such as coal
+***** [[Short rotation coppice]] (SRC) &ndash; focus on species that are able to naturally regenerate through [[Living stump|stump sprouts]] to maximize economic productivity
+**** [[Sustainable forest management]] &ndash; emphasizes practices that maintain forest biodiversity, productivity, regeneration capacity, and vitality, while continuing to fulfill relevant ecological, economic and social functions
 *** [[Arboriculture]] – cultivation, management, and study of individual trees, shrubs, vines, and other perennial woody plants.
 *** [[Silviculture]] – practice of controlling the establishment, growth, composition, health, and quality of forests to meet diverse needs and values. It includes regenerating, tending and harvesting techniques.
 ** Horticulture – art, science, technology and business of intensive plant cultivation for human use
@@ -1560,10 +1721,9 @@ Applied sciences
 *** [[Hydroculture]] – growing of plants in a soilless medium, or an aquatic based environment. Plant nutrients are distributed via water. Hydroculture is aquatic horticulture.
 **** [[Hydroponics]] – subset of hydroculture and is a method of growing plants using mineral nutrient solutions, in water, without soil.
 ** [[Permaculture]] – branch of ecological design and ecological engineering, which develop sustainable human settlements and self-maintained agricultural systems modeled from natural ecosystems.
-* [[Outline of architecture|Architecture]] – process and product of planning, designing and construction. Architectural works, in the material form of buildings, are often perceived as cultural symbols and as works of art.
+* [[Architecture]] – process and product of planning, designing and construction. Architectural works, in the material form of buildings, are often perceived as cultural symbols and as works of art.
 ** [[Architectural engineering]] – application of engineering principles and technology to building design and construction.
 ** [[Building science]] – collection of scientific knowledge that focuses on the analysis and control of the physical phenomena affecting buildings.
-* [[Outline of education|Education]] – any act or experience that has a formative effect on the mind, character, or physical ability of an individual. In its technical sense, education is the process by which society deliberately transmits its accumulated knowledge, skills, and values from one generation to another.
 * [[Outline of engineering|Engineering]] – discipline, art, skill and profession of acquiring and applying scientific, mathematical, economic, social, and practical knowledge, in order to design and build structures, machines, devices, systems, materials and processes that safely realize improvements to the lives of people.
 ** [[Aeronautical engineering]] – Aerospace engineering is the primary branch of engineering concerned with the design, construction, and science of aircraft and spacecraft. It is divided into two major and overlapping branches: aeronautical engineering and astronautical engineering. The former deals with craft that stay within Earth's atmosphere, and the latter with craft that operate outside it.
 *** [[Aerospace engineering]] – Aerospace engineering is the primary branch of engineering concerned with the design, construction, and science of aircraft and spacecraft. It is divided into two major and overlapping branches: aeronautical engineering and astronautical engineering. The former deals with craft that stay within Earth's atmosphere, and the latter with craft that operate outside it.
@@ -1572,7 +1732,7 @@ Applied sciences
 ** [[Biomedical engineering]] – application of engineering principles and design concepts to medicine and biology.
 ** [[Bioengineering]] – application of concepts and methods of biology (and secondarily of physics, chemistry, mathematics, and computer science) to solve real-world problems related to the life sciences and/or the application thereof, using engineering's own analytical and synthetic methodologies and also its traditional sensitivity to the cost and practicality of the solution(s) arrived at.
 ** [[Outline of chemical engineering|Chemical engineering]] – application of physical science (e.g., chemistry and physics), and life sciences (e.g., biology, microbiology and biochemistry) with mathematics and economics, to the process of converting raw materials or chemicals into more useful or valuable forms.
-** Civil engineering – professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including works like roads, bridges, canals, dams, and buildings.
+** [[Civil engineering]] – professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including works like roads, bridges, canals, dams, and buildings.
 ** [[Outline of computer engineering|Computer engineering]] – design and development of computer systems
 ** [[Control engineering]] – engineering discipline that applies control theory to design systems with desired behaviors.
 ** [[Electrical engineering]] – field of engineering that generally deals with the study and application of electricity, electronics and electromagnetism.
@@ -1580,7 +1740,7 @@ Applied sciences
 ** [[Language engineering]] – deliberate effort to influence the function, structure, or acquisition of languages or language variety within a speech community.
 ** [[Marine engineering]] – engineering of boats, ships, oil rigs and any other marine vessel
 ** [[Materials engineering]] – interdisciplinary field applying the properties of matter to various areas of science and engineering.
-** Mechanical engineering – discipline of engineering that applies the principles of physics and materials science for analysis, design, manufacturing, and maintenance of mechanical systems.
+** [[Mechanical engineering]] – discipline of engineering that applies the principles of physics and materials science for analysis, design, manufacturing, and maintenance of mechanical systems.
 ** [[Mining engineering]] – engineering discipline that involves the practice, the theory, the science, the technology, and application of extracting and processing minerals from a naturally occurring environment.
 ** [[Nuclear engineering]] – branch of engineering concerned with the application of the breakdown (fission) as well as the fusion of atomic nuclei and/or the application of other sub-atomic physics, based on the principles of nuclear physics.
 ** [[Polymer engineering]] – subfield of materials science concerned with polymers, primarily synthetic polymers such as plastics.
