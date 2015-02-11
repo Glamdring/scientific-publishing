@@ -1716,7 +1716,7 @@ practices of various schools of thought.
 **** [[Sustainable forest management]] &ndash; emphasizes practices that maintain forest biodiversity, productivity, regeneration capacity, and vitality, while continuing to fulfill relevant ecological, economic and social functions
 *** [[Arboriculture]] – cultivation, management, and study of individual trees, shrubs, vines, and other perennial woody plants.
 *** [[Silviculture]] – practice of controlling the establishment, growth, composition, health, and quality of forests to meet diverse needs and values. It includes regenerating, tending and harvesting techniques.
-** Horticulture – art, science, technology and business of intensive plant cultivation for human use
+** [[Horticulture]] – art, science, technology and business of intensive plant cultivation for human use
 *** [[Floriculture]] – discipline of horticulture concerned with the cultivation of flowering and ornamental plants for gardens and for floristry, comprising the floral industry.
 *** [[Hydroculture]] – growing of plants in a soilless medium, or an aquatic based environment. Plant nutrients are distributed via water. Hydroculture is aquatic horticulture.
 **** [[Hydroponics]] – subset of hydroculture and is a method of growing plants using mineral nutrient solutions, in water, without soil.
@@ -1724,28 +1724,168 @@ practices of various schools of thought.
 * [[Architecture]] – process and product of planning, designing and construction. Architectural works, in the material form of buildings, are often perceived as cultural symbols and as works of art.
 ** [[Architectural engineering]] – application of engineering principles and technology to building design and construction.
 ** [[Building science]] – collection of scientific knowledge that focuses on the analysis and control of the physical phenomena affecting buildings.
-* [[Outline of engineering|Engineering]] – discipline, art, skill and profession of acquiring and applying scientific, mathematical, economic, social, and practical knowledge, in order to design and build structures, machines, devices, systems, materials and processes that safely realize improvements to the lives of people.
-** [[Aeronautical engineering]] – Aerospace engineering is the primary branch of engineering concerned with the design, construction, and science of aircraft and spacecraft. It is divided into two major and overlapping branches: aeronautical engineering and astronautical engineering. The former deals with craft that stay within Earth's atmosphere, and the latter with craft that operate outside it.
-*** [[Aerospace engineering]] – Aerospace engineering is the primary branch of engineering concerned with the design, construction, and science of aircraft and spacecraft. It is divided into two major and overlapping branches: aeronautical engineering and astronautical engineering. The former deals with craft that stay within Earth's atmosphere, and the latter with craft that operate outside it.
+* [[Engineering]] – discipline, art, skill and profession of acquiring and applying scientific, mathematical, economic, social, and practical knowledge, in order to design and build structures, machines, devices, systems, materials and processes that safely realize improvements to the lives of people.
+** [[Aerospace engineering]]
+*** [[Aeronautical engineering]] 
+*** [[Astronautical engineering]]
 ** [[Agricultural engineering]] – engineering discipline that applies engineering science and technology to agricultural production and processing.
 *** [[Agricultural science]] – broad multidisciplinary field that encompasses the parts of exact, natural, economic and social sciences that are used in the practice and understanding of agriculture.
+** [[Applied engineering]]
+** [[Architectural engineering]]
+** [[Audio engineering]]
 ** [[Biomedical engineering]] – application of engineering principles and design concepts to medicine and biology.
-** [[Bioengineering]] – application of concepts and methods of biology (and secondarily of physics, chemistry, mathematics, and computer science) to solve real-world problems related to the life sciences and/or the application thereof, using engineering's own analytical and synthetic methodologies and also its traditional sensitivity to the cost and practicality of the solution(s) arrived at.
-** [[Outline of chemical engineering|Chemical engineering]] – application of physical science (e.g., chemistry and physics), and life sciences (e.g., biology, microbiology and biochemistry) with mathematics and economics, to the process of converting raw materials or chemicals into more useful or valuable forms.
-** [[Civil engineering]] – professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including works like roads, bridges, canals, dams, and buildings.
-** [[Outline of computer engineering|Computer engineering]] – design and development of computer systems
-** [[Control engineering]] – engineering discipline that applies control theory to design systems with desired behaviors.
-** [[Electrical engineering]] – field of engineering that generally deals with the study and application of electricity, electronics and electromagnetism.
-** [[Industrial engineering]] – branch of engineering dealing with the optimization of complex processes or systems
-** [[Language engineering]] – deliberate effort to influence the function, structure, or acquisition of languages or language variety within a speech community.
-** [[Marine engineering]] – engineering of boats, ships, oil rigs and any other marine vessel
-** [[Materials engineering]] – interdisciplinary field applying the properties of matter to various areas of science and engineering.
-** [[Mechanical engineering]] – discipline of engineering that applies the principles of physics and materials science for analysis, design, manufacturing, and maintenance of mechanical systems.
-** [[Mining engineering]] – engineering discipline that involves the practice, the theory, the science, the technology, and application of extracting and processing minerals from a naturally occurring environment.
-** [[Nuclear engineering]] – branch of engineering concerned with the application of the breakdown (fission) as well as the fusion of atomic nuclei and/or the application of other sub-atomic physics, based on the principles of nuclear physics.
-** [[Polymer engineering]] – subfield of materials science concerned with polymers, primarily synthetic polymers such as plastics.
-** [[Outline of software engineering|Software engineering]] – application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software; that is the application of engineering to software.
-** [[Systems engineering]] – interdisciplinary field of engineering focusing on how complex engineering projects should be designed and managed over their life cycles.
+** [[Biological engineering]]
+*** [[Agricultural engineering]]
+*** [[Biochemical engineering]]
+*** [[Biomechanical engineering]]
+*** [[Ergonomics]]
+*** [[Food engineering]]
+*** [[Bioprocess engineering]]
+*** [[Genetic engineering]]
+*** [[Human genetic engineering]]
+*** [[Metabolic engineering]]
+*** [[Molecular engineering]]
+*** [[Neural engineering]]
+*** [[Protein engineering]]
+*** [[Rehabilitation engineering]]
+*** [[Tissue engineering]]
+** [[Broadcast engineering]]
+** [[Building engineering]]
+** [[Building services engineering]]
+** [[Ceramics engineering]]
+** [[Chemical engineering]]
+*** [[Explosives engineering]]
+*** [[Biomolecular engineering]]
+*** [[Process engineering]] - also appears under industrial engineering
+** [[Computer Science and Engineering]]
+** [[Computer engineering]]
+** [[Civil engineering]]
+*** [[Aquatic and environmental engineering]]
+*** [[Architectural engineering]]
+*** [[Climate engineering]]
+*** [[Civionic engineering (civionics)]]
+*** [[Construction engineering]]
+*** [[Earthquake engineering]]
+*** [[Earth systems engineering and management]]
+*** [[Ecological engineering]]
+*** [[Environmental engineering]]
+*** [[Facilities engineering]]
+*** [[Geomatics engineering]]
+*** [[Geotechnical engineering]]
+*** [[Highway engineering]]
+*** [[Hydraulic engineering]]
+*** [[Landscape engineering]] ([[landscape architecture]])
+*** [[Land development engineering]]
+*** [[Pavement engineering]]
+*** [[Railway systems engineering]]
+*** [[River engineering]]
+*** [[Sanitary engineering]]
+*** [[Sewage engineering]]
+*** [[Structural engineering]]
+*** [[Surveying]]
+*** [[Traffic engineering (transportation)|Traffic engineering]]
+*** [[Transportation engineering]] (transport engineering)
+*** [[Urban engineering]] (Municipal engineering)
+** [[Electrical engineering]]
+*** [[Broadcast engineering]]
+*** [[Building engineering]]
+*** [[Signal Processing]]
+*** [[Communications system engineering]]
+*** [[Computer engineering]]
+*** [[Power systems engineering]]
+*** [[Control engineering]] (control systems engineering)
+*** [[Telecommunications engineering]]
+*** [[Electronics engineering]] (includes microelectronics engineering, microelectronics and semiconductor engineering)
+*** [[Instrumentation engineering]]
+*** [[Network engineering]]
+*** [[Neuromorphic engineering]]
+** [[Electronics engineering]]
+** [[Engineering Science]]
+*** [[Engineering physics]] (engineering science)
+*** [[Engineering Technology]]
+*** [[Integrated engineering]]
+** [[Environmental engineering]]
+** [[Fire protection engineering]]
+** [[Financial engineering]]
+*** [[Value engineering]]
+*** [[Cost engineering]]
+** [[Food engineering]]
+** [[Glass engineering]]
+** [[Industrial engineering]] (includes manufacturing and production engineering)
+*** [[Domain engineering]]
+*** [[Engineering economics]]
+*** [[Engineering management]]
+*** [[Engineering psychology]]
+*** [[Logistic engineering]]
+*** [[Model-driven engineering]]
+*** [[Performance engineering]]
+*** [[Process engineering]]- also appears under chemical engineering
+*** [[Product Family Engineering]]
+*** [[Quality assurance|Quality engineering]] (quality assurance engineering)
+*** [[Reliability engineering]]
+*** [[Safety engineering]]
+*** [[Security engineering]]
+*** [[Support engineering]]
+*** [[Systems engineering]] (systems design engineering)
+** [[Marine engineering]]
+** [[Materials engineering]]
+*** [[Metallurgical Engineering]]
+*** [[Surface Engineering]]
+*** [[Biomaterials Engineering]]
+*** [[Crystal Engineering]]
+*** [[Amorphous Metals engineering]]
+*** [[Metal Forming engineering]]
+*** [[Ceramic Engineering]]
+*** [[Plastics Engineering]]
+*** [[Forensic Materials Engineering]]
+*** [[Composite Materials]]
+*** [[Electronic Materials]]
+*** [[Nano materials]]
+*** [[Corrosion Engineering]]
+*** [[Vitreous Materials]]
+*** [[Welding]]
+** [[Mechanical engineering]]
+*** [[Acoustical engineering]]
+*** [[Aerospace engineering]]
+*** [[Audio engineering]]
+*** [[Automotive engineering]] (automotive systems engineering)
+*** [[Building services engineering]]
+*** [[Earthquake engineering]]
+*** [[Forensic engineering]]
+*** [[Naval architecture|Marine engineering]]
+*** [[Mechatronics]]
+*** [[Nanoengineering]]
+*** [[Naval architecture]]
+*** [[Sports engineering]]
+*** [[Structural engineering]]
+*** [[Vacuum engineering]]
+** [[Mechatronics|Mechatronic engineering]]
+** [[Military engineering]]
+*** [[Combat engineering]]
+** [[Nuclear engineering]]
+** [[Instrumentation engineering]]
+** [[Offshore construction|Offshore engineering]]
+** [[Optical engineering]]
+** [[Petroleum engineering]]
+*** [[Geophysical engineering]]
+*** [[Mineral engineering]]
+*** [[Mining engineering]]
+*** [[Reservoir engineering]]
+** [[Planetary engineering]]
+** [[Safety engineering]]
+** [[Software engineering]]
+*** [[Computer-aided engineering]]
+*** [[Cryptographic engineering]]
+*** [[Information engineering]]
+*** [[Knowledge engineering]]
+*** [[Language engineering]]
+*** [[Release engineering]]
+*** [[Teletraffic engineering]]
+*** [[Usability engineering]]
+*** [[Web engineering]]
+** [[Sports engineering]]
+** [[Systems engineering]]
+** [[Textile engineering]]
 * [[Outline of health science|Health science]] – application of science, technology, engineering or mathematics to the delivery of healthcare
 ** [[Conservation medicine]] – emerging, interdisciplinary field that studies the relationship between human and animal health, and environmental conditions.
 ** [[Outline of dentistry and oral health|Dentistry]] – branch of medicine that is involved in the study, diagnosis, prevention, and treatment of diseases, disorders and conditions of the oral cavity, maxillofacial area and the adjacent and associated structures and their impact on the human body.
