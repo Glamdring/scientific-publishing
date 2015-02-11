@@ -959,46 +959,184 @@ Social sciences
 * [[Industrial relations]] – multidisciplinary field that studies the employment relationship.
 * [[Information science]] –  interdisciplinary field primarily concerned with the analysis, collection, classification, manipulation, storage, retrieval and dissemination of information.
 * [[International studies]] – study of the major political, economic, social, cultural and sacral issues that dominate the international agenda
-* [[Outline of law|Law]] – set of rules and principles (laws) by which a society is governed, through enforcement by governmental authorities.
+* [[Law]] – set of rules and principles (laws) by which a society is governed, through enforcement by governmental authorities.
+** [[Substantive law and adjectival law]]
+*** [[Substantive law]]
+*** [[Procedural law]]
+** [[Criminal law]]
+*** [[Criminal law]] (penal law)
+*** [[Criminal procedure]]
+** [[Civil law]]
+*** [[Civil law (common law)]]
+*** [[Civil procedure]]
+*** [[Civil rights]]
+*** [[Common law]]
+*** [[Environmental law]]
+*** [[Family law]]
+** [[Administrative law]]
+*** [[Administrative law]]
+*** [[Code of Federal Regulations]]
+** [[Religious Law]]
+*** [[Canon law]]
+**** [[Canon law (Catholic Church)]]
+***** [[Apostolic constitution]]
+***** [[Papal rescript]]
+*** [[Sharia law]]
+** [[Laws by scope]]
+*** [[International law]]
+**** [[Public international law]]
+**** [[Conflict of laws]] (private international law)
+***** [[Dualism (law)]]
+***** [[Legal pluralism]]
+**** [[Supranational law]]
+**** [[Law of the European Union]]
+***** [[Treaties of the European Union]]
+***** [[Regulation (European Union)]]
+***** [[Directive (European Union)]]
+***** [[European Union decision]]
+***** [[European Union legislative procedure]]
+*** [[Federal law]] (national law)
+*** [[State law]]
+*** [[Local ordinance]]
 * [[Legal management]] – social sciences discipline that is designed for students interested in the study of State and its elements, Law, Law Practice, Legal Research and Jurisprudence, legal Philosophy, Criminal Justice, Governance, Government structure, Political history and theories, Business Organization and Management, Entrepreneurship, Public Administration and Human Resource Development.
 ** [[Paralegal studies]] – social sciences discipline that is designed for students interested in the study of State and its elements, Law, Law Practice, Legal Research and Jurisprudence, legal Philosophy, Criminal Justice, Governance, Government structure, Political history and theories, Business Organization and Management, Entrepreneurship, Public Administration and Human Resource Development.
-* [[Outline of library science|Library science]] – study of issues related to libraries and the information fields.
-* [[Outline of linguistics|Linguistics]] – scientific study of natural language.
-** [[Anthropological linguistics]] – study of the relations between language and culture and the relations between human biology, cognition and language.
-** [[Applied linguistics]] – interdisciplinary field of study that identifies, investigates, and offers solutions to language-related real-life problems.
-** [[Biolinguistics]] – study of the biology and evolution of language.
-** [[Clinical linguistics]] and [[speech and language pathology]] – sub-discipline of linguistics which involves the application of linguistic theory to the field of Speech-Language Pathology.
-** [[Cognitive linguistics]] – branch of linguistics that interprets language in terms of the concepts, sometimes universal, sometimes specific to a particular tongue, which underlie its forms.
-** [[Comparative linguistics]] – branch of historical linguistics that is concerned with comparing languages to establish their historical relatedness.
-** [[Computational linguistics]] – interdisciplinary field dealing with the statistical or rule-based modeling of natural language from a computational perspective.
-** [[Developmental linguistics]] – study of the development of linguistic ability in an individual, particularly the acquisition of language in childhood.
-**** [[language acquisition]] –  the process by which humans acquire the capacity to perceive and comprehend language, as well as to produce and use words to communicate.
-** [[Dialectology]]  – scientific study of linguistic dialect, a sub-field of sociolinguistics.
-*** [[dialectometry]] – the study of high levels of structure in geographical dialect networks.
-** [[Discourse analysis]] – general term for a number of approaches to analyzing written, spoken, signed language use or any significant semiotic event.
-** [[Etymology]] – study of the history of words, their origins, and how their form and meaning have changed over time.
-** [[Evolutionary linguistics]] – the scientific study of both the origins and development of language as well as the cultural evolution of languages.
-** [[Forensic linguistics]] – application of linguistic knowledge, methods and insights to the forensic context of law, language, crime investigation, trial, and judicial procedure.
-** [[Geolinguistics]] – branch of human geography that studies the geographic distribution of language or its constituent elements.
-** [[Historical linguistics]] – study of language change.
-** [[Lexis]] – total vocabulary or lexicon having items of lexical, rather than grammatical, meaning.
-** [[Linguistic typology]] – subfield of linguistics that studies and classifies languages according to their structural features.
-** [[Morphology]] – identification, analysis and description of the structure of a given language's morphemes and other linguistic units, such as words, affixes, parts of speech, intonation/stress, or implied context (words in a lexicon are the subject matter of lexicology).
-** [[Neurolinguistics]] – study of the neural mechanisms in the human brain that control the comprehension, production, and acquisition of language.
+* [[Library science]] – study of issues related to libraries and the information fields.
+** [[Archival science]]
+** [[Bibliographic databases]]
+** [[Cataloging]]
+** [[Library instruction]]
+** [[Preservation (library science)]]
+** [[Readers' advisory]]
+** [[Reference (library science)]]
+* [[Linguistics]] – scientific study of natural language.
+** [[Theoretical linguistics]]
+*** [[Cognitive linguistics]]
+*** [[Generative linguistics]]
+*** [[Functional theories of grammar]]
+*** [[Quantitative linguistics]]
+*** [[Phonology]]
+**** [[Graphemics]]
+*** [[Morphology (linguistics)|Morphology]]
+*** [[Syntax]]
+*** [[Lexis (linguistics)|Lexis]]
+*** [[Semantics]]
+**** [[Phraseology]] – study of set or fixed expressions, such as idioms, phrasal verbs, and other types of multi-word lexical units (often collectively referred to as phrasemes), in which the component parts of the expression take on a meaning more specific than or otherwise not predictable from the sum of their meanings when used independently.
+*** [[Pragmatics]]
+*** [[Linguistic typology]] - study of the common properties of diverse unrelated languages, properties that may, given sufficient attestation, be assumed to be innate to human language capacity.
+** [[Descriptive linguistics]]
+*** [[Anthropological linguistics]]
+*** [[Comparative linguistics]]
+**** [[Comparative method (linguistics)]]
+*** [[Historical linguistics]]
+*** [[Phonetics]]
+**** [[Graphetics]]
+*** [[Etymology]]
+**** [[Sociolinguistics]]
+** [[Applied linguistics]]
+*** [[Computational linguistics]]
+*** [[Evolutionary linguistics]]
+*** [[Forensic linguistics]]
+*** [[Internet linguistics]]
+*** [[Language acquisition]]
+*** [[Language assessment]]
+*** [[Language documentation]]
+*** [[Language revitalization]]
+*** [[Language development]]
+*** [[Language education]]
+*** [[Linguistic anthropology]]
+*** [[Neurolinguistics]]
+*** [[Psycholinguistics]]
+*** [[Second-language acquisition]]
+*** [[Writing systems]] 
+*** [[Orthography]] – representation of language in a textual medium through the use of a set of signs or symbols (known as a writing system).
+*** [[Constructed languages]]
+*** [[Biolinguistics]] - study of natural as well as human-taught communication systems in animals, compared to human language.
+*** [[Clinical linguistics]] - application of linguistic theory to the field of [[Speech-Language Pathology]].
+*** [[Computational linguistics]] - study of linguistic issues in a way that is 'computationally responsible', i.e., taking careful note of computational consideration of algorithmic specification and computational complexity, so that the linguistic theories devised can be shown to exhibit certain desirable computational properties implementations.
+*** [[Developmental linguistics]] - study of the development of linguistic ability in individuals, particularly [[Language acquisition|the acquisition of language]] in childhood.
+**** [[Language acquisition]] –  the process by which humans acquire the capacity to perceive and comprehend language, as well as to produce and use words to communicate.
+*** [[Evolutionary linguistics]] - study of the origin and subsequent development of language by the human species.
+*** [[Language geography]] - study of the geographical distribution of languages and linguistic features.
+*** [[Sociolinguistics]] - study of variation in language and its relationship with social factors.
+**** [[Discourse analysis]] - analysis of language use in [[Text (literary theory)|texts]] (spoken, written, or signed)
+**** [[Dialectology]]  – scientific study of linguistic dialect, a sub-field of sociolinguistics.
+***** [[Dialectometry]] – the study of high levels of structure in geographical dialect networks.
+*** [[Stylistics (linguistics)]] - study of linguistic factors that place a discourse in context.
+*** [[Geolinguistics]] – branch of human geography that studies the geographic distribution of language or its constituent elements.
+*** [[Contrastive linguistics]]
 ** [[Philology]] – study of language in written historical sources; it is a combination of literary studies, history and linguistics.
-** [[Phonetics]] – branch of linguistics that comprises the study of the sounds of human speech, orthe equivalent aspects of sign.
-** [[Phonology]] – branch of linguistics concerned with the systematic organization of sounds in languages.
-** [[Phraseology]] – study of set or fixed expressions, such as idioms, phrasal verbs, and other types of multi-word lexical units (often collectively referred to as phrasemes), in which the component parts of the expression take on a meaning more specific than or otherwise not predictable from the sum of their meanings when used independently.
-** [[Pragmatics]] – subfield of linguistics which studies the ways in which context contributes to meaning.
-** [[Psycholinguistics]] – study of the psychological and neurobiological factors that enable humans to acquire, use, comprehend and produce language.
-** [[Sociolinguistics]] – descriptive study of the effect of any and all aspects of society, including cultural norms, expectations, and context, on the way language is used, and the effects of language use on society.
 ** [[Speech science]] – Speech science refers to the study of production, transmission and perception of speech. Speech science involves anatomy, in particular the anatomy of the oro-facial region and neuroanatomy, physiology, and acoustics.
-** [[Stylistics]] – study and interpretation of texts from a linguistic perspective.
-** [[Syntax]] – "the study of the principles and processes by which sentences are constructed in particular languages."
-** [[Semantics]] – study of meaning.
-** [[Writing systems]] 
-** [[Orthography]] – representation of language in a textual medium through the use of a set of signs or symbols (known as a writing system).
-* [[Outline of business management|Management]] – act of getting people together to accomplish desired goals and objectives using available resources efficiently and effectively.
+** [[Corpus linguistics]]
+* [[Management]] – act of getting people together to accomplish desired goals and objectives using available resources efficiently and effectively.
+** [[Self-management]]
+*** [[Personal information management]]
+*** [[Personal knowledge management]]
+*** [[Stress management]]
+*** [[Time management]]
+*** [[Attention management]]
+*** [[Task management]]
+*** [[Personal finance]]
+** [[General organization management]]
+*** Administration
+*** [[Agile management]]
+*** [[Asset management]]
+*** [[Change management]]
+*** [[Conflict management]]
+*** [[Conflict resolution]]
+*** [[Constraint management]]
+**** [[Theory of Constraints]]
+**** [[Focused improvement]]
+**** [[Donella Meadows' twelve leverage points to intervene in a system]]
+*** [[Cost management]]
+*** [[Crisis management]]
+*** [[Critical management studies]] (CMS)
+*** [[Customer relationship management]]
+*** [[Data management]]
+*** [[Design management]]
+*** [[Earned value management]]
+*** [[Human interaction management]]
+*** [[Integration management]]
+*** [[Interim Management]]
+*** [[Knowledge management]]
+*** [[Logistics management]]
+*** [[Operations management]]
+*** [[Organization development]]
+*** [[Perception management]]
+*** [[Planning (management)]]
+*** [[Process management]]
+*** [[Program management]]
+*** [[Project management]]
+*** [[Quality management]]
+*** [[Requirements management]]
+*** [[Resource management]]
+*** [[Risk management]]
+*** [[Skills management]]
+*** [[Spend management]]
+*** [[Strategic management]]
+*** [[Strategic planning]]
+*** [[Systems management]]
+** [[Department management]]
+*** [[Accounting management]]
+*** [[Communication management]]
+*** [[Engineering management]]
+*** [[Enterprise content management]]
+*** [[Finance|Financial management]]
+*** [[Human resource management]]
+*** [[Information technology management]]
+*** [[Marketing management]]
+*** [[Procurement]]
+*** [[Product management]]
+*** [[Records Management]]
+*** [[Supply chain management]]
+** [[Field-specific management]]
+*** [[Association management]]
+*** [[Educational leadership|Educational management]]
+*** [[Facility management]]
+*** [[Investment management]]
+*** [[Land management]]
+*** [[Public administration]]
+*** [[Public management]]
+*** [[Talent manager|Talent management]]
 * [[Media studies]] – academic discipline and field of study that deals with the content, history and effects of various media; in particular, the 'mass media'.
 ** [[Communication studies]] – academic field that deals with processes of human communication, commonly defined as the sharing of symbols to create meaning.
 * [[Outline of philosophy|Philosophy]] – study of general and fundamental problems concerning matters such as existence, knowledge, values, reason, mind, and language. Academic philosophy is considered a science by some.<ref>[http://opinionator.blogs.nytimes.com/2012/03/04/philosophy-by-another-name/ COLIN MCGINN, New York Times, March 2012]</ref> Others say that philosophy is not a science but it is instead a precursor of it.<ref>[http://opinionator.blogs.nytimes.com/2012/04/05/philosophy-is-not-a-science/ Friedland, New York Times, April 2012]</ref> The role of philosophy is also a philosophical question.<ref>Philosophy: The Journal of the Royal Institute of Philosophy, 81(316), 189–207. 19 p./ Priest, Graham, April 2006]</ref> 
