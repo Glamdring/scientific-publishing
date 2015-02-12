@@ -828,6 +828,20 @@
 ** [[Psychological anthropology]] – interdisciplinary subfield of anthropology that studies the interaction of cultural and mental processes.
 ** [[Zooarchaeology]] – study of faunal remains.
 ** [[Anthrozoology]] – study of human-animal interaction.
+* [[Communication]]
+** [[Broadcast/Video Studies]]
+** [[Communication Technology and New Media]]
+** [[Critical and Cultural Studies]]
+** [[Gender, Race, Sexuality, and Ethnicity in Communication]]
+** [[Health Communication]]
+** [[International and Intercultural Communication]]
+** [[Interpersonal/Small Group Communication]]
+** [[Journalism Studies]]
+** [[Mass Communication]]
+** [[Organizational Communication]]
+** [[Public Relations/Advertising]]
+** [[Social Influence and Political Communication]]
+** [[Speech and Rhetorical Studies]]
 * [[Business studies]] – academic subject combining elements of accountancy, finance, marketing, organizational studies and economics
 * [[Civics]] – study of the theoretical and practical aspects of citizenship, its rights and duties; the duties of citizens to each other as members of a political body and to the government.
 * [[Cognitive Science]] – interdisciplinary scientific study of the mind and its processes. It examines what cognition is, what it does and how it works.
