@@ -792,7 +792,7 @@
 *** [[Systems engineering]] – interdisciplinary field of engineering focusing on how complex engineering projects should be designed and managed over their life cycles.
 *** [[Systems neuroscience]] – subdiscipline of neuroscience and systems biology that studies the function of neural circuits and systems.
 *** [[Systems psychology]] – branch of applied psychology that studies human behaviour and experience in complex systems.
-Social sciences
+[[Social sciences]]
 * [[Anthropology]] - study of humans, past and present, that draws and builds upon knowledge from the social sciences and biological sciences, as well as the humanities and the natural sciences.
 ** [[Anthropology of religion]] – study of religious institutions in relation to other social institutions, and the comparison of religious beliefs and practices across cultures
 ** [[Applied anthropology]] – application of the method and theory of anthropology to the analysis and solution of practical problems.
@@ -935,69 +935,9 @@ Social sciences
 *** [[Palaeogeography]] – study of what the geography was in times past.
 ** [[Regional geography]] – study of world regions.
 * [[Gerontology]] – study of the social, psychological and biological aspects of aging.
-* [[History]] – discovery, collection, organization, and presentation of information about past events. History can also mean the period of time after writing was invented.
-** [[Archaeology]] – study of past human cultures through the recovery, documentation and analysis of material remains and environmental data
-** [[Archontology]] – study of historical offices and important positions in state, international, political, religious and other organizations and societies
-** [[Art history]] – the study of changes in and social context of art
-** [[Chronology]] – locating events in time
-*** [[Cultural history]] – the study of culture in the past
-** [[History of science]] – the study of the emergence and development of scientific inquiry
-** [[Economic history]] – the study of economies in the past
-** [[Environmental history]] – study of natural history and the human relationship with the natural world
-** [[Futurology]] – study of the future: researches the medium to long-term future of societies and of the physical world
-** [[History painting]] – the painting of works of art having historical motifs or depicting great events
-** [[Military history]] – the study of warfare and wars in history
-** [[Natural history]] – history of the natural world, now usually referred to as science
-** [[Naval history]] – the branch of military history devoted to warfare at sea or in bodies of water
-** [[Paleography]] – the study of ancient texts
-** [[Political history]] – the study of past political events, ideas, movements, and leaders
-** [[Public history]] – the presentation of history to public audiences and other areas typically outside academia
-** [[Psychohistory]] – study of the psychological motivations of historical events
-** [[Social history]] – the study of societies and social trends in the past
-** [[Urban history]] - the historical nature of cities and towns, and the process of urbanization
-** [[World history]] – the study of global historical trends and dynamics
 * [[Industrial relations]] – multidisciplinary field that studies the employment relationship.
 * [[Information science]] –  interdisciplinary field primarily concerned with the analysis, collection, classification, manipulation, storage, retrieval and dissemination of information.
 * [[International studies]] – study of the major political, economic, social, cultural and sacral issues that dominate the international agenda
-* [[Law]] – set of rules and principles (laws) by which a society is governed, through enforcement by governmental authorities.
-** [[Substantive law and adjectival law]]
-*** [[Substantive law]]
-*** [[Procedural law]]
-** [[Criminal law]]
-*** [[Criminal law]] (penal law)
-*** [[Criminal procedure]]
-** [[Civil law]]
-*** [[Civil law (common law)]]
-*** [[Civil procedure]]
-*** [[Civil rights]]
-*** [[Common law]]
-*** [[Environmental law]]
-*** [[Family law]]
-** [[Administrative law]]
-*** [[Administrative law]]
-*** [[Code of Federal Regulations]]
-** [[Religious Law]]
-*** [[Canon law]]
-**** [[Canon law (Catholic Church)]]
-***** [[Apostolic constitution]]
-***** [[Papal rescript]]
-*** [[Sharia law]]
-** [[Laws by scope]]
-*** [[International law]]
-**** [[Public international law]]
-**** [[Conflict of laws]] (private international law)
-***** [[Dualism (law)]]
-***** [[Legal pluralism]]
-**** [[Supranational law]]
-**** [[Law of the European Union]]
-***** [[Treaties of the European Union]]
-***** [[Regulation (European Union)]]
-***** [[Directive (European Union)]]
-***** [[European Union decision]]
-***** [[European Union legislative procedure]]
-*** [[Federal law]] (national law)
-*** [[State law]]
-*** [[Local ordinance]]
 * [[Legal management]] – social sciences discipline that is designed for students interested in the study of State and its elements, Law, Law Practice, Legal Research and Jurisprudence, legal Philosophy, Criminal Justice, Governance, Government structure, Political history and theories, Business Organization and Management, Entrepreneurship, Public Administration and Human Resource Development.
 ** [[Paralegal studies]] – social sciences discipline that is designed for students interested in the study of State and its elements, Law, Law Practice, Legal Research and Jurisprudence, legal Philosophy, Criminal Justice, Governance, Government structure, Political history and theories, Business Organization and Management, Entrepreneurship, Public Administration and Human Resource Development.
 * [[Library science]] – study of issues related to libraries and the information fields.
@@ -1069,6 +1009,266 @@ Social sciences
 ** [[Corpus linguistics]]
 * [[Media studies]] – academic discipline and field of study that deals with the content, history and effects of various media; in particular, the 'mass media'.
 ** [[Communication studies]] – academic field that deals with processes of human communication, commonly defined as the sharing of symbols to create meaning.
+* [[Political science]] – social science discipline concerned with the study of the state, government, and politics.
+** [[Comparative politics]] – field and a method used in political science, characterized by an empirical approach based on the comparative method.
+** [[Game theory]] – study of strategic decision making.
+** [[Geopolitics]] – theory that describes the relation between politics and territory whether on local or international scale.
+*** [[political geography]] –  field of human geography that is concerned with the study of both the spatially uneven outcomes of political processes and the ways in which political processes are themselves affected by spatial structures.
+** [[Ideology]] – set of ideas that constitute one's goals, expectations, and actions.
+** [[Political economy]] – Political economy originally was the term for studying production, buying, and selling, and their relations with law, custom, and government, as well as with the distribution of national income and wealth, including through the budget process. Political economy originated in moral philosophy. It developed in the 18th century as the study of the economies of states, polities, hence political economy.
+** [[Political psychology]], bureaucratic, administrative and judicial behaviour –
+** [[Psephology]] – branch of political science which deals with the study and scientific analysis of elections.
+** [[Voting systems]] – methods by which voters make a choice between options, often in an election or on a policy referendum.
+** [[Public administration]] – houses the implementation of government policy and an academic discipline that studies this implementation and that prepares civil servants for this work.
+*** [[Public policy]] – generally the principled guide to action taken by the administrative or executive branches of the state with regard to a class of issues in a manner consistent with law and institutional customs.
+*** [[Local government studies]] – form of public administration which in a majority of contexts, exists as the lowest tier of administration within the a given state.
+*** [[International politics]] – study of relationships between countries, including the roles of states, inter-governmental organizations (IGOs), international nongovernmental organizations (INGOs), non-governmental organizations (NGOs) and multinational corporations (MNCs).
+** [[International relations theory]] – study of international relations from a theoretical perspective; it attempts to provide a conceptual framework upon which international relations can be analyzed.
+** [[Political theory]]
+* [[Psychology]] – science of behavior and mental processes
+** [[Applied psychology]] – use of psychological principles and theories to overcome problems in other areas, such as mental health, business management, education, health, product design, ergonomics, and law.
+*** [[Psychological testing]] – field characterized by the use of samples of behavior in order to assess psychological construct(s), such as cognitive and emotional functioning, about a given individual.
+*** [[Clinical psychology]] – integration of science, theory and clinical knowledge for the purpose of understanding, preventing, and relieving psychologically based distress or dysfunction and to promote subjective well-being and personal development.
+*** [[Community psychology]] – Sense of community Social capital
+*** [[Consumer behaviour]] – study of when, why, how, and where people do or do not buy a product.
+*** [[Counseling psychology]] – psychological specialty that encompasses research and applied work in several broad domains: counseling process and outcome; supervision and training; career development and counseling; and prevention and health.
+*** [[Educational psychology]] – study of how humans learn in educational settings, the effectiveness of educational interventions, the psychology of teaching, and the social psychology of schools as organizations.
+*** [[Forensic psychology]] – intersection between psychology and the courtroom—criminal, civil, family and Federal.
+*** [[Health psychology]] – concerned with understanding how biological, psychological, environmental, and cultural factors are involved in physical health and illness.
+*** [[Industrial and organizational psychology]] – scientific study of employees, workplaces, and organizations.
+*** [[Legal psychology]] – involves empirical, psychological research of the law, legal institutions, and people who come into contact with the law.
+*** [[Media psychology]] – seeks an understanding of how people perceive, interpret, use, and respond to a media-rich world.
+*** [[Military psychology]] – research, design and application of psychological theories and experimentation data towards understanding, predicting and countering behaviours either in friendly or enemy forces or civilian population that may be undesirable, threatening or potentially dangerous to the conduct of military operations.
+*** [[Occupational health psychology]] – concerned with the psychosocial characteristics of workplaces that contribute to the development of health-related problems in people who work.
+*** [[Pastoral psychology]] – application of psychological methods and interpretive frameworks to religious traditions, as well as to both religious and irreligious individuals.
+*** [[Political psychology]] – interdisciplinary academic field dedicated to understanding political science, politicians and political behavior through the use of psychological theories.
+*** [[Psychometrics]] – field of study concerned with the theory and technique of psychological measurement, which includes the measurement of knowledge, abilities, attitudes, personality traits, and educational measurement.
+*** [[School psychology]] – field that applies principles of clinical psychology and educational psychology to the diagnosis and treatment of children's and adolescents' behavioral and learning problems.
+*** [[Sport psychology]] – interdisciplinary science that draws on knowledge from the fields of Kinesiology and Psychology.
+*** [[Systems psychology]] – branch of applied psychology that studies human behaviour and experience in complex systems.
+*** [[Traffic psychology]] – study of the behavior of road users and the psychological processes underlying that behavior (Rothengatter, 1997, 223) as well as to the relationship between behavior and accidents
+** [[Behavior analysis]] – philosophy of psychology based on the proposition that all things that organisms do can and should be regarded as behaviors, and that psychological disorders are best treated by altering behavior patterns or modifying the environment.
+** [[Biopsychology]] – application of the principles of biology (in particular neurobiology), to the study of physiological, genetic, and developmental mechanisms of behavior in human and non-human animals.
+** [[Cognitive psychology]] – subdiscipline of psychology exploring internal mental processes.
+** [[Clinical psychology]] – integration of science, theory and clinical knowledge for the purpose of understanding, preventing, and relieving psychologically based distress or dysfunction and to promote subjective well-being and personal development.
+** [[Cultural psychology]] – field of psychology which assumes the idea that culture and mind are inseparable, and that psychological theories grounded in one culture are likely to be limited in applicability when applied to a different culture.
+** [[Developmental psychology]] – scientific study of systematic psychological changes, emotional changes, and perception changes that occur in human beings over the course of their life span.
+** [[Educational psychology]] – study of how humans learn in educational settings, the effectiveness of educational interventions, the psychology of teaching, and the social psychology of schools as organizations.
+** [[Evolutionary psychology]] – approach in the social and natural sciences that examines psychological traits such as memory, perception, and language from a modern evolutionary perspective.
+** [[Experimental psychology]] – application of experimental methods to the study of behavior and the processes that underlie it.
+** [[Forensic psychology]] – intersection between psychology and the courtroom—criminal, civil, family and Federal.
+** [[Health psychology]] – concerned with understanding how biological, psychological, environmental, and cultural factors are involved in physical health and illness.
+** [[Humanistic psychology]] – psychological perspective which rose to prominence in the mid-20th century in the context of the tertiary sector beginning to produce in the most developed countries in the world more than the secondary sector was producing, for the first time in human history demanding creativity and new understanding of human capital.
+** [[Industrial and organizational psychology]] – scientific study of employees, workplaces, and organizations.
+** [[Music therapy]] – allied health profession and one of the expressive therapies, consisting of an interpersonal process in which a trained music therapist uses music to help clients to improve or maintain their health.
+** [[Neuropsychology]] – studies the structure and function of the brain as they relate to specific psychological processes and behaviors.
+** [[Personality psychology]] – branch of psychology that studies personality and individual differences.
+** [[Psychometrics]] – field of study concerned with the theory and technique of psychological measurement, which includes the measurement of knowledge, abilities, attitudes, personality traits, and educational measurement.
+** [[Psychology of religion]] – application of psychological methods and interpretive frameworks to religious traditions, as well as to both religious and irreligious individuals.
+** [[Psychophysics]] – quantitatively investigates the relationship between physical stimuli and the sensations and perceptions they affect.
+** [[Sensation and perception psychology]] –
+* [[Public administration]] – houses the implementation of government policy and an academic discipline that studies this implementation and that prepares civil servants for this work.
+* [[Social work]] – professional and academic discipline that seeks to improve the quality of life and wellbeing of an individual, group, or community by intervening through research, policy, community organizing, direct practice, and teaching on behalf of those afflicted with poverty or any real or perceived social injustices and violations of their human rights.
+* [[Sociology]] – studies society using various methods of empirical investigation and critical analysis to understand human social activity, from the micro level of individual agency and interaction to the macro level of systems and social structure.
+** [[Analytical sociology]]
+** [[Applied sociology]]
+** [[Architectural sociology]]
+** [[Behavioral sociology]]
+** [[Chinese sociology]]
+** [[Collective behavior]]
+** [[Comparative sociology]]
+** [[Computational sociology]]
+** [[Critical sociology]]
+** [[Cultural sociology]]
+** [[Dramaturgical sociology]]
+** [[Economic sociology]]
+** [[Educational sociology]]
+** [[Empirical sociology]]
+** [[Environmental sociology]]
+** [[Evolutionary sociology]]
+** [[Feminist sociology]]
+** [[Figurational sociology]]
+** [[Historical sociology]]
+** [[Humanistic sociology]]
+** [[Industrial sociology]]
+** [[Internet sociology]]
+** [[Interpretive sociology]]
+** [[Jealousy sociology]]
+** [[Macrosociology]]
+** [[Marxist sociology]]
+** [[Mathematical sociology]]
+** [[Medical sociology]]
+** [[Mesosociology]]
+** [[Microsociology]]
+** [[Military sociology]]
+** [[Natural resource sociology]]
+** [[Phenomenological sociology]]
+** [[Policy sociology]]
+** [[Polish sociology]]
+** [[Political sociology]]
+** [[Psychoanalytic sociology]]
+** [[Public sociology]]
+** [[Pure sociology]]
+** [[Rural sociology]]
+** [[Social inequality]]
+** [[Social psychology (sociology)]]
+** [[Sociology of aging]]
+** [[Sociology of agriculture]]
+** [[Sociology of architecture]]
+** [[Sociology of art]]
+** [[Sociology of autism]]
+** [[Sociology of childhood]]
+** [[Sociology of conflict]]
+** [[Sociology of culture]]
+** [[Sociology of cyberspace]]
+** [[Sociology of deviance]]
+** [[Sociology of development]]
+** [[Sociology of disaster]]
+** [[Sociology of education]]
+** [[Sociology of emotions]]
+** [[Sociology of the family]]
+** [[Sociology of fatherhood]]
+** [[Sociology of film]]
+** [[Sociology of finance]]
+** [[Sociology of food]]
+** [[Sociology of gender]]
+** [[Sociology of generations]]
+** [[Sociology of globalization]]
+** [[Sociology of government]]
+** [[Sociology of health and illness]]
+** [[Sociology of human consciousness]]
+** [[Sociology of immigration]]
+** [[Sociology of knowledge]]
+** [[Sociology of language]]
+** [[Sociology of law]]
+** [[Sociology of leisure]]
+** [[Sociology of literature]]
+** [[Sociology of markets]]
+** [[Sociology of marriage]]
+** [[Sociology of motherhood]]
+** [[Sociology of music]]
+** [[Sociology of organizations]]
+** [[Sociology of peace, war, and social conflict]]
+** [[Sociology of punishment]]
+** [[Sociology of race and ethnic relations]]
+** [[Sociology of religion]]
+** [[Sociology of risk]]
+** [[Sociology of science]]
+** [[Sociology of scientific knowledge]]
+** [[Sociology of social change]]
+** [[Sociology of social movements]]
+** [[Sociology of space]]
+** [[Sociology of sport]]
+** [[Sociology of technology]]
+** [[Sociology of terrorism]]
+** [[Sociology of the body]]
+** [[Sociology of the family]]
+** [[Sociology of the history of science]]
+** [[Sociology of the Internet]]
+** [[Sociology of work]]
+** [[Sociography]]
+** [[Structural sociology]]
+** [[Theoretical sociology]]
+** [[Urban sociology]]
+** [[Visual sociology]]}}
+** [[Agnotology]]
+** [[Agrarian studies]]
+** [[Anthrozoology]]
+** [[Area studies]]
+** [[Behavioral economics]]
+** [[Communication studies]]
+** [[Community informatics]]
+** [[Criminology]]
+** [[Cultural studies]]
+** [[Demography]]
+** [[Development studies]]
+** [[Disability studies]]
+** [[Environmental studies]]
+** [[Food studies]]
+** [[Gender studies]]
+** [[Geodemography]]
+** [[Global studies]]
+** [[Gerontology]]
+** [[Human ecology]]
+** [[Political ecology]]
+** [[Science studies]]
+** [[Science, technology and society]]
+** [[Social architecture]]
+** [[Social epistemology]]
+** [[Social geography]]
+** [[Social informatics]]
+** [[Social philosophy]]
+** [[Social studies of finance]]
+** [[Social theory]]
+** [[Sociobiology]]
+** [[Sociomapping]]
+** [[Sociometry]]
+** [[Sociomusicology]]
+** [[Systems theory]]
+** [[Urban studies]]
+** [[Victimology]]
+** [[World-systems theory]]
+[[Humanities and arts]]
+* [[History]] – discovery, collection, organization, and presentation of information about past events. History can also mean the period of time after writing was invented.
+** [[Archaeology]] – study of past human cultures through the recovery, documentation and analysis of material remains and environmental data
+** [[Archontology]] – study of historical offices and important positions in state, international, political, religious and other organizations and societies
+** [[Art history]] – the study of changes in and social context of art
+** [[Chronology]] – locating events in time
+*** [[Cultural history]] – the study of culture in the past
+** [[History of science]] – the study of the emergence and development of scientific inquiry
+** [[Economic history]] – the study of economies in the past
+** [[Environmental history]] – study of natural history and the human relationship with the natural world
+** [[Futurology]] – study of the future: researches the medium to long-term future of societies and of the physical world
+** [[History painting]] – the painting of works of art having historical motifs or depicting great events
+** [[Military history]] – the study of warfare and wars in history
+** [[Natural history]] – history of the natural world, now usually referred to as science
+** [[Naval history]] – the branch of military history devoted to warfare at sea or in bodies of water
+** [[Paleography]] – the study of ancient texts
+** [[Political history]] – the study of past political events, ideas, movements, and leaders
+** [[Public history]] – the presentation of history to public audiences and other areas typically outside academia
+** [[Psychohistory]] – study of the psychological motivations of historical events
+** [[Social history]] – the study of societies and social trends in the past
+** [[Urban history]] - the historical nature of cities and towns, and the process of urbanization
+** [[World history]] – the study of global historical trends and dynamics
+* [[Law]] – set of rules and principles (laws) by which a society is governed, through enforcement by governmental authorities.
+** [[Substantive law and adjectival law]]
+*** [[Substantive law]]
+*** [[Procedural law]]
+** [[Criminal law]]
+*** [[Criminal law]] (penal law)
+*** [[Criminal procedure]]
+** [[Civil law]]
+*** [[Civil law (common law)]]
+*** [[Civil procedure]]
+*** [[Civil rights]]
+*** [[Common law]]
+*** [[Environmental law]]
+*** [[Family law]]
+** [[Administrative law]]
+*** [[Administrative law]]
+*** [[Code of Federal Regulations]]
+** [[Religious Law]]
+*** [[Canon law]]
+**** [[Canon law (Catholic Church)]]
+***** [[Apostolic constitution]]
+***** [[Papal rescript]]
+*** [[Sharia law]]
+** [[Laws by scope]]
+*** [[International law]]
+**** [[Public international law]]
+**** [[Conflict of laws]] (private international law)
+***** [[Dualism (law)]]
+***** [[Legal pluralism]]
+**** [[Supranational law]]
+**** [[Law of the European Union]]
+***** [[Treaties of the European Union]]
+***** [[Regulation (European Union)]]
+***** [[Directive (European Union)]]
+***** [[European Union decision]]
+***** [[European Union legislative procedure]]
+*** [[Federal law]] (national law)
+*** [[State law]]
+*** [[Local ordinance]]
 * [[Philosophy]] – study of general and fundamental problems concerning matters such as existence, knowledge, values, reason, mind, and language. Academic philosophy is considered a science by some.<ref>[http://opinionator.blogs.nytimes.com/2012/03/04/philosophy-by-another-name/ COLIN MCGINN, New York Times, March 2012]</ref> Others say that philosophy is not a science but it is instead a precursor of it.<ref>[http://opinionator.blogs.nytimes.com/2012/04/05/philosophy-is-not-a-science/ Friedland, New York Times, April 2012]</ref> The role of philosophy is also a philosophical question.<ref>Philosophy: The Journal of the Royal Institute of Philosophy, 81(316), 189–207. 19 p./ Priest, Graham, April 2006]</ref>
 ** [[Aesthetics]]
 *** [[Symbolism (arts)]]
@@ -1407,205 +1607,46 @@ practices of various schools of thought.
 ** [[Social philosophy]] – is the study of questions about social behavior and interpretations of society and social institutions in terms of ethical values rather than empirical relations.
 ** [[Philosophy of mathematics]] –  is the branch of philosophy that studies the philosophical assumptions, foundations, and implications of mathematics. The aim of the philosophy of mathematics is to provide an account of the nature and methodology of mathematics and to understand the place of mathematics in people's lives. 
 ** [[Philosophy of education]] –  Philosophy of education can refer to either the academic field of applied philosophy or to one of any educational philosophies that promote a specific type or vision of education, and/or which examine the definition, goals and meaning of education.
-* [[Political science]] – social science discipline concerned with the study of the state, government, and politics.
-** [[Comparative politics]] – field and a method used in political science, characterized by an empirical approach based on the comparative method.
-** [[Game theory]] – study of strategic decision making.
-** [[Geopolitics]] – theory that describes the relation between politics and territory whether on local or international scale.
-*** [[political geography]] –  field of human geography that is concerned with the study of both the spatially uneven outcomes of political processes and the ways in which political processes are themselves affected by spatial structures.
-** [[Ideology]] – set of ideas that constitute one's goals, expectations, and actions.
-** [[Political economy]] – Political economy originally was the term for studying production, buying, and selling, and their relations with law, custom, and government, as well as with the distribution of national income and wealth, including through the budget process. Political economy originated in moral philosophy. It developed in the 18th century as the study of the economies of states, polities, hence political economy.
-** [[Political psychology]], bureaucratic, administrative and judicial behaviour –
-** [[Psephology]] – branch of political science which deals with the study and scientific analysis of elections.
-** [[Voting systems]] – methods by which voters make a choice between options, often in an election or on a policy referendum.
-** [[Public administration]] – houses the implementation of government policy and an academic discipline that studies this implementation and that prepares civil servants for this work.
-*** [[Public policy]] – generally the principled guide to action taken by the administrative or executive branches of the state with regard to a class of issues in a manner consistent with law and institutional customs.
-*** [[Local government studies]] – form of public administration which in a majority of contexts, exists as the lowest tier of administration within the a given state.
-*** [[International politics]] – study of relationships between countries, including the roles of states, inter-governmental organizations (IGOs), international nongovernmental organizations (INGOs), non-governmental organizations (NGOs) and multinational corporations (MNCs).
-** [[International relations theory]] – study of international relations from a theoretical perspective; it attempts to provide a conceptual framework upon which international relations can be analyzed.
-** [[Political theory]]
-* [[Psychology]] – science of behavior and mental processes
-** [[Applied psychology]] – use of psychological principles and theories to overcome problems in other areas, such as mental health, business management, education, health, product design, ergonomics, and law.
-*** [[Psychological testing]] – field characterized by the use of samples of behavior in order to assess psychological construct(s), such as cognitive and emotional functioning, about a given individual.
-*** [[Clinical psychology]] – integration of science, theory and clinical knowledge for the purpose of understanding, preventing, and relieving psychologically based distress or dysfunction and to promote subjective well-being and personal development.
-*** [[Community psychology]] – Sense of community Social capital
-*** [[Consumer behaviour]] – study of when, why, how, and where people do or do not buy a product.
-*** [[Counseling psychology]] – psychological specialty that encompasses research and applied work in several broad domains: counseling process and outcome; supervision and training; career development and counseling; and prevention and health.
-*** [[Educational psychology]] – study of how humans learn in educational settings, the effectiveness of educational interventions, the psychology of teaching, and the social psychology of schools as organizations.
-*** [[Forensic psychology]] – intersection between psychology and the courtroom—criminal, civil, family and Federal.
-*** [[Health psychology]] – concerned with understanding how biological, psychological, environmental, and cultural factors are involved in physical health and illness.
-*** [[Industrial and organizational psychology]] – scientific study of employees, workplaces, and organizations.
-*** [[Legal psychology]] – involves empirical, psychological research of the law, legal institutions, and people who come into contact with the law.
-*** [[Media psychology]] – seeks an understanding of how people perceive, interpret, use, and respond to a media-rich world.
-*** [[Military psychology]] – research, design and application of psychological theories and experimentation data towards understanding, predicting and countering behaviours either in friendly or enemy forces or civilian population that may be undesirable, threatening or potentially dangerous to the conduct of military operations.
-*** [[Occupational health psychology]] – concerned with the psychosocial characteristics of workplaces that contribute to the development of health-related problems in people who work.
-*** [[Pastoral psychology]] – application of psychological methods and interpretive frameworks to religious traditions, as well as to both religious and irreligious individuals.
-*** [[Political psychology]] – interdisciplinary academic field dedicated to understanding political science, politicians and political behavior through the use of psychological theories.
-*** [[Psychometrics]] – field of study concerned with the theory and technique of psychological measurement, which includes the measurement of knowledge, abilities, attitudes, personality traits, and educational measurement.
-*** [[School psychology]] – field that applies principles of clinical psychology and educational psychology to the diagnosis and treatment of children's and adolescents' behavioral and learning problems.
-*** [[Sport psychology]] – interdisciplinary science that draws on knowledge from the fields of Kinesiology and Psychology.
-*** [[Systems psychology]] – branch of applied psychology that studies human behaviour and experience in complex systems.
-*** [[Traffic psychology]] – study of the behavior of road users and the psychological processes underlying that behavior (Rothengatter, 1997, 223) as well as to the relationship between behavior and accidents
-** [[Behavior analysis]] – philosophy of psychology based on the proposition that all things that organisms do can and should be regarded as behaviors, and that psychological disorders are best treated by altering behavior patterns or modifying the environment.
-** [[Biopsychology]] – application of the principles of biology (in particular neurobiology), to the study of physiological, genetic, and developmental mechanisms of behavior in human and non-human animals.
-** [[Cognitive psychology]] – subdiscipline of psychology exploring internal mental processes.
-** [[Clinical psychology]] – integration of science, theory and clinical knowledge for the purpose of understanding, preventing, and relieving psychologically based distress or dysfunction and to promote subjective well-being and personal development.
-** [[Cultural psychology]] – field of psychology which assumes the idea that culture and mind are inseparable, and that psychological theories grounded in one culture are likely to be limited in applicability when applied to a different culture.
-** [[Developmental psychology]] – scientific study of systematic psychological changes, emotional changes, and perception changes that occur in human beings over the course of their life span.
-** [[Educational psychology]] – study of how humans learn in educational settings, the effectiveness of educational interventions, the psychology of teaching, and the social psychology of schools as organizations.
-** [[Evolutionary psychology]] – approach in the social and natural sciences that examines psychological traits such as memory, perception, and language from a modern evolutionary perspective.
-** [[Experimental psychology]] – application of experimental methods to the study of behavior and the processes that underlie it.
-** [[Forensic psychology]] – intersection between psychology and the courtroom—criminal, civil, family and Federal.
-** [[Health psychology]] – concerned with understanding how biological, psychological, environmental, and cultural factors are involved in physical health and illness.
-** [[Humanistic psychology]] – psychological perspective which rose to prominence in the mid-20th century in the context of the tertiary sector beginning to produce in the most developed countries in the world more than the secondary sector was producing, for the first time in human history demanding creativity and new understanding of human capital.
-** [[Industrial and organizational psychology]] – scientific study of employees, workplaces, and organizations.
-** [[Music therapy]] – allied health profession and one of the expressive therapies, consisting of an interpersonal process in which a trained music therapist uses music to help clients to improve or maintain their health.
-** [[Neuropsychology]] – studies the structure and function of the brain as they relate to specific psychological processes and behaviors.
-** [[Personality psychology]] – branch of psychology that studies personality and individual differences.
-** [[Psychometrics]] – field of study concerned with the theory and technique of psychological measurement, which includes the measurement of knowledge, abilities, attitudes, personality traits, and educational measurement.
-** [[Psychology of religion]] – application of psychological methods and interpretive frameworks to religious traditions, as well as to both religious and irreligious individuals.
-** [[Psychophysics]] – quantitatively investigates the relationship between physical stimuli and the sensations and perceptions they affect.
-** [[Sensation and perception psychology]] –
-* [[Public administration]] – houses the implementation of government policy and an academic discipline that studies this implementation and that prepares civil servants for this work.
-* [[Social work]] – professional and academic discipline that seeks to improve the quality of life and wellbeing of an individual, group, or community by intervening through research, policy, community organizing, direct practice, and teaching on behalf of those afflicted with poverty or any real or perceived social injustices and violations of their human rights.
-* [[Sociology]] – studies society using various methods of empirical investigation and critical analysis to understand human social activity, from the micro level of individual agency and interaction to the macro level of systems and social structure.
-** [[Analytical sociology]]
-** [[Applied sociology]]
-** [[Architectural sociology]]
-** [[Behavioral sociology]]
-** [[Chinese sociology]]
-** [[Collective behavior]]
-** [[Comparative sociology]]
-** [[Computational sociology]]
-** [[Critical sociology]]
-** [[Cultural sociology]]
-** [[Dramaturgical sociology]]
-** [[Economic sociology]]
-** [[Educational sociology]]
-** [[Empirical sociology]]
-** [[Environmental sociology]]
-** [[Evolutionary sociology]]
-** [[Feminist sociology]]
-** [[Figurational sociology]]
-** [[Historical sociology]]
-** [[Humanistic sociology]]
-** [[Industrial sociology]]
-** [[Internet sociology]]
-** [[Interpretive sociology]]
-** [[Jealousy sociology]]
-** [[Macrosociology]]
-** [[Marxist sociology]]
-** [[Mathematical sociology]]
-** [[Medical sociology]]
-** [[Mesosociology]]
-** [[Microsociology]]
-** [[Military sociology]]
-** [[Natural resource sociology]]
-** [[Phenomenological sociology]]
-** [[Policy sociology]]
-** [[Polish sociology]]
-** [[Political sociology]]
-** [[Psychoanalytic sociology]]
-** [[Public sociology]]
-** [[Pure sociology]]
-** [[Rural sociology]]
-** [[Social inequality]]
-** [[Social psychology (sociology)]]
-** [[Sociology of aging]]
-** [[Sociology of agriculture]]
-** [[Sociology of architecture]]
-** [[Sociology of art]]
-** [[Sociology of autism]]
-** [[Sociology of childhood]]
-** [[Sociology of conflict]]
-** [[Sociology of culture]]
-** [[Sociology of cyberspace]]
-** [[Sociology of deviance]]
-** [[Sociology of development]]
-** [[Sociology of disaster]]
-** [[Sociology of education]]
-** [[Sociology of emotions]]
-** [[Sociology of the family]]
-** [[Sociology of fatherhood]]
-** [[Sociology of film]]
-** [[Sociology of finance]]
-** [[Sociology of food]]
-** [[Sociology of gender]]
-** [[Sociology of generations]]
-** [[Sociology of globalization]]
-** [[Sociology of government]]
-** [[Sociology of health and illness]]
-** [[Sociology of human consciousness]]
-** [[Sociology of immigration]]
-** [[Sociology of knowledge]]
-** [[Sociology of language]]
-** [[Sociology of law]]
-** [[Sociology of leisure]]
-** [[Sociology of literature]]
-** [[Sociology of markets]]
-** [[Sociology of marriage]]
-** [[Sociology of motherhood]]
-** [[Sociology of music]]
-** [[Sociology of organizations]]
-** [[Sociology of peace, war, and social conflict]]
-** [[Sociology of punishment]]
-** [[Sociology of race and ethnic relations]]
+* [[Classics]]
+** [[Ancient history]]
+** [[Ancient philosophy]]
+** [[Byzantine and Modern Greek]]
+** [[Classical archaeology and art history]]
+** [[Classical literature and philology]]
+** [[Indo-European linguistics and philology]]
+* [[Music]]
+** [[Music composition]]
+** [[Ethnomusicology]]
+** [[Musicology]]
+** [[Music Theory]]
+* [[Theater]]
+** [[Theatre History
+** [[Dramatic Literature, Criticism and Theory]]
+** [[Performance Studies]]
+** [[Playwriting]]
+* [[Literature]]
+* [[Religious studies and theology]]
+** [[Anthropology of religion]]
+** [[Comparative religion]]
+** [[History of religions]]
+** [[Philosophy of religion]]
+** [[Psychology of religion]]
 ** [[Sociology of religion]]
-** [[Sociology of risk]]
-** [[Sociology of science]]
-** [[Sociology of scientific knowledge]]
-** [[Sociology of social change]]
-** [[Sociology of social movements]]
-** [[Sociology of space]]
-** [[Sociology of sport]]
-** [[Sociology of technology]]
-** [[Sociology of terrorism]]
-** [[Sociology of the body]]
-** [[Sociology of the family]]
-** [[Sociology of the history of science]]
-** [[Sociology of the Internet]]
-** [[Sociology of work]]
-** [[Sociography]]
-** [[Structural sociology]]
-** [[Theoretical sociology]]
-** [[Urban sociology]]
-** [[Visual sociology]]}}
-** [[Agnotology]]
-** [[Agrarian studies]]
-** [[Anthrozoology]]
-** [[Area studies]]
-** [[Behavioral economics]]
-** [[Communication studies]]
-** [[Community informatics]]
-** [[Criminology]]
-** [[Cultural studies]]
-** [[Demography]]
-** [[Development studies]]
-** [[Disability studies]]
-** [[Environmental studies]]
-** [[Food studies]]
-** [[Gender studies]]
-** [[Geodemography]]
-** [[Global studies]]
-** [[Gerontology]]
-** [[Human ecology]]
-** [[Political ecology]]
-** [[Science studies]]
-** [[Science, technology and society]]
-** [[Social architecture]]
-** [[Social epistemology]]
-** [[Social geography]]
-** [[Social informatics]]
-** [[Social philosophy]]
-** [[Social studies of finance]]
-** [[Social theory]]
-** [[Sociobiology]]
-** [[Sociomapping]]
-** [[Sociometry]]
-** [[Sociomusicology]]
-** [[Systems theory]]
-** [[Urban studies]]
-** [[Victimology]]
-** [[World-systems theory]]
+* [[Film studies]]
+* [[History of Art, Architecture and Archaeology]]
+** [[American Art and Architecture]]
+** [[Ancient, Medieval, Renaissance and Baroque Art and Architecture]]
+** [[Asian Art and Architecture]]
+** [[Contemporary Art]]
+** [[Modern Art and Architecture]]
+* [[Language, Societies, and Cultures]]
+** [[African Languages and Societies]]
+** [[East Asian Languages and Societies]]
+** [[European Languages and Societies (not elsewhere classified)]]
+** [[Latin American Languages and Societies (not elsewhere classified]]
+** [[Near Eastern Languages and Societies]]
+** [[Slavic Languages and Societies]]
+** [[South and Southeast Asian Languages and Societies]]
 [[Applied sciences]]
 * [[Agronomy]] – science and technology of producing and using plants for food, fuel, feed, fiber, and reclamation.
 ** [[Animal husbandry]] – agricultural practice of breeding and raising livestock.
