@@ -509,11 +509,11 @@
 **** [[Symbolic artificial intelligence]]
 **** [[Good Old Fashioned AI]]
 *** [[Sub-symbolic]]
-**** [[Artificial intelligence#Cybernetics and brain simulation|Early cybernetics and brain simulation]]
+**** [[Cybernetics and brain simulation]]
 **** [[Behavior based AI]]
 ***** [[Subsumption architecture]]
 **** [[Nouvelle AI]]
-**** [[Computational intelligence|Computational intelligence (CI)]]
+**** [[Computational intelligence]]
 ***** [[Computational creativity]]
 ***** [[Neural networks]]
 ****** [[Hybrid neural network]]
@@ -931,7 +931,7 @@ Social sciences
 *** [[Glaciology]] – study of glaciers, or more generally ice and natural phenomena that involve ice.
 *** [[Limnology]] – study of inland waters.
 *** [[Oceanography]] – branch of Earth science that studies the ocean.
-*** [[Pedology (soil study)|Pedology]] – study of soils in their natural environment.
+*** [[Pedology (soil study)]] – study of soils in their natural environment.
 *** [[Palaeogeography]] – study of what the geography was in times past.
 ** [[Regional geography]] – study of world regions.
 * [[Gerontology]] – study of the social, psychological and biological aspects of aging.
@@ -1016,9 +1016,9 @@ Social sciences
 *** [[Quantitative linguistics]]
 *** [[Phonology]]
 **** [[Graphemics]]
-*** [[Morphology (linguistics)|Morphology]]
+*** [[Morphology (linguistics)]]
 *** [[Syntax]]
-*** [[Lexis (linguistics)|Lexis]]
+*** [[Lexis (linguistics)]]
 *** [[Semantics]]
 **** [[Phraseology]] – study of set or fixed expressions, such as idioms, phrasal verbs, and other types of multi-word lexical units (often collectively referred to as phrasemes), in which the component parts of the expression take on a meaning more specific than or otherwise not predictable from the sum of their meanings when used independently.
 *** [[Pragmatics]]
@@ -1067,75 +1067,6 @@ Social sciences
 ** [[Philology]] – study of language in written historical sources; it is a combination of literary studies, history and linguistics.
 ** [[Speech science]] – Speech science refers to the study of production, transmission and perception of speech. Speech science involves anatomy, in particular the anatomy of the oro-facial region and neuroanatomy, physiology, and acoustics.
 ** [[Corpus linguistics]]
-* [[Management]] – act of getting people together to accomplish desired goals and objectives using available resources efficiently and effectively.
-** [[Self-management]]
-*** [[Personal information management]]
-*** [[Personal knowledge management]]
-*** [[Stress management]]
-*** [[Time management]]
-*** [[Attention management]]
-*** [[Task management]]
-*** [[Personal finance]]
-** [[General organization management]]
-*** Administration
-*** [[Agile management]]
-*** [[Asset management]]
-*** [[Change management]]
-*** [[Conflict management]]
-*** [[Conflict resolution]]
-*** [[Constraint management]]
-**** [[Theory of Constraints]]
-**** [[Focused improvement]]
-*** [[Cost management]]
-*** [[Crisis management]]
-*** [[Critical management studies]] (CMS)
-*** [[Customer relationship management]]
-*** [[Data management]]
-*** [[Design management]]
-*** [[Earned value management]]
-*** [[Human interaction management]]
-*** [[Integration management]]
-*** [[Interim Management]]
-*** [[Knowledge management]]
-*** [[Logistics management]]
-*** [[Operations management]]
-*** [[Organization development]]
-*** [[Perception management]]
-*** [[Planning (management)]]
-*** [[Process management]]
-*** [[Program management]]
-*** [[Project management]]
-*** [[Quality management]]
-*** [[Requirements management]]
-*** [[Resource management]]
-*** [[Risk management]]
-*** [[Skills management]]
-*** [[Spend management]]
-*** [[Strategic management]]
-*** [[Strategic planning]]
-*** [[Systems management]]
-** [[Department management]]
-*** [[Accounting management]]
-*** [[Communication management]]
-*** [[Engineering management]]
-*** [[Enterprise content management]]
-*** [[Finance|Financial management]]
-*** [[Human resource management]]
-*** [[Information technology management]]
-*** [[Marketing management]]
-*** [[Procurement]]
-*** [[Product management]]
-*** [[Records Management]]
-*** [[Supply chain management]]
-** [[Field-specific management]]
-*** [[Association management]]
-*** [[Educational leadership|Educational management]]
-*** [[Facility management]]
-*** [[Investment management]]
-*** [[Land management]]
-*** [[Public administration]]
-*** [[Public management]]
-*** [[Talent manager|Talent management]]
 * [[Media studies]] – academic discipline and field of study that deals with the content, history and effects of various media; in particular, the 'mass media'.
 ** [[Communication studies]] – academic field that deals with processes of human communication, commonly defined as the sharing of symbols to create meaning.
 * [[Philosophy]] – study of general and fundamental problems concerning matters such as existence, knowledge, values, reason, mind, and language. Academic philosophy is considered a science by some.<ref>[http://opinionator.blogs.nytimes.com/2012/03/04/philosophy-by-another-name/ COLIN MCGINN, New York Times, March 2012]</ref> Others say that philosophy is not a science but it is instead a precursor of it.<ref>[http://opinionator.blogs.nytimes.com/2012/04/05/philosophy-is-not-a-science/ Friedland, New York Times, April 2012]</ref> The role of philosophy is also a philosophical question.<ref>Philosophy: The Journal of the Royal Institute of Philosophy, 81(316), 189–207. 19 p./ Priest, Graham, April 2006]</ref>
@@ -1180,7 +1111,7 @@ Social sciences
 *** [[Virtue ethics]]
 *** [[Ethics of care]]
 *** [[Applied ethics]]
-**** Economics and business
+**** [[Economics and business]]
 ***** [[Business ethics]] – concerns questions such as the limits on managers in the pursuit of profit, or the duty of 'whistleblowers' to the general public as opposed to their employers.
 ***** [[Development ethics]] (economic development)
 ***** [[Ethics in management]]
@@ -1481,14 +1412,14 @@ practices of various schools of thought.
 ** [[Game theory]] – study of strategic decision making.
 ** [[Geopolitics]] – theory that describes the relation between politics and territory whether on local or international scale.
 *** [[political geography]] –  field of human geography that is concerned with the study of both the spatially uneven outcomes of political processes and the ways in which political processes are themselves affected by spatial structures.
-** Ideology – set of ideas that constitute one's goals, expectations, and actions.
+** [[Ideology]] – set of ideas that constitute one's goals, expectations, and actions.
 ** [[Political economy]] – Political economy originally was the term for studying production, buying, and selling, and their relations with law, custom, and government, as well as with the distribution of national income and wealth, including through the budget process. Political economy originated in moral philosophy. It developed in the 18th century as the study of the economies of states, polities, hence political economy.
 ** [[Political psychology]], bureaucratic, administrative and judicial behaviour –
 ** [[Psephology]] – branch of political science which deals with the study and scientific analysis of elections.
 ** [[Voting systems]] – methods by which voters make a choice between options, often in an election or on a policy referendum.
 ** [[Public administration]] – houses the implementation of government policy and an academic discipline that studies this implementation and that prepares civil servants for this work.
 *** [[Public policy]] – generally the principled guide to action taken by the administrative or executive branches of the state with regard to a class of issues in a manner consistent with law and institutional customs.
-*** Local government studies – form of public administration which in a majority of contexts, exists as the lowest tier of administration within the a given state.
+*** [[Local government studies]] – form of public administration which in a majority of contexts, exists as the lowest tier of administration within the a given state.
 *** [[International politics]] – study of relationships between countries, including the roles of states, inter-governmental organizations (IGOs), international nongovernmental organizations (INGOs), non-governmental organizations (NGOs) and multinational corporations (MNCs).
 ** [[International relations theory]] – study of international relations from a theoretical perspective; it attempts to provide a conceptual framework upon which international relations can be analyzed.
 ** [[Political theory]]
@@ -1783,7 +1714,7 @@ practices of various schools of thought.
 *** [[Sewage engineering]]
 *** [[Structural engineering]]
 *** [[Surveying]]
-*** [[Traffic engineering (transportation)|Traffic engineering]]
+*** [[Traffic engineering]]
 *** [[Transportation engineering]] (transport engineering)
 *** [[Urban engineering]] (Municipal engineering)
 ** [[Electrical engineering]]
@@ -1821,7 +1752,7 @@ practices of various schools of thought.
 *** [[Performance engineering]]
 *** [[Process engineering]]- also appears under chemical engineering
 *** [[Product Family Engineering]]
-*** [[Quality assurance|Quality engineering]] (quality assurance engineering)
+*** [[Quality engineering]] (quality assurance engineering)
 *** [[Reliability engineering]]
 *** [[Safety engineering]]
 *** [[Security engineering]]
@@ -1852,19 +1783,19 @@ practices of various schools of thought.
 *** [[Building services engineering]]
 *** [[Earthquake engineering]]
 *** [[Forensic engineering]]
-*** [[Naval architecture|Marine engineering]]
+*** [[Naval architecture]]
 *** [[Mechatronics]]
 *** [[Nanoengineering]]
 *** [[Naval architecture]]
 *** [[Sports engineering]]
 *** [[Structural engineering]]
 *** [[Vacuum engineering]]
-** [[Mechatronics|Mechatronic engineering]]
+** [[Mechatronic engineering]]
 ** [[Military engineering]]
 *** [[Combat engineering]]
 ** [[Nuclear engineering]]
 ** [[Instrumentation engineering]]
-** [[Offshore construction|Offshore engineering]]
+** [[Offshore construction]]
 ** [[Optical engineering]]
 ** [[Petroleum engineering]]
 *** [[Geophysical engineering]]
@@ -1886,31 +1817,88 @@ practices of various schools of thought.
 ** [[Sports engineering]]
 ** [[Systems engineering]]
 ** [[Textile engineering]]
-* [[Outline of health science|Health science]] – application of science, technology, engineering or mathematics to the delivery of healthcare
+* [[Health science]] – application of science, technology, engineering or mathematics to the delivery of healthcare
 ** [[Conservation medicine]] – emerging, interdisciplinary field that studies the relationship between human and animal health, and environmental conditions.
-** [[Outline of dentistry and oral health|Dentistry]] – branch of medicine that is involved in the study, diagnosis, prevention, and treatment of diseases, disorders and conditions of the oral cavity, maxillofacial area and the adjacent and associated structures and their impact on the human body.
+** [[Dentistry]] – branch of medicine that is involved in the study, diagnosis, prevention, and treatment of diseases, disorders and conditions of the oral cavity, maxillofacial area and the adjacent and associated structures and their impact on the human body.
+*** [[Endodontics
+*** [[Orthodontics
+*** [[Minimal intervention dentistry
+*** [[Prosthodontics
+*** [[Pediatric dentistry
+*** [[Preventive dentistry
+*** [[Periodontics
+*** [[Oral and maxillofacial surgery
+*** [[Dento-maxillofacial radiology
+*** [[Oral pathology
+*** [[Oral medicine
 ** [[Optometry]] – health care profession concerned with the health of the eyes and related structures, as well as vision, visual systems, and vision information processing in humans.
-** [[Outline of medicine|Medicine]] – science of healing.
+** [[Medicine]] – science of healing.
 *** [[Anatomy]] – branch of biology and medicine that is the consideration of the structure of living things.
-**** [[Outline of human anatomy|Human anatomy]] – scientific study of the morphology of the adult human.
+**** [[Human anatomy]] – scientific study of the morphology of the adult human.
+**** [[Gross anatomy]]
+**** [[Microscopic anatomy]]
+***** [[Cytology]]
+***** [[Histology]]
 *** [[Dermatology]] – branch of medicine dealing with the skin and its diseases, a unique specialty with both medical and surgical aspects.
 *** [[Cardiology]] – medical specialty dealing with disorders of the heart (specifically the human heart).
+*** [[Critical care medicine]]
 *** [[Endocrinology]] - medical specialty dealing with the endocrine system, its diseases, and its specific secretions (hormones), and the interactions of these with all aspects of bodily functioning
 *** [[Gastroenterology]] – branch of medicine whereby the digestive system and its disorders are studied.
 *** [[Gynecology]] – medical practice dealing with the health of the female reproductive system (uterus, vagina, and ovaries).
-*** [[Outline of immunology|Immunology]] – study of the immune system.
+*** [[General practice (medicine)]]
+*** [[Geriatrics]] - branch of medicine that deals with the general health and well-being of the [[elderly]].
+*** [[Hematology]]  branch of medicine that deals with the [[blood]] and the [[circulatory system]].
+*** [[Hepatology]]  branch of medicine that deals with the [[liver]], [[gallbladder]] and the [[biliary system]].
+*** [[Infectious disease]]  branch of medicine that deals with the diagnosis and management of [[infectious disease]], especially for complex cases and [[immunocompromised]] patients.
+*** [[Immunology]] – study of the immune system.
+**** [[Classical immunology]]
+**** [[Clinical immunology]]
+**** [[Computational immunology]]
+**** [[Diagnostic immunology]]
+**** [[Evolutionary immunology]]
+**** [[Systems immunology]]
+**** [[Immunomics]]
+**** [[Immunoproteomics]]
+**** [[Immunophysics]]
+**** [[Immunochemistry]]
+**** [[Ecoimmunology]]
+**** [[Immunopathology]]
+**** [[Nutritional immunology]]
+**** [[Psychoneuroimmunology]]
+**** [[Reproductive immunology]]
+**** [[Circadian immunology]]
+**** [[Immunotoxicology]]
+**** [[Palaeoimmunology]]
+**** [[Tissue-based immunology]]
+***** [[Testicular immunology]] - [[Testes]]
+***** [[Immunodermatology]] - [[Skin]]
+***** [[Intravascular immunology]] - [[Blood]]
+***** [[Osteoimmunology]] - [[Bone]]
+***** [[Mucosal immunology]] - [[Mucosal surfaces]]
+****** [[Respiratory tract antimicrobial defense system]] - [[Respiratory tract]]
+***** [[Neuroimmunology]] - [[Neuroimmune system]] in the [[Central nervous system]]
+***** [[Ocularimmunology]] - [[Ocular immune system]] in the [[Eye]]
+***** [[Cancer immunology]]
 *** [[Internal medicine]] – medical specialty dealing with the prevention, diagnosis, and treatment of adult diseases.
 *** [[Neurology]] – medical specialty dealing with disorders of the nervous system.
+*** [[Nephrology]]  branch of medicine which deals with the kidneys.
+*** [[Oncology]]  is the branch of medicine that studies of cancer.
 *** [[Ophthalmology]] – branch of medicine that deals with the anatomy, physiology and diseases of the eye.
+*** [[Otolaryngology]]  branch of medicine that deals the [[ear]]s, [[Human nose|nose]] and [[throat]].
 *** [[Pathology]] – precise study and diagnosis of disease.
 *** [[Pathophysiology]] – study of the changes of normal mechanical, physiological, and biochemical functions, either caused by a disease, or resulting from an abnormal syndrome.
 *** [[Pediatrics]] – branch of medicine that deals with the medical care of infants, children, and adolescents.
 *** [[Pharmacy]] – health profession that links the health sciences with the chemical sciences and it is charged with ensuring the safe and effective use of pharmaceutical drugs.
+*** [[Pulmonology]]  branch of medicine that deals with the [[respiratory system]].
 *** [[Physiology]] – science of the function of living systems.
 *** [[Psychiatry]] – medical specialty devoted to the study and treatment of mental disorders.
 *** [[Radiology]] – medical specialty that employs the use of imaging to both diagnose and treat disease visualised within the human body.
+*** [[Rheumatology]]  branch of medicine that deals with the diagnosis and treatment of [[rheumatic disease]]s.
 *** [[Toxicology]] – branch of biology, chemistry, and medicine concerned with the study of the adverse effects of chemicals on living organisms.
 *** [[Urology]] – medical and surgical specialty that focuses on the urinary tracts of males and females, and on the reproductive system of males.
+*** [[Surgery]]
+*** [[Anaesthesiology]]
+** [[Dietetics]]
 ** [[Nutrition]] – studies the relationship between diet and states of health and disease.
 *** [[Nutrigenomics]]
 *** [[Nutrition physiology]]
@@ -1920,19 +1908,93 @@ practices of various schools of thought.
 ** [[Pharmacology]] – branch of medicine and biology concerned with the study of drug action
 ** [[Physical therapy]] – Military Physical Therapists working with patients on balance problems, orthopedic/musculoskeletal injuries, amputee, compression wrapping to control edema, and during evaluation/assessment of strength, flexibility, and joint range of motion, massages, etc. .
 ** [[Veterinary medicine]] – branch of science that deals with the prevention, diagnosis and treatment of disease, disorder and injury in non-human animals.
-* [[Management]] – getting people together to accomplish desired goals and objectives using available resources efficiently and effectively.
+** [[Alternative medicine]]
+** [[Exercise physiology]]
+** [[Medical physics]]
+** [[Medical technology]]
+** [[Public health]]
+** [[Physical education]]
+** [[Speech-Language Pathology]]
+* [[Management]] – act of getting people together to accomplish desired goals and objectives using available resources efficiently and effectively.
+** [[Self-management]]
+*** [[Personal information management]]
+*** [[Personal knowledge management]]
+*** [[Stress management]]
+*** [[Time management]]
+*** [[Attention management]]
+*** [[Task management]]
+*** [[Personal finance]]
+** [[General organization management]]
+*** [[Administration]]
+*** [[Agile management]]
+*** [[Asset management]]
+*** [[Change management]]
+*** [[Conflict management]]
+*** [[Conflict resolution]]
+*** [[Constraint management]]
+**** [[Theory of Constraints]]
+**** [[Focused improvement]]
+*** [[Cost management]]
+*** [[Crisis management]]
+*** [[Critical management studies]] (CMS)
+*** [[Customer relationship management]]
+*** [[Data management]]
+*** [[Design management]]
+*** [[Earned value management]]
+*** [[Human interaction management]]
+*** [[Integration management]]
+*** [[Interim Management]]
+*** [[Knowledge management]]
+*** [[Logistics management]]
+*** [[Operations management]]
+*** [[Organization development]]
+*** [[Perception management]]
+*** [[Planning (management)]]
+*** [[Process management]]
+*** [[Program management]]
+*** [[Project management]]
+*** [[Quality management]]
+*** [[Requirements management]]
+*** [[Resource management]]
+*** [[Risk management]]
+*** [[Skills management]]
+*** [[Spend management]]
+*** [[Strategic management]]
+*** [[Strategic planning]]
+*** [[Systems management]]
+** [[Department management]]
+*** [[Accounting management]]
+*** [[Communication management]]
+*** [[Engineering management]]
+*** [[Enterprise content management]]
+*** [[Financial management]]
+*** [[Human resource management]]
+*** [[Information technology management]]
+*** [[Marketing management]]
+*** [[Procurement]]
+*** [[Product management]]
+*** [[Records Management]]
+*** [[Supply chain management]]
+** [[Field-specific management]]
+*** [[Association management]]
+*** [[Educational management]]
+*** [[Facility management]]
+*** [[Investment management]]
+*** [[Land management]]
+*** [[Public administration]]
+*** [[Public management]]
+*** [[Talent management]]
 ** [[Accounting]] – process of communicating financial information about a business entity to users such as shareholders and managers.
-** [[Outline of business management|Outline of management]] – getting people together to accomplish desired goals and objectives using available resources efficiently and effectively.
 ** [[Business Strategy]] – field that deals with the major intended and emergent initiatives taken by general managers on behalf of owners, involving utilization of resources, to enhance the performance of firms in their external environments.
-** [[Outline of finance|Finance]] –  addresses the ways in which individuals, businesses and organizations raise, allocate and use monetary resources over time, taking into account the risks entailed in their projects.
-** [[Outline of marketing|Marketing]] – social and managerial processes by which products, services and value are exchanged in order to fulfil individuals' or group's needs and wants. These processes include, but are not limited to, advertising, promotion, distribution, and sales.
+** [[Finance]] –  addresses the ways in which individuals, businesses and organizations raise, allocate and use monetary resources over time, taking into account the risks entailed in their projects.
+** [[Marketing]] – social and managerial processes by which products, services and value are exchanged in order to fulfil individuals' or group's needs and wants. These processes include, but are not limited to, advertising, promotion, distribution, and sales.
 ** [[Organizational Behavior]] – field of study that investigates the impact that individuals, groups and structures have on behavior within an organization.
-** [[Business operations|Operations]] – those ongoing recurring (cyclic) activities involved in the running of a business for the purpose of producing value for the stakeholders.
-* [[Outline of military science and technology|Military science]] – study of the technique, psychology, practice and other phenomena which constitute war and armed conflict.
+** [[Business operations]] – those ongoing recurring (cyclic) activities involved in the running of a business for the purpose of producing value for the stakeholders.
+* [[Military science]] – study of the technique, psychology, practice and other phenomena which constitute war and armed conflict.
 ** [[Military organisation]] – structuring of the armed forces of a state so as to offer military capability required by the national defence policy.
 ** [[Military Education and Training]] – Recruit training, more commonly known as Basic Training and colloquially called Boot Camp, is the initial indoctrination and instruction given to new military personnel, enlisted and officer.
 ** [[Military history]] – humanities discipline within the scope of general historical recording of armed conflict in the history of humanity, and its impact on the societies, their cultures, economies and changing intra and international relationships.
-** [[Military technology and equipment|Military Engineering]] – collection of equipment, vehicles, structures and communication systems that are designed for use in warfare.
+** [[Military technology and equipment]] – collection of equipment, vehicles, structures and communication systems that are designed for use in warfare.
 ** [[Military Strategy and Tactics]] – set of ideas implemented by military organizations to pursue desired strategic goals
 * [[Spatial science]]  academic discipline incorporating fields such as surveying, geographic information systems, hydrography and cartography. Spatial science is typically concerned with the measurement, management, analysis and display of spatial information describing the Earth, its physical features and the built environment.
 ** [[GIS]] – geographic information system is a system designed to capture, store, manipulate, analyze, manage, and present all types of geographical data.
