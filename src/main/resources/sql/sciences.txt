@@ -402,7 +402,7 @@
 ***** [[Neuropharmacology]]
 ***** [[Behavioral neuroscience]]
 ****** [[Neuroethology]]
-***** [[Developmental neuroscience
+***** [[Developmental neuroscience]]
 ***** [[Cognitive neuroscience]]
 ****** [[Neurolinguistics]]
 ****** [[Neuroimaging]]
@@ -438,7 +438,7 @@
 **** [[Physical anthropology]] – studies the physical development of the human species.
 *** [[Nematology]] – scientific discipline concerned with the study of nematodes, or roundworms
 *** [[Ornithology]] – study of birds
-[[Formal sciences]
+[[Formal sciences]]
 * [[Computer science]] – study of the theoretical foundations of information and computation and their implementation and application in computer systems. ''(See also [[Outline of computer science#Branches|Branches of Computer Science]] and ACM [http://www.acm.org/class/ Computing Classification System])''
 ** [[Theory of computation]] – branch that deals with whether and how efficiently problems can be solved on a model of computation, using an algorithm
 *** [[Automata theory]] – study of mathematical objects called abstract machines or automata and the computational problems that can be solved using them.
@@ -456,7 +456,7 @@
 ** [[Operating systems]] – set of software that manages computer hardware resources and provides common services for computer programs
 ** [[Computer networking]] – collection of hardware components and computers interconnected by communication channels that allow sharing of resources and information
 *** [[Information theory]] – branch of applied mathematics and electrical engineering involving the quantification of information
-*** Internet – global system of interconnected computer networks that use the standard Internet protocol suite (often called TCP/IP, although not all applications use TCP) to serve billions of users worldwide.
+*** [[Internet]] – global system of interconnected computer networks that use the standard Internet protocol suite (often called TCP/IP, although not all applications use TCP) to serve billions of users worldwide.
 **** [[World wide web]] – part of the Internet; system of interlinked hypertext documents accessed via the Internet.
 *** [[Wireless computing]]  – any type of computer network that is not connected by cables of any kind.
 **** [[Mobile computing]] – form of human–computer interaction by which a computer is expected to be transported during normal usage.
@@ -1382,8 +1382,7 @@
 ***** [[Regulatory ethics]]
 *** [[Meta-ethics]] or moral epistemology
 **** [[Moral nihilism]] – the meta-ethical view that nothing is intrinsically moral or immoral (see also [[nihilism]])
-**** [[Moral syncretism]] – the attempt to reconcile disparate or contradictory moral beliefs, often while melding the ethical
-practices of various schools of thought.
+**** [[Moral syncretism]] – the attempt to reconcile disparate or contradictory moral beliefs, often while melding the ethical practices of various schools of thought.
 **** [[Moral relativism]] and [[relativism]]
 **** [[Fallibilism]] – the philosophical principle that human beings could be wrong about their beliefs, expectations, or their understanding of the world
 **** [[Moral skepticism]] – a class of metaethical theories all members of which entail that no one has any moral knowledg
@@ -1880,17 +1879,17 @@ practices of various schools of thought.
 * [[Health science]] – application of science, technology, engineering or mathematics to the delivery of healthcare
 ** [[Conservation medicine]] – emerging, interdisciplinary field that studies the relationship between human and animal health, and environmental conditions.
 ** [[Dentistry]] – branch of medicine that is involved in the study, diagnosis, prevention, and treatment of diseases, disorders and conditions of the oral cavity, maxillofacial area and the adjacent and associated structures and their impact on the human body.
-*** [[Endodontics
-*** [[Orthodontics
-*** [[Minimal intervention dentistry
-*** [[Prosthodontics
-*** [[Pediatric dentistry
-*** [[Preventive dentistry
-*** [[Periodontics
-*** [[Oral and maxillofacial surgery
-*** [[Dento-maxillofacial radiology
-*** [[Oral pathology
-*** [[Oral medicine
+*** [[Endodontics]]
+*** [[Orthodontics]]
+*** [[Minimal intervention dentistry]]
+*** [[Prosthodontics]]
+*** [[Pediatric dentistry]]
+*** [[Preventive dentistry]]
+*** [[Periodontics]]
+*** [[Oral and maxillofacial surgery]]
+*** [[Dento-maxillofacial radiology]]
+*** [[Oral pathology]]
+*** [[Oral medicine]]
 ** [[Optometry]] – health care profession concerned with the health of the eyes and related structures, as well as vision, visual systems, and vision information processing in humans.
 ** [[Medicine]] – science of healing.
 *** [[Anatomy]] – branch of biology and medicine that is the consideration of the structure of living things.
