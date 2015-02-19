@@ -10,7 +10,7 @@ import com.scipub.tools.BranchExtractor.Branch;
 
 public class BranchJsonGenerator {
     
-    public static void main(String[] args) throws Exception {
+    public static void mainNested(String[] args) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         List<Branch> branches = BranchExtractor.extractBranches();
         Map<Integer, ScienceBranch> branchesMap = new HashMap<>(); 
@@ -37,6 +37,12 @@ public class BranchJsonGenerator {
         root.setName("Science");
         root.setChildren(roots);
         System.out.println(mapper.writeValueAsString(root));
+    }
+    
+    public static void main(String[] args) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        List<Branch> branches = BranchExtractor.extractBranches();
+        System.out.println(mapper.writeValueAsString(branches));
     }
     
     public static class ScienceBranch {
