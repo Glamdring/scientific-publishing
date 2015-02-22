@@ -50,7 +50,6 @@
 *** [[Computational physics]] – study and implementation of numerical algorithms to solve problems in physics for which a quantitative theory already exists.
 *** [[Condensed matter physics]] – study of the physical properties of condensed phases of matter.
 *** [[Cryogenics]] – cryogenics is the study of the production of very low temperature (below −150&nbsp;°C, −238&nbsp;°F or 123K) and the behavior of materials at those temperatures.
-*** [[Dynamics (mechanics)]] – study of the causes of motion and changes in motion
 *** [[Econophysics]] – interdisciplinary research field, applying theories and methods originally developed by physicists in order to solve problems in economics
 *** [[Electromagnetism]] – branch of science concerned with the forces that occur between electrically charged particles.
 *** [[Geophysics]] – the physics of the Earth and its environment in space; also the study of the Earth using quantitative physical methods, see also [[Outline_of_geography#Physical_geography|physical geography]] below
@@ -60,7 +59,9 @@
 **** [[Aerodynamics]]
 **** [[Biomechanics]] – study of the structure and function of biological systems such as humans, animals, plants, organs, and cells by means of the methods of mechanics.
 **** [[Classical mechanics]] – one of the two major sub-fields of mechanics, which is concerned with the set of physical laws describing the motion of bodies under the action of a system of forces.
+***** [[Dynamics (mechanics)]] – study of the causes of motion and changes in motion
 ***** [[Kinematics]]
+***** [[Statics]] – branch of mechanics concerned with the analysis of loads (force, torque/moment) on physical systems in static equilibrium, that is, in a state where the relative positions of subsystems do not vary over time, or where components and structures are at a constant velocity.
 **** [[Continuum mechanics]] – branch of mechanics that deals with the analysis of the kinematics and the mechanical behavior of materials modeled as a continuous mass rather than as discrete particles.
 **** [[Fluid mechanics]] – study of fluids and the forces on them.
 ***** [[Fluid statics]]
@@ -76,7 +77,6 @@
 *** [[Polymer physics]] – field of physics that studies polymers, their fluctuations, mechanical properties, as well as the kinetics of reactions involving degradation and polymerisation of polymers and monomers respectively.
 *** [[Quantum physics]] – branch of physics dealing with physical phenomena where the action is on the order of the Planck constant.
 *** [[Relativity]] –
-*** [[Statics]] – branch of mechanics concerned with the analysis of loads (force, torque/moment) on physical systems in static equilibrium, that is, in a state where the relative positions of subsystems do not vary over time, or where components and structures are at a constant velocity.
 *** [[Solid state physics]] – study of rigid matter, or solids, through methods such as quantum mechanics, crystallography, electromagnetism, and metallurgy.
 *** [[Vehicle dynamics]] – dynamics of vehicles, here assumed to be ground vehicles.
 ** [[Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions

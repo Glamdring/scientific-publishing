@@ -10,8 +10,8 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Branch {
 
-    @GeneratedValue(strategy=GenerationType.AUTO)
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     
     @Column

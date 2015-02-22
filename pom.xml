@@ -112,6 +112,12 @@
             <version>2.4.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+        
         <!-- Just the annotations; use this dependency if you want to attach annotations to classes without connecting them 
             to the code. -->
         <dependency>
