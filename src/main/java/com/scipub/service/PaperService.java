@@ -10,6 +10,5 @@ public class PaperService {
 
     @Transactional
     public void submitPaper(PaperSubmissionDto dto) {
-        
     }
 }
