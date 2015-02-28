@@ -301,6 +301,37 @@
             <version>${aspectj.version}</version>
             <scope>runtime</scope>
         </dependency>
+        
+        <!-- TODO install to local repo? -->
+        <dependency>
+            <groupId>vuze</groupId>
+            <artifactId>azplugins_2.1.4</artifactId>
+            <version>2.1.4</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/azplugins_2.1.4.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>vuze</groupId>
+            <artifactId>mlDHT_1.5.5</artifactId>
+            <version>1.5.5</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/mlDHT_1.5.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>vuze</groupId>
+            <artifactId>Vuze_5501-31_pluginapi</artifactId>
+            <version>5501-31</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/Vuze_5501-31_pluginapi.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>vuze</groupId>
+            <artifactId>Vuze_5501-31</artifactId>
+            <version>5501-31</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/Vuze_5501-31.jar</systemPath>
+        </dependency>
+        
     </dependencies>
     <dependencyManagement>
         <dependencies>
