@@ -19,6 +19,8 @@ public class PaperSubmissionDto {
     private String paperAbstract;
     private String content;
     private String originalFilename;
+    private byte[] originalFileContent;
+    
     public String getDoi() {
         return doi;
     }
@@ -96,5 +98,11 @@ public class PaperSubmissionDto {
     }
     public void setOriginalFilename(String originalFilename) {
         this.originalFilename = originalFilename;
+    }
+    public byte[] getOriginalFileContent() {
+        return originalFileContent;
+    }
+    public void setOriginalFileContent(byte[] originalFileContent) {
+        this.originalFileContent = originalFileContent;
     }
 }

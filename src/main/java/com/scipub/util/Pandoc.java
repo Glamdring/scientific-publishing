@@ -8,7 +8,7 @@ import com.google.common.collect.Lists;
 
 public class Pandoc {
 
-    public static void convert(Format from, Format to, File out, File in, List<String> additionalArguments)
+    public static void convert(Format from, Format to, File in, File out, List<String> additionalArguments)
             throws IOException, InterruptedException {
         List<String> args =
                 Lists.newArrayList("-f", from.getArgument(), "-t", to.getArgument(), "-o", out.getAbsolutePath(),
@@ -84,6 +84,15 @@ public class Pandoc {
 
         public String getExtension() {
             return extension;
+        }
+        
+        public static Format forExtension(String extension) {
+            for (Format format : Format.values()) {
+                if (format.getExtension().equals(extension)) {
+                    return format;
+                }
+            }
+            return null;
         }
     }
 }
