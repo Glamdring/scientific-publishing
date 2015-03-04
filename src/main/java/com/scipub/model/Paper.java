@@ -45,7 +45,10 @@ public class Paper {
     private Paper followUpTo;
     
     @Column
-    private String followUpToUri;
+    private String followUpToLink;
+    
+    @Column
+    private String followUpToDoi;
     
     @Column
     private int citations;
@@ -122,12 +125,21 @@ public class Paper {
         this.followUpTo = followUpTo;
     }
 
-    public String getFollowUpToUri() {
-        return followUpToUri;
+
+    public String getFollowUpToLink() {
+        return followUpToLink;
     }
 
-    public void setFollowUpToUri(String followUpToLink) {
-        this.followUpToUri = followUpToLink;
+    public void setFollowUpToLink(String followUpToLink) {
+        this.followUpToLink = followUpToLink;
+    }
+
+    public String getFollowUpToDoi() {
+        return followUpToDoi;
+    }
+
+    public void setFollowUpToDoi(String followUpToDoi) {
+        this.followUpToDoi = followUpToDoi;
     }
 
     public int getCitations() {

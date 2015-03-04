@@ -15,6 +15,7 @@ public class PaperSubmissionDto {
     private List<String> tags;
     private String followUpTo;
     private String followUpToLink;
+    private String followUpToDoi;
     private String title;
     private String paperAbstract;
     private String content;
@@ -71,6 +72,12 @@ public class PaperSubmissionDto {
     }
     public String getFollowUpToLink() {
         return followUpToLink;
+    }
+    public String getFollowUpToDoi() {
+        return followUpToDoi;
+    }
+    public void setFollowUpToDoi(String followUpToDoi) {
+        this.followUpToDoi = followUpToDoi;
     }
     public void setFollowUpToLink(String followUpToLink) {
         this.followUpToLink = followUpToLink;

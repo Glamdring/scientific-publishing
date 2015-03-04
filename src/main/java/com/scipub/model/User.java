@@ -2,8 +2,6 @@ package com.scipub.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
@@ -12,8 +10,7 @@ import javax.persistence.ManyToOne;
 public class User {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long userId;
+    private String userId;
     
     @Column(unique = true)
     private String email;
