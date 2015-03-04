@@ -12,7 +12,7 @@ import org.joda.time.DateTime;
 public class PeerReview {
 
     @Id
-    private String doi;
+    private String uri;
 
     @ManyToOne
     private Paper paper;
@@ -44,12 +44,12 @@ public class PeerReview {
     @Column(nullable = false)
     private int qualityOfPresentation;
 
-    public String getDoi() {
-        return doi;
+    public String getUri() {
+        return uri;
     }
 
-    public void setDoi(String doi) {
-        this.doi = doi;
+    public void setUri(String doi) {
+        this.uri = doi;
     }
 
     public Paper getPaper() {

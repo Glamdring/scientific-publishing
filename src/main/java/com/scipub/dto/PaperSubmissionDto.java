@@ -6,7 +6,7 @@ import com.scipub.model.PaperStatus;
 
 public class PaperSubmissionDto {
 
-    private String doi; 
+    private String uri; 
     private List<Integer> branchIds;
     private List<Long> authorIds;
     private Long submitterId;
@@ -21,11 +21,11 @@ public class PaperSubmissionDto {
     private String originalFilename;
     private byte[] originalFileContent;
     
-    public String getDoi() {
-        return doi;
+    public String getUri() {
+        return uri;
     }
-    public void setDoi(String doi) {
-        this.doi = doi;
+    public void setUri(String uri) {
+        this.uri = uri;
     }
     public List<Integer> getBranchIds() {
         return branchIds;

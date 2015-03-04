@@ -18,7 +18,7 @@ import org.joda.time.DateTime;
 public class Paper {
 
     @Id
-    private String doi;
+    private String uri;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private List<User> authors;
@@ -45,17 +45,17 @@ public class Paper {
     private Paper followUpTo;
     
     @Column
-    private String followUpToLink;
+    private String followUpToUri;
     
     @Column
     private int citations;
 
-    public String getDoi() {
-        return doi;
+    public String getUri() {
+        return uri;
     }
 
-    public void setDoi(String doi) {
-        this.doi = doi;
+    public void setUri(String doi) {
+        this.uri = doi;
     }
 
     public List<User> getAuthors() {
@@ -122,12 +122,12 @@ public class Paper {
         this.followUpTo = followUpTo;
     }
 
-    public String getFollowUpToLink() {
-        return followUpToLink;
+    public String getFollowUpToUri() {
+        return followUpToUri;
     }
 
-    public void setFollowUpToLink(String followUpToLink) {
-        this.followUpToLink = followUpToLink;
+    public void setFollowUpToUri(String followUpToLink) {
+        this.followUpToUri = followUpToLink;
     }
 
     public int getCitations() {

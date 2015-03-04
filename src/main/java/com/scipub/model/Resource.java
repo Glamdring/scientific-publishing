@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 public class Resource {
 
     @Id
-    private String doi;
+    private String uri;
     
     @Column
     private String filename;
@@ -25,12 +25,12 @@ public class Resource {
     @Enumerated(EnumType.STRING)
     private ResourceType resourceType;
 
-    public String getDoi() {
-        return doi;
+    public String getUri() {
+        return uri;
     }
 
-    public void setDoi(String doi) {
-        this.doi = doi;
+    public void setUri(String doi) {
+        this.uri = doi;
     }
 
     public String getFilename() {

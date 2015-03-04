@@ -37,9 +37,9 @@ public class PaperService {
             throw new IllegalStateException("Unsupported extension " + extension);
         }
         try {
-            File in = new File(pandocConversionDir, dto.getDoi() + "." + extension);
+            File in = new File(pandocConversionDir, dto.getUri() + "." + extension);
             Files.write(dto.getOriginalFileContent(), in);
-            File out = new File(pandocConversionDir, dto.getDoi() + ".md");
+            File out = new File(pandocConversionDir, dto.getUri() + ".md");
             Pandoc.convert(format, Format.MARKDOWN, in, out, Collections.<String>emptyList());
             String content = Files.toString(out, Charsets.UTF_8);
             dto.setContent(content);
