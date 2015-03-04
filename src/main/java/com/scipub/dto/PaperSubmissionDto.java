@@ -1,18 +1,18 @@
 package com.scipub.dto;
 
-import java.util.List;
+import java.util.Set;
 
 import com.scipub.model.PaperStatus;
 
 public class PaperSubmissionDto {
 
     private String uri; 
-    private List<Integer> branchIds;
-    private List<Long> authorIds;
+    private Set<Integer> branchIds;
+    private Set<String> authorIds;
     private Long submitterId;
-    private List<String> nonRegisteredAuthors;
+    private Set<String> nonRegisteredAuthors;
     private PaperStatus status;
-    private List<String> tags;
+    private Set<String> tags;
     private String followUpTo;
     private String followUpToLink;
     private String followUpToDoi;
@@ -28,16 +28,16 @@ public class PaperSubmissionDto {
     public void setUri(String uri) {
         this.uri = uri;
     }
-    public List<Integer> getBranchIds() {
+    public Set<Integer> getBranchIds() {
         return branchIds;
     }
-    public void setBranchIds(List<Integer> branchIds) {
+    public void setBranchIds(Set<Integer> branchIds) {
         this.branchIds = branchIds;
     }
-    public List<Long> getAuthorIds() {
+    public Set<String> getAuthorIds() {
         return authorIds;
     }
-    public void setAuthorIds(List<Long> authorIds) {
+    public void setAuthorIds(Set<String> authorIds) {
         this.authorIds = authorIds;
     }
     public Long getSubmitterId() {
@@ -46,10 +46,10 @@ public class PaperSubmissionDto {
     public void setSubmitterId(Long submitterId) {
         this.submitterId = submitterId;
     }
-    public List<String> getNonRegisteredAuthors() {
+    public Set<String> getNonRegisteredAuthors() {
         return nonRegisteredAuthors;
     }
-    public void setNonRegisteredAuthors(List<String> nonRegisteredAuthors) {
+    public void setNonRegisteredAuthors(Set<String> nonRegisteredAuthors) {
         this.nonRegisteredAuthors = nonRegisteredAuthors;
     }
     public PaperStatus getStatus() {
@@ -58,10 +58,10 @@ public class PaperSubmissionDto {
     public void setStatus(PaperStatus status) {
         this.status = status;
     }
-    public List<String> getTags() {
+    public Set<String> getTags() {
         return tags;
     }
-    public void setTags(List<String> tags) {
+    public void setTags(Set<String> tags) {
         this.tags = tags;
     }
     public String getFollowUpTo() {

@@ -1,6 +1,7 @@
 package com.scipub.model;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,10 +22,10 @@ public class Paper {
     private String uri;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private List<User> authors;
+    private Set<User> authors = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private List<String> nonRegisteredAuthors;
+    private Set<String> nonRegisteredAuthors = new HashSet<>();
 
     @ManyToOne
     private PaperRevision currentRevision;
@@ -36,10 +37,10 @@ public class Paper {
     private PaperStatus status;
     
     @ManyToMany(fetch = FetchType.EAGER)
-    private List<Branch> branches;
+    private Set<Branch> branches = new HashSet<>();
     
     @ManyToMany(fetch = FetchType.EAGER)
-    private List<Tag> tags;
+    private Set<Tag> tags = new HashSet<>();
     
     @ManyToOne
     private Paper followUpTo;
@@ -61,19 +62,19 @@ public class Paper {
         this.uri = doi;
     }
 
-    public List<User> getAuthors() {
+    public Set<User> getAuthors() {
         return authors;
     }
 
-    public void setAuthors(List<User> authors) {
+    public void setAuthors(Set<User> authors) {
         this.authors = authors;
     }
 
-    public List<String> getNonRegisteredAuthors() {
+    public Set<String> getNonRegisteredAuthors() {
         return nonRegisteredAuthors;
     }
 
-    public void setNonRegisteredAuthors(List<String> nonRegisteredAuthors) {
+    public void setNonRegisteredAuthors(Set<String> nonRegisteredAuthors) {
         this.nonRegisteredAuthors = nonRegisteredAuthors;
     }
 
@@ -101,19 +102,19 @@ public class Paper {
         this.status = status;
     }
 
-    public List<Branch> getBranches() {
+    public Set<Branch> getBranches() {
         return branches;
     }
 
-    public void setBranches(List<Branch> branches) {
+    public void setBranches(Set<Branch> branches) {
         this.branches = branches;
     }
 
-    public List<Tag> getTags() {
+    public Set<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(List<Tag> tags) {
+    public void setTags(Set<Tag> tags) {
         this.tags = tags;
     }
 

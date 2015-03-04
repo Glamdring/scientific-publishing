@@ -112,12 +112,15 @@ public class Dao {
     }
 
     @SuppressWarnings("unchecked")
-    protected <T> List<T> findByQuery(QueryDetails details) {
-        Query q = null;
+    protected <T> List<T> findByQuery(QueryDetails<T> details) {
+        if (details.getResultClass() == null) {
+            throw new IllegalArgumentException("You must specify a result class");
+        }
+        TypedQuery<T> q = null;
         if (details.getQueryName() != null) {
-            q = entityManager.createNamedQuery(details.getQueryName());
+            q = entityManager.createNamedQuery(details.getQueryName(), details.getResultClass());
         } else if (details.getQuery() != null) {
-            q = entityManager.createQuery(details.getQuery());
+            q = entityManager.createQuery(details.getQuery(), details.getResultClass());
         } else {
             throw new IllegalArgumentException("Either query or query name must be set");
         }

@@ -18,7 +18,7 @@
 
 package com.scipub.dao.jpa;
 
-public class QueryDetails {
+public class QueryDetails<T> {
 
     private String query;
     private String queryName;
@@ -27,55 +27,62 @@ public class QueryDetails {
     private int start = -1;
     private int count = -1;
     private boolean cacheable;
+    private Class<T> resultClass;
 
     public String getQuery() {
         return query;
     }
-    public QueryDetails setQuery(String query) {
+    public QueryDetails<T> setQuery(String query) {
         this.query = query;
         return this;
     }
     public String[] getParamNames() {
         return paramNames;
     }
-    public QueryDetails setParamNames(String[] paramNames) {
+    public QueryDetails<T> setParamNames(String[] paramNames) {
         this.paramNames = paramNames.clone();
         return this;
     }
     public Object[] getParamValues() {
         return paramValues;
     }
-    public QueryDetails setParamValues(Object[] paramValues) {
+    public QueryDetails<T> setParamValues(Object[] paramValues) {
         this.paramValues = paramValues.clone();
         return this;
     }
     public int getStart() {
         return start;
     }
-    public QueryDetails setStart(int start) {
+    public QueryDetails<T> setStart(int start) {
         this.start = start;
         return this;
     }
     public int getCount() {
         return count;
     }
-    public QueryDetails setCount(int count) {
+    public QueryDetails<T> setCount(int count) {
         this.count = count;
         return this;
     }
     public boolean isCacheable() {
         return cacheable;
     }
-    public QueryDetails setCacheable(boolean cacheable) {
+    public QueryDetails<T> setCacheable(boolean cacheable) {
         this.cacheable = cacheable;
         return this;
     }
     public String getQueryName() {
         return queryName;
     }
-    public QueryDetails setQueryName(String queryName) {
+    public QueryDetails<T> setQueryName(String queryName) {
         this.queryName = queryName;
         return this;
     }
-
+    public Class<T> getResultClass() {
+        return resultClass;
+    }
+    public QueryDetails<T> setResultClass(Class<T> resultClass) {
+        this.resultClass = resultClass;
+        return this;
+    }
 }
