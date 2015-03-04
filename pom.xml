@@ -117,7 +117,7 @@
             <artifactId>javax.inject</artifactId>
             <version>1</version>
         </dependency>
-        
+
         <!-- Just the annotations; use this dependency if you want to attach annotations to classes without connecting them 
             to the code. -->
         <dependency>
@@ -148,7 +148,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>${spring-framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -158,7 +157,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>${spring-framework.version}</version>
         </dependency>
         <!-- used for EhCacheCacheManager -->
         <dependency>
@@ -169,7 +167,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${spring-framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -301,7 +298,7 @@
             <version>${aspectj.version}</version>
             <scope>runtime</scope>
         </dependency>
-        
+
         <!-- TODO install to local repo? -->
         <dependency>
             <groupId>vuze</groupId>
@@ -331,7 +328,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/Vuze_5501-31.jar</systemPath>
         </dependency>
-        
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
