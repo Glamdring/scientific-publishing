@@ -13,19 +13,20 @@
 
     <!-- ========================= RESOURCE DEFINITIONS ========================= -->
 
+    <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
+    <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
+    <context:property-placeholder location="classpath:/application.properties,file:${scipub.config.location}/scipub.properties"
+        system-properties-mode="OVERRIDE" />
+        
     <!-- import the dataSource definition -->
     <import resource="datasource.xml" />
     <import resource="jmx.xml" />
+    <import resource="social.xml" />
 
     <context:component-scan base-package="com.scipub">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
         <context:exclude-filter type="regex" expression="com\.scipub\.web\..*" />
     </context:component-scan>
-
-    <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
-    <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
-    <context:property-placeholder location="file:${scipub.config.location}/scipub.properties"
-        system-properties-mode="OVERRIDE" />
 
     <!-- enables scanning for @Transactional annotations -->
     <tx:annotation-driven />

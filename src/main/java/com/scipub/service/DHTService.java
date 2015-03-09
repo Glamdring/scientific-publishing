@@ -38,7 +38,7 @@ public class DHTService {
         
     }
     
-    @PostConstruct
+    //@PostConstruct TODO enable
     public void init() throws Exception {
         DHT.setLogLevel(LogLevel.Debug);
 
