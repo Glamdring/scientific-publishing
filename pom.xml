@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.scipub</groupId>
     <artifactId>scipub</artifactId>
-    <version>0.01.1-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>scipub</name>
     <packaging>war</packaging>
@@ -12,7 +12,7 @@
     <properties>
 
         <!-- Generic properties -->
-        <java.version>1.8</java.version>
+        <java.version>1.7</java.version> <!-- TODO use 8, rewrite some stuff -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -240,6 +240,11 @@
             <artifactId>joda-time-jsptags</artifactId>
             <version>${jodatime-jsptags.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5</version>
+        </dependency>
 
         <!-- Databases - Uses HSQL by default -->
         <!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> <version>${mysql.version}</version> 
@@ -263,7 +268,7 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -303,6 +308,11 @@
             <version>3.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
 
         <!-- Test Artifacts -->
         <dependency>
@@ -503,6 +513,17 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <systemProperties>
+                        <!-- local untracked file, copy config/scipub.properties sample -->
+                        <scipub.config.location>/config</scipub.config.location>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>

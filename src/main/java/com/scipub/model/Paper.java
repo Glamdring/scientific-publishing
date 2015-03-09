@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -24,7 +25,7 @@ public class Paper {
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<User> authors = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> nonRegisteredAuthors = new HashSet<>();
 
     @ManyToOne

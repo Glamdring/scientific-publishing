@@ -30,7 +30,7 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
         <property name="attributeSource" ref="jmxAttributeSource" />
     </bean>
     
-    <bean class="net.sf.ehcache.management.ManagementService" init-method="init" destroy-method="dispose">
+    <!-- bean class="net.sf.ehcache.management.ManagementService" init-method="init" destroy-method="dispose">
         <constructor-arg ref="ehCacheManager" />
         <constructor-arg ref="mbeanServer" />
         <constructor-arg value="true" />
@@ -38,7 +38,8 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
         <constructor-arg value="true" />
         <constructor-arg value="true" />
         <constructor-arg value="true" />
-    </bean>
+    </bean-->
+    
     <!-- bean id="hibernateStatisticsMBean" class="org.hibernate.jmx.StatisticsService"> <property name="statisticsEnabled" 
         value="true" /> <property name="sessionFactory" value="#{entityManagerFactory.sessionFactory}" /> </bean -->
 </beans>

@@ -24,7 +24,7 @@
 
     <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
-    <context:property-placeholder location="${scipub.config.location}/scipub.properties"
+    <context:property-placeholder location="file:${scipub.config.location}/scipub.properties"
         system-properties-mode="OVERRIDE" />
 
     <!-- enables scanning for @Transactional annotations -->
@@ -44,41 +44,38 @@
 
     <!-- ================== 2 Profiles to choose from =================== - jpa - spring-data-jpa ============================================================================= -->
 
-    <beans profile="jpa,spring-data-jpa">
-        <!-- JPA EntityManagerFactory -->
-        <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-            p:dataSource-ref="dataSource">
-            <property name="jpaVendorAdapter">
-                <!-- the 'database' parameter refers to the database dialect being used. By default, Hibernate will use a 
-                    'HSQL' dialect because 'jpa.database' has been set to 'HSQL' inside file spring/data-access.properties -->
-                <bean class="com.scipub.util.HibernateExtendedJpaVendorAdapter" p:database="${jpa.database}"
-                    p:showSql="${jpa.showSql}">
-                    <property name="generateDdl" value="${hibernate.generateDDL}" />
-                    <property name="hibernate.hbm2ddl.import_files" value="/sql/science_branches.sql" />
-                    <!-- custom properties -->
-                    <property name="vendorProperties">
-                        <util:map>
-                            <entry key="hibernate.generate_statistics" value="${hibernate.statistics.enabled}" />
-                            <entry key="net.sf.ehcache.configurationResourceName" value="ehcache.xml" />
-                        </util:map>
-                    </property>
-                </bean>
-            </property>
-            <!-- BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit will win -->
-            <property name="persistenceUnitName" value="scipub" />
-            <property name="packagesToScan" value="com.scipub.model" />
-        </bean>
+    <!-- JPA EntityManagerFactory -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+        p:dataSource-ref="dataSource">
+        <property name="jpaVendorAdapter">
+            <!-- the 'database' parameter refers to the database dialect being used. By default, Hibernate will use a 
+                'HSQL' dialect because 'jpa.database' has been set to 'HSQL' inside file spring/data-access.properties -->
+            <bean class="com.scipub.util.HibernateExtendedJpaVendorAdapter" p:databasePlatform="${hibernate.dialect}"
+                p:showSql="${hibernate.showSql}">
+                <property name="generateDdl" value="${hibernate.generateDDL}" />
+                <!-- custom properties -->
+                <property name="vendorProperties">
+                    <util:map>
+                        <entry key="hibernate.generate_statistics" value="${hibernate.statistics.enabled}" />
+                        <entry key="hibernate.hbm2ddl.import_files" value="/sql/science_branches.sql" />
+                        <entry key="net.sf.ehcache.configurationResourceName" value="ehcache.xml" />
+                    </util:map>
+                </property>
+            </bean>
+        </property>
+        <!-- BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit will win -->
+        <property name="persistenceUnitName" value="scipub" />
+        <property name="packagesToScan" value="com.scipub.model" />
+    </bean>
 
-        <!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
-        <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
-            p:entityManagerFactory-ref="entityManagerFactory" />
+    <!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+        p:entityManagerFactory-ref="entityManagerFactory" />
 
 
-        <!-- Post-processor to perform exception translation on @Repository classes (from native exceptions such as JPA PersistenceExceptions 
-            to Spring's DataAccessException hierarchy). -->
-        <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-
-    </beans>
+    <!-- Post-processor to perform exception translation on @Repository classes (from native exceptions such as JPA PersistenceExceptions 
+        to Spring's DataAccessException hierarchy). -->
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
     <beans profile="jpa">
         <!-- Loads JPA beans Will automatically be transactional due to @Transactional. EntityManager will be auto-injected 
