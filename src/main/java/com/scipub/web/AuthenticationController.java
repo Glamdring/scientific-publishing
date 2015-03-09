@@ -19,6 +19,8 @@ import org.springframework.social.connect.web.ProviderSignInAttempt;
 import org.springframework.social.connect.web.ProviderSignInController;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.FacebookProfile;
+import org.springframework.social.linkedin.api.LinkedIn;
+import org.springframework.social.linkedin.api.LinkedInProfile;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.api.TwitterProfile;
 import org.springframework.stereotype.Controller;
@@ -37,6 +39,8 @@ import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.web.util.WebUtils;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.googlecode.googleplus.Plus;
+import com.googlecode.googleplus.model.person.Person;
 import com.scipub.model.User;
 import com.scipub.service.UserService;
 
@@ -89,6 +93,16 @@ public class AuthenticationController {
             } else if (api instanceof Twitter) {
                 TwitterProfile profile = ((Twitter) api).userOperations().getUserProfile();
                 user.setNames(profile.getName());
+            } else if (api instanceof Plus) {
+                Person person = ((Plus) api).getPeopleOperations().get("me");
+                user.setNames(person.getName().getFormatted());
+                if (!person.getEmails().isEmpty()) {
+                    user.setEmail(person.getEmails().iterator().next().getValue());
+                }
+            } else if (api instanceof LinkedIn) {
+               LinkedInProfile profile = ((LinkedIn) api).profileOperations().getUserProfile();
+               user.setNames(profile.getFirstName() + " " + profile.getLastName());
+               user.setEmail(profile.getEmailAddress());
             }
         } else {
             user.setEmail(email);
