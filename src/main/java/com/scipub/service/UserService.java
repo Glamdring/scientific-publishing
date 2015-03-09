@@ -12,7 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.social.connect.Connection;
-import org.springframework.social.connect.ConnectionData;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +19,7 @@ import com.scipub.dao.jpa.UserDao;
 import com.scipub.model.Paper;
 import com.scipub.model.SocialAuthentication;
 import com.scipub.model.User;
+import com.scipub.service.auth.JpaConnectionRepository;
 import com.scipub.util.SecurityUtils;
 
 @Service
@@ -95,7 +95,7 @@ public class UserService {
         //user.setReceiveDailyDigest(receiveDailyDigest);
         user = dao.persist(user);
         if (connection != null) {
-            SocialAuthentication auth = connectionToAuth(connection);
+            SocialAuthentication auth = JpaConnectionRepository.connectionToAuth(connection);
             auth.setUser(user);
             dao.persist(auth);
         }
@@ -145,17 +145,6 @@ public class UserService {
             return null;
         }
         SocialAuthentication auth = dao.getTwitterAuthentication(user);
-        return auth;
-    }
-    
-    public static SocialAuthentication connectionToAuth(Connection<?> connection) {
-        SocialAuthentication auth = new SocialAuthentication();
-        ConnectionData data = connection.createData();
-        auth.setProviderId(data.getProviderId());
-        auth.setToken(data.getAccessToken());
-        auth.setRefreshToken(data.getRefreshToken());
-        auth.setSecret(data.getSecret());
-        auth.setProviderUserId(data.getProviderUserId());
         return auth;
     }
 }

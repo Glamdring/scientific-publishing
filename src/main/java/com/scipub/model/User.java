@@ -13,7 +13,7 @@ import org.joda.time.DateTime;
 public class User {
 
     @Id
-    private String userId;
+    private String id;
     
     @Column(unique = true)
     private String email;
@@ -108,12 +108,12 @@ public class User {
         this.bio = bio;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setId(String userId) {
+        this.id = userId;
     }
 
     public String getArxivUsername() {
@@ -176,7 +176,7 @@ public class User {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((userId == null) ? 0 : userId.hashCode());
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
 
@@ -189,10 +189,10 @@ public class User {
         if (getClass() != obj.getClass())
             return false;
         User other = (User) obj;
-        if (userId == null) {
-            if (other.userId != null)
+        if (id == null) {
+            if (other.id != null)
                 return false;
-        } else if (!userId.equals(other.userId))
+        } else if (!id.equals(other.id))
             return false;
         return true;
     }
