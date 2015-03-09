@@ -64,6 +64,10 @@ public class PaperService {
         
         // create revision
         saveRevision(dto, paper, user, revisions.size() + 1);
+        
+        if (user.getArxivUsername() != null) {
+            pushToArxiv(dto, user);
+        }
     }
 
     private Paper dtoToEntity(PaperSubmissionDto dto, User user) {
@@ -144,5 +148,9 @@ public class PaperService {
         } catch (IOException | InterruptedException e) {
             throw new IllegalStateException(e);
         }
+    }
+    
+    private void pushToArxiv(PaperSubmissionDto dto, User user) {
+        // TODO Auto-generated method stub
     }
 }

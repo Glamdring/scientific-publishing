@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.Type;
+import org.joda.time.DateTime;
+
 @Entity
 public class User {
 
@@ -30,6 +33,33 @@ public class User {
     @Lob
     private String bio;
 
+    @Column
+    private String arxivUsername;
+    
+    @Column
+    private String arxivPassword;
+    
+    /**
+     * Login token is used for secure cookie-based login
+     */
+    @Column
+    private String loginToken;
+
+    /**
+     * Login series is used for secure cookie-based login
+     */
+    @Column
+    private String loginSeries;
+    
+    @Type(type = "com.scipub.util.PersistentDateTime")
+    private DateTime lastLoginTime;
+    
+    @Type(type = "com.scipub.util.PersistentDateTime")
+    private DateTime registrationTime;
+    
+    @Column(nullable=false)
+    private boolean loginAutomatically;
+    
     public String getEmail() {
         return email;
     }
@@ -76,6 +106,70 @@ public class User {
 
     public void setBio(String bio) {
         this.bio = bio;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getArxivUsername() {
+        return arxivUsername;
+    }
+
+    public void setArxivUsername(String arxivUsername) {
+        this.arxivUsername = arxivUsername;
+    }
+
+    public String getArxivPassword() {
+        return arxivPassword;
+    }
+
+    public void setArxivPassword(String arxivPassword) {
+        this.arxivPassword = arxivPassword;
+    }
+
+    public String getLoginToken() {
+        return loginToken;
+    }
+
+    public void setLoginToken(String loginToken) {
+        this.loginToken = loginToken;
+    }
+
+    public String getLoginSeries() {
+        return loginSeries;
+    }
+
+    public void setLoginSeries(String loginSeries) {
+        this.loginSeries = loginSeries;
+    }
+
+    public DateTime getLastLoginTime() {
+        return lastLoginTime;
+    }
+
+    public void setLastLoginTime(DateTime lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
+    }
+
+    public DateTime getRegistrationTime() {
+        return registrationTime;
+    }
+
+    public void setRegistrationTime(DateTime registrationTime) {
+        this.registrationTime = registrationTime;
+    }
+
+    public boolean isLoginAutomatically() {
+        return loginAutomatically;
+    }
+
+    public void setLoginAutomatically(boolean loginAutomatically) {
+        this.loginAutomatically = loginAutomatically;
     }
 
     @Override
