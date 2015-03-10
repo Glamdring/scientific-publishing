@@ -77,6 +77,11 @@ public class AuthenticationController {
         return signInController.signIn(providerId, request);
     }
 
+    @RequestMapping("/signup")
+    public String signupPage() {
+        return "signup";
+    }
+    
     @RequestMapping("/socialSignUp")
     public String socialSignupPage(@RequestParam(required=false) String email, NativeWebRequest request, Model model) {
         ProviderSignInAttempt attempt = (ProviderSignInAttempt) request.getAttribute(ProviderSignInAttempt.class.getName(), RequestAttributes.SCOPE_SESSION);
