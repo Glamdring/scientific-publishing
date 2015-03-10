@@ -524,6 +524,7 @@
                         <!-- local untracked file, copy config/scipub.properties sample -->
                         <scipub.config.location>/config</scipub.config.location>
                     </systemProperties>
+                    <port>8080</port>
                 </configuration>
             </plugin>
         </plugins>

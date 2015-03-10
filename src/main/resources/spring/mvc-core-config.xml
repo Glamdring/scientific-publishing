@@ -35,6 +35,10 @@
     <!-- all resources inside folder src/main/webapp/resources are mapped so they can be refered to inside JSP files (see 
         header.jsp for more details) -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
+    
+    <mvc:resources mapping="/static/img/**" location="/img/" cache-period="0" />
+    <mvc:resources mapping="/static/scripts/**" location="/scripts/" cache-period="0" />
+    <mvc:resources mapping="/static/css/**" location="/css/" cache-period="0" />
 
     <!-- uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (Bootstrap, jQuery...) -->
     <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
