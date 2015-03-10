@@ -85,7 +85,7 @@ public class UserService {
     }
 
     @Transactional
-    public User completeUserRegistration(String email, String username, String names, Connection<?> connection,
+    public User completeUserRegistration(String email, String names, Connection<?> connection,
             boolean loginAutomatically, boolean receiveDailyDigest) {
         User user = new User();
         user.setEmail(email);

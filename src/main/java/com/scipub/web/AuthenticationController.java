@@ -119,7 +119,7 @@ public class AuthenticationController {
 
     @RequestMapping("/social/completeRegistration")
     public String completeRegistration(@RequestParam String email, @RequestParam String names,
-            @RequestParam String username, @RequestParam String type,
+            @RequestParam String type,
             @RequestParam(defaultValue = "false", required = false) boolean receiveDailyDigest,
             @RequestParam(defaultValue = "false", required = false) boolean loginAutomatically,
             NativeWebRequest request, HttpSession session, Model model) {
@@ -131,10 +131,10 @@ public class AuthenticationController {
         // if the session has expired for a fb/tw registration (i.e. attempt is null), do not proceed - otherwise inconsistent data is stored
         ProviderSignInAttempt attempt = (ProviderSignInAttempt) request.getAttribute(ProviderSignInAttempt.class.getName(), RequestAttributes.SCOPE_SESSION);
         if (attempt != null) {
-            User user = userService.completeUserRegistration(email, username, names, attempt.getConnection(), loginAutomatically, receiveDailyDigest);
+            User user = userService.completeUserRegistration(email, names, attempt.getConnection(), loginAutomatically, receiveDailyDigest);
             signInAdapter.signIn(user, (HttpServletResponse) request.getNativeResponse(), true);
         } else if ("Persona".equals(type)){
-            User user = userService.completeUserRegistration(email, username, names, null, loginAutomatically, receiveDailyDigest);
+            User user = userService.completeUserRegistration(email, names, null, loginAutomatically, receiveDailyDigest);
             signInAdapter.signIn(user, (HttpServletResponse) request.getNativeResponse(), true);
         }
         String redirectUri = (String) session.getAttribute(REDIRECT_AFTER_LOGIN);

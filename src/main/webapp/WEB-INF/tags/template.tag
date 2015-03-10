@@ -93,9 +93,6 @@
                 <li<c:if test="${currentPage == 'docs'}"> class="active"</c:if>><a href="${root}/docs">Docs</a></li>
                 <li<c:if test="${currentPage == 'about'}"> class="active"</c:if>><a href="${root}/about">About</a></li>
 
-                <c:if test="${!userLoggedIn}">
-                    <li><a href="javascript:void(0);" id="personaSignin">Sign in</a></li>
-                </c:if>
                 <c:if test="${userLoggedIn}">
                     <li><a href="${root}/logout">Logout</a></li>
                 </c:if>

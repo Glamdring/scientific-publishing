@@ -72,11 +72,12 @@ public class Dao {
     public <T> T getByPropertyValue(Class<T> clazz, String propertyName,
             Object propertyValue) {
         String dotlessPropertyName = propertyName.replace(".", "");
-        List<T> result = findByQuery(new QueryDetails()
+        List<T> result = findByQuery(new QueryDetails<T>()
                 .setQuery("SELECT ob FROM " + clazz.getName() + " ob WHERE " + propertyName
                         + "=:" + dotlessPropertyName)
                 .setParamNames(new String[] {dotlessPropertyName})
-                .setParamValues(new Object[] {propertyValue}));
+                .setParamValues(new Object[] {propertyValue})
+                .setResultClass(clazz));
 
         return getResult(result);
 
@@ -85,11 +86,12 @@ public class Dao {
     public <T> List<T> getListByPropertyValue(Class<T> clazz, String propertyName,
             Object propertyValue) {
         String dotlessPropertyName = propertyName.replace(".", "");
-        List<T> result = findByQuery(new QueryDetails().setQuery(
+        List<T> result = findByQuery(new QueryDetails<T>().setQuery(
                 "SELECT o FROM " + clazz.getName() + " o WHERE " + propertyName
                         + "=:" + dotlessPropertyName)
                 .setParamNames(new String[] { dotlessPropertyName })
-                .setParamValues(new Object[] { propertyValue }));
+                .setParamValues(new Object[] { propertyValue })
+                .setResultClass(clazz));
 
         return result;
 
@@ -111,7 +113,6 @@ public class Dao {
         return q.executeUpdate();
     }
 
-    @SuppressWarnings("unchecked")
     protected <T> List<T> findByQuery(QueryDetails<T> details) {
         if (details.getResultClass() == null) {
             throw new IllegalArgumentException("You must specify a result class");
@@ -163,8 +164,8 @@ public class Dao {
 
 
     public <T> List<T> listOrdered(Class<T> clazz, String orderField) {
-        return findByQuery(new QueryDetails().setQuery("from " + clazz.getName() + " ORDER BY "
-                + orderField));
+        return findByQuery(new QueryDetails<T>().setQuery("from " + clazz.getName() + " ORDER BY "
+                + orderField).setResultClass(clazz));
     }
 
     protected EntityManager getEntityManager() {
@@ -185,11 +186,12 @@ public class Dao {
 
     public <T> List<T> getOrderedListByPropertyValue(Class<T> clazz,
             String propertyName, Object propertyValue, String orderField) {
-        List<T> result = findByQuery(new QueryDetails()
+        List<T> result = findByQuery(new QueryDetails<T>()
                 .setQuery("SELECT o FROM " + clazz.getName()
                 + " o WHERE " + propertyName + "=:" + propertyName
                 + " ORDER BY " + orderField).setParamNames(new String[] { propertyName })
-                .setParamValues(new Object[] { propertyValue }));
+                .setParamValues(new Object[] { propertyValue })
+                .setResultClass(clazz));
 
         return result;
     }
@@ -203,7 +205,8 @@ public class Dao {
 
 
     public <T> List<T> listPaged(Class<T> clazz, int start, int pageSize) {
-        return findByQuery(new QueryDetails().setQuery("FROM " + clazz.getName() + " ORDER BY id").setStart(start).setCount(pageSize));
+        return findByQuery(new QueryDetails<T>().setQuery("FROM " + clazz.getName() + " ORDER BY id").setStart(start)
+                .setCount(pageSize).setResultClass(clazz));
     }
 
     /**
