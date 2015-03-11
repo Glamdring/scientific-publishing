@@ -11,11 +11,12 @@ import org.joda.time.Period;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.social.connect.Connection;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.scipub.dao.jpa.UserDao;
+import com.scipub.dto.RegistrationDto;
+import com.scipub.model.Branch;
 import com.scipub.model.Paper;
 import com.scipub.model.SocialAuthentication;
 import com.scipub.model.User;
@@ -85,17 +86,22 @@ public class UserService {
     }
 
     @Transactional
-    public User completeUserRegistration(String email, String names, Connection<?> connection,
-            boolean loginAutomatically, boolean receiveDailyDigest) {
+    public User completeUserRegistration(RegistrationDto dto) {
         User user = new User();
-        user.setEmail(email);
-        user.setNames(names);
-        user.setLoginAutomatically(loginAutomatically);
+        user.setEmail(dto.getEmail());
+        user.setFirstName(dto.getFirstName());
+        user.setMiddleName(dto.getMiddleName());
+        user.setLastName(dto.getLastName());
+        user.setDegree(dto.getDegree());
+        user.setLoginAutomatically(dto.isLoginAutomatically());
+        for (long branchId : dto.getBranchIds()) {
+            user.getBranches().add(dao.getById(Branch.class, branchId));
+        }
         user.setRegistrationTime(new DateTime());
-        //user.setReceiveDailyDigest(receiveDailyDigest);
+        
         user = dao.persist(user);
-        if (connection != null) {
-            SocialAuthentication auth = JpaConnectionRepository.connectionToAuth(connection);
+        if (dto.getConnection() != null) {
+            SocialAuthentication auth = JpaConnectionRepository.connectionToAuth(dto.getConnection());
             auth.setUser(user);
             dao.persist(auth);
         }

@@ -1,10 +1,15 @@
 package com.scipub.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
@@ -14,31 +19,40 @@ public class User {
 
     @Id
     private String id;
-    
+
     @Column(unique = true)
     private String email;
-    
+
     @Column
     private String orcid;
-    
+
     @Column
-    private String names;
-    
+    private String firstName;
+
+    @Column
+    private String middleName;
+
+    @Column
+    private String lastName;
+
+    @Column
+    private String degree;
+
     @ManyToOne
     private Organization organization;
-    
+
     @Column
     private String photo;
-    
+
     @Lob
     private String bio;
 
     @Column
     private String arxivUsername;
-    
+
     @Column
     private String arxivPassword;
-    
+
     /**
      * Login token is used for secure cookie-based login
      */
@@ -50,15 +64,20 @@ public class User {
      */
     @Column
     private String loginSeries;
-    
+
     @Type(type = "com.scipub.util.PersistentDateTime")
     private DateTime lastLoginTime;
-    
+
     @Type(type = "com.scipub.util.PersistentDateTime")
     private DateTime registrationTime;
-    
-    @Column(nullable=false)
+
+    @Column(nullable = false)
     private boolean loginAutomatically;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<Branch> branches = new HashSet<>();
+
+    // deliberately no "gender" - it's irrelevant
     
     public String getEmail() {
         return email;
@@ -76,12 +95,36 @@ public class User {
         this.orcid = orcid;
     }
 
-    public String getNames() {
-        return names;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNames(String names) {
-        this.names = names;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getDegree() {
+        return degree;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
     }
 
     public Organization getOrganization() {
@@ -170,6 +213,14 @@ public class User {
 
     public void setLoginAutomatically(boolean loginAutomatically) {
         this.loginAutomatically = loginAutomatically;
+    }
+
+    public Set<Branch> getBranches() {
+        return branches;
+    }
+
+    public void setBranches(Set<Branch> branches) {
+        this.branches = branches;
     }
 
     @Override

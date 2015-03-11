@@ -41,6 +41,7 @@ import org.springframework.web.util.WebUtils;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.googlecode.googleplus.Plus;
 import com.googlecode.googleplus.model.person.Person;
+import com.scipub.dto.RegistrationDto;
 import com.scipub.model.User;
 import com.scipub.service.UserService;
 
@@ -94,19 +95,31 @@ public class AuthenticationController {
             if (api instanceof Facebook) {
                 FacebookProfile profile = ((Facebook) api).userOperations().getUserProfile();
                 user.setEmail(profile.getEmail());
-                user.setNames(profile.getName());
+                user.setFirstName(profile.getFirstName());
+                user.setLastName(profile.getLastName());
             } else if (api instanceof Twitter) {
                 TwitterProfile profile = ((Twitter) api).userOperations().getUserProfile();
-                user.setNames(profile.getName());
+                String[] names = profile.getName().split(" ");
+                if (names.length == 2) {
+                    user.setFirstName(names[0]);
+                    user.setLastName(names[1]);
+                } else if (names.length == 3) {
+                    user.setFirstName(names[0]);
+                    user.setMiddleName(names[1]);
+                    user.setLastName(names[2]);
+                }
             } else if (api instanceof Plus) {
                 Person person = ((Plus) api).getPeopleOperations().get("me");
-                user.setNames(person.getName().getFormatted());
+                user.setFirstName(person.getName().getGivenName());
+                user.setMiddleName(person.getName().getMiddleName());
+                user.setLastName(person.getName().getFamilyName());
                 if (!person.getEmails().isEmpty()) {
                     user.setEmail(person.getEmails().iterator().next().getValue());
                 }
             } else if (api instanceof LinkedIn) {
                LinkedInProfile profile = ((LinkedIn) api).profileOperations().getUserProfile();
-               user.setNames(profile.getFirstName() + " " + profile.getLastName());
+               user.setFirstName(profile.getFirstName());
+               user.setLastName(profile.getLastName());
                user.setEmail(profile.getEmailAddress());
             }
         } else {
@@ -118,23 +131,20 @@ public class AuthenticationController {
     }
 
     @RequestMapping("/social/completeRegistration")
-    public String completeRegistration(@RequestParam String email, @RequestParam String names,
-            @RequestParam String type,
-            @RequestParam(defaultValue = "false", required = false) boolean receiveDailyDigest,
-            @RequestParam(defaultValue = "false", required = false) boolean loginAutomatically,
+    public String completeRegistration(RegistrationDto registration, @RequestParam String type,
             NativeWebRequest request, HttpSession session, Model model) {
 
-        if (!emailValidator.isValid(email, null)) {
+        if (!emailValidator.isValid(registration.getEmail(), null)) {
             return "redirect:/?message=Invalid email. Try again";
         }
 
         // if the session has expired for a fb/tw registration (i.e. attempt is null), do not proceed - otherwise inconsistent data is stored
         ProviderSignInAttempt attempt = (ProviderSignInAttempt) request.getAttribute(ProviderSignInAttempt.class.getName(), RequestAttributes.SCOPE_SESSION);
         if (attempt != null) {
-            User user = userService.completeUserRegistration(email, names, attempt.getConnection(), loginAutomatically, receiveDailyDigest);
-            signInAdapter.signIn(user, (HttpServletResponse) request.getNativeResponse(), true);
-        } else if ("Persona".equals(type)){
-            User user = userService.completeUserRegistration(email, names, null, loginAutomatically, receiveDailyDigest);
+            registration.setConnection(attempt.getConnection());
+        }
+        if (attempt != null || "Persona".equals(type)){
+            User user = userService.completeUserRegistration(registration);
             signInAdapter.signIn(user, (HttpServletResponse) request.getNativeResponse(), true);
         }
         String redirectUri = (String) session.getAttribute(REDIRECT_AFTER_LOGIN);
