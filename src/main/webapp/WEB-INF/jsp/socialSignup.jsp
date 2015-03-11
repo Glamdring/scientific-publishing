@@ -13,7 +13,6 @@
 	<form action="<c:url value="/social/completeRegistration" />" method="POST">
 	    <input type="text" name="email" value="${user.email}" placeholder="Email" <c:if test="${type == 'Persona'}">readonly</c:if>/>
 	    <input type="text" name="firstName" placeholder="First name" value="${user.firstName}" />
-	    <input type="text" name="middleName" placeholder="Middle name" value="${user.middleName}" />
 	    <input type="text" name="lastName" placeholder="Last name" value="${user.lastName}" />
 	    <input type="text" name="degree" placeholder="degree" value="${user.degree}" />
 

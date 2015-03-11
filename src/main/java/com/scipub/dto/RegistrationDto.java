@@ -8,7 +8,6 @@ public class RegistrationDto {
     
     private String email;
     private String firstName;
-    private String middleName;
     private String lastName;
     private String degree;
     private Connection<?> connection;
@@ -26,12 +25,6 @@ public class RegistrationDto {
     }
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-    public String getMiddleName() {
-        return middleName;
-    }
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
     }
     public String getLastName() {
         return lastName;

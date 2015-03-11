@@ -90,7 +90,6 @@ public class UserService {
         User user = new User();
         user.setEmail(dto.getEmail());
         user.setFirstName(dto.getFirstName());
-        user.setMiddleName(dto.getMiddleName());
         user.setLastName(dto.getLastName());
         user.setDegree(dto.getDegree());
         user.setLoginAutomatically(dto.isLoginAutomatically());
