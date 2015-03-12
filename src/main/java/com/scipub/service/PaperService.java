@@ -35,7 +35,7 @@ public class PaperService {
     @Value("${pandoc.conversion.dir}")
     private String pandocConversionDir;
     
-    @Value("${branches.on.homepage")
+    @Value("${branches.on.homepage}")
     private int branchesOnHomepage;
     
     @Inject
@@ -95,7 +95,11 @@ public class PaperService {
         branchIds.addAll(branchDao.getTopLevelBranches().stream().map(b -> b.getId()).collect(Collectors.toList()));
         branchIds = branchIds.subList(0, Math.min(branchesOnHomepage, branchIds.size()));
         
-        return dao.getLatestPapers(branchIds);
+        List<Paper> papers = new ArrayList<>();
+        for (long branchId : branchIds) {
+            papers.addAll(dao.getLatestPapers(branchId, PAPERS_PER_BRANCH));
+        }
+        return papers;
     }
 
     private void addParentBranches(Branch branch, List<Long> branchIds) {

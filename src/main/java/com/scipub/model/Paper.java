@@ -21,7 +21,7 @@ import org.joda.time.DateTime;
 @Entity
 @NamedQueries({
     @NamedQuery(name = "Paper.getLatestByBranch", 
-                query = "SELECT p FROM Paper p WHERE p.branches IN (:branchIds)......TODO")
+                query = "SELECT p FROM Paper p WHERE :branchId IN elements(p.branches) ORDER BY p.created")
 })
 public class Paper {
 
