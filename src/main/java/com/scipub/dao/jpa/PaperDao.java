@@ -18,4 +18,13 @@ public class PaperDao extends Dao {
         
         return findByQuery(query);
     }
+
+    public List<Paper> getLatestPapers(List<Long> branchIds) {
+        QueryDetails<Paper> query = new QueryDetails<Paper>().setQueryName("Paper.getLatestByBranch")
+                .setParamNames(new String[] {"branchIds"})
+                .setParamValues(new Object[] {branchIds})
+                .setResultClass(Paper.class);
+            
+            return findByQuery(query);
+    }
 }

@@ -2,8 +2,10 @@ package com.scipub.service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
@@ -14,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
+import com.scipub.dao.jpa.BranchDao;
 import com.scipub.dao.jpa.PaperDao;
 import com.scipub.dto.PaperSubmissionDto;
 import com.scipub.model.Branch;
@@ -27,14 +30,22 @@ import com.scipub.util.UriUtils;
 @Service
 public class PaperService {
 
+    private static final int PAPERS_PER_BRANCH = 3;
+    
     @Value("${pandoc.conversion.dir}")
     private String pandocConversionDir;
+    
+    @Value("${branches.on.homepage")
+    private int branchesOnHomepage;
     
     @Inject
     private UserService userService;
     
     @Inject
     private PaperDao dao;
+    
+    @Inject
+    private BranchDao branchDao;
     
     @Transactional
     public void submitPaper(PaperSubmissionDto dto, String userId) {
@@ -70,6 +81,30 @@ public class PaperService {
         }
     }
 
+    @Transactional(readOnly = true)
+    public List<Paper> getLatestPapers(User user) {
+        List<Long> branchIds = new ArrayList<Long>();
+        if (user != null) {
+            branchIds.addAll(user.getBranches().stream().map(b -> b.getId()).collect(Collectors.toList()));
+            
+            for (Branch branch : user.getBranches()) {
+                addParentBranches(branch, branchIds);
+            }
+        }
+
+        branchIds.addAll(branchDao.getTopLevelBranches().stream().map(b -> b.getId()).collect(Collectors.toList()));
+        branchIds = branchIds.subList(0, Math.min(branchesOnHomepage, branchIds.size()));
+        
+        return dao.getLatestPapers(branchIds);
+    }
+
+    private void addParentBranches(Branch branch, List<Long> branchIds) {
+        if (branch.getParentBranch() != null) {
+            branchIds.add(branch.getParentBranch().getId());
+            addParentBranches(branch.getParentBranch(), branchIds);
+        }
+    }
+    
     private Paper dtoToEntity(PaperSubmissionDto dto, User user) {
         Paper paper = null;
         if (dto.getUri() != null) {

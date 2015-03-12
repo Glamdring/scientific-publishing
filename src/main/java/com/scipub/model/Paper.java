@@ -12,11 +12,17 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "Paper.getLatestByBranch", 
+                query = "SELECT p FROM Paper p WHERE p.branches IN (:branchIds)......TODO")
+})
 public class Paper {
 
     @Id
