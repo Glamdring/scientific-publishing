@@ -14,7 +14,7 @@
 	    <input type="text" name="email" value="${user.email}" placeholder="Email" <c:if test="${type == 'Persona'}">readonly</c:if>/>
 	    <input type="text" name="firstName" placeholder="First name" value="${user.firstName}" />
 	    <input type="text" name="lastName" placeholder="Last name" value="${user.lastName}" />
-	    <input type="text" name="degree" placeholder="degree" value="${user.degree}" />
+	    <input type="text" name="degree" placeholder="Degree" value="${user.degree}" />
 
         <!-- TODO input branch -->	    
 	    <c:if test="${type == 'Persona'}">
