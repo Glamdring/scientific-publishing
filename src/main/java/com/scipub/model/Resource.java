@@ -17,7 +17,7 @@ public class Resource {
     private String filename;
     
     @ManyToOne
-    private Paper paper;
+    private Publication publication;
     
     @Column
     private String link; //figshare, slideshare, github,...
@@ -41,12 +41,12 @@ public class Resource {
         this.filename = filename;
     }
 
-    public Paper getPaper() {
-        return paper;
+    public Publication getPublication() {
+        return publication;
     }
 
-    public void setPaper(Paper paper) {
-        this.paper = paper;
+    public void setPublication(Publication paper) {
+        this.publication = paper;
     }
 
     public String getLink() {

@@ -10,14 +10,14 @@ import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 @Entity
-public class PaperVote {
+public class PublicationEndorsement {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private long id;
 
     @ManyToOne
-    private Paper paper;
+    private Publication publication;
 
     @ManyToOne
     private User voter;
@@ -33,12 +33,12 @@ public class PaperVote {
         this.id = id;
     }
 
-    public Paper getPaper() {
-        return paper;
+    public Publication getPublication() {
+        return publication;
     }
 
-    public void setPaper(Paper paper) {
-        this.paper = paper;
+    public void setPublication(Publication paper) {
+        this.publication = paper;
     }
 
     public User getVoter() {

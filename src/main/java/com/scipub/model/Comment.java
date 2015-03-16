@@ -18,7 +18,7 @@ public class Comment {
     private long id;
     
     @ManyToOne
-    private Paper paper;
+    private Publication publication;
     
     @ManyToOne
     private PeerReview peerReview;
@@ -37,12 +37,12 @@ public class Comment {
         this.id = id;
     }
 
-    public Paper getPaper() {
-        return paper;
+    public Publication getPublication() {
+        return publication;
     }
 
-    public void setPaper(Paper paper) {
-        this.paper = paper;
+    public void setPublication(Publication publication) {
+        this.publication = publication;
     }
 
     public PeerReview getPeerReview() {

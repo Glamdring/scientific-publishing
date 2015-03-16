@@ -15,7 +15,7 @@ public class PeerReview {
     private String uri;
 
     @ManyToOne
-    private Paper paper;
+    private Publication publication;
 
     @ManyToOne
     private User reviewer;
@@ -52,12 +52,12 @@ public class PeerReview {
         this.uri = doi;
     }
 
-    public Paper getPaper() {
-        return paper;
+    public Publication getPublication() {
+        return publication;
     }
 
-    public void setPaper(Paper paper) {
-        this.paper = paper;
+    public void setPublication(Publication paper) {
+        this.publication = paper;
     }
 
     public User getReviewer() {

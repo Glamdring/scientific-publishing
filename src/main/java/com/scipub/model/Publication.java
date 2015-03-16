@@ -20,10 +20,10 @@ import org.joda.time.DateTime;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "Paper.getLatestByBranch", 
-                query = "SELECT p FROM Paper p WHERE :branchId IN elements(p.branches) ORDER BY p.created")
+    @NamedQuery(name = "Publication.getLatestByBranch", 
+                query = "SELECT p FROM Publication p WHERE :branchId IN elements(p.branches) ORDER BY p.created")
 })
-public class Paper {
+public class Publication {
 
     @Id
     private String uri;
@@ -35,7 +35,7 @@ public class Paper {
     private Set<String> nonRegisteredAuthors = new HashSet<>();
 
     @ManyToOne
-    private PaperRevision currentRevision;
+    private PublicationRevision currentRevision;
 
     @Type(type = "com.scipub.util.PersistentDateTime")
     private DateTime created;
@@ -50,7 +50,7 @@ public class Paper {
     private Set<Tag> tags = new HashSet<>();
     
     @ManyToOne
-    private Paper followUpTo;
+    private Publication followUpTo;
     
     @Column
     private String followUpToLink;
@@ -85,11 +85,11 @@ public class Paper {
         this.nonRegisteredAuthors = nonRegisteredAuthors;
     }
 
-    public PaperRevision getCurrentRevision() {
+    public PublicationRevision getCurrentRevision() {
         return currentRevision;
     }
 
-    public void setCurrentRevision(PaperRevision currentRevision) {
+    public void setCurrentRevision(PublicationRevision currentRevision) {
         this.currentRevision = currentRevision;
     }
 
@@ -125,11 +125,11 @@ public class Paper {
         this.tags = tags;
     }
 
-    public Paper getFollowUpTo() {
+    public Publication getFollowUpTo() {
         return followUpTo;
     }
 
-    public void setFollowUpTo(Paper followUpTo) {
+    public void setFollowUpTo(Publication followUpTo) {
         this.followUpTo = followUpTo;
     }
 

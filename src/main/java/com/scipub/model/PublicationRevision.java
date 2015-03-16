@@ -12,14 +12,14 @@ import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 @Entity
-public class PaperRevision {
+public class PublicationRevision {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private long id;
 
     @ManyToOne
-    private Paper paper;
+    private Publication publication;
 
     @ManyToOne
     private User submitter;
@@ -31,7 +31,7 @@ public class PaperRevision {
     private String title;
     
     @Column
-    private String paperAbstract;
+    private String publicationAbstract;
     
     @Lob
     private String content;
@@ -53,12 +53,12 @@ public class PaperRevision {
         this.id = id;
     }
 
-    public Paper getPaper() {
-        return paper;
+    public Publication getPublication() {
+        return publication;
     }
 
-    public void setPaper(Paper paper) {
-        this.paper = paper;
+    public void setPublication(Publication paper) {
+        this.publication = paper;
     }
 
     public User getSubmitter() {
@@ -85,12 +85,12 @@ public class PaperRevision {
         this.title = title;
     }
 
-    public String getPaperAbstract() {
-        return paperAbstract;
+    public String getPublicationAbstract() {
+        return publicationAbstract;
     }
 
-    public void setPaperAbstract(String paperAbstract) {
-        this.paperAbstract = paperAbstract;
+    public void setPublicationAbstract(String paperAbstract) {
+        this.publicationAbstract = paperAbstract;
     }
 
     public String getContent() {

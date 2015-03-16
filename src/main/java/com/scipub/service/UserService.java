@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.scipub.dao.jpa.UserDao;
 import com.scipub.dto.RegistrationDto;
 import com.scipub.model.Branch;
-import com.scipub.model.Paper;
+import com.scipub.model.Publication;
 import com.scipub.model.SocialAuthentication;
 import com.scipub.model.User;
 import com.scipub.service.auth.JpaConnectionRepository;
@@ -33,7 +33,7 @@ public class UserService {
 
     @Transactional(readOnly = true)
     public boolean isAuthor(User user, String paperUri) {
-        Paper paper = dao.getById(Paper.class, paperUri);
+        Publication paper = dao.getById(Publication.class, paperUri);
         return paper.getAuthors().contains(user);
     }
 

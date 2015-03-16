@@ -20,8 +20,8 @@ import com.scipub.dao.jpa.BranchDao;
 import com.scipub.dao.jpa.PaperDao;
 import com.scipub.dto.PaperSubmissionDto;
 import com.scipub.model.Branch;
-import com.scipub.model.Paper;
-import com.scipub.model.PaperRevision;
+import com.scipub.model.Publication;
+import com.scipub.model.PublicationRevision;
 import com.scipub.model.User;
 import com.scipub.util.Pandoc;
 import com.scipub.util.Pandoc.Format;
@@ -54,7 +54,7 @@ public class PaperService {
             throw new IllegalStateException("User is not an author of the paper he's submitting");
         }
         
-        Paper paper = dtoToEntity(dto, user);
+        Publication paper = dtoToEntity(dto, user);
         
         assignIdentifiers(dto, userId);
         
@@ -67,8 +67,8 @@ public class PaperService {
         dao.persist(paper);
 
         // set old revisions as old
-        List<PaperRevision> revisions = dao.getRevisions(paper);
-        for (PaperRevision revision : revisions) {
+        List<PublicationRevision> revisions = dao.getRevisions(paper);
+        for (PublicationRevision revision : revisions) {
             revision.setLatest(false);
             dao.persist(revision);
         }
@@ -82,7 +82,7 @@ public class PaperService {
     }
 
     @Transactional(readOnly = true)
-    public List<Paper> getLatestPapers(User user) {
+    public List<Publication> getLatestPapers(User user) {
         List<Long> branchIds = new ArrayList<Long>();
         if (user != null) {
             branchIds.addAll(user.getBranches().stream().map(b -> b.getId()).collect(Collectors.toList()));
@@ -95,7 +95,7 @@ public class PaperService {
         branchIds.addAll(branchDao.getTopLevelBranches().stream().map(b -> b.getId()).collect(Collectors.toList()));
         branchIds = branchIds.subList(0, Math.min(branchesOnHomepage, branchIds.size()));
         
-        List<Paper> papers = new ArrayList<>();
+        List<Publication> papers = new ArrayList<>();
         for (long branchId : branchIds) {
             papers.addAll(dao.getLatestPapers(branchId, PAPERS_PER_BRANCH));
         }
@@ -109,13 +109,13 @@ public class PaperService {
         }
     }
     
-    private Paper dtoToEntity(PaperSubmissionDto dto, User user) {
-        Paper paper = null;
+    private Publication dtoToEntity(PaperSubmissionDto dto, User user) {
+        Publication paper = null;
         if (dto.getUri() != null) {
-            paper = dao.getById(Paper.class, dto.getUri());
+            paper = dao.getById(Publication.class, dto.getUri());
         }
         if (paper == null) {
-            paper = new Paper();
+            paper = new Publication();
             paper.setCreated(DateTime.now());
         }
         
@@ -127,7 +127,7 @@ public class PaperService {
         }
         
         if (dto.getFollowUpTo() != null) {
-            paper.setFollowUpTo(dao.getById(Paper.class, dto.getFollowUpTo()));
+            paper.setFollowUpTo(dao.getById(Publication.class, dto.getFollowUpTo()));
         }
         
         for (Integer branchId : dto.getBranchIds()) {
@@ -145,14 +145,14 @@ public class PaperService {
         return paper;
     }
 
-    private void saveRevision(PaperSubmissionDto dto, Paper paper, User user, int revisionIdx) {
-        PaperRevision revision = new PaperRevision();
+    private void saveRevision(PaperSubmissionDto dto, Publication paper, User user, int revisionIdx) {
+        PublicationRevision revision = new PublicationRevision();
         revision.setCreated(DateTime.now());
         revision.setLatest(true);
-        revision.setPaper(paper);
+        revision.setPublication(paper);
         revision.setOriginalFilename(dto.getOriginalFilename());
         revision.setContent(dto.getContent()); //extracted by convertContentToMarkdown
-        revision.setPaperAbstract(dto.getPaperAbstract());
+        revision.setPublicationAbstract(dto.getPaperAbstract());
         revision.setTitle(dto.getTitle());
         revision.setRevision(revisionIdx);
         revision.setSubmitter(user);
