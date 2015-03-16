@@ -61,6 +61,9 @@ public class Publication {
     @Column
     private int citations;
 
+    @Enumerated(EnumType.STRING)
+    private Language language;
+    
     public String getUri() {
         return uri;
     }
@@ -156,5 +159,13 @@ public class Publication {
 
     public void setCitations(int citations) {
         this.citations = citations;
+    }
+
+    public Language getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(Language language) {
+        this.language = language;
     }
 }
