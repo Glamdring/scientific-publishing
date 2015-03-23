@@ -2,8 +2,9 @@
 <head>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-	
-	<link rel='stylesheet' href='css/jquery.tree.min.css'>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.tree.min.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
 	<script src='js/jquery.tree.min.js'></script>
 	
 	<script type="text/javascript">
@@ -15,8 +16,37 @@
 			    var elements = [];
 			    appendBranch(elements, sciences);
 			    container.append(elements.join(""));
-			    container.tree()	    
+			    container.tree({
+			    	onCheck: { 
+			    		ancestors: 'nothing', 
+			    		descendants: 'nothing' 
+		    		}, 
+		    		onUncheck: { 
+		    			ancestors: 'nothing' 
+	    			}
+			    })	    
 		    //});
+		    
+		    //var listOptions = {valueNames: ["branchName"]};
+		    //var branchesList = new List("science", listOptions);
+		    
+		    $("#branchSearchBox").keyup(function() {
+		    	var text = $(this).val().toLowerCase();
+		    	$(".branchName").each(function() {
+		    		var branch = $(this);
+		    		if (branch.text().toLowerCase().indexOf(text) <= -1) {
+		    			branch.parent().hide(); //hide the li
+		    		} else {
+		    			var currentLi = branch.parent();
+		    			currentLi.show();
+		    			//also show all parents of the li to the top
+		    			while (currentLi.parent().parent().prop("tagName").toLowerCase() != "div") {
+		    				currentLi = currentLi.parent().parent();
+		    				currentLi.show();
+		    			}
+		    		}
+		    	});
+		    });
 		});
 
 		function appendBranch(container, branches) {
@@ -27,7 +57,7 @@
             for (var i = 0; i < branches.length; i ++) {
                 var branch = branches[i]; 
                 container.push('<li><input type="checkbox" name="scienceBranch" id="scienceBranch' + branch.id + 
-                    '" value="' + branch.id + '" /><label for="scienceBranch' + branch.id + '">' + branch.name + '</label>');
+                    '" value="' + branch.id + '" /><label for="scienceBranch' + branch.id + '" class="branchName">' + branch.name + '</label>');
 
                 appendBranch(container, branch.children);
                 container.push("</li>");
@@ -37,5 +67,7 @@
 		}
 	</script>
 </head>
-<div id="sciences"></div>
+<input type="text" class="ui-input" id="branchSearchBox" />
+<div id="sciences" style="height: 310px; width: 650px; overflow: auto;">
+</div>
 </html>
