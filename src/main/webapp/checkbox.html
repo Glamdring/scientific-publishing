@@ -39,6 +39,9 @@
 		    	if (!text && branchListFullyVisible) {
 		    		return;
 		    	}
+		    	// cache expanded and visible nodes so that they are not expanded and shown multiple times
+		    	var expandedNodes = {};
+		    	
 		    	$(".branchName").each(function() {
 		    		var branch = $(this);
 		    		if (branch.text().toLowerCase().indexOf(text) <= -1) {
@@ -57,8 +60,12 @@
 	                        // also show all parents of the li to the top
 			    			while (currentLi.parent().parent().prop("tagName").toLowerCase() != "div") {
 			    				currentLi = currentLi.parent().parent();
-			    				container.tree("expand", currentLi);
-			    				currentLi.show();
+			    				var id = currentLi.attr("id");
+			    				if (!expandedNodes.hasOwnProperty(id)) {
+				    				container.tree("expand", currentLi);
+				    				currentLi.show();
+				    				expandedNodes[id] = "";
+			    				}
 			    			}
 		    			}
 		    		}
@@ -79,7 +86,7 @@
                 if (branch.children.length == 0) {
                 	cssClass = "leaf";
                 }
-                container.push('<li class="' + cssClass + '"><input type="checkbox" name="scienceBranch" id="scienceBranch' + branch.id + 
+                container.push('<li class="' + cssClass + '" id="scienceBranchLi' + branch.id +'"><input type="checkbox" name="scienceBranch" id="scienceBranch' + branch.id + 
                     '" value="' + branch.id + '" /><label for="scienceBranch' + branch.id + '" class="branchName">' + branch.name + '</label>');
 
                 if (branches.length > 0) {
