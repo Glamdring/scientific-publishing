@@ -1,0 +1,18 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * { margin:0; padding:0; list-style:none;  }
+.sf-menu { line-height:14px; }
+.sf-menu ul { position:absolute; top:-999em; width:180px; /* left offset of submenus need to match (see below) */ }
+.sf-menu ul li { width:100%; }
+.sf-menu li:hover { visibility:inherit; /* fixes IE7 'sticky bug' */ }
+.sf-menu li { float:left; position:relative; margin-right:0px; }
+.sf-menu a { display:block; position:relative; }
+* html .sf-menu a  { position:fixed; }
+.sf-menu li:hover ul, .sf-menu li.sfHover ul { left:0; top:2.9em; /* match top ul list item height */ z-index:99; }
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul { top:-999em; }
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {left:180px; /* match ul width */ top:0; }
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul { top:-999em; }
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul { left:180px; /* match ul width */ top:0; }
+/*** DEMO SKIN ***/
+.sf-menu { float:left; width:930px;  }
+.sf-menu li a { padding:11px 15px; font-family:Arial, Verdana, Helvetica, sans-serif; font-weight:bold; text-decoration:none;font-size:14px; }
+.sf-menu li li a, .sf-menu li li li a, .sf-menu li li li li a, .sf-menu li li li li li a { padding:8px 15px; font-size:12px;}

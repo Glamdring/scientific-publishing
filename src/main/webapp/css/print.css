@@ -1,0 +1,13 @@
+.header, .breadcrumbs, .sidebarlite, .bottompart, .footer,
+	.latestproperties, #theImages, .propertydetails_toplinks, #arrow_right,
+	#arrow_left, #waitMessage, .sidebar, .agent_info, #basic-modal-content,
+	#basic-modal-content2, .propertymap {
+	display: none !important;
+}
+
+body {
+	float: none !important;
+	width: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
