@@ -46,6 +46,9 @@
 ***** [[Gravitational wave astronomy]] – Gravitons
 *** [[Atmospheric physics]] – study of the application of physics to the atmosphere
 *** [[Atomic, molecular, and optical physics]] – study of how matter and light interact
+**** [[Atomic physics]]
+**** [[Molecular physics]]
+**** [[Optical physics]]
 *** [[Biophysics]] – study of physical processes relating to biology
 **** [[Medical physics]] – application of physics concepts, theories and methods to medicine.
 **** [[Neurophysics]] – branch of biophysics dealing with the nervous system.
@@ -79,7 +82,7 @@
 **** [[Thermodynamics]] – branch of physical science concerned with heat and its relation to other forms of energy and work.
 *** [[Nuclear physics]] – field of physics that studies the building blocks and interactions of atomic nuclei.
 **** [[Experimental nuclear physics]]
-**** [[Theorecital nuclear physics]]
+**** [[Theoretical nuclear physics]]
 *** [[Optics]] – branch of physics which involves the behavior and properties of light, including its interactions with matter and the construction of instruments that use or detect it.
 *** [[Particle physics]] – branch of physics that studies the existence and interactions of particles that are the constituents of what is usually referred to as matter or radiation.
 *** [[Psychophysics]] – quantitatively investigates the relationship between physical stimuli and the sensations and perceptions they affect.
@@ -98,6 +101,12 @@
 **** [[Theoretical high energy physics]]
 *** [[Statistical physics]]
 *** [[Instrumentation and detectors (physics)]]
+*** [[Nonlinear sciences]]
+**** [[Adaptation and Self-Organizing Systems]]
+**** [[Cellular Automata and Lattice Gases]]
+**** [[Chaotic Dynamics]]
+**** [[Exactly Solvable and Integrable Systems]]
+**** [[Pattern Formation and Solitons]]
 ** [[Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions
 *** [[Analytical chemistry]] – study of the separation, identification, and quantification of the chemical components of natural and artificial materials.
 *** [[Astrochemistry]] – study of the abundance and reactions of chemical elements and molecules in the universe, and their interaction with radiation.
@@ -294,7 +303,6 @@
 ** [[Biomathematics or Mathematical Biology]] – quantitative or mathematical study of biological processes, with an emphasis on modeling
 ** [[Biomechanics]] – often considered a branch of medicine, the study of the mechanics of living beings, with an emphasis on applied use through [[prosthetics]] or [[orthotics]]
 ** [[Biomedical research]] – study of the human body in health and disease
-** [[Biophysics]] – study of biological processes through physics, by applying the theories and methods traditionally used in the physical sciences
 ** [[Biotechnology]] – new and sometimes controversial branch of biology that studies the manipulation of living matter, including genetic modification and [[synthetic biology]]
 ** [[Building biology]] – study of the indoor living environment
 ** [[Botany]] – study of plants
@@ -474,7 +482,6 @@
 *** [[Very-large-scale integration]] – process of creating integrated circuits by combining thousands of transistors into a single chip
 ** [[Operating systems]] – set of software that manages computer hardware resources and provides common services for computer programs
 ** [[Computer networking]] – collection of hardware components and computers interconnected by communication channels that allow sharing of resources and information
-*** [[Information theory]] – branch of applied mathematics and electrical engineering involving the quantification of information
 *** [[Internet]] – global system of interconnected computer networks that use the standard Internet protocol suite (often called TCP/IP, although not all applications use TCP) to serve billions of users worldwide.
 **** [[World wide web]] – part of the Internet; system of interlinked hypertext documents accessed via the Internet.
 *** [[Wireless computing]]  – any type of computer network that is not connected by cables of any kind.
@@ -653,6 +660,7 @@
 **** [[Order theory]] – branch of mathematics which investigates our intuitive notion of order using binary relations.
 *** [[Differential algebra]] – algebras equipped with a derivation, which is a unary function that is linear and satisfies the Leibniz product rule.
 *** [[Commutative algebra]]
+*** [[Quantum algebra]]
 ** [[Mathematical analysis]] – branch of pure mathematics that includes the theories of differentiation, integration and measure, limits, infinite series, and analytic functions
 *** [[Real analysis]] – branch of mathematical analysis dealing with the set of real numbers and functions of a real variable.
 **** [[Calculus]] – branch of mathematics focused on limits, functions, derivatives, integrals, and infinite series.
@@ -722,6 +730,7 @@
 *** [[Toric geometry]]
 *** [[Transformation geometry]]
 *** [[Tropical geometry]]
+*** [[Metric geometry]]
 ** [[Trigonometry]] –
 ** [[Number theory]] – branch of pure mathematics devoted primarily to the study of the integers
 *** [[Analytic number theory]] – branch of number theory that uses methods from mathematical analysis to solve problems about the integers
@@ -737,13 +746,12 @@
 *** [[Intuitionistic logic]] – symbolic logic system differing from classical logic in its definition of the meaning of a statement being true
 ** [[Applied mathematics]] – branch of mathematics that concerns itself with mathematical methods that are typically used in science, engineering, business, and industry.
 *** [[Mathematical statistics]] – study of statistics from a mathematical standpoint, using probability theory as well as other branches of mathematics such as linear algebra and analysis
-**** [[Probability]] – likelihood or chance that something is the case or will happen
 **** [[Econometrics]] – application of mathematics and statistical methods to economic data
 **** [[Actuarial science]] – discipline that applies mathematical and statistical methods to assess risk in the insurance and finance industries.
 **** [[Demography]] – statistical study of human populations and sub-populations.
 *** [[Approximation theory]] – study of how functions can best be approximated with simpler functions, and with quantitatively characterizing the errors introduced thereby.
 *** [[Numerical analysis]] – study of algorithms that use numerical approximation (as opposed to general symbolic manipulations) for the problems of mathematical analysis (as distinguished from discrete mathematics).
-*** [[Optimization (mathematics))]] – selection of a best element from some set of available alternatives.
+*** [[Optimization (mathematics)]] – selection of a best element from some set of available alternatives.
 **** [[Operations research]] – study of the application of advanced analytical methods to help make better decisions
 **** [[Linear programming]] – mathematical method for determining a way to achieve the best outcome (such as maximum profit or lowest cost) in a given mathematical model for some list of requirements represented as linear relationships
 *** [[Dynamical systems]] – concept in mathematics where a fixed rule describes the time dependence of a point in a geometrical space
@@ -770,7 +778,7 @@
 ** [[Engineering statistics]] – Engineering statistics combines engineering and statistics
 ** [[Spatial statistics]] – any of the formal techniques which study entities using their topological, geometric, or geographic properties.
 ** [[Social statistics]] – use of statistical measurement systems to study human behavior in a social environment
-** [[Statistical model]]ling – formalization of relationships between variables in the form of mathematical equations
+** [[Statistical modelling]] – formalization of relationships between variables in the form of mathematical equations
 *** [[Biostatistics]] – application of statistics to a wide range of topics in biology.
 **** [[Epidemiology]] – study of the distribution and patterns of health-events, health-characteristics and their causes or influences in well-defined populations.
 *** [[Multivariate analysis]] – observation and analysis of more than one statistical variable at a time.
@@ -781,7 +789,6 @@
 ** [[Statistical theory]] – provides a basis for the whole range of techniques, in both study design and data analysis, that are used within applications of statistics.
 *** [[Decision theory]] – identifies the values, uncertainties and other issues relevant in a given decision, its rationality, and the resulting optimal decision.
 *** [[Mathematical statistics]] – study of statistics from a mathematical standpoint, using probability theory as well as other branches of mathematics such as linear algebra and analysis.
-**** [[Probability]] – likelihood or chance that something is the case or will happen.
 ** [[Survey Sampling]] – process of selecting a sample of elements from a target population in order to conduct a survey.
 *** [[Sampling theory]] – study of the collection, organization, analysis, and interpretation of data.
 *** [[Survey methodology]] – field that studies the sampling of individuals from a population with a view towards making statistical inferences about the population using the sample.
@@ -919,6 +926,7 @@
 ** [[Vocational education and training]]
 ** [[Higher education]]
 ** [[Autodidacticism]]
+** [[Science education]]
 * [[Environmental studies]] – interdisciplinary academic field which systematically studies human interaction with the environment.
 * [[Gender studies]] – field of interdisciplinary study and academic field devoted to gender identity and gendered representation as central categories of analysis.
 * [[Geography]] – study of the lands, features, inhabitants, and phenomena of Earth.
