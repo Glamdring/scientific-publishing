@@ -46,6 +46,9 @@ public class Publication {
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Branch> branches = new HashSet<>();
     
+    @ManyToOne
+    private Branch primaryBranch;
+    
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Tag> tags = new HashSet<>();
     
@@ -71,8 +74,8 @@ public class Publication {
         return uri;
     }
 
-    public void setUri(String doi) {
-        this.uri = doi;
+    public void setUri(String uri) {
+        this.uri = uri;
     }
 
     public Set<User> getAuthors() {
@@ -178,5 +181,13 @@ public class Publication {
 
     public void setSource(PublicationSource source) {
         this.source = source;
+    }
+
+    public Branch getPrimaryBranch() {
+        return primaryBranch;
+    }
+
+    public void setPrimaryBranch(Branch primaryBranch) {
+        this.primaryBranch = primaryBranch;
     }
 }
