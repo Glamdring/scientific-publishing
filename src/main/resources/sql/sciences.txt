@@ -1,6 +1,8 @@
 [[Natural sciences]]
 * [[Physical science]] – branch of natural science that studies non-living systems, in contrast to the biological sciences. It in turn has many branches, each referred to as a "physical science", together called the "physical sciences". However, the term "physical" creates an unintended, somewhat arbitrary distinction, since many branches of physical science also study biological phenomena (organic chemistry, for example).
 ** [[Physics]] – physical science that studies matter and its motion through space-time, and related concepts such as energy and force
+*** [[Applied physics]]
+**** [[Accelerator physics]]
 *** [[Acoustics]] – study of mechanical waves in solids, liquids, and gases (such as vibration and sound)
 *** [[Agrophysics]] – study of physics applied to [[agroecosystems]]
 **** [[Soil physics]] – study of soil physical properties and processes.
@@ -13,6 +15,8 @@
 ***** [[Plasma astrophysics]] – studies properties of plasma in outer space.
 ***** [[Relativistic astrophysics]] – studies effects of special relativity and general relativity in astrophysical contexts including gravitational waves, gravitational lensing and black holes.
 ***** [[Solar physics]] – Sun and its interaction with the remainder of the Solar System and interstellar space.
+***** [[Methods for astrophysics]]
+***** [[Astrophysics of Galaxies]]
 **** [[Astrobiology]]
 **** [[Astrodynamics]] – application of ballistics and celestial mechanics to the practical problems concerning the motion of rockets and other spacecraft.
 **** [[Astrometry]] – branch of astronomy that involves precise measurements of the positions and movements of stars and other celestial bodies.
@@ -20,9 +24,8 @@
 **** [[Extragalactic astronomy]] – branch of astronomy concerned with objects outside our own Milky Way Galaxy
 **** [[Galactic astronomy]] – study of our own Milky Way galaxy and all its contents.
 **** [[Physical cosmology]] – study of the largest-scale structures and dynamics of the universe and is concerned with fundamental questions about its formation and evolution.
-**** [[Planetary science]] – scientific study of planets (including Earth), moons, and planetary systems, in particular those of the Solar System and the processes that form them.
 **** [[Stellar astronomy]] – natural science that deals with the study of celestial objects (such as stars, planets, comets, nebulae, star clusters and galaxies) and phenomena that originate outside the atmosphere of Earth (such as cosmic background radiation)
-**** [[Planetary Science]] – study of the planets of the Solar System.
+**** [[Planetary science]] – study of the planets of the Solar System.
 ***** [[Exoplanetology]] – various planets outside of the Solar System
 ***** [[Planetary formation]] – formation of planets and moons in the context of the formation and evolution of the Solar System.
 ***** [[Planetary rings]] – dynamics, stability, and composition of planetary rings
@@ -49,6 +52,12 @@
 *** [[Chemical physics]] – branch of physics that studies chemical processes from the point of view of physics.
 *** [[Computational physics]] – study and implementation of numerical algorithms to solve problems in physics for which a quantitative theory already exists.
 *** [[Condensed matter physics]] – study of the physical properties of condensed phases of matter.
+**** [[Disordered systems]]
+**** [[Mesoscale and nanoscale physics]] 
+**** [[Quantum gases]]
+**** [[Soft condensed matter]] 
+**** [[Strongly correlated electrons]] 
+**** [[Superconductivity]]
 *** [[Cryogenics]] – cryogenics is the study of the production of very low temperature (below −150&nbsp;°C, −238&nbsp;°F or 123K) and the behavior of materials at those temperatures.
 *** [[Econophysics]] – interdisciplinary research field, applying theories and methods originally developed by physicists in order to solve problems in economics
 *** [[Electromagnetism]] – branch of science concerned with the forces that occur between electrically charged particles.
@@ -67,18 +76,28 @@
 ***** [[Fluid statics]]
 ***** [[Fluid kinematics]]
 ***** [[Fluid dynamics]]
-**** [[Quantum mechanics]] – branch of physics dealing with physical phenomena where the action is on the order of the Planck constant.
 **** [[Thermodynamics]] – branch of physical science concerned with heat and its relation to other forms of energy and work.
 *** [[Nuclear physics]] – field of physics that studies the building blocks and interactions of atomic nuclei.
+**** [[Experimental nuclear physics]]
+**** [[Theorecital nuclear physics]]
 *** [[Optics]] – branch of physics which involves the behavior and properties of light, including its interactions with matter and the construction of instruments that use or detect it.
 *** [[Particle physics]] – branch of physics that studies the existence and interactions of particles that are the constituents of what is usually referred to as matter or radiation.
 *** [[Psychophysics]] – quantitatively investigates the relationship between physical stimuli and the sensations and perceptions they affect.
 *** [[Plasma physics]] – state of matter similar to gas in which a certain portion of the particles are ionized.
+**** [[Space plasma physics]] – state of matter similar to gas in which a certain portion of the particles are ionized.
 *** [[Polymer physics]] – field of physics that studies polymers, their fluctuations, mechanical properties, as well as the kinetics of reactions involving degradation and polymerisation of polymers and monomers respectively.
 *** [[Quantum physics]] – branch of physics dealing with physical phenomena where the action is on the order of the Planck constant.
+**** [[Quantum cosmology]] -
 *** [[Relativity]] –
 *** [[Solid state physics]] – study of rigid matter, or solids, through methods such as quantum mechanics, crystallography, electromagnetism, and metallurgy.
 *** [[Vehicle dynamics]] – dynamics of vehicles, here assumed to be ground vehicles.
+*** [[High energy physics]]
+**** [[Experimental high energy physics]]
+**** [[Lattice high energy physics]]
+**** [[Phenomenology of high energy physics]]
+**** [[Theoretical high energy physics]]
+*** [[Statistical physics]]
+*** [[Instrumentation and detectors (physics)]]
 ** [[Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions
 *** [[Analytical chemistry]] – study of the separation, identification, and quantification of the chemical components of natural and artificial materials.
 *** [[Astrochemistry]] – study of the abundance and reactions of chemical elements and molecules in the universe, and their interaction with radiation.
@@ -633,6 +652,7 @@
 *** [[Lattice theory]] – partially ordered set in which any two elements have a unique supremum (also called a least upper bound or join) and a unique infimum (also called a greatest lower bound or meet).
 **** [[Order theory]] – branch of mathematics which investigates our intuitive notion of order using binary relations.
 *** [[Differential algebra]] – algebras equipped with a derivation, which is a unary function that is linear and satisfies the Leibniz product rule.
+*** [[Commutative algebra]]
 ** [[Mathematical analysis]] – branch of pure mathematics that includes the theories of differentiation, integration and measure, limits, infinite series, and analytic functions
 *** [[Real analysis]] – branch of mathematical analysis dealing with the set of real numbers and functions of a real variable.
 **** [[Calculus]] – branch of mathematics focused on limits, functions, derivatives, integrals, and infinite series.
@@ -1230,6 +1250,12 @@
 ** [[Chronology]] – locating events in time
 *** [[Cultural history]] – the study of culture in the past
 ** [[History of science]] – the study of the emergence and development of scientific inquiry
+*** [[History of physics]]
+*** [[History of biology]]
+*** [[History of mathematics]]
+*** [[History of chemistry]]
+*** [[History of computer science]]
+*** [[History of social sciences]]
 ** [[Economic history]] – the study of economies in the past
 ** [[Environmental history]] – study of natural history and the human relationship with the natural world
 ** [[Futurology]] – study of the future: researches the medium to long-term future of societies and of the physical world
@@ -1617,6 +1643,11 @@
 *** [[Vitalism]] 
 ** [[Philosophy of information]] – (PI) is the area of research that studies conceptual issues arising at the intersection of computer science, information science, information technology, and philosophy.
 ** [[Philosophy of science]] – questions the assumptions, foundations, methods and implications of science; questions the use and merit of science; sometimes overlaps [[metaphysics]] and epistemology by questioning whether scientific results are actually a study of truth.
+*** [[Philosophy of physics]]
+*** [[Philosophy of mathematics]]
+*** [[Philosophy of biology]]
+*** [[Philosophy of chemistry]]
+*** [[Philosophy of computer science]]
 ** [[Social philosophy]] – is the study of questions about social behavior and interpretations of society and social institutions in terms of ethical values rather than empirical relations.
 ** [[Philosophy of mathematics]] –  is the branch of philosophy that studies the philosophical assumptions, foundations, and implications of mathematics. The aim of the philosophy of mathematics is to provide an account of the nature and methodology of mathematics and to understand the place of mathematics in people's lives. 
 ** [[Philosophy of education]] –  Philosophy of education can refer to either the academic field of applied philosophy or to one of any educational philosophies that promote a specific type or vision of education, and/or which examine the definition, goals and meaning of education.

@@ -64,6 +64,9 @@ public class Publication {
     @Enumerated(EnumType.STRING)
     private Language language;
     
+    @Enumerated(EnumType.STRING)
+    private PublicationSource source;
+    
     public String getUri() {
         return uri;
     }
@@ -167,5 +170,13 @@ public class Publication {
 
     public void setLanguage(Language language) {
         this.language = language;
+    }
+
+    public PublicationSource getSource() {
+        return source;
+    }
+
+    public void setSource(PublicationSource source) {
+        this.source = source;
     }
 }
