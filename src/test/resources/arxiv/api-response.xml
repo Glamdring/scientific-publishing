@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="http://arxiv.org/api/query?search_query%3D%26id_list%3D1503.07585%2C1503.07695%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
+  <title type="html">ArXiv Query: search_query=&amp;id_list=1503.07585,1503.07695&amp;start=0&amp;max_results=10</title>
+  <id>http://arxiv.org/api/36om1hz0S2+BM17MpA1lsI324Vo</id>
+  <updated>2015-03-29T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">2</opensearch:totalResults>
+  <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
+  <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
+  <entry>
+    <id>http://arxiv.org/abs/1503.07585v1</id>
+    <updated>2015-03-26T00:00:07Z</updated>
+    <published>2015-03-26T00:00:07Z</published>
+    <title>Internal algebra classifiers as codescent objects of crossed internal
+  categories</title>
+    <summary>  Inspired by recent work of Batanin and Berger on the homotopy theory of
+operads, a general monad-theoretic context for speaking about structures within
+structures is presented, and the problem of constructing the universal ambient
+structure containing the prescribed internal structure is studied. Following
+the work of Lack, these universal objects must be constructed from simplicial
+objects arising from our monad-theoretic framework, as certain 2-categorical
+colimits called codescent objects. We isolate the extra structure present on
+these simplicial objects which enable their codescent objects to be computed.
+These are the crossed internal categories of the title, and generalise the
+crossed simplicial groups of Loday and Fiedorowicz. The most general results of
+this article are concerned with how to compute such codescent objects in
+2-categories of internal categories, and on isolating conditions on the
+monad-theoretic situation which enable these results to apply. Combined with
+earlier work of the author in which operads are seen as polynomial 2-monads,
+our results are then applied to the theory of non-symmetric, symmetric and
+braided operads. In particular, the well-known construction of a PROP from an
+operad is recovered, as an illustration of our techniques.
+</summary>
+    <author>
+      <name>Mark Weber</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">67 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/1503.07585v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1503.07585v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="18D20, 18D50, 55P48" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.07695v1</id>
+    <updated>2015-03-26T11:44:41Z</updated>
+    <published>2015-03-26T11:44:41Z</published>
+    <title>Symplectic fermions and a quasi-Hopf algebra structure on $\bar{U}_i
+  sl(2)$</title>
+    <summary>  We consider the (finite-dimensional) small quantum group $\bar{U}_q sl(2)$ at
+$q=i$. We show that $\bar{U}_i sl(2)$ does not allow for an R-matrix, even
+though $U \otimes V \cong V \otimes U$ holds for all finite-dimensional
+representations $U,V$ of $\bar{U}_i sl(2)$. We then give an explicit
+coassociator $\Phi$ and an R-matrix $R$ such that $\bar{U}_i sl(2)$ becomes a
+quasi-triangular quasi-Hopf algebra.
+  Our construction is motivated by the two-dimensional chiral conformal field
+theory of symplectic fermions with central charge $c=-2$. There, a braided
+monoidal category, $\mathcal{SF}$, has been computed from the factorisation and
+monodromy properties of conformal blocks, and we prove that
+$\mathrm{Rep}\,(\bar{U}_i sl(2),\Phi,R)$ is braided monoidally equivalent to
+$\mathcal{SF}$.
+</summary>
+    <author>
+      <name>A. M. Gainutdinov</name>
+    </author>
+    <author>
+      <name>I. Runkel</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">40pp, 11 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/1503.07695v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/1503.07695v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+</feed>

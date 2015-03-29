@@ -37,6 +37,9 @@ public class PublicationRevision {
     @Lob
     private String content;
 
+    @Column
+    private String contentLink;
+    
     @Column(nullable = false)
     private boolean latest;
 
@@ -124,5 +127,13 @@ public class PublicationRevision {
 
     public void setOriginalFilename(String originalFilename) {
         this.originalFilename = originalFilename;
+    }
+
+    public String getContentLink() {
+        return contentLink;
+    }
+
+    public void setContentLink(String contentLink) {
+        this.contentLink = contentLink;
     }
 }

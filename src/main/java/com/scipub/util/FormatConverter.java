@@ -1,43 +1,57 @@
 package com.scipub.util;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
 
+import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
+import com.google.common.io.ByteStreams;
+import com.google.common.io.Files;
 
-public class Pandoc {
+public class FormatConverter {
 
-    public static void convert(Format from, Format to, File in, File out, List<String> additionalArguments)
-            throws IOException, InterruptedException {
-        List<String> args =
-                Lists.newArrayList("-f", from.getArgument(), "-t", to.getArgument(), "-o", out.getAbsolutePath(),
-                        in.getAbsolutePath());
-        args.addAll(additionalArguments);
-        args.add(0, "pandoc");
-        Process process = new ProcessBuilder(args).start();
-        process.waitFor();
+    public static String convert(Format from, Format to, String input) {
+        return new String(convert(from, to, input.getBytes(Charsets.UTF_8)), Charsets.UTF_8);
+    }
+    
+    public static byte[] convert(Format from, Format to, byte[] in) {
+        return pandocConvert(from, to, in);
     }
 
-    /*
-     private def readOutputAsString(p: Process, encoding: String = "UTF-8")(
-    implicit ctx: ExecutionContext): Future[String] = {
-    val sb = new StringBuilder
-
-    future {
-      val in = new BufferedReader(new InputStreamReader(
-        p.getInputStream(), encoding))
-
-      var c = in.read()
-      while (c != -1) {
-        if (c != '\r') // filter windows style line endings
-          sb += c.toChar
-        c = in.read()
-      }
-
-      sb.result
+    private static byte[] pandocConvert(Format from, Format to, byte[] in) {
+        File inFile = null;
+        try {
+            inFile = File.createTempFile("pandocInFile", "." + from.getExtension());
+            Files.write(in, inFile);
+            
+            List<String> args =
+                    Lists.newArrayList("pandoc", "-f", from.getArgument(), "-t", to.getArgument(), inFile.getAbsolutePath());
+            Process process = new ProcessBuilder(args).start();
+            try (OutputStream out = new BufferedOutputStream(process.getOutputStream())) {
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ByteStreams.copy(new BufferedInputStream(process.getInputStream()), baos);
+                byte[] result = baos.toByteArray();
+                if (result.length == 0) {
+                    ByteStreams.copy(new BufferedInputStream(process.getErrorStream()), baos);
+                    throw new IllegalStateException(new String(baos.toByteArray(), "UTF-8"));
+                } else {
+                    return result;
+                }
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException(e);
+        } finally {
+            if (inFile != null) {
+                inFile.delete();
+            }
+        }
     }
-     */
+    
     public static enum Format {
         NATIVE_HASKELL("native", "haskell"),
         JSON("json", "json"),

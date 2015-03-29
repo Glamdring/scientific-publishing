@@ -4,13 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
-import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,8 +22,7 @@ import com.scipub.model.Branch;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.User;
-import com.scipub.util.Pandoc;
-import com.scipub.util.Pandoc.Format;
+import com.scipub.util.FormatConverter.Format;
 import com.scipub.util.UriUtils;
 
 @Service
@@ -182,10 +179,10 @@ public class PaperService {
             File in = new File(pandocConversionDir, dto.getUri() + "." + extension);
             Files.write(dto.getOriginalFileContent(), in);
             File out = new File(pandocConversionDir, dto.getUri() + ".md");
-            Pandoc.convert(format, Format.MARKDOWN, in, out, Collections.<String>emptyList());
+            //TODO? Pandoc.convert(format, Format.MARKDOWN, in, out, Collections.<String>emptyList());
             String content = Files.toString(out, Charsets.UTF_8);
             dto.setContent(content);
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             throw new IllegalStateException(e);
         }
     }
