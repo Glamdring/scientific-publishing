@@ -1,5 +1,9 @@
 package com.scipub.service;
 
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.temporal.ChronoField;
+import java.time.temporal.TemporalField;
 import java.util.List;
 import java.util.UUID;
 
@@ -46,7 +50,7 @@ public class UserService {
     public void fillUserWithNewTokens(User user, String series) {
         user.setLoginToken(UUID.randomUUID().toString());
         user.setLoginSeries(series != null ? series : UUID.randomUUID().toString());
-        user.setLastLoginTime(new DateTime());
+        user.setLastLoginTime(LocalDateTime.now());
         dao.persist(user);
     }
 
@@ -96,7 +100,7 @@ public class UserService {
         for (long branchId : dto.getBranchIds()) {
             user.getBranches().add(dao.getById(Branch.class, branchId));
         }
-        user.setRegistrationTime(new DateTime());
+        user.setRegistrationTime(LocalDateTime.now());
         
         user = dao.persist(user);
         if (dto.getConnection() != null) {
@@ -127,7 +131,9 @@ public class UserService {
             // if a login series exists, assume the previous token was stolen, so deleting all persistent logins.
             // An exception is a request made within a few seconds from the last login time
             // which may mean request from the same browser that is not yet aware of the renewed cookie
-            if (loginBySeries != null && new Period(loginBySeries.getLastLoginTime(), new DateTime()).getSeconds() < 5) {
+            // Note: fallback to joda-time, as java.time is insufficient 
+            if (loginBySeries != null && new Period(new DateTime(loginBySeries.getLastLoginTime().toInstant(ZoneOffset.UTC).toEpochMilli()), 
+                    DateTime.now()).getSeconds() < 5) {
                 logger.info("Assuming login cookies theft; deleting all sessions for user " + loginBySeries);
                 loginBySeries.setLoginSeries(null);
                 loginBySeries.setLoginToken(null);

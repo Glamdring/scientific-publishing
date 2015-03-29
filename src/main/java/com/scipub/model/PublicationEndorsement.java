@@ -1,5 +1,7 @@
 package com.scipub.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
 
 @Entity
 public class PublicationEndorsement {
@@ -22,8 +23,8 @@ public class PublicationEndorsement {
     @ManyToOne
     private User voter;
 
-    @Type(type = "com.scipub.util.PersistentDateTime")
-    private DateTime created;
+    @Type(type = "com.scipub.util.PersistentLocalDateTime")
+    private LocalDateTime created;
 
     public long getId() {
         return id;
@@ -49,11 +50,11 @@ public class PublicationEndorsement {
         this.voter = voter;
     }
 
-    public DateTime getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 }

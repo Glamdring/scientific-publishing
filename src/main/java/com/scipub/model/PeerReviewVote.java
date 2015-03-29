@@ -20,6 +20,8 @@ public class PeerReviewVote {
     @Column(nullable = false)
     private int score;
 
+    //TODO time?
+    
     public long getId() {
         return id;
     }

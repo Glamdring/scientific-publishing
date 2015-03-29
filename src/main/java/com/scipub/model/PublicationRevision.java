@@ -1,5 +1,7 @@
 package com.scipub.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,6 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
 
 @Entity
 public class PublicationRevision {
@@ -39,8 +40,8 @@ public class PublicationRevision {
     @Column(nullable = false)
     private boolean latest;
 
-    @Type(type = "com.scipub.util.PersistentDateTime")
-    private DateTime created;
+    @Type(type = "com.scipub.util.PersistentLocalDateTime")
+    private LocalDateTime created;
 
     @Column
     private String originalFilename;
@@ -109,11 +110,11 @@ public class PublicationRevision {
         this.latest = latest;
     }
 
-    public DateTime getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 

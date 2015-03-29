@@ -19,6 +19,8 @@ public class PeerReviewRevision {
 
     @Column
     private String content;
+    
+    //TODO time?
 
     public long getId() {
         return id;

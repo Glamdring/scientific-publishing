@@ -1,20 +1,27 @@
 package com.scipub.scheduled;
 
-
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.Set;
+import java.util.TimeZone;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 import org.joda.time.DateTimeConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.web.client.RestTemplate;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
+import org.xml.sax.helpers.DefaultHandler;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.HashMultimap;
@@ -24,15 +31,20 @@ import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
+import com.scipub.model.Branch;
 import com.scipub.model.Language;
 import com.scipub.model.PaperStatus;
 import com.scipub.model.Publication;
+import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
 
 
 public class ArxivImporter {
 
     private static final Logger logger = LoggerFactory.getLogger(ArxivImporter.class);
+    
+    private static final DateTimeFormatter DATE_FORMAT = 
+            DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'").withZone(TimeZone.getTimeZone("UTC").toZoneId());
     
     private static final String ROOT_RSS_URL = "http://export.arxiv.org/rss/";
     private static final String URI_PREFIX = "http://arxiv.org/abs/";
@@ -146,8 +158,6 @@ public class ArxivImporter {
     
     private Joiner joiner = Joiner.on(',');
     
-    private RestTemplate restTemplate = new RestTemplate();
-    
     @Scheduled(fixedRate=DateTimeConstants.MILLIS_PER_DAY)
     public void run() {
         for (String feedKey : FEEDS) {
@@ -159,27 +169,23 @@ public class ArxivImporter {
                     uris.add(entry.getLink());
                 }
                 
-                //TODO parse properly. It's an atom feed, so either use https://github.com/DSpace/DSpace/blob/master/dspace-api/src/main/java/org/dspace/submit/lookup/ArXivService.java
-                // or use S(t)AX
-                restTemplate.getForObject("http://export.arxiv.org/api/query?id_list=" + joiner.join(uris), ArxivFeed.class);
+                // TODO consider persisnting in batches?
+                final List<Publication> publications = new ArrayList<>(uris.size());
                 
-                List<Publication> publications = new ArrayList<>(uris.size());
-                for (String uri : uris) {
-                    String id = uri.replace(URI_PREFIX, "");
-                    
-                    
-                    String publicationAbstract = null; //entry.getDescription().getValue(); //TODO convert from latex to MD
-                    String link = null; //entry.getLink();
-                    Set<String> authors = null; //TODO parse authors
-                    String[] branchNames = null; //TODO parse branch names from page
-                    
-                    Publication publication = new Publication();
-                    publication.setSource(PublicationSource.ARXIV);
-                    publication.setLanguage(Language.EN);
-                    publication.setNonRegisteredAuthors(authors);
-                    publication.setCreated(null);
-                    publication.setStatus(PaperStatus.PUBLISHED);
-                    publication.setUri(null); // get arxiv uri http://arxiv.org/abs/1503.07585
+                try (InputStream inputStream = new URL("http://export.arxiv.org/api/query?id_list=" + joiner.join(uris)).openStream()) {
+                    final  SAXParserFactory parserFactory = SAXParserFactory.newInstance();
+                    parserFactory.setNamespaceAware(true);
+                    try {
+                        SAXParser parser = parserFactory.newSAXParser();
+                        parser.parse(inputStream, new ArxivSaxHandler(new PublicationCallbackHandler() {
+                            @Override
+                            public void onNewPublication(Publication publication) {
+                                publications.add(publication);
+                            }
+                        }));
+                    } catch (SAXException | ParserConfigurationException e) {
+                        throw new IllegalStateException("Failed to parse input", e);
+                    }
                 }
             } catch (IllegalArgumentException | FeedException | IOException e) {
                 logger.error("Problem getting arxiv RSS feed", e);
@@ -188,41 +194,112 @@ public class ArxivImporter {
     }
     
     
-    private static class ArxivFeed {
-        private List<ArxivEntry> entries;
-    }
-    
-    private static class ArxivEntry {
-        private String id;
-        private String updated;
-        private String published;
-        private String title;
-        private String summary;
-        private List<Author> authors;
-        @XmlAttribute(name="term")
-        private List<String> categories;
-        
-        @XmlAttribute(name="term")
-        private List<String> link;
-        
-        
-        @XmlAttribute(name="term")
-        private List<String> pdfLink;
-        
-        @XmlElement(name="primary_category")
-        private String primaryCategory;
-    }
-    
-    static class Author {
-        private String name;
+    private static class ArxivSaxHandler extends DefaultHandler {
+        private final PublicationCallbackHandler callbackHandler;
 
-        public String getName() {
-            return name;
+        private Publication currentPublication;
+        private StringBuilder currentValue;
+        
+        private Attributes currentAttributes;
+
+        public ArxivSaxHandler(PublicationCallbackHandler callbackHandler) {
+            this.callbackHandler = callbackHandler;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        @Override
+        public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+            // we are not checking for segments and instead flatten the contents of a track
+            if (localName.equals("entry")) {
+                currentPublication = new Publication();
+                currentPublication.setCurrentRevision(new PublicationRevision());
+                currentPublication.getCurrentRevision().setPublication(currentPublication);
+                currentPublication.setSource(PublicationSource.ARXIV);
+                currentPublication.setLanguage(Language.EN);
+                currentPublication.setStatus(PaperStatus.PUBLISHED);
+            }
+            currentAttributes = attributes;
+            
+            currentValue = new StringBuilder();
+        }
+
+
+        @Override
+        public void characters(char[] ch, int start, int length) throws SAXException {
+            if (currentValue != null) {
+                // supporting multiple "characters" event per text node
+                String value = new String(ch, start, length);
+                currentValue.append(value);
+            }
+        }
+        
+        @Override
+        public void endElement(String uri, String localName, String qName) throws SAXException {
+            setProperties(localName);
+            currentValue = null;
+            if (localName.equals("entry")) {
+                if (currentPublication != null) {
+                    // add the last batch
+                    callbackHandler.onNewPublication(currentPublication);
+                }
+                currentPublication = null;
+            }
+        }
+
+        private void setProperties(String currentElement) {
+            if (currentValue == null) {
+                return;
+            }
+            String value = currentValue.toString();
+            if (currentPublication != null) {
+                if (currentElement.equals("name")) {
+                    currentPublication.getNonRegisteredAuthors().add(value);
+                } else if (currentElement.equals("id")) {
+                    currentPublication.setUri(value);
+                } else if (currentElement.equals("link")) {
+                    String type = currentAttributes.getValue(currentAttributes.getIndex("type"));
+                    if (type.equals("application/pdf")) {
+                        //TODO extract content
+                    }
+                } else if (currentElement.equals("summary")) {
+                    currentPublication.getCurrentRevision().setPublicationAbstract(value); //TODO convert from TeX to MD
+                } else if (currentElement.equals("published")) {
+                    currentPublication.setCreated(DATE_FORMAT.parse(value, LocalDateTime::from));
+                } else if (currentElement.equals("updated")) {
+                    currentPublication.getCurrentRevision().setCreated(DATE_FORMAT.parse(value, LocalDateTime::from));
+                } else if (currentElement.equals("title")) {
+                    currentPublication.getCurrentRevision().setTitle(value); //TODO convert from TeX to MD
+                } else if (currentElement.equals("arxiv:primary_category")){
+                    String branchKey = currentAttributes.getValue(currentAttributes.getIndex("term"));
+                    //TODO what happens if it's an unrecognized brnach? Only this publication should be skipped
+                    currentPublication.setPrimaryBranch(getBranches(branchKey).iterator().next());
+                } else if (currentElement.equals("category")) {
+                    String branchKey = currentAttributes.getValue(currentAttributes.getIndex("term"));
+                    currentPublication.getBranches().addAll(getBranches(branchKey));
+                }
+            }
+        }
+
+
+        private List<Branch> getBranches(String key) {
+            Collection<String> branchName = BRANCHES.get(key);
+            // TODO get branch by name
+            return null;
+        }
+
+        @Override
+        public void error(final SAXParseException e) throws SAXException {
+            throw new IllegalStateException("Failed parsing arxiv response", e);
         }
     }
-    
+
+    /**
+     * Implementations of this interface are notified of events occurring during XML parsing.
+     */
+    public interface PublicationCallbackHandler {
+        /**
+         * Whenever a new publication is discovered, this method is invoked
+         * @param publication
+         */
+        void onNewPublication(Publication publication);
+    }
 }

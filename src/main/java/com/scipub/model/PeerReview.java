@@ -1,12 +1,13 @@
 package com.scipub.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
 
 @Entity
 public class PeerReview {
@@ -20,11 +21,11 @@ public class PeerReview {
     @ManyToOne
     private User reviewer;
 
-    @Type(type = "com.scipub.util.PersistentDateTime")
-    private DateTime created;
+    @Type(type = "com.scipub.util.PersistentLocalDateTime")
+    private LocalDateTime created;
 
-    @Type(type = "com.scipub.util.PersistentDateTime")
-    private DateTime modified;
+    @Type(type = "com.scipub.util.PersistentLocalDateTime")
+    private LocalDateTime modified;
 
     @Column(nullable = false)
     private int clarityOfBackground;
@@ -68,19 +69,19 @@ public class PeerReview {
         this.reviewer = reviewer;
     }
 
-    public DateTime getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 
-    public DateTime getModified() {
+    public LocalDateTime getModified() {
         return modified;
     }
 
-    public void setModified(DateTime modified) {
+    public void setModified(LocalDateTime modified) {
         this.modified = modified;
     }
 

@@ -2,6 +2,7 @@ package com.scipub.service;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -116,7 +117,7 @@ public class PaperService {
         }
         if (paper == null) {
             paper = new Publication();
-            paper.setCreated(DateTime.now());
+            paper.setCreated(LocalDateTime.now());
         }
         
         for (String authorId : dto.getAuthorIds()) {
@@ -147,7 +148,7 @@ public class PaperService {
 
     private void saveRevision(PaperSubmissionDto dto, Publication paper, User user, int revisionIdx) {
         PublicationRevision revision = new PublicationRevision();
-        revision.setCreated(DateTime.now());
+        revision.setCreated(LocalDateTime.now());
         revision.setLatest(true);
         revision.setPublication(paper);
         revision.setOriginalFilename(dto.getOriginalFilename());

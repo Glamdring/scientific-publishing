@@ -1,5 +1,6 @@
 package com.scipub.model;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -38,7 +39,7 @@ public class Publication {
     private PublicationRevision currentRevision;
 
     @Type(type = "com.scipub.util.PersistentDateTime")
-    private DateTime created;
+    private LocalDateTime created;
 
     @Enumerated(EnumType.STRING)
     private PaperStatus status;
@@ -102,11 +103,11 @@ public class Publication {
         this.currentRevision = currentRevision;
     }
 
-    public DateTime getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 

@@ -1,5 +1,7 @@
 package com.scipub.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,7 +10,6 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
 
 @Entity
 public class Comment {
@@ -23,8 +24,8 @@ public class Comment {
     @ManyToOne
     private PeerReview peerReview;
     
-    @Type(type="com.scipub.util.PersistentDateTime")
-    private DateTime created;
+    @Type(type="com.scipub.util.PersistentLocalDateTime")
+    private LocalDateTime created;
     
     @Lob
     private String content;
@@ -53,11 +54,11 @@ public class Comment {
         this.peerReview = peerReview;
     }
 
-    public DateTime getCreated() {
+    public LocalDateTime getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(LocalDateTime created) {
         this.created = created;
     }
 

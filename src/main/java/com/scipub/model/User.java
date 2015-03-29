@@ -1,5 +1,6 @@
 package com.scipub.model;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
 
 @Entity
 public class User {
@@ -65,11 +65,11 @@ public class User {
     @Column
     private String loginSeries;
 
-    @Type(type = "com.scipub.util.PersistentDateTime")
-    private DateTime lastLoginTime;
+    @Type(type = "com.scipub.util.PersistentLocalDateTime")
+    private LocalDateTime lastLoginTime;
 
-    @Type(type = "com.scipub.util.PersistentDateTime")
-    private DateTime registrationTime;
+    @Type(type = "com.scipub.util.PersistentLocalDateTime")
+    private LocalDateTime registrationTime;
 
     @Column(nullable = false)
     private boolean loginAutomatically;
@@ -191,19 +191,19 @@ public class User {
         this.loginSeries = loginSeries;
     }
 
-    public DateTime getLastLoginTime() {
+    public LocalDateTime getLastLoginTime() {
         return lastLoginTime;
     }
 
-    public void setLastLoginTime(DateTime lastLoginTime) {
+    public void setLastLoginTime(LocalDateTime lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
     }
 
-    public DateTime getRegistrationTime() {
+    public LocalDateTime getRegistrationTime() {
         return registrationTime;
     }
 
-    public void setRegistrationTime(DateTime registrationTime) {
+    public void setRegistrationTime(LocalDateTime registrationTime) {
         this.registrationTime = registrationTime;
     }
 
