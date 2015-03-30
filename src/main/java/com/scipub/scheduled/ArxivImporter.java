@@ -71,11 +71,11 @@ public class ArxivImporter {
     
     static {
         BRANCHES.put("astro-ph.GA", "Astrophysics of Galaxies"); //?
-        BRANCHES.put("astrp-ph.CO", "Physical cosmology"); //?
-        BRANCHES.put("astrp-ph.EP", "Planetary science"); //?
-        BRANCHES.put("astrp-ph.HE", "High energy astrophysics");
-        BRANCHES.put("astrp-ph.IM", "Methods for astrophysics");
-        BRANCHES.put("astrp-ph.SR", "Astrophysics");
+        BRANCHES.put("astro-ph.CO", "Physical cosmology"); //?
+        BRANCHES.put("astro-ph.EP", "Planetary science"); //?
+        BRANCHES.put("astro-ph.HE", "High energy astrophysics");
+        BRANCHES.put("astro-ph.IM", "Methods for astrophysics");
+        BRANCHES.put("astro-ph.SR", "Astrophysics");
         
         BRANCHES.put("cond-mat.dis-nn", "Disordered systems");
         BRANCHES.put("cond-mat.mtrl-sci", "Materials physics");
@@ -187,7 +187,7 @@ public class ArxivImporter {
                     ids.add(entry.getLink().replace(URI_PREFIX, ""));
                 }
                 
-                URL url = new URL("http://export.arxiv.org/api/query?id_list=" + joiner.join(ids));
+                URL url = new URL("http://export.arxiv.org/api/query?id_list=" + joiner.join(ids) + "&max_results=100");
                 try (InputStream inputStream = url.openStream()) {
                     List<Publication> publications = extractPublications(inputStream, lastImport, ids.size());
                     publications = publications.stream().filter(p -> p.getCreated().isAfter(lastImport)).collect(Collectors.toList());
@@ -332,7 +332,6 @@ public class ArxivImporter {
                 }
             }
         }
-
 
         private List<Branch> getBranches(String key) {
             Collection<String> branchNames = BRANCHES.get(key);

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -34,7 +35,7 @@ public class Publication {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> nonRegisteredAuthors = new HashSet<>();
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     private PublicationRevision currentRevision;
 
     @Type(type = "com.scipub.util.PersistentLocalDateTime")

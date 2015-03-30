@@ -201,7 +201,7 @@ public class PublicationService {
     public LocalDateTime getLastImportDate(PublicationSource arxiv) {
         LocalDateTime lastImport = dao.getLastImportDate(arxiv);
         if (lastImport == null) {
-            lastImport = LocalDateTime.now().minusDays(2);
+            lastImport = LocalDateTime.now().minusWeeks(1);
         }
         return lastImport;
     }
