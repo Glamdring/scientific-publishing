@@ -37,7 +37,7 @@ public class Publication {
     @ManyToOne
     private PublicationRevision currentRevision;
 
-    @Type(type = "com.scipub.util.PersistentDateTime")
+    @Type(type = "com.scipub.util.PersistentLocalDateTime")
     private LocalDateTime created;
 
     @Enumerated(EnumType.STRING)

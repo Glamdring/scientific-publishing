@@ -21,7 +21,7 @@ import org.hibernate.usertype.EnhancedUserType;
  * 
  * @author bozho
  */
-public class PersistentDateTime implements EnhancedUserType, Serializable {
+public class PersistentLocalDateTime implements EnhancedUserType, Serializable {
  
     private static final long serialVersionUID = 6517203034160316166L;
     
@@ -33,7 +33,7 @@ public class PersistentDateTime implements EnhancedUserType, Serializable {
     }
  
     @Override
-    public Class returnedClass() {
+    public Class<?> returnedClass() {
         return LocalDateTime.class;
     }
  
