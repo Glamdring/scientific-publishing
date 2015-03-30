@@ -79,7 +79,7 @@ public class Dao {
                 .setParamValues(new Object[] {propertyValue})
                 .setResultClass(clazz));
 
-        return getResult(result);
+        return getSingleResult(result);
 
     }
 
@@ -154,7 +154,7 @@ public class Dao {
         return entityManager.createNamedQuery(name).executeUpdate();
     }
 
-    protected <T> T getResult(List<T> result) {
+    protected <T> T getSingleResult(List<T> result) {
         if (!result.isEmpty()) {
              return result.get(0);
          }

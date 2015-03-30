@@ -45,7 +45,7 @@ public class UserDao extends Dao {
             .setParamValues(new Object[] {token, series })
             .setResultClass(User.class));
 
-        return getResult(result);
+        return getSingleResult(result);
     }
 
     public SocialAuthentication getTwitterAuthentication(User user) {
@@ -56,6 +56,6 @@ public class UserDao extends Dao {
         .setCount(1)
         .setResultClass(SocialAuthentication.class));
 
-        return getResult(result);
+        return getSingleResult(result);
     }
 }

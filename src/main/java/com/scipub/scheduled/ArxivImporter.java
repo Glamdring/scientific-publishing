@@ -12,6 +12,7 @@ import java.util.TimeZone;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import javax.xml.parsers.FactoryConfigurationError;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -43,6 +44,7 @@ import com.scipub.model.PaperStatus;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
+import com.scipub.service.PublicationService;
 import com.scipub.util.FormatConverter;
 import com.scipub.util.FormatConverter.Format;
 
@@ -170,6 +172,9 @@ public class ArxivImporter {
     @Inject
     private BranchDao dao;
     
+    @Inject
+    private PublicationService service;
+    
     @Scheduled(fixedRate=DateTimeConstants.MILLIS_PER_DAY)
     public void run() {
         for (String feedKey : FEEDS) {
@@ -184,8 +189,9 @@ public class ArxivImporter {
                 URL url = new URL("http://export.arxiv.org/api/query?id_list=" + joiner.join(ids));
                 try (InputStream inputStream = url.openStream()) {
                     List<Publication> publications = extractPublications(inputStream, ids.size());
+                    service.storePublication(publications);
                 }
-                //TODO consider persisnting in batches?
+                
             } catch (IllegalArgumentException | FeedException | IOException e) {
                 logger.error("Problem getting arxiv RSS feed", e);
             }

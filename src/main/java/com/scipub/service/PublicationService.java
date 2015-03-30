@@ -16,17 +16,18 @@ import org.springframework.transaction.annotation.Transactional;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import com.scipub.dao.jpa.BranchDao;
-import com.scipub.dao.jpa.PaperDao;
+import com.scipub.dao.jpa.PublicationDao;
 import com.scipub.dto.PaperSubmissionDto;
 import com.scipub.model.Branch;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
+import com.scipub.model.PublicationSource;
 import com.scipub.model.User;
 import com.scipub.util.FormatConverter.Format;
 import com.scipub.util.UriUtils;
 
 @Service
-public class PaperService {
+public class PublicationService {
 
     private static final int PAPERS_PER_BRANCH = 3;
     
@@ -40,7 +41,7 @@ public class PaperService {
     private UserService userService;
     
     @Inject
-    private PaperDao dao;
+    private PublicationDao dao;
     
     @Inject
     private BranchDao branchDao;
@@ -187,7 +188,21 @@ public class PaperService {
         }
     }
     
+    @Transactional
+    public void storePublication(List<Publication> publications) {
+        dao.storePublications(publications);
+    }
+    
     private void pushToArxiv(PaperSubmissionDto dto, User user) {
         // TODO Auto-generated method stub
+    }
+
+    @Transactional(readOnly = true)
+    public LocalDateTime getLastImportDate(PublicationSource arxiv) {
+        LocalDateTime lastImport = dao.getLastImportDate(arxiv);
+        if (lastImport == null) {
+            lastImport = LocalDateTime.now().minusDays(2);
+        }
+        return lastImport;
     }
 }

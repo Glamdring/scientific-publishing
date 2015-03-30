@@ -39,14 +39,14 @@ public class QueryDetails<T> {
     public String[] getParamNames() {
         return paramNames;
     }
-    public QueryDetails<T> setParamNames(String[] paramNames) {
+    public QueryDetails<T> setParamNames(String... paramNames) {
         this.paramNames = paramNames.clone();
         return this;
     }
     public Object[] getParamValues() {
         return paramValues;
     }
-    public QueryDetails<T> setParamValues(Object[] paramValues) {
+    public QueryDetails<T> setParamValues(Object... paramValues) {
         this.paramValues = paramValues.clone();
         return this;
     }
