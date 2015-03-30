@@ -70,6 +70,9 @@ public class Publication {
     @Enumerated(EnumType.STRING)
     private PublicationSource source;
     
+    @Column
+    private String doi;
+    
     public String getUri() {
         return uri;
     }
@@ -189,5 +192,22 @@ public class Publication {
 
     public void setPrimaryBranch(Branch primaryBranch) {
         this.primaryBranch = primaryBranch;
+    }
+
+    public String getDoi() {
+        return doi;
+    }
+
+    public void setDoi(String doi) {
+        this.doi = doi;
+    }
+
+    @Override
+    public String toString() {
+        return "Publication [uri=" + uri + ", authors=" + authors + ", nonRegisteredAuthors=" + nonRegisteredAuthors
+                + ", currentRevision=" + currentRevision + ", created=" + created + ", status=" + status
+                + ", branches=" + branches + ", primaryBranch=" + primaryBranch + ", tags=" + tags + ", followUpTo="
+                + followUpTo + ", followUpToLink=" + followUpToLink + ", followUpToDoi=" + followUpToDoi
+                + ", citations=" + citations + ", language=" + language + ", source=" + source + "]";
     }
 }

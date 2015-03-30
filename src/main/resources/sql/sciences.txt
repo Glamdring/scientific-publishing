@@ -23,7 +23,6 @@
 **** [[Cosmology]] – discipline that deals with the nature of the Universe as a whole.
 **** [[Extragalactic astronomy]] – branch of astronomy concerned with objects outside our own Milky Way Galaxy
 **** [[Galactic astronomy]] – study of our own Milky Way galaxy and all its contents.
-**** [[Physical cosmology]] – study of the largest-scale structures and dynamics of the universe and is concerned with fundamental questions about its formation and evolution.
 **** [[Stellar astronomy]] – natural science that deals with the study of celestial objects (such as stars, planets, comets, nebulae, star clusters and galaxies) and phenomena that originate outside the atmosphere of Earth (such as cosmic background radiation)
 **** [[Planetary science]] – study of the planets of the Solar System.
 ***** [[Exoplanetology]] – various planets outside of the Solar System
@@ -161,7 +160,6 @@
 **** [[Chemical biology]] – scientific discipline spanning the fields of chemistry and biology that involves the application of chemical techniques and tools, often compounds produced through synthetic chemistry, to the study and manipulation of biological systems.
 **** [[Chemical engineering]] – branch of engineering that deals with physical science (e.g., chemistry and physics), and life sciences (e.g., biology, microbiology and biochemistry) with mathematics and economics, to the process of converting raw materials or chemicals into more useful or valuable forms.
 **** [[Chemical oceanography]] – study of the behavior of the chemical elements within the Earth's oceans.
-**** [[Chemical physics]] – branch of physics that studies chemical processes from the point of view of physics.
 **** [[Materials science]] – interdisciplinary field applying the properties of matter to various areas of science and engineering.
 **** [[Nanotechnology]] – study of manipulating matter on an atomic and molecular scale
 ***** [[Green nanotechnology]] – use of nanotechnology to enhance the environmental-sustainability of processes currently producing negative externalities. It also refers to the use of the products of nanotechnology to enhance sustainability.
@@ -194,14 +192,11 @@
 **** [[Engineering geology]]
 **** [[Environmental geology]]
 **** [[Quaternary geology]]
-**** [[Planetary geology]]
 **** [[Petroleum geology]]
 **** [[Historical geology]]
-**** [[Hydrogeology]]
 **** [[Structural geology]]
 *** [[Geomorphology]] – scientific study of landforms and the processes that shape them
 *** [[Geostatistics]] – branch of statistics focusing on spatial or spatiotemporal datasets
-*** [[Geophysics]] – physics of the Earth and its environment in space; also the study of the Earth using quantitative physical methods.
 *** [[Glaciology]] – study of glaciers, or more generally ice and natural phenomena that involve ice.
 *** [[Hydrology]] – study of the movement, distribution, and quality of water on Earth and other planets, including the hydrologic cycle, water resources and environmental watershed sustainability.
 **** [[Hydrometry]] – the measurement of the different components of the hydrologic cycle

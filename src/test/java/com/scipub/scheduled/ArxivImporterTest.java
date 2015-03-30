@@ -41,7 +41,8 @@ public class ArxivImporterTest {
         
         InputStream apiResponse = ArxivImporterTest.class.getResourceAsStream("/arxiv/api-response.xml");
         
-        List<Publication> publications = importer.extractPublications(apiResponse, 2);
+        List<Publication> publications =
+                importer.extractPublications(apiResponse, LocalDate.of(2015, 3, 26).minusDays(1).atTime(0, 0), 2);
         
         Publication first = publications.get(0);
         

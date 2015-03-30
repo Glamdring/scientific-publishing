@@ -42,7 +42,7 @@ public class PublicationDao extends Dao {
 
     public LocalDateTime getLastImportDate(PublicationSource source) {
         QueryDetails<LocalDateTime> query = new QueryDetails<LocalDateTime>()
-                .setQuery("from Publication p WHERE p.source=:source ORDER BY created DESC")
+                .setQuery("SELECT p.created FROM Publication p WHERE p.source=:source ORDER BY created DESC")
                 .setCount(1)
                 .setParamNames("source")
                 .setParamValues(source)

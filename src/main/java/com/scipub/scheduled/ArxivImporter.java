@@ -177,6 +177,7 @@ public class ArxivImporter {
     
     @Scheduled(fixedRate=DateTimeConstants.MILLIS_PER_DAY)
     public void run() {
+        LocalDateTime lastImport = service.getLastImportDate(PublicationSource.ARXIV);
         for (String feedKey : FEEDS) {
             SyndFeedInput input = new SyndFeedInput();
             try {
@@ -188,7 +189,9 @@ public class ArxivImporter {
                 
                 URL url = new URL("http://export.arxiv.org/api/query?id_list=" + joiner.join(ids));
                 try (InputStream inputStream = url.openStream()) {
-                    List<Publication> publications = extractPublications(inputStream, ids.size());
+                    List<Publication> publications = extractPublications(inputStream, lastImport, ids.size());
+                    publications = publications.stream().filter(p -> p.getCreated().isAfter(lastImport)).collect(Collectors.toList());
+                    logger.info("Obtained publications from arxiv for category {}: {}", feedKey, publications.size());
                     service.storePublication(publications);
                 }
                 
@@ -199,8 +202,7 @@ public class ArxivImporter {
     }
 
     @VisibleForTesting
-    List<Publication> extractPublications(InputStream inputStream, int total) throws FactoryConfigurationError,
-            IOException {
+    List<Publication> extractPublications(InputStream inputStream, LocalDateTime lastImport, int total) throws FactoryConfigurationError {
         final List<Publication> publications = new ArrayList<>(total);
         final  SAXParserFactory parserFactory = SAXParserFactory.newInstance();
         parserFactory.setNamespaceAware(true);
@@ -211,8 +213,10 @@ public class ArxivImporter {
                 public void onNewPublication(Publication publication) {
                     publications.add(publication);
                 }
-            }, dao));
-        } catch (SAXException | ParserConfigurationException e) {
+            }, dao, lastImport));
+        } catch (StopParsing ex) {
+            logger.info("Stopped parsing because entries were before the last import date");
+        } catch (SAXException | ParserConfigurationException | IOException e) {
             throw new IllegalStateException("Failed to parse input", e);
         }
         
@@ -222,7 +226,8 @@ public class ArxivImporter {
     
     private static class ArxivSaxHandler extends DefaultHandler {
         private final PublicationCallbackHandler callbackHandler;
-
+        private LocalDateTime lastImport;
+        
         private Publication currentPublication;
         private StringBuilder currentValue;
         
@@ -230,9 +235,10 @@ public class ArxivImporter {
 
         private BranchDao dao;
         
-        public ArxivSaxHandler(PublicationCallbackHandler callbackHandler, BranchDao dao) {
+        public ArxivSaxHandler(PublicationCallbackHandler callbackHandler, BranchDao dao, LocalDateTime lastImport) {
             this.callbackHandler = callbackHandler;
             this.dao = dao;
+            this.lastImport = lastImport;
         }
 
         @Override
@@ -263,19 +269,25 @@ public class ArxivImporter {
         
         @Override
         public void endElement(String uri, String localName, String qName) throws SAXException {
-            setProperties(localName);
-            currentValue = null;
-            if (localName.equals("entry")) {
-                // do not process publications for which we could not find a corresponding branch
-                if (currentPublication != null && currentPublication.getPrimaryBranch() != null) {
-                    // add the last batch
-                    callbackHandler.onNewPublication(currentPublication);
+            try {
+                setProperties(localName);
+                currentValue = null;
+                if (localName.equals("entry")) {
+                    // do not process publications for which we could not find a corresponding branch
+                    if (currentPublication != null && currentPublication.getPrimaryBranch() != null) {
+                        // add the last batch
+                        callbackHandler.onNewPublication(currentPublication);
+                    }
+                    currentPublication = null;
                 }
-                currentPublication = null;
+            } catch (StopParsing stop) {
+                throw stop;
+            } catch (Exception ex) {
+                logger.warn("Problem parsing element " + localName + ". Publication is: " + currentPublication, ex);
             }
         }
 
-        private void setProperties(String currentElement) {
+        private void setProperties(String currentElement) throws StopParsing {
             if (currentValue == null) {
                 return;
             }
@@ -286,15 +298,23 @@ public class ArxivImporter {
                 } else if (currentElement.equals("id")) {
                     currentPublication.setUri(value);
                 } else if (currentElement.equals("link")) {
+                    if (currentAttributes == null) {
+                        throw new IllegalStateException("currentAttributes is null, " + value);
+                    }
                     String type = currentAttributes.getValue(currentAttributes.getIndex("type"));
-                    if (type.equals("application/pdf")) {
+                    if (type != null && type.equals("application/pdf")) {
                         currentPublication.getCurrentRevision().setContentLink(
                                 currentAttributes.getValue(currentAttributes.getIndex("href")));
                     }
+                } else if (currentElement.equals("doi")) {
+                    currentPublication.setDoi(value);
                 } else if (currentElement.equals("summary")) {
                     currentPublication.getCurrentRevision().setPublicationAbstract(value);
                 } else if (currentElement.equals("published")) {
                     currentPublication.setCreated(DATE_FORMAT.parse(value, LocalDateTime::from));
+                    if (currentPublication.getCreated().isBefore(lastImport)) {
+                        throw new StopParsing();
+                    }
                 } else if (currentElement.equals("updated")) {
                     currentPublication.getCurrentRevision().setCreated(DATE_FORMAT.parse(value, LocalDateTime::from));
                 } else if (currentElement.equals("title")) {
@@ -324,7 +344,7 @@ public class ArxivImporter {
 
         @Override
         public void error(final SAXParseException e) throws SAXException {
-            throw new IllegalStateException("Failed parsing arxiv response", e);
+            throw e;
         }
     }
 
@@ -337,5 +357,11 @@ public class ArxivImporter {
          * @param publication
          */
         void onNewPublication(Publication publication);
+    }
+
+    /**
+     * Exception used to indicate that parsing should stop
+     */
+    public static class StopParsing extends SAXException {
     }
 }
