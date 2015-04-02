@@ -12,7 +12,6 @@ import java.util.TimeZone;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
-import javax.transaction.Transactional;
 import javax.xml.parsers.FactoryConfigurationError;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -45,8 +44,6 @@ import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
 import com.scipub.service.PublicationService;
-import com.scipub.util.FormatConverter;
-import com.scipub.util.FormatConverter.Format;
 
 
 @Component
@@ -66,7 +63,10 @@ public class ArxivImporter {
         "astro-ph", "cond-mat", "gr-qc", "gr-qc", "hep-ex", "hep-lat", "hep-ph", "hep-th", "math-ph", "nlin",
         "nucl-ex", "nucl-th", "physics", "quant-ph",
         "math",
-        "cs"
+        "cs",
+        "q-bio",
+        "q-fin",
+        "stat"
     };
     
     static {
@@ -165,6 +165,60 @@ public class ArxivImporter {
         BRANCHES.put("math.ST", "Statistical theory");
         BRANCHES.put("math.SG", "Symplectic geometry");
         // end of mathematics
+        
+        BRANCHES.put("cs.AI", "Artificial intelligence");
+        BRANCHES.put("cs.CL", "Computational linguistics");
+        BRANCHES.put("cs.CC", "Computational complexity theory");
+        BRANCHES.put("cs.CE", "Scientific computing");
+        BRANCHES.put("cs.GT", "Game theory");
+        BRANCHES.put("cs.CV", "Computer vision");
+        BRANCHES.put("cs.CY", "Computational sociology");
+        BRANCHES.put("cs.CR", "Computer security");
+        BRANCHES.put("cs.CR", "Cryptography");
+        BRANCHES.put("cs.DS", "Data structures");
+        BRANCHES.put("cs.DS", "Algorithms");
+        BRANCHES.put("cs.DB", "Database");
+        BRANCHES.put("cs.DM", "Computer science");
+        BRANCHES.put("cs.DC", "Distributed computing");
+        BRANCHES.put("cs.DC", "Parallel computing");
+        BRANCHES.put("cs.FL", "Automata theory");
+        BRANCHES.put("cs.GR", "Computer graphics");
+        BRANCHES.put("cs.AR", "Computer architecture");
+        BRANCHES.put("cs.HC", "Human-computer interaction");
+        BRANCHES.put("cs.IR", "Information retrieval");
+        BRANCHES.put("cs.IT", "Information theory");
+        BRANCHES.put("cs.LG", "Machine learning");
+        BRANCHES.put("cs.MM", "Multimedia");
+        BRANCHES.put("cs.NI", "Computer networking");
+        BRANCHES.put("cs.NE", "Artificial neural networks");
+        BRANCHES.put("cs.NA", "Numerical analysis");
+        BRANCHES.put("cs.OS", "Operating systems");
+        BRANCHES.put("cs.OH", "Computer science");
+        BRANCHES.put("cs.PL", "Programming languages");
+        BRANCHES.put("cs.RO", "Robotics");
+        BRANCHES.put("cs.SE", "Software engineering");
+        BRANCHES.put("cs.SC", "Symbolic computation");
+        // End of computer science
+        
+        BRANCHES.put("q-bio.CB", "Cell biology");
+        BRANCHES.put("q-bio.GN", "Genomics");
+        BRANCHES.put("q-bio.NC", "Neurobiology");
+        BRANCHES.put("q-bio.PE", "Population dynamics");
+        // End of quantitative biology
+        
+        BRANCHES.put("q-fin.CP", "Computational finance");
+        BRANCHES.put("q-fin.EC", "Economics");
+        BRANCHES.put("q-fin.GN", "Finance");
+        BRANCHES.put("q-fin.MF", "Mathematical finance");
+        BRANCHES.put("q-fin.RM", "Risk management");
+        // End of quantitative finance
+        
+        BRANCHES.put("stat.CO", "Computational statistics");
+        BRANCHES.put("stat.OT", "Statistics");
+        BRANCHES.put("stat.ST", "Statistical theory");
+        BRANCHES.put("stat.ML", "Machine learning");
+        // End of statistics
+        
     }
     
     private Joiner joiner = Joiner.on(',');

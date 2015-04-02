@@ -516,7 +516,7 @@
 **** [[Distributed database]] – database in which storage devices are not all attached to a common CPU.
 **** [[Object database]] – database management system in which information is represented in the form of objects as used in object-oriented programming
 *** [[Multimedia]] – media and content that uses a combination of different content forms.
-*** [[hypermedia]] – computer-based information retrieval system that enables a user to gain or provide access to texts, audio and video recordings, photographs and computer graphics related to a particular subject.
+*** [[Hypermedia]] – computer-based information retrieval system that enables a user to gain or provide access to texts, audio and video recordings, photographs and computer graphics related to a particular subject.
 *** [[Data mining]] – process that results in the discovery of new patterns in large data sets
 *** [[Information retrieval]] – area of study concerned with searching for documents, for information within documents, and for metadata about documents, as well as that of searching structured storage, relational databases, and the World Wide Web.
 ** [[Artificial intelligence]] – branch of computer science that deals with intelligent behavior, learning, and adaptation in machines.
@@ -602,7 +602,6 @@
 **** [[Robot programming]] 
 **** [[Sensors]]  (also called detector) is a converter that measures a physical quantity and converts it into a signal which can be read by an observer or by an (today mostly electronic) instrument.
 **** [[Simultaneous localization and mapping]]  a technique used by robots and autonomous vehicles to build up a map within an unknown environment (without a priori knowledge), or to update a map within a known environment (with a priori knowledge from a given map), while at the same time keeping track of their current location.
-**** [[Software engineering]]  the application of a systematic, disciplined, quantifiable approach to the design, development, operation, and maintenance of software, and the study of these approaches; that is, the application of engineering to software.
 **** [[Speech processing]]  study of speech signals and the processing methods of these signals. The signals are usually processed in a digital representation, so speech processing can be regarded as a special case of digital signal processing, applied to speech signal.[clarification needed] Aspects of speech processing includes the acquisition, manipulation, storage, transfer and output of digital speech signals.
 **** [[Support vector machine]]s  supervised learning models with associated learning algorithms that analyze data and recognize patterns, used for classification and regression analysis. 
 **** [[Robotic surgery]]  computer-assisted surgery, and robotically-assisted surgery are terms for technological developments that use robotic systems to aid in surgical procedures.
@@ -760,6 +759,7 @@
 **** [[Coding theory]] – study of the properties of codes and their fitness for a specific application
 *** [[Graph theory]] – study of graphs, mathematical structures used to model pairwise relations between objects from a certain collection
 *** [[Game theory]] – study of strategic decision making. More formally, it is "the study of mathematical models of conflict and cooperation between intelligent rational decision-makers."
+*** [[Mathematical finance]]
 * [[Statistics]] – collection, analysis, interpretation, and presentation of data.
 ** [[Computational statistics]] – interface between statistics and computer science.
 *** [[Data mining]] – process that results in the discovery of new patterns in large data sets
@@ -1010,7 +1010,6 @@
 *** [[Etymology]]
 **** [[Sociolinguistics]]
 ** [[Applied linguistics]]
-*** [[Computational linguistics]]
 *** [[Evolutionary linguistics]]
 *** [[Forensic linguistics]]
 *** [[Internet linguistics]]
