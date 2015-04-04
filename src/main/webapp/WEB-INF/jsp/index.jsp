@@ -16,132 +16,41 @@
            <div class="content_wrapper">
                   <div class="content_over_shadow"></div>
                   <div class="content_body">
-	                  <div class="publication_list_entry">
-	                      <span class="reviews_total"> <a href="">3 </a> Reviews </span>
-	
-	                      <h3>
-	                          <a href="TODO">A paper title</a>
-	                      </h3>
-	                      <p class="abstract">
-	                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-	                      </p>
-	                      <p>
-	                          <span class="user">
-	                               Published by: <strong><a href="TODO" title="TODO" rel="author">todo</a></strong>
-	                          </span> 
-	                          <span class="views"><b>1111 </b> views </span> 
-	                          
-	                          <span class="branches">Biology</a>
-	                          </span>
-	                      </p>
-	                  </div>
+                  <c:forEach items="${publications}" var="entry">
+                    <h2>${entry.key}</h2>
+                    <c:forEach items="${entry.value}" var="publication">
+		                  <div class="publication_list_entry">
+		                      <span class="reviews_total"> <a href="">${publication.reviews} </a> Reviews </span>
+		
+		                      <h3>
+		                          <a href="TODO">${publication.currentRevision.title}</a>
+		                      </h3>
+		                      <p class="abstract">
+		                           ${publication.currentRevision.publicationAbstract}
+		                      </p>
+		                      <p>
+		                          <span class="user">
+		                               Published by:
+		                               <c:forEach items="${publication.authors}" var="author"> 
+		                                  <strong><a href="TODO" title="TODO" rel="author">${author.firstName} ${author.lastName}</a></strong>
+		                               </c:forEach>
+		                               <c:forEach items="${publication.nonRegisteredAuthors}" var="author"> 
+                                          <strong><a href="TODO" title="TODO" rel="author">${author}</a></strong>
+                                       </c:forEach>
+		                          </span> 
+		                          <span class="views"><b>1111 </b> views </span> 
+		                          
+		                          <span class="branches">
+		                              <c:forEach items="${publication.branches}" var="branch">
+		                                  <a href="TODO">${branch.name}</a>
+	                                  </c:forEach>
+		                          </span>
+		                      </p>
+		                  </div></c:forEach>
 	                  <!-- publication #end -->
-	                   
-	                  <div class="publication_list_entry">
-	                      <span class="reviews_total"> <a href="">3 </a> Reviews </span>
-	
-	                      <h3>
-	                          <a href="TODO">A longer paper title</a>
-	                      </h3>
-	                      <p clas="abstract">
-	                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-	                      </p>
-	                      <p>
-	                          <span class="user">
-	                               Published by: <strong><a href="TODO" title="TODO" rel="author">todo</a></strong>
-	                          </span> 
-	                          <span class="views"><b>1111 </b> views </span> 
-	                          
-	                          <span class="branches">Biology</a>
-	                          </span>
-	                      </p>
+	                  </c:forEach>
 	                  </div>
-	                  <!-- publication #end -->
-	                  
-	                  <div class="publication_list_entry">
-	                      <span class="reviews_total"> <a href="">3 </a> Reviews </span>
-	
-	                      <h3>
-	                          <a href="TODO">A paper title</a>
-	                      </h3>
-	                      <p clas="abstract">
-	                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-	                      </p>
-	                      <p>
-	                          <span class="user">
-	                               Published by: <strong><a href="TODO" title="TODO" rel="author">todo</a></strong>
-	                          </span> 
-	                          <span class="views"><b>1111 </b> views </span> 
-	                          
-	                          <span class="branches">Biology</a>
-	                          </span>
-	                      </p>
-	                  </div>
-	                  <!-- publication #end -->
-	                   
-	                  <div class="publication_list_entry">
-	                      <span class="reviews_total"> <a href="">3 </a> Reviews </span>
-	
-	                      <h3>
-	                          <a href="TODO">A longer paper title</a>
-	                      </h3>
-	                      <p clas="abstract">
-	                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-	                      </p>
-	                      <p>
-	                          <span class="user">
-	                               Published by: <strong><a href="TODO" title="TODO" rel="author">todo</a></strong>
-	                          </span> 
-	                          <span class="views"><b>1111 </b> views </span> 
-	                          
-	                          <span class="branches">Biology</a>
-	                          </span>
-	                      </p>
-	                  </div>
-	                  <!-- publication #end -->
-	                  
-	                  <div class="publication_list_entry">
-	                      <span class="reviews_total"> <a href="">3 </a> Reviews </span>
-	
-	                      <h3>
-	                          <a href="TODO">A paper title</a>
-	                      </h3>
-	                      <p clas="abstract">
-	                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-	                      </p>
-	                      <p>
-	                          <span class="user">
-	                               Published by: <strong><a href="TODO" title="TODO" rel="author">todo</a></strong>
-	                          </span> 
-	                          <span class="views"><b>1111 </b> views </span> 
-	                          
-	                          <span class="branches">Biology</a>
-	                          </span>
-	                      </p>
-	                  </div>
-	                  <!-- publication #end -->
-	                   
-	                  <div class="publication_list_entry">
-	                      <span class="reviews_total"> <a href="">3 </a> Reviews </span>
-	
-	                      <h3>
-	                          <a href="TODO">A longer paper title</a>
-	                      </h3>
-	                      <p clas="abstract">
-	                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-	                      </p>
-	                      <p>
-	                          <span class="user">
-	                               Published by: <strong><a href="TODO" title="TODO" rel="author">todo</a></strong>
-	                          </span> 
-	                          <span class="views"><b>1111 </b> views </span> 
-	                          
-	                          <span class="branches">Biology</a>
-	                          </span>
-	                      </p>
-	                  </div>
-	                  <!-- publication #end -->
-	                  <div class="pagination">
+                      <div class="pagination">
 	                      <div class='Navi'>
 	                          <strong class='on'>1</strong> 
 	                          <a href="TODO">2</a>

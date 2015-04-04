@@ -11,6 +11,6 @@ public class BranchDao extends Dao {
 
     public List<Branch> getTopLevelBranches() {
         return findByQuery(new QueryDetails<Branch>().setResultClass(Branch.class).setQuery(
-                "SELECT b FROM Branch b WHERE b.parent IS NULL"));
+                "SELECT b FROM Branch b WHERE b.parentBranch IS NULL"));
     }
 }

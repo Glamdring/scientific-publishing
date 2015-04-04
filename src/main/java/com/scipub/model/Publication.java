@@ -12,6 +12,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
@@ -22,7 +23,7 @@ import org.hibernate.annotations.Type;
 @Entity
 @NamedQueries({
     @NamedQuery(name = "Publication.getLatestByBranch", 
-                query = "SELECT p FROM Publication p WHERE :branchId IN elements(p.branches) ORDER BY p.created")
+                query = "SELECT p FROM Publication p WHERE :branchId IN elements(p.branches) OR :branchId IN elements(p.parentBranches) ORDER BY p.created")
 })
 public class Publication {
 
@@ -47,6 +48,10 @@ public class Publication {
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Branch> branches = new HashSet<>();
     
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name="publication_parent_branches")
+    private Set<Branch> parentBranches = new HashSet<>();
+    
     @ManyToOne
     private Branch primaryBranch;
     
@@ -65,6 +70,9 @@ public class Publication {
     @Column
     private int citations;
 
+    @Column
+    private int reviews;
+    
     @Enumerated(EnumType.STRING)
     private Language language;
     
@@ -201,6 +209,22 @@ public class Publication {
 
     public void setDoi(String doi) {
         this.doi = doi;
+    }
+
+    public int getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(int reviews) {
+        this.reviews = reviews;
+    }
+
+    public Set<Branch> getParentBranches() {
+        return parentBranches;
+    }
+
+    public void setParentBranches(Set<Branch> parentBranches) {
+        this.parentBranches = parentBranches;
     }
 
     @Override

@@ -60,7 +60,7 @@ public class ArxivImporter {
     private static final Multimap<String, String> BRANCHES = HashMultimap.create();
     
     private static final String[] FEEDS = new String[] {
-        "astro-ph", "cond-mat", "gr-qc", "gr-qc", "hep-ex", "hep-lat", "hep-ph", "hep-th", "math-ph", "nlin",
+        "astro-ph", "cond-mat", "gr-qc", "hep-ex", "hep-lat", "hep-ph", "hep-th", "math-ph", "nlin",
         "nucl-ex", "nucl-th", "physics", "quant-ph",
         "math",
         "cs",
@@ -329,7 +329,14 @@ public class ArxivImporter {
                 if (localName.equals("entry")) {
                     // do not process publications for which we could not find a corresponding branch
                     if (currentPublication != null && currentPublication.getPrimaryBranch() != null) {
-                        // add the last batch
+
+                        // set parent branches of all the detected branches
+                        for (Branch branch : currentPublication.getBranches()) {
+                            while (branch.getParentBranch() != null) {
+                                branch = branch.getParentBranch();
+                                currentPublication.getParentBranches().add(branch);
+                            }
+                        }
                         callbackHandler.onNewPublication(currentPublication);
                     }
                     currentPublication = null;
@@ -392,6 +399,7 @@ public class ArxivImporter {
             return branchNames
                     .stream()
                     .map(name -> dao.getByPropertyValue(Branch.class, "name", name))
+                    .filter(branch -> branch != null)
                     .collect(Collectors.toList());
         }
 

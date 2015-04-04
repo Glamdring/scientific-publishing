@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
@@ -81,7 +83,7 @@ public class PublicationService {
     }
 
     @Transactional(readOnly = true)
-    public List<Publication> getLatestPapers(User user) {
+    public Map<String, List<Publication>> getLatestPublicationsForUser(User user) {
         List<Long> branchIds = new ArrayList<Long>();
         if (user != null) {
             branchIds.addAll(user.getBranches().stream().map(b -> b.getId()).collect(Collectors.toList()));
@@ -94,11 +96,12 @@ public class PublicationService {
         branchIds.addAll(branchDao.getTopLevelBranches().stream().map(b -> b.getId()).collect(Collectors.toList()));
         branchIds = branchIds.subList(0, Math.min(branchesOnHomepage, branchIds.size()));
         
-        List<Publication> papers = new ArrayList<>();
+        Map<String, List<Publication>> publications = new LinkedHashMap<>();
         for (long branchId : branchIds) {
-            papers.addAll(dao.getLatestPapers(branchId, PAPERS_PER_BRANCH));
+            publications.put(branchDao.getById(Branch.class, branchId).getName(), 
+                             dao.getLatestPapers(branchId, PAPERS_PER_BRANCH));
         }
-        return papers;
+        return publications;
     }
 
     private void addParentBranches(Branch branch, List<Long> branchIds) {
