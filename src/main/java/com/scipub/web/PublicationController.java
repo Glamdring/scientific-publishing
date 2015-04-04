@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.scipub.dto.PaperSubmissionDto;
+import com.scipub.dto.PublicationSubmissionDto;
 import com.scipub.service.PublicationService;
 import com.scipub.tools.BranchJsonGenerator;
 
@@ -30,7 +30,7 @@ public class PublicationController {
         return "newPublication";
     }
     
-    private void submit(@RequestBody PaperSubmissionDto dto) {
+    private void submit(@RequestBody PublicationSubmissionDto dto) {
         
     }
     

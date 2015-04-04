@@ -4,7 +4,7 @@ import java.util.Set;
 
 import com.scipub.model.PaperStatus;
 
-public class PaperSubmissionDto {
+public class PublicationSubmissionDto {
 
     private String uri; 
     private Set<Integer> branchIds;
@@ -21,6 +21,7 @@ public class PaperSubmissionDto {
     private String content;
     private String originalFilename;
     private byte[] originalFileContent;
+    private boolean pushToArxiv;
     
     public String getUri() {
         return uri;
@@ -111,5 +112,11 @@ public class PaperSubmissionDto {
     }
     public void setOriginalFileContent(byte[] originalFileContent) {
         this.originalFileContent = originalFileContent;
+    }
+    public boolean isPushToArxiv() {
+        return pushToArxiv;
+    }
+    public void setPushToArxiv(boolean pushToArxiv) {
+        this.pushToArxiv = pushToArxiv;
     }
 }
