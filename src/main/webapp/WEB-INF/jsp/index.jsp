@@ -22,9 +22,7 @@
 		                  <div class="publication_list_entry">
 		                      <span class="reviews_total"> <a href="">${publication.reviews} </a> Reviews </span>
 		
-		                      <h3>
-		                          <a href="TODO">${publication.currentRevision.title}</a>
-		                      </h3>
+		                      <h3><a href="TODO">${publication.currentRevision.title}</a></h3>
 		                      <p class="abstract">
 		                           ${publication.currentRevision.publicationAbstract}
 		                      </p>

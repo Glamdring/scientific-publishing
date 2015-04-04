@@ -55,6 +55,11 @@
 
 <script type="text/javascript" src="https://login.persona.org/include.js"></script>
 
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
 <script type="text/javascript">
     var loggedInUser = '${userContext.user != null ? userContext.user.email : null}';
     var userRequestedAuthentication = false;
@@ -148,7 +153,7 @@
                                 href="${root}/branches">Branches</a></li>
                                 
                             <li class="menu-item<c:if test="${currentPage == 'submit'}"> current-menu-item</c:if>"><a
-                                href="${root}/new">Submit a publication</a></li>
+                                href="${root}/publication/new">Submit a publication</a></li>
                                 
                             <li class="menu-item"><a
                                 href="">Stuff</a>

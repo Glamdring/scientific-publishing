@@ -124,7 +124,7 @@ public class ArxivImporter {
         BRANCHES.put("physics.med-ph", "Medical physics");
         BRANCHES.put("physics.optics", "Optics");
         BRANCHES.put("physics.ed-ph", "Science education");
-        BRANCHES.put("physics.soc-ph", "Sociology of science");
+        BRANCHES.put("physics.soc-ph", "Physics and society");
         BRANCHES.put("physics.plasm-ph", "Plasma physics");
         BRANCHES.put("physics.space-ph", "Space plasma physics");
         

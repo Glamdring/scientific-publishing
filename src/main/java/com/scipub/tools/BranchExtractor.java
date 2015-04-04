@@ -31,7 +31,7 @@ public class BranchExtractor {
     }
 
     public static List<Branch> extractBranches() throws IOException {
-        InputStream in = BranchExtractor.class.getResourceAsStream("/sql/sciences.txt");
+        InputStream in = BranchExtractor.class.getResourceAsStream("/sciences.txt");
         List<String> lines = CharStreams.readLines(new InputStreamReader(in, Charsets.UTF_8));
         
         Pattern p = Pattern.compile("\\[\\[([^\\[\\]]+)\\]\\]");

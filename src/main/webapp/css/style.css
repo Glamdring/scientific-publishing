@@ -1,9 +1,6 @@
 /* Import RESET styling for grid framework*/
 @import url("reset.css");
 
-/* Import GRID styling for grid framework*/
-@import url("default.css");
-
 /*  --------------------------------------------------
 Global Reset - Resets all browser defaults to 0
 -------------------------------------------------- */

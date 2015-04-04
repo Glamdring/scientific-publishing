@@ -1,16 +1,23 @@
 package com.scipub.tools;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.scipub.tools.BranchExtractor.Branch;
 
 public class BranchJsonGenerator {
     
-    public static void mainNested(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
+        String json = getBranchJson(false);
+        System.out.println(json);
+    }
+
+    public static String getBranchJson(boolean useSingleRoot) throws IOException, JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         List<Branch> branches = BranchExtractor.extractBranches();
         Map<Integer, ScienceBranch> branchesMap = new HashMap<>(); 
@@ -33,13 +40,18 @@ public class BranchJsonGenerator {
             }
         }
         
-        ScienceBranch root = new ScienceBranch();
-        root.setName("Science");
-        root.setChildren(roots);
-        System.out.println(mapper.writeValueAsString(root));
+        if (useSingleRoot) {
+            ScienceBranch root = new ScienceBranch();
+            root.setName("Science");
+            root.setChildren(roots);
+            return mapper.writeValueAsString(root);
+        } else {
+            return mapper.writeValueAsString(roots);
+        }
+        
     }
     
-    public static void main(String[] args) throws Exception {
+    public static void mainFlat(String[] args) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         List<Branch> branches = BranchExtractor.extractBranches();
         System.out.println(mapper.writeValueAsString(branches));

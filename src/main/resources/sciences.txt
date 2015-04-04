@@ -106,6 +106,7 @@
 **** [[Chaotic Dynamics]]
 **** [[Exactly Solvable and Integrable Systems]]
 **** [[Pattern Formation and Solitons]]
+*** [[Physics and society]]
 ** [[Chemistry]] – physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions
 *** [[Analytical chemistry]] – study of the separation, identification, and quantification of the chemical components of natural and artificial materials.
 *** [[Astrochemistry]] – study of the abundance and reactions of chemical elements and molecules in the universe, and their interaction with radiation.

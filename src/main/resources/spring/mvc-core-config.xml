@@ -37,7 +37,7 @@
     <mvc:resources mapping="/resources/**" location="/resources/" />
     
     <mvc:resources mapping="/static/img/**" location="/img/" cache-period="0" />
-    <mvc:resources mapping="/static/scripts/**" location="/scripts/" cache-period="0" />
+    <mvc:resources mapping="/static/js/**" location="/js/" cache-period="0" />
     <mvc:resources mapping="/static/css/**" location="/css/" cache-period="0" />
 
     <!-- uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (Bootstrap, jQuery...) -->
