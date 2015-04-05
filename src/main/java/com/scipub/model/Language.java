@@ -5,6 +5,7 @@ import java.util.Locale;
 public enum Language {
     EN("English", "en"), 
     DE("Deutsch", "de"),
+    ES("Español", "es"),
     FR("Français", "fr"),
     RU("Русский", "ru"),
     BG("Български", "bg");

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.scipub.dto.PublicationSubmissionDto;
+import com.scipub.model.Language;
 import com.scipub.service.PublicationService;
 import com.scipub.tools.BranchJsonGenerator;
 
@@ -38,5 +39,10 @@ public class PublicationController {
     @ModelAttribute("scienceBranchesJson")
     public String getScienceBranchesJson() {
         return branchesJson;
+    }
+    
+    @ModelAttribute("languages")
+    public Language[] getLanguages(){
+        return Language.values();
     }
 }
