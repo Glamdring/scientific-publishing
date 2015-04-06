@@ -83,7 +83,6 @@
 **** [[Experimental nuclear physics]]
 **** [[Theoretical nuclear physics]]
 *** [[Optics]] – branch of physics which involves the behavior and properties of light, including its interactions with matter and the construction of instruments that use or detect it.
-*** [[Particle physics]] – branch of physics that studies the existence and interactions of particles that are the constituents of what is usually referred to as matter or radiation.
 *** [[Psychophysics]] – quantitatively investigates the relationship between physical stimuli and the sensations and perceptions they affect.
 *** [[Plasma physics]] – state of matter similar to gas in which a certain portion of the particles are ionized.
 **** [[Space plasma physics]] – state of matter similar to gas in which a certain portion of the particles are ionized.
@@ -93,7 +92,7 @@
 *** [[Relativity]] –
 *** [[Solid state physics]] – study of rigid matter, or solids, through methods such as quantum mechanics, crystallography, electromagnetism, and metallurgy.
 *** [[Vehicle dynamics]] – dynamics of vehicles, here assumed to be ground vehicles.
-*** [[High energy physics]]
+*** [[High energy physics]] (or Particle physics) branch of physics that studies the existence and interactions of particles that are the constituents of what is usually referred to as matter or radiation.
 **** [[Experimental high energy physics]]
 **** [[Lattice high energy physics]]
 **** [[Phenomenology of high energy physics]]
