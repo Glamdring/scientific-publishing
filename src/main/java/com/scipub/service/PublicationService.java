@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +26,7 @@ import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
 import com.scipub.model.User;
+import com.scipub.service.SearchService.SearchType;
 import com.scipub.util.FormatConverter.Format;
 import com.scipub.util.UriUtils;
 
@@ -47,6 +49,9 @@ public class PublicationService {
     
     @Inject
     private BranchDao branchDao;
+    
+    @Inject
+    private SearchService searchService;
     
     @Transactional
     public void submitPaper(PublicationSubmissionDto dto, String userId) {
@@ -222,7 +227,8 @@ public class PublicationService {
     }
 
     public List<PublicationSubmissionDto> findPublication(String input) {
-        // TODO Auto-generated method stub
-        return null;
+        List<Publication> result = searchService.search(input, Publication.class, SearchType.FULL);
+        //TODO map
+        return Collections.emptyList();
     }
 }

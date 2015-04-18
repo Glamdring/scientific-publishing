@@ -37,18 +37,18 @@
                     });
                     $("#authors").trigger("addItem", {title:'${userContext.user.displayName}, ${userContext.user.degree}', value: 'id:${userContext.user.id}'});
                     
-                    $("#followUpTo").autocomplete();
+                    //$("#followUpToInternal").autocomplete();
                     $("input[name='followUpType']").change(function() {
-                        var selected = $('input[name=followUpType]:checked', '#myForm').val();
+                        var selected = $('input[name=followUpType]:checked').val();
                         if (selected == "internal") {
                             $("#followUpToInternal").show();
-                            $("#followUpToLink #followUpToDoi").hide();
+                            $("#followUpToLink,#followUpToDoi").hide();
                         } else if (selected == "link") {
                             $("#followUpToLink").show();
-                            $("#followUpToInternal #followUpToDoi").hide();
+                            $("#followUpToInternal,#followUpToDoi").hide();
                         } else if (selected == "doi") {
                             $("#followUpToDoi").show();
-                            $("#followUpToLink #followUpToInternal").hide();
+                            $("#followUpToLink,#followUpToInternal").hide();
                         }
                         
                     });
@@ -128,20 +128,21 @@
 	        </div>
 	        
 	        <div class="form-group">
-                <label for="authors">This publication is a follow-up to:</label>
+                <label>This publication is a follow-up to:</label>
+                <br />
                 <input type="radio" id="followUpTypeInternal" name="followUpType" value="internal" checked>
-                <label for="followUpTypeInternal">Scienation publication</label>
+                <label for="followUpTypeInternal">Scienation publication</label><br />
                 
                 <input type="radio" id="followUpTypeLink" name="followUpType" value="link">
-                <label for="followUpTypeLink">External (link)</label>
+                <label for="followUpTypeLink">External publication (link)</label><br />
                 
                 <input type="radio" id="followUpTypeDoi" name="followUpType" value="doi">
-                <label for="followUpTypeDoi">External (DOI)</label>
+                <label for="followUpTypeDoi">External publication (DOI)</label><br />
                 
-                <input type="text" id="followUpToInternal" name="followUpToInternal" />
+                <input type="text" id="followUpToInternal" name="followUpToInternal" class="form-control" />
                 <input type="hidden" id="followUpTo" name="followUpTo" />
-                <input type="text" id="followUpToLink" name="followUpToLink" style="display: none;" />
-                <input type="text" id="followUpToDoi" name="followUpToDoi" style="display: none;" />
+                <input type="text" id="followUpToLink" name="followUpToLink" style="display: none;" class="form-control" />
+                <input type="text" id="followUpToDoi" name="followUpToDoi" style="display: none;" class="form-control" />
             </div>
             
 	        <input type="text" />
