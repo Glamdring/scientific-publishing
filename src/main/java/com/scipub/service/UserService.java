@@ -171,7 +171,7 @@ public class UserService {
         if (StringUtils.isEmpty(start)) {
             return Collections.emptyList();
         }
-        List<User> byName = searchService.search(start.trim(), User.class, SearchType.START);
+        List<User> byName = searchService.search(start.trim(), User.class, SearchType.START, "names");
         return extractUserDetails(byName);
     }
 

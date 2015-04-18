@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SearchService {
 
-    public <T> List<T> search(String keywords, Class<T> resultType, SearchType searchType) {
+    public <T> List<T> search(String keywords, Class<T> resultType, SearchType searchType, String... fields) {
         return Collections.emptyList();
     }
     

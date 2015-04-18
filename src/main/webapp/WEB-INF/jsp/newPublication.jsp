@@ -27,17 +27,57 @@
                         height: 10,
                         filter_case: false,
                         filter_hide: true,
-                        newel: false,
+                        newel: true,
+                        addontab: true,
+                        addoncomma: true,
+                        addonblur: true,
                         maxitems: 5,
+                        bricket: false,
                         width: "auto"
                     });
-                    $("#authors").trigger("addItem", {title:'${userContext.user.displayName}, ${userContext.user.degree}', value: '${userContext.user.id}'});
+                    $("#authors").trigger("addItem", {title:'${userContext.user.displayName}, ${userContext.user.degree}', value: 'id:${userContext.user.id}'});
+                    
+                    $("#followUpTo").autocomplete();
+                    $("input[name='followUpType']").change(function() {
+                        var selected = $('input[name=followUpType]:checked', '#myForm').val();
+                        if (selected == "internal") {
+                            $("#followUpToInternal").show();
+                            $("#followUpToLink #followUpToDoi").hide();
+                        } else if (selected == "link") {
+                            $("#followUpToLink").show();
+                            $("#followUpToInternal #followUpToDoi").hide();
+                        } else if (selected == "doi") {
+                            $("#followUpToDoi").show();
+                            $("#followUpToLink #followUpToInternal").hide();
+                        }
+                        
+                    });
                 });
+                
+                function fillAuthors() {
+                	var authors = $("#authors :selected");
+                    var idDelim = "";
+                    var nameDelim = "";
+                    var authorIds = "";
+                    var nonRegisteredAuthors = "";
+                    authors.each(function(idx, elem) {
+                    	var value = $(elem).val();
+                    	if (value.indexOf("id:") === 0) {
+                    		authorIds += idDelim + value.replace("id:", "");
+                            idDelim = ",";
+                    	} else {
+                    		nonRegisteredUsers += nameDelim + value;
+                            nameDelim = ",";
+                    	}
+                    });
+                    $("#authorIds").val(authorIds);
+                    $("#nonRegisteredAuthors").val(nonRegisteredAuthors);
+                }
           </script>
     </jsp:attribute>
 
     <jsp:body>
-        <form role="form" style="width: 400px;">
+        <form role="form" style="width: 400px;" onsubmit="fillAuthors();">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" class="form-control" />
@@ -83,7 +123,28 @@
 	        <div class="form-group">
 				<label for="authors">Authors</label>
 				<input type="text" name="authors" id="authors" class="form-control" />
+				<input type="hidden" name="authorIds" id="authorIds" value="${userContext.user.id}" />
+                <input type="hidden" name="nonRegisteredAuthors" id="nonRegisteredAuthors" />
 	        </div>
+	        
+	        <div class="form-group">
+                <label for="authors">This publication is a follow-up to:</label>
+                <input type="radio" id="followUpTypeInternal" name="followUpType" value="internal" checked>
+                <label for="followUpTypeInternal">Scienation publication</label>
+                
+                <input type="radio" id="followUpTypeLink" name="followUpType" value="link">
+                <label for="followUpTypeLink">External (link)</label>
+                
+                <input type="radio" id="followUpTypeDoi" name="followUpType" value="doi">
+                <label for="followUpTypeDoi">External (DOI)</label>
+                
+                <input type="text" id="followUpToInternal" name="followUpToInternal" />
+                <input type="hidden" id="followUpTo" name="followUpTo" />
+                <input type="text" id="followUpToLink" name="followUpToLink" style="display: none;" />
+                <input type="text" id="followUpToDoi" name="followUpToDoi" style="display: none;" />
+            </div>
+            
+	        <input type="text" />
 	        
 	        - non registered editors (send invites)
 	        - follow-up-to (internal|link|doi)

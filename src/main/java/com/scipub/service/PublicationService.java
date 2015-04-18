@@ -220,4 +220,9 @@ public class PublicationService {
         }
         return lastImport;
     }
+
+    public List<PublicationSubmissionDto> findPublication(String input) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }
