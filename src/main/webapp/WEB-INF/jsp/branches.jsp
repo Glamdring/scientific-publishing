@@ -28,7 +28,7 @@
                delay(function() {
                    $("#branches li").removeClass("found show collapseChildren");
                    var text = $("#branchSearchBox").val().toLowerCase();
-                   console.log(text);
+
                    // only start filtering after the 2nd character
                    if (text.length < 3) {
                        text = "";

@@ -10,17 +10,6 @@
         
         <script type="text/javascript">
                 $(document).ready(function() {
-                    $("input[name='scienceBranch']").change(function(){
-                        var input = $(this);
-                        if (input.prop("checked")) {
-                            $("#primaryBranch").append($("<option></option>")
-                                    .attr("value", input.val())
-                                    .text(input.parent().children("label").text()));
-                        } else {
-                            $("#primaryBranch").children("option[value='" + input.val() + "']").remove();
-                        }
-                    });
-                    
                     $("#authors").fcbkcomplete({
                         json_url: "${root}/users/autocompleteList",
                         cache: false,
@@ -84,11 +73,24 @@
                     $("#authorIds").val(authorIds);
                     $("#nonRegisteredAuthors").val(nonRegisteredAuthors);
                 }
+                
+                function handlePrimaryBranchOptions() {
+                    $("#submissionForm input[name='scienceBranch']").change(function(){
+                        var input = $(this);
+                        if (input.prop("checked")) {
+                            $("#primaryBranch").append($("<option></option>")
+                                    .attr("value", input.val())
+                                    .text(input.parent().children("label").text()));
+                        } else {
+                            $("#primaryBranch").children("option[value='" + input.val() + "']").remove();
+                        }
+                    });
+                } 
           </script>
     </jsp:attribute>
 
     <jsp:body>
-        <form role="form" style="width: 400px;" onsubmit="fillAuthors();">
+        <form role="form" id="submissionForm" style="width: 400px;" onsubmit="fillAuthors();">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" class="form-control" />
@@ -131,6 +133,12 @@
 	        <div class="form-group">
 	            <label>Classification</label>
 		        <jsp:include page="branches.jsp" />
+		        <script type="text/javascript">
+		          $(document).ready(function() {
+		              // this snippet is here, because if it's put in the header, the branches are not yet loaded
+		              handlePrimaryBranchOptions();
+		          });
+		        </script>
 	        </div>
 	       
 	        <div class="form-group">
