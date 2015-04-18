@@ -52,6 +52,17 @@
                         }
                         
                     });
+                    
+                    $("input[name='contentInputType']").change(function() {
+                        var selected = $('input[name=contentInputType]:checked').val();
+                        if (selected == "direct") {
+                            $("#contentEditor").show();
+                            $("#externalContent").hide();
+                        } else if (selected == "link") {
+                            $("#externalContent").show();
+                            $("#contentEditor").hide();
+                        }
+                    });
                 });
                 
                 function fillAuthors() {
@@ -83,19 +94,39 @@
                 <input type="text" name="title" id="title" class="form-control" />
             </div>
         
-            <div class="form-group">
+        
+            <div class="form-group" id="abstractEditor">
 		        <c:set var="editorSuffix" value="1" />
 		        <c:set var="includeResources" value="true" />
 		        <label>Abstract</label>
 		        <%@include file="editor.jsp" %>
 	        </div>
 	        
-	        <div class="form-group">
+	         <div class="form-group">
+                <label>Content input type</label>
+
+                <div class="radio">
+                    <input type="radio" id="contentInputTypeDirect" name="contentInputType" value="direct" checked>
+                    <label for="contentInputTypeDirect">Direct input</label>
+                </div>
+                
+                <div class="radio">
+                    <input type="radio" id="contentInputTypeLink" name="contentInputType" value="link">
+                    <label for="contentInputTypeLink">External Link</label>
+                </div>
+            </div>
+            
+	        <div class="form-group" id="contentEditor">
 		        <c:set var="editorSuffix" value="2" />
 		        <c:set var="includeResources" value="false" />
 		        <label>Content</label>
 		        <%@include file="editor.jsp" %>
 	        </div>
+	        
+            <div class="form-group" id="externalContent" style="display: none;">
+                <label>Link to external content</label>
+                <input type="text" name="contentLink" placeholder="http://" class="form-control" />
+            </div>
 	        
 	        <div class="form-group">
 	            <label>Classification</label>
@@ -108,7 +139,9 @@
             </div>
             
             <div class="checkbox"> 
-	           <input type="checkbox" id="pushToArxiv" /><label for="pushToArxiv">Push to arxiv</label>
+               <div class="checkbox">
+	               <input type="checkbox" id="pushToArxiv" /><label for="pushToArxiv">Push to arxiv</label>
+               </div>
 	        </div>
 	
             <div class="form-group">
@@ -129,29 +162,30 @@
 	        
 	        <div class="form-group">
                 <label>This publication is a follow-up to:</label>
-                <br />
-                <input type="radio" id="followUpTypeInternal" name="followUpType" value="internal" checked>
-                <label for="followUpTypeInternal">Scienation publication</label><br />
                 
-                <input type="radio" id="followUpTypeLink" name="followUpType" value="link">
-                <label for="followUpTypeLink">External publication (link)</label><br />
+                <div class="radio">
+	                <input type="radio" id="followUpTypeInternal" name="followUpType" value="internal">
+	                <label for="followUpTypeInternal">Scienation publication</label>
+                </div>
                 
-                <input type="radio" id="followUpTypeDoi" name="followUpType" value="doi">
-                <label for="followUpTypeDoi">External publication (DOI)</label><br />
-                
-                <input type="text" id="followUpToInternal" name="followUpToInternal" class="form-control" />
+                <div class="radio">
+	                <input type="radio" id="followUpTypeLink" name="followUpType" value="link">
+	                <label for="followUpTypeLink">External publication (link)</label><br />
+	            </div>
+	            
+	            <div class="radio">
+	                <input type="radio" id="followUpTypeDoi" name="followUpType" value="doi">
+	                <label for="followUpTypeDoi">External publication (DOI)</label><br />
+                </div>
+                	                
+                <input type="text" id="followUpToInternal" name="followUpToInternal" style="display: none;" class="form-control" />
                 <input type="hidden" id="followUpTo" name="followUpTo" />
-                <input type="text" id="followUpToLink" name="followUpToLink" style="display: none;" class="form-control" />
+                <input type="text" id="followUpToLink" name="followUpToLink" style="display: none;" class="form-control" placeholder="http://" />
                 <input type="text" id="followUpToDoi" name="followUpToDoi" style="display: none;" class="form-control" />
             </div>
             
-	        <input type="text" />
-	        
-	        - non registered editors (send invites)
-	        - follow-up-to (internal|link|doi)
-	        - link to content
+	        - send invites to non registered editors
 	        - upload file
-	        
 	        - invite reviewers
         </form>
     </jsp:body>

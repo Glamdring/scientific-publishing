@@ -19,6 +19,7 @@ public class PublicationSubmissionDto {
     private String title;
     private String paperAbstract;
     private String content;
+    private String contentLink;
     private String originalFilename;
     private byte[] originalFileContent;
     private boolean pushToArxiv;
@@ -118,5 +119,11 @@ public class PublicationSubmissionDto {
     }
     public void setPushToArxiv(boolean pushToArxiv) {
         this.pushToArxiv = pushToArxiv;
+    }
+    public String getContentLink() {
+        return contentLink;
+    }
+    public void setContentLink(String contentLink) {
+        this.contentLink = contentLink;
     }
 }
