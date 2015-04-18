@@ -10,7 +10,7 @@
 
 <div class="wmd-panel">
 	<div id="wmd-button-bar${editorSuffix}"></div>
-	<textarea class="wmd-input ${editorClass}" id="wmd-input${editorSuffix}"></textarea>
+	<textarea class="form-control wmd-input ${editorClass}" id="wmd-input${editorSuffix}"></textarea>
 </div>
 <div id="wmd-preview${editorSuffix}" class="wmd-panel wmd-preview"></div>
 

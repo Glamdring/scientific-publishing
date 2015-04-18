@@ -5,34 +5,28 @@ blockquote {
     background: #d0f0ff;
 }
 
-.wmd-panel
-{
-    margin-left: 25%;
-    margin-right: 25%;
+.wmd-panel {
     width: 50%;
     min-width: 500px;
 }
 
-.wmd-button-bar 
-{
+.wmd-button-bar {
     width: 100%;
     background-color: silver; 
 }
 
-.wmd-input 
-{ 
-    height: 300px;
+.wmd-input { 
+    height: 300px !important;
     width: 100%;
     border: 1px solid darkgray;
 }
 
-.wmd-preview 
-{ 
+.wmd-preview { 
     background-color: #c0e0ff; 
+    float: left;
 }
 
-.wmd-button-row 
-{
+.wmd-button-row {
     position: relative; 
     margin-left: 5px;
     margin-right: 5px;
@@ -42,8 +36,7 @@ blockquote {
     height: 20px;
 }
 
-.wmd-spacer
-{
+.wmd-spacer {
     width: 1px; 
     height: 20px; 
     margin-left: 14px;
@@ -74,29 +67,21 @@ blockquote {
     display: inline-block;
 }
 
-.wmd-spacer1
-{
+.wmd-spacer1 {
     left: 50px;
 }
-.wmd-spacer2
-{
+.wmd-spacer2 {
     left: 175px;
 }
-.wmd-spacer3
-{
+.wmd-spacer3 {
     left: 300px;
 }
 
-
-
-
-.wmd-prompt-background
-{
+.wmd-prompt-background {
     background-color: Black;
 }
 
-.wmd-prompt-dialog
-{
+.wmd-prompt-dialog {
     border: 1px solid #999999;
     background-color: #F5F5F5;
 }
@@ -112,7 +97,7 @@ blockquote {
     color: black;
 }
 
-.wmd-prompt-dialog > form > input[type="button"]{
+.wmd-prompt-dialog > form > input[type="button"] {
     border: 1px solid #888888;
     font-family: trebuchet MS, helvetica, sans-serif;
     font-size: 0.8em;
