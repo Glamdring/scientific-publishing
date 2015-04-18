@@ -22,8 +22,10 @@ blockquote {
 }
 
 .wmd-preview { 
-    background-color: #c0e0ff; 
+    background-color: #e6e6e6; 
     float: left;
+    max-height: 300px;
+    overflow: auto;
 }
 
 .wmd-button-row {

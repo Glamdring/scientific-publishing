@@ -1,5 +1,6 @@
 package com.scipub.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.social.connect.Connection;
@@ -12,7 +13,7 @@ public class RegistrationDto {
     private String degree;
     private Connection<?> connection;
     private boolean loginAutomatically;
-    private List<Long> branchIds;
+    private List<Long> branchIds = new ArrayList<>();
     
     public String getEmail() {
         return email;

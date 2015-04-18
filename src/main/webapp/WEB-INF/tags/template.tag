@@ -48,8 +48,10 @@
 <link type="text/css" href="${staticRoot}/css/dropdownmenu.css" rel="stylesheet" media="screen" />
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
 
 <link rel="canonical" href="TODO" />
 
@@ -120,7 +122,7 @@
                     Welcome
                     <a href="${root}/signin">Sign in</a>
                      <c:if test="${userLoggedIn}">
-                        <li><a href="${root}/logout">Logout</a></li>
+                        <a href="${root}/logout">Logout</a>
                      </c:if>
                 </p>
             </div>
@@ -131,7 +133,7 @@
         <div id="header">
             <div id="header_inner">
                 <div class="logo">
-                    <a href="TODO"><img src="${staticRoot}/images/logo.png" alt="Scienation logo" /></a>
+                    <a href="TODO"><img src="" alt="Scienation logo" /></a>
                 </div>
 
                 <div class="header_right">

@@ -42,7 +42,10 @@ public class User {
     private Organization organization;
 
     @Column
-    private String photo;
+    private String smallPhotoUri;
+    
+    @Column
+    private String largePhotoUri;
 
     @Lob
     private String bio;
@@ -135,12 +138,20 @@ public class User {
         this.organization = organization;
     }
 
-    public String getPhoto() {
-        return photo;
+    public String getSmallPhotoUri() {
+        return smallPhotoUri;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setSmallPhotoUri(String smallPhotoUri) {
+        this.smallPhotoUri = smallPhotoUri;
+    }
+
+    public String getLargePhotoUri() {
+        return largePhotoUri;
+    }
+
+    public void setLargePhotoUri(String largePhotoUri) {
+        this.largePhotoUri = largePhotoUri;
     }
 
     public String getBio() {
@@ -223,6 +234,10 @@ public class User {
         this.branches = branches;
     }
 
+    public String getDisplayName() {
+        return firstName + " " + lastName;
+    }
+    
     @Override
     public int hashCode() {
         final int prime = 31;

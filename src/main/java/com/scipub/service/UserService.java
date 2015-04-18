@@ -2,13 +2,14 @@ package com.scipub.service;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.time.temporal.ChronoField;
-import java.time.temporal.TemporalField;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.StaleStateException;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
@@ -20,10 +21,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.scipub.dao.jpa.UserDao;
 import com.scipub.dto.RegistrationDto;
+import com.scipub.dto.UserDetails;
 import com.scipub.model.Branch;
 import com.scipub.model.Publication;
 import com.scipub.model.SocialAuthentication;
 import com.scipub.model.User;
+import com.scipub.service.SearchService.SearchType;
 import com.scipub.service.auth.JpaConnectionRepository;
 import com.scipub.util.SecurityUtils;
 
@@ -34,6 +37,9 @@ public class UserService {
     
     @Inject
     private UserDao dao;
+    
+    @Inject
+    private SearchService searchService;
 
     @Transactional(readOnly = true)
     public boolean isAuthor(User user, String paperUri) {
@@ -92,6 +98,7 @@ public class UserService {
     @Transactional
     public User completeUserRegistration(RegistrationDto dto) {
         User user = new User();
+        user.setId(UUID.randomUUID().toString());
         user.setEmail(dto.getEmail());
         user.setFirstName(dto.getFirstName());
         user.setLastName(dto.getLastName());
@@ -157,5 +164,27 @@ public class UserService {
         }
         SocialAuthentication auth = dao.getTwitterAuthentication(user);
         return auth;
+    }
+
+    @Transactional(readOnly = true)
+    public List<UserDetails> findUsers(String start) {
+        if (StringUtils.isEmpty(start)) {
+            return Collections.emptyList();
+        }
+        List<User> byName = searchService.search(start.trim(), User.class, SearchType.START);
+        return extractUserDetails(byName);
+    }
+
+    private List<UserDetails> extractUserDetails(List<User> users) {
+        return users.stream().map(u -> {
+            UserDetails details = new UserDetails();
+            details.setFirstName(u.getFirstName());
+            details.setLastName(u.getLastName());
+            details.setDegree(u.getDegree());
+            details.setSmallPhotoUri(u.getSmallPhotoUri());
+            details.setLargePhotoUri(u.getLargePhotoUri());
+            details.setOrganization(u.getOrganization().getName());
+            return details;
+        }).collect(Collectors.toList());
     }
 }

@@ -1,9 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-   <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
    <link rel="stylesheet" href="${staticRoot}/css/jquery.tree.min.css">
-   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
    <script src="${staticRoot}/js/jquery.tree.min.js"></script>
    
    <script type="text/javascript">
