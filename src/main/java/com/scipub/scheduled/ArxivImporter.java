@@ -39,7 +39,7 @@ import com.rometools.rome.io.XmlReader;
 import com.scipub.dao.jpa.BranchDao;
 import com.scipub.model.Branch;
 import com.scipub.model.Language;
-import com.scipub.model.PaperStatus;
+import com.scipub.model.PublicationStatus;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
@@ -304,7 +304,7 @@ public class ArxivImporter {
                 currentPublication.getCurrentRevision().setPublication(currentPublication);
                 currentPublication.setSource(PublicationSource.ARXIV);
                 currentPublication.setLanguage(Language.EN);
-                currentPublication.setStatus(PaperStatus.PUBLISHED);
+                currentPublication.setStatus(PublicationStatus.PUBLISHED);
             }
             currentAttributes = attributes;
             

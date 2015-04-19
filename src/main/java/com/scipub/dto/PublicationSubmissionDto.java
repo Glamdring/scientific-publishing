@@ -2,7 +2,7 @@ package com.scipub.dto;
 
 import java.util.Set;
 
-import com.scipub.model.PaperStatus;
+import com.scipub.model.PublicationStatus;
 
 public class PublicationSubmissionDto {
 
@@ -11,7 +11,7 @@ public class PublicationSubmissionDto {
     private Set<String> authorIds;
     private Long submitterId;
     private Set<String> nonRegisteredAuthors;
-    private PaperStatus status;
+    private PublicationStatus status;
     private Set<String> tags;
     private String followUpTo;
     private String followUpToLink;
@@ -54,10 +54,10 @@ public class PublicationSubmissionDto {
     public void setNonRegisteredAuthors(Set<String> nonRegisteredAuthors) {
         this.nonRegisteredAuthors = nonRegisteredAuthors;
     }
-    public PaperStatus getStatus() {
+    public PublicationStatus getStatus() {
         return status;
     }
-    public void setStatus(PaperStatus status) {
+    public void setStatus(PublicationStatus status) {
         this.status = status;
     }
     public Set<String> getTags() {

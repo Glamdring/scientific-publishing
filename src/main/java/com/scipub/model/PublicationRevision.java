@@ -41,7 +41,7 @@ public class PublicationRevision {
     private String contentLink;
     
     @Column(nullable = false)
-    private boolean latest;
+    private boolean latestPublished;
 
     @Type(type = "com.scipub.util.PersistentLocalDateTime")
     private LocalDateTime created;
@@ -105,12 +105,12 @@ public class PublicationRevision {
         this.content = content;
     }
 
-    public boolean isLatest() {
-        return latest;
+    public boolean isLatestPublished() {
+        return latestPublished;
     }
 
-    public void setLatest(boolean latest) {
-        this.latest = latest;
+    public void setLatestPublished(boolean latest) {
+        this.latestPublished = latest;
     }
 
     public LocalDateTime getCreated() {

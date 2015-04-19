@@ -25,6 +25,7 @@ import com.scipub.model.Branch;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
+import com.scipub.model.PublicationStatus;
 import com.scipub.model.User;
 import com.scipub.service.SearchService.SearchType;
 import com.scipub.util.FormatConverter.Format;
@@ -74,15 +75,21 @@ public class PublicationService {
         // save paper
         dao.persist(publication);
 
-        // set old revisions as old
         List<PublicationRevision> revisions = dao.getRevisions(publication);
-        for (PublicationRevision revision : revisions) {
-            revision.setLatest(false);
-            dao.persist(revision);
+        // set old revisions as old (if the new one is not just a draft)
+        if (dto.getStatus() == PublicationStatus.PUBLISHED) {
+            for (PublicationRevision revision : revisions) {
+                revision.setLatestPublished(false);
+                dao.persist(revision);
+            }
         }
         
         // create revision
-        saveRevision(dto, publication, user, revisions.size() + 1);
+        PublicationRevision revision = saveRevision(dto, publication, user, revisions);
+        
+        if (dto.getStatus() == PublicationStatus.PUBLISHED) {
+            publication.setCurrentRevision(revision);
+        }
         
         if (user.getArxivUsername() != null && dto.isPushToArxiv()) {
             pushToArxiv(dto, user);
@@ -164,10 +171,19 @@ public class PublicationService {
         return paper;
     }
 
-    private void saveRevision(PublicationSubmissionDto dto, Publication paper, User user, int revisionIdx) {
-        PublicationRevision revision = new PublicationRevision();
+    private PublicationRevision saveRevision(PublicationSubmissionDto dto, Publication paper, User user, List<PublicationRevision> currentRevisions) {
+        int revisionIdx = currentRevisions.size() + 1;
+        PublicationRevision lastRevision = currentRevisions.get(currentRevisions.size() - 1);
+        PublicationRevision revision;
+        if (dto.getStatus() == PublicationStatus.DRAFT && !lastRevision.isLatestPublished()) {
+            revision = lastRevision;
+        } else {
+            revision = new PublicationRevision();
+        }
+        
         revision.setCreated(LocalDateTime.now());
-        revision.setLatest(true);
+        // set as latest only if it's not a draft; otherwise it should not be visible
+        revision.setLatestPublished(dto.getStatus() == PublicationStatus.PUBLISHED ? true : false);
         revision.setPublication(paper);
         revision.setOriginalFilename(dto.getOriginalFilename());
         revision.setContent(dto.getContent()); //extracted by convertContentToMarkdown
@@ -176,7 +192,7 @@ public class PublicationService {
         revision.setRevision(revisionIdx);
         revision.setSubmitter(user);
         
-        dao.persist(revision);
+        return dao.persist(revision);
     }
     
     private void assignIdentifiers(PublicationSubmissionDto dto, String userId) {

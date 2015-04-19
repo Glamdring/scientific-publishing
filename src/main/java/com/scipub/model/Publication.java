@@ -43,7 +43,7 @@ public class Publication {
     private LocalDateTime created;
 
     @Enumerated(EnumType.STRING)
-    private PaperStatus status;
+    private PublicationStatus status;
     
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Branch> branches = new HashSet<>();
@@ -122,11 +122,11 @@ public class Publication {
         this.created = created;
     }
 
-    public PaperStatus getStatus() {
+    public PublicationStatus getStatus() {
         return status;
     }
 
-    public void setStatus(PaperStatus status) {
+    public void setStatus(PublicationStatus status) {
         this.status = status;
     }
 

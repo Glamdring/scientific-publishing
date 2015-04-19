@@ -5,7 +5,9 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.google.common.io.Files;
 import com.scipub.dto.PublicationSubmissionDto;
 import com.scipub.model.Language;
+import com.scipub.model.PublicationStatus;
 import com.scipub.service.PublicationService;
 import com.scipub.tools.BranchJsonGenerator;
 import com.scipub.util.FormatConverter;
@@ -30,8 +33,13 @@ public class PublicationController {
 
     private static final Logger logger = LoggerFactory.getLogger(PublicationController.class);
     
+    private static final String LAST_UPLOADED_FILE_KEY = "lastUploadedFile";
+    
     @Inject
     private PublicationService publicationService;
+    
+    @Inject
+    private UserContext userContext;
     
     private String branchesJson; 
     
@@ -40,24 +48,46 @@ public class PublicationController {
         branchesJson = BranchJsonGenerator.getBranchJson(false).replace("'", "\\'");
     }
     @RequestMapping("/new")
-    public String newPublication() {
+    public String newPublication(HttpSession session) {
+        // cleanup any previously uploaded file
+        session.removeAttribute(LAST_UPLOADED_FILE_KEY);
         return "newPublication";
     }
     
-    private void submit(@RequestBody PublicationSubmissionDto dto) {
+    @RequestMapping("/submit")
+    public void submit(@RequestBody PublicationSubmissionDto dto, HttpSession session) {
         
+        fillFileDetails(dto, session);
+        dto.setStatus(PublicationStatus.PUBLISHED);
+        publicationService.submitPaper(dto, userContext.getUser().getId());
     }
     
+    @RequestMapping("/saveDraft")
+    private void saveDraft(@RequestBody PublicationSubmissionDto dto, HttpSession session) {
+        
+        fillFileDetails(dto, session);
+        dto.setStatus(PublicationStatus.DRAFT);
+        publicationService.submitPaper(dto, userContext.getUser().getId());
+    }
+    
+    private void fillFileDetails(PublicationSubmissionDto dto, HttpSession session) {
+        @SuppressWarnings("unchecked")
+        ImmutablePair<String, byte[]> file = (ImmutablePair<String, byte[]>) session.getAttribute(LAST_UPLOADED_FILE_KEY);
+        if (file != null) {
+            dto.setOriginalFilename(file.getKey());
+            dto.setOriginalFileContent(file.getValue());
+        }
+    }
     
     @RequestMapping("/uploadFile")
     @ResponseBody
-    public void uploadFile(@RequestParam MultipartFile file) {
-        //TODO store in session
+    public void uploadFile(@RequestParam MultipartFile file, HttpSession session) throws IOException {
+        session.setAttribute(LAST_UPLOADED_FILE_KEY, new ImmutablePair<String, byte[]>(file.getOriginalFilename(), file.getBytes()));
     }
     
     @RequestMapping("/importFile")
     @ResponseBody
-    public UploadResult importFile(@RequestParam MultipartFile file) throws IOException {
+    public UploadResult importFile(@RequestParam MultipartFile file, HttpSession session) throws IOException {
         String extension = Files.getFileExtension(file.getOriginalFilename());
         logger.info("Received file " + file.getOriginalFilename() + " of type " + file.getContentType() + " and size "
                 + file.getSize() + " and ext " + extension);
@@ -65,7 +95,8 @@ public class PublicationController {
         UploadResult result = new UploadResult();
         result.setContent(new String(md, "UTF-8"));
         
-        //TODO store file in session?
+        session.setAttribute(LAST_UPLOADED_FILE_KEY, new ImmutablePair<String, byte[]>(file.getOriginalFilename(), file.getBytes()));
+        
         return result;
     }
     
