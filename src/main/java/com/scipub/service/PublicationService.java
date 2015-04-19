@@ -67,12 +67,7 @@ public class PublicationService {
         
         setParentBranches(publication);
         
-        // for non-markdown submissions
-        if (dto.getOriginalFilename() != null) {
-            convertContentToMarkdown(dto);
-        }
-        
-        // save paper
+        // save publication
         dao.persist(publication);
 
         List<PublicationRevision> revisions = dao.getRevisions(publication);
@@ -175,7 +170,9 @@ public class PublicationService {
         int revisionIdx = currentRevisions.size() + 1;
         PublicationRevision lastRevision = currentRevisions.get(currentRevisions.size() - 1);
         PublicationRevision revision;
-        if (dto.getStatus() == PublicationStatus.DRAFT && !lastRevision.isLatestPublished()) {
+        
+        // if the last revision is not the latest published, it means it's a draft we want to override
+        if (!lastRevision.isLatestPublished()) {
             revision = lastRevision;
         } else {
             revision = new PublicationRevision();
@@ -206,24 +203,6 @@ public class PublicationService {
         }
     }
 
-    private void convertContentToMarkdown(PublicationSubmissionDto dto) {
-        String extension = Files.getFileExtension(dto.getOriginalFilename());
-        Format format = Format.forExtension(extension);
-        if (format == null) {
-            throw new IllegalStateException("Unsupported extension " + extension);
-        }
-        try {
-            File in = new File(pandocConversionDir, dto.getUri() + "." + extension);
-            Files.write(dto.getOriginalFileContent(), in);
-            File out = new File(pandocConversionDir, dto.getUri() + ".md");
-            //TODO? Pandoc.convert(format, Format.MARKDOWN, in, out, Collections.<String>emptyList());
-            String content = Files.toString(out, Charsets.UTF_8);
-            dto.setContent(content);
-        } catch (IOException e) {
-            throw new IllegalStateException(e);
-        }
-    }
-    
     @Transactional
     public void storePublication(List<Publication> publications) {
         dao.storePublications(publications);
