@@ -1,5 +1,6 @@
 package com.scipub.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +16,9 @@ import javax.persistence.OneToMany;
 import org.hibernate.annotations.Type;
 
 @Entity
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 978398160453380686L;
 
     @Id
     private String id;

@@ -8,85 +8,111 @@
         <script type="text/javascript" src="${staticRoot}/js/jquery.fcbkcomplete.min.js"></script>
         <link href="${staticRoot}/css/autocomplete.css" rel="stylesheet" />
         
+        <script src="${staticRoot}/js/jquery.iframe.transport.js"></script>
+        <script src="${staticRoot}/js/jquery.fileupload.js"></script>
+        
         <script type="text/javascript">
-                $(document).ready(function() {
-                    $("#authors").fcbkcomplete({
-                        json_url: "${root}/users/autocompleteList",
-                        cache: false,
-                        height: 10,
-                        filter_case: false,
-                        filter_hide: true,
-                        newel: true,
-                        addontab: true,
-                        addoncomma: true,
-                        addonblur: true,
-                        maxitems: 5,
-                        bricket: false,
-                        width: "auto"
-                    });
-                    $("#authors").trigger("addItem", {title:'${userContext.user.displayName}, ${userContext.user.degree}', value: 'id:${userContext.user.id}'});
+	        $(function () {
+			    $('#fileimport').fileupload({
+			        dataType: 'json',
+			        done: function (e, data) {
+		                $("#wmd-input2").val(data.result.content);
+			        }
+			    });
+			});
+			
+            $(document).ready(function() {
+                $("#authors").fcbkcomplete({
+                    json_url: "${root}/users/autocompleteList",
+                    cache: false,
+                    height: 10,
+                    filter_case: false,
+                    filter_hide: true,
+                    newel: true,
+                    addontab: true,
+                    addoncomma: true,
+                    addonblur: true,
+                    maxitems: 5,
+                    bricket: false,
+                    width: "auto"
+                });
+                $("#authors").trigger("addItem", {title:'${userContext.user.displayName}, ${userContext.user.degree}', value: 'id:${userContext.user.id}'});
+                
+                //$("#followUpToInternal").autocomplete();
+                $("input[name='followUpType']").change(function() {
+                    var selected = $('input[name=followUpType]:checked').val();
+                    if (selected == "internal") {
+                        $("#followUpToInternal").show();
+                        $("#followUpToLink,#followUpToDoi").hide();
+                    } else if (selected == "link") {
+                        $("#followUpToLink").show();
+                        $("#followUpToInternal,#followUpToDoi").hide();
+                    } else if (selected == "doi") {
+                        $("#followUpToDoi").show();
+                        $("#followUpToLink,#followUpToInternal").hide();
+                    }
                     
-                    //$("#followUpToInternal").autocomplete();
-                    $("input[name='followUpType']").change(function() {
-                        var selected = $('input[name=followUpType]:checked').val();
-                        if (selected == "internal") {
-                            $("#followUpToInternal").show();
-                            $("#followUpToLink,#followUpToDoi").hide();
-                        } else if (selected == "link") {
-                            $("#followUpToLink").show();
-                            $("#followUpToInternal,#followUpToDoi").hide();
-                        } else if (selected == "doi") {
-                            $("#followUpToDoi").show();
-                            $("#followUpToLink,#followUpToInternal").hide();
-                        }
-                        
-                    });
-                    
-                    $("input[name='contentInputType']").change(function() {
-                        var selected = $('input[name=contentInputType]:checked').val();
-                        if (selected == "direct") {
-                            $("#contentEditor").show();
-                            $("#externalContent").hide();
-                        } else if (selected == "link") {
-                            $("#externalContent").show();
-                            $("#contentEditor").hide();
-                        }
-                    });
                 });
                 
-                function fillAuthors() {
-                	var authors = $("#authors :selected");
-                    var idDelim = "";
-                    var nameDelim = "";
-                    var authorIds = "";
-                    var nonRegisteredAuthors = "";
-                    authors.each(function(idx, elem) {
-                    	var value = $(elem).val();
-                    	if (value.indexOf("id:") === 0) {
-                    		authorIds += idDelim + value.replace("id:", "");
-                            idDelim = ",";
-                    	} else {
-                    		nonRegisteredUsers += nameDelim + value;
-                            nameDelim = ",";
-                    	}
-                    });
-                    $("#authorIds").val(authorIds);
-                    $("#nonRegisteredAuthors").val(nonRegisteredAuthors);
-                }
+                $("input[name='contentInputType']").change(function() {
+                    var selected = $('input[name=contentInputType]:checked').val();
+                    if (selected == "direct") {
+                        $("#contentEditor,#fileImport").show();
+                        $("#externalContent,#fileUpload").hide();
+                    } else if (selected == "link") {
+                        $("#externalContent").show();
+                        $("#contentEditor,#fileImport,#fileUpload").hide();
+                    } else if (selected == "upload") {
+                        $("#fileUpload").show();
+                        $("#contentEditor,#fileImport,#externalContent").hide();
+                    }
+                });
                 
-                function handlePrimaryBranchOptions() {
-                    $("#submissionForm input[name='scienceBranch']").change(function(){
-                        var input = $(this);
-                        if (input.prop("checked")) {
-                            $("#primaryBranch").append($("<option></option>")
-                                    .attr("value", input.val())
-                                    .text(input.parent().children("label").text()));
-                        } else {
-                            $("#primaryBranch").children("option[value='" + input.val() + "']").remove();
-                        }
-                    });
-                } 
-          </script>
+                 $(document).ready(function () {
+			        // Save draft every 30 seconds
+			        window.setInterval(saveDraft, 30000);
+		          });
+			
+			      function saveDraft() {
+			         fillAuthors();
+			         var params = $("#submissionForm").serialize();
+			         // post to saveDraft
+			      }
+            });
+            
+            function fillAuthors() {
+            	var authors = $("#authors :selected");
+                var idDelim = "";
+                var nameDelim = "";
+                var authorIds = "";
+                var nonRegisteredAuthors = "";
+                authors.each(function(idx, elem) {
+                	var value = $(elem).val();
+                	if (value.indexOf("id:") === 0) {
+                		authorIds += idDelim + value.replace("id:", "");
+                        idDelim = ",";
+                	} else {
+                		nonRegisteredUsers += nameDelim + value;
+                        nameDelim = ",";
+                	}
+                });
+                $("#authorIds").val(authorIds);
+                $("#nonRegisteredAuthors").val(nonRegisteredAuthors);
+            }
+            
+            function handlePrimaryBranchOptions() {
+                $("#submissionForm input[name='scienceBranch']").change(function(){
+                    var input = $(this);
+                    if (input.prop("checked")) {
+                        $("#primaryBranch").append($("<option></option>")
+                                .attr("value", input.val())
+                                .text(input.parent().children("label").text()));
+                    } else {
+                        $("#primaryBranch").children("option[value='" + input.val() + "']").remove();
+                    }
+                });
+            } 
+        </script>
     </jsp:attribute>
 
     <jsp:body>
@@ -113,9 +139,19 @@
                 </div>
                 
                 <div class="radio">
+                    <input type="radio" id="contentInputTypeUpload" name="contentInputType" value="upload">
+                    <label for="contentInputTypeUpload">Upload</label>
+                </div>
+                
+                <div class="radio">
                     <input type="radio" id="contentInputTypeLink" name="contentInputType" value="link">
                     <label for="contentInputTypeLink">External Link</label>
                 </div>
+            </div>
+            
+            <div id="fileImport">
+                <label for="fileimport">You can import content from a file:</label>
+                <input id="fileimport" type="file" name="file" data-url="${root}/publication/importFile"><br />
             </div>
             
 	        <div class="form-group" id="contentEditor">
@@ -128,6 +164,11 @@
             <div class="form-group" id="externalContent" style="display: none;">
                 <label>Link to external content</label>
                 <input type="text" name="contentLink" placeholder="http://" class="form-control" />
+            </div>
+            
+            <div id="fileUpload" style="display: none;">
+                <label for="fileupload">Select file to upload</label>
+                <input id="fileupload" type="file" name="fileUpload" data-url="${root}/publication/uploadFile"><br />
             </div>
 	        
 	        <div class="form-group">

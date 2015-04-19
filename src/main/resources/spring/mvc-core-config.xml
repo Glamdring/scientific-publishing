@@ -46,7 +46,9 @@
     <!-- serve static resources (*.html, ...) from src/main/webapp/ Required when both servlet-mapping is '/' and static 
         resources need to be served -->
     <mvc:default-servlet-handler />
-
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+        
     <mvc:interceptors>
         <bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
             <property name="cacheSeconds" value="0" />
