@@ -116,6 +116,8 @@
     </jsp:attribute>
 
     <jsp:body>
+        <h1 class="page_head">Publication</h1>
+        
         <form role="form" id="submissionForm" style="width: 400px;" onsubmit="fillAuthors();">
             <div class="form-group">
                 <label for="title">Title</label>
