@@ -1,4 +1,3 @@
-
 body, html {
 }
 body, h1, h2, h3, h4, h5, h6 {
@@ -12,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p {
     word-wrap: break-word;
 }
 body, legend, ul {
-    padding: 0;
+    padding-left: 15px;
 }
 .resume-entry ul, ul {
     list-style: outside none none;
@@ -341,9 +340,9 @@ select {
     width: 80px;
 }
 label, legend {
-    display: block;
     font-size: 14px;
     font-weight: 700;
+    padding-left: 3px;
 }
 input[type="checkbox"] {
     display: inline;
@@ -1362,10 +1361,6 @@ p a:focus, p a:hover {
 .fadewhite, .wall {
     display: block;
 }
-.wall ul li:first-child {
-    position: relative;
-    z-index: 10;
-}
 .wall h2 {
 	margin-bottom: 10px;
 	margin-top: 5px;
@@ -1468,6 +1463,39 @@ strong.db.wind {
     height: 31px;
     margin-top: 14px;
     width: 160px;
+}
+.persona-button:before {
+    background: linear-gradient(-45deg, #3095ce, #50b8e8) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.1);
+    content: "";
+    display: block;
+    height: 26px;
+    left: 2px;
+    margin-top: -13px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 26px;
+    z-index: 0;
+}
+
+.persona-orange:before {
+    background: linear-gradient(-45deg, #e84a21, #f7ad27) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.success {
+    color: darkgreen;
+}
+.failure {
+    color: darkred;
+}
+.logo {
+    border-style: none;
+    float: left;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#branches li {
+    padding-bottom: 0px;
 }
 @media not all, (min--moz-device-pixel-ratio: 1.5), not all, (min-resolution: 1.5dppx) {
 #header #logo, .subsection-wall #header.active #logo {
@@ -1976,10 +2004,6 @@ user-menu #logout {
 #feed-tabs li a.active, #topics-tabs li a.active {
     background-position: center 32px;
     transition: background-position 0.15s ease 0s, opacity 0.15s ease 0s;
-}
-#user-posts ul li, .search-post li, user-post, .wall li, wall-post {
-    display: block;
-    padding-bottom: 10px;
 }
 #user-posts ul li h3, #user-posts ul li span.topic-section, .search-post li h3, .search-post li span.topic-section, user-post h3, user-post span.topic-section, .wall li h3, .wall li span.topic-section, wall-post h3, wall-post span.topic-section {
     margin-bottom: 7px;

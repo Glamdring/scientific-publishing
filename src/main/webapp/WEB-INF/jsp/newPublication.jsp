@@ -118,10 +118,10 @@
     <jsp:body>
         <h1 class="page_head">Publication</h1>
         
-        <form role="form" id="submissionForm" style="width: 400px;" onsubmit="fillAuthors();">
+        <form role="form" id="submissionForm" class="post-form" style="width: 400px;" onsubmit="fillAuthors();">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" class="form-control" />
+                <input type="text" name="title" id="title" />
             </div>
         
         
@@ -165,7 +165,7 @@
 	        
             <div class="form-group" id="externalContent" style="display: none;">
                 <label>Link to external content</label>
-                <input type="text" name="contentLink" placeholder="http://" class="form-control" />
+                <input type="text" name="contentLink" placeholder="http://" />
             </div>
             
             <div id="fileUpload" style="display: none;">
@@ -186,7 +186,7 @@
 	       
 	        <div class="form-group">
                <label for="primaryBranch">Primary branch</label>
-               <select id="primaryBranch" name="primaryBranch" class="form-control"></select>
+               <select id="primaryBranch" name="primaryBranch"></select>
             </div>
             
             <div class="checkbox"> 
@@ -197,7 +197,7 @@
 	
             <div class="form-group">
                 <label for="language">Language</label>
-		        <select name="language" id="language" class="form-control">
+		        <select name="language" id="language">
 		            <c:forEach items="${languages}" var="lang">
 		                <option value="${lang.code}">${lang.name}</option>
 		            </c:forEach>
@@ -206,7 +206,7 @@
 	        
 	        <div class="form-group">
 				<label for="authors">Authors</label>
-				<input type="text" name="authors" id="authors" class="form-control" />
+				<input type="text" name="authors" id="authors" />
 				<input type="hidden" name="authorIds" id="authorIds" value="${userContext.user.id}" />
                 <input type="hidden" name="nonRegisteredAuthors" id="nonRegisteredAuthors" />
 	        </div>
@@ -229,10 +229,10 @@
 	                <label for="followUpTypeDoi">External publication (DOI)</label><br />
                 </div>
                 	                
-                <input type="text" id="followUpToInternal" name="followUpToInternal" style="display: none;" class="form-control" />
+                <input type="text" id="followUpToInternal" name="followUpToInternal" style="display: none;" />
                 <input type="hidden" id="followUpTo" name="followUpTo" />
-                <input type="text" id="followUpToLink" name="followUpToLink" style="display: none;" class="form-control" placeholder="http://" />
-                <input type="text" id="followUpToDoi" name="followUpToDoi" style="display: none;" class="form-control" />
+                <input type="text" id="followUpToLink" name="followUpToLink" style="display: none;"  placeholder="http://" />
+                <input type="text" id="followUpToDoi" name="followUpToDoi" style="display: none;" />
             </div>
             
 	        - send invites to non registered editors
