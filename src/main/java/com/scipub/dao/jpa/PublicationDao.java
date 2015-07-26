@@ -14,20 +14,20 @@ import com.scipub.model.PublicationSource;
 @Repository
 public class PublicationDao extends Dao {
 
-    public List<PublicationRevision> getRevisions(Publication paper) {
+    public List<PublicationRevision> getRevisions(Publication publication) {
         QueryDetails<PublicationRevision> query = new QueryDetails<PublicationRevision>().setQueryName("Publication.getRevisions")
-            .setParamNames("paper")
-            .setParamValues(paper)
+            .setParamNames("publication")
+            .setParamValues(publication)
             .setResultClass(PublicationRevision.class);
         
         return findByQuery(query);
     }
 
-    public List<Publication> getLatestPapers(long branchId, int papersPerBranch) {
+    public List<Publication> getLatestPapers(long branchId, int publicationsPerBranch) {
         QueryDetails<Publication> query = new QueryDetails<Publication>().setQueryName("Publication.getLatestByBranch")
                 .setParamNames("branchId")
                 .setParamValues(branchId)
-                .setCount(papersPerBranch)
+                .setCount(publicationsPerBranch)
                 .setResultClass(Publication.class);
             
         return findByQuery(query);

@@ -1,5 +1,6 @@
 package com.scipub.dto;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import com.scipub.model.PublicationStatus;
@@ -7,12 +8,12 @@ import com.scipub.model.PublicationStatus;
 public class PublicationSubmissionDto {
 
     private String uri; 
-    private Set<Integer> branchIds;
-    private Set<String> authorIds;
+    private Set<Integer> branchIds = new HashSet<>();
+    private Set<String> authorIds = new HashSet<>();
     private Long submitterId;
     private Set<String> nonRegisteredAuthors;
     private PublicationStatus status;
-    private Set<String> tags;
+    private Set<String> tags = new HashSet<>();
     private String followUpTo;
     private String followUpToLink;
     private String followUpToDoi;

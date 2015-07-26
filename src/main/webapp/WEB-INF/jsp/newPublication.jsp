@@ -76,7 +76,7 @@
 			      function saveDraft() {
 			         fillAuthors();
 			         var params = $("#submissionForm").serialize();
-			         // post to saveDraft
+			         $.post("${root}/publication/saveDraft", params)
 			      }
             });
             
@@ -118,7 +118,8 @@
     <jsp:body>
         <h1 class="page_head">Publication</h1>
         
-        <form role="form" id="submissionForm" class="post-form" style="width: 400px;" onsubmit="fillAuthors();">
+        <form role="form" id="submissionForm" class="post-form" 
+            style="width: 400px;" onsubmit="fillAuthors();" action="${root}/publication/submit" method="POST">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" />
@@ -213,7 +214,12 @@
 	        
 	        <div class="form-group">
                 <label>This publication is a follow-up to:</label>
-                
+
+                <div class="radio">
+                    <input type="radio" id="followUpTypeNone" name="followUpType" value="">
+                    <label for="followUpTypeLink">Not a follow-up</label><br />
+                </div>
+                                
                 <div class="radio">
 	                <input type="radio" id="followUpTypeInternal" name="followUpType" value="internal">
 	                <label for="followUpTypeInternal">Scienation publication</label>
@@ -235,8 +241,11 @@
                 <input type="text" id="followUpToDoi" name="followUpToDoi" style="display: none;" />
             </div>
             
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+            
 	        - send invites to non registered editors
-	        - upload file
 	        - invite reviewers
         </form>
     </jsp:body>

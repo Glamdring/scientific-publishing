@@ -12,7 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -55,19 +54,19 @@ public class PublicationController {
     }
     
     @RequestMapping("/submit")
-    public void submit(@RequestBody PublicationSubmissionDto dto, HttpSession session) {
+    public void submit(PublicationSubmissionDto dto, HttpSession session) {
         
         fillFileDetails(dto, session);
         dto.setStatus(PublicationStatus.PUBLISHED);
-        publicationService.submitPaper(dto, userContext.getUser().getId());
+        publicationService.submitPublication(dto, userContext.getUser().getId());
     }
     
     @RequestMapping("/saveDraft")
-    private void saveDraft(@RequestBody PublicationSubmissionDto dto, HttpSession session) {
+    private void saveDraft(PublicationSubmissionDto dto, HttpSession session) {
         
         fillFileDetails(dto, session);
         dto.setStatus(PublicationStatus.DRAFT);
-        publicationService.submitPaper(dto, userContext.getUser().getId());
+        publicationService.submitPublication(dto, userContext.getUser().getId());
     }
     
     private void fillFileDetails(PublicationSubmissionDto dto, HttpSession session) {

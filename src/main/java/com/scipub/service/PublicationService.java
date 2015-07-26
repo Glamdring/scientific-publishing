@@ -53,9 +53,15 @@ public class PublicationService {
     
     @Inject
     private SearchService searchService;
-    
+
+    /**
+     * Submit the given publication for the given user id
+     * @param dto the publication details
+     * @param userId the id of the submitter
+     * @return the URI of the saved publication
+     */
     @Transactional
-    public void submitPaper(PublicationSubmissionDto dto, String userId) {
+    public String submitPublication(PublicationSubmissionDto dto, String userId) {
         User user = dao.getById(User.class, userId);
         if (dto.getUri() != null && !userService.isAuthor(user, dto.getUri())) {
             throw new IllegalStateException("User is not an author of the paper he's submitting");
@@ -63,7 +69,7 @@ public class PublicationService {
         
         Publication publication = dtoToEntity(dto, user);
         
-        assignIdentifiers(dto, userId);
+        assignIdentifiers(publication, dto, userId);
         
         setParentBranches(publication);
         
@@ -89,6 +95,8 @@ public class PublicationService {
         if (user.getArxivUsername() != null && dto.isPushToArxiv()) {
             pushToArxiv(dto, user);
         }
+        
+        return publication.getUri();
     }
 
     private void setParentBranches(Publication publication) {
@@ -131,42 +139,42 @@ public class PublicationService {
     }
     
     private Publication dtoToEntity(PublicationSubmissionDto dto, User user) {
-        Publication paper = null;
+        Publication publication = null;
         if (dto.getUri() != null) {
-            paper = dao.getById(Publication.class, dto.getUri());
+            publication = dao.getById(Publication.class, dto.getUri());
         }
-        if (paper == null) {
-            paper = new Publication();
-            paper.setCreated(LocalDateTime.now());
+        if (publication == null) {
+            publication = new Publication();
+            publication.setCreated(LocalDateTime.now());
         }
         
         for (String authorId : dto.getAuthorIds()) {
-            paper.getAuthors().add(dao.getById(User.class, authorId));
+            publication.getAuthors().add(dao.getById(User.class, authorId));
         }
         for (String nonRegisteredAuthorName : dto.getNonRegisteredAuthors()) {
-            paper.getNonRegisteredAuthors().add(nonRegisteredAuthorName);
+            publication.getNonRegisteredAuthors().add(nonRegisteredAuthorName);
         }
         
         if (dto.getFollowUpTo() != null) {
-            paper.setFollowUpTo(dao.getById(Publication.class, dto.getFollowUpTo()));
+            publication.setFollowUpTo(dao.getById(Publication.class, dto.getFollowUpTo()));
         }
         
         for (Integer branchId : dto.getBranchIds()) {
-            paper.getBranches().add(dao.getById(Branch.class, branchId));
+            publication.getBranches().add(dao.getById(Branch.class, branchId));
         }
         
         for (String tag : dto.getTags()) {
             //TODO fetch tags and set
         }
         
-        paper.setFollowUpToLink(dto.getFollowUpToLink());
-        paper.setFollowUpToDoi(dto.getFollowUpToDoi());
-        paper.setStatus(dto.getStatus());
+        publication.setFollowUpToLink(dto.getFollowUpToLink());
+        publication.setFollowUpToDoi(dto.getFollowUpToDoi());
+        publication.setStatus(dto.getStatus());
         
-        return paper;
+        return publication;
     }
 
-    private PublicationRevision saveRevision(PublicationSubmissionDto dto, Publication paper, User user, List<PublicationRevision> currentRevisions) {
+    private PublicationRevision saveRevision(PublicationSubmissionDto dto, Publication publication, User user, List<PublicationRevision> currentRevisions) {
         int revisionIdx = currentRevisions.size() + 1;
         PublicationRevision lastRevision = currentRevisions.get(currentRevisions.size() - 1);
         PublicationRevision revision;
@@ -181,7 +189,7 @@ public class PublicationService {
         revision.setCreated(LocalDateTime.now());
         // set as latest only if it's not a draft; otherwise it should not be visible
         revision.setLatestPublished(dto.getStatus() == PublicationStatus.PUBLISHED ? true : false);
-        revision.setPublication(paper);
+        revision.setPublication(publication);
         revision.setOriginalFilename(dto.getOriginalFilename());
         revision.setContent(dto.getContent()); //extracted by convertContentToMarkdown
         revision.setPublicationAbstract(dto.getPaperAbstract());
@@ -192,14 +200,14 @@ public class PublicationService {
         return dao.persist(revision);
     }
     
-    private void assignIdentifiers(PublicationSubmissionDto dto, String userId) {
-        if (dto.getUri() == null) {
-            dto.setUri(UriUtils.generateUri());
+    private void assignIdentifiers(Publication publication, PublicationSubmissionDto dto, String userId) {
+        if (publication.getUri() == null) {
+            publication.setUri(UriUtils.generateUri());
         }
         
         // fill-in the link based on the doi
         if (dto.getFollowUpToDoi() != null && dto.getFollowUpToLink() == null) {
-            dto.setFollowUpToLink(UriUtils.getDoiUri(dto.getFollowUpToDoi()));
+            publication.setFollowUpToLink(UriUtils.getDoiUri(dto.getFollowUpToDoi()));
         }
     }
 

@@ -23,7 +23,9 @@ import org.hibernate.annotations.Type;
 @Entity
 @NamedQueries({
     @NamedQuery(name = "Publication.getLatestByBranch", 
-                query = "SELECT p FROM Publication p WHERE :branchId IN elements(p.branches) OR :branchId IN elements(p.parentBranches) ORDER BY p.created")
+                query = "SELECT p FROM Publication p WHERE :branchId IN elements(p.branches) OR :branchId IN elements(p.parentBranches) ORDER BY p.created"),
+    @NamedQuery(name = "Publication.getRevisions",
+                query = "SELECT r FROM PublicationRevision WHERE r.publication = :publication")
 })
 public class Publication {
 
