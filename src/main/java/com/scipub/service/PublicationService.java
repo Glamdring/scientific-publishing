@@ -1,7 +1,5 @@
 package com.scipub.service;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,8 +14,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.google.common.base.Charsets;
-import com.google.common.io.Files;
 import com.scipub.dao.jpa.BranchDao;
 import com.scipub.dao.jpa.PublicationDao;
 import com.scipub.dto.PublicationSubmissionDto;
@@ -28,7 +24,6 @@ import com.scipub.model.PublicationSource;
 import com.scipub.model.PublicationStatus;
 import com.scipub.model.User;
 import com.scipub.service.SearchService.SearchType;
-import com.scipub.util.FormatConverter.Format;
 import com.scipub.util.UriUtils;
 
 @Service
@@ -176,11 +171,11 @@ public class PublicationService {
 
     private PublicationRevision saveRevision(PublicationSubmissionDto dto, Publication publication, User user, List<PublicationRevision> currentRevisions) {
         int revisionIdx = currentRevisions.size() + 1;
-        PublicationRevision lastRevision = currentRevisions.get(currentRevisions.size() - 1);
+        PublicationRevision lastRevision = currentRevisions.isEmpty() ? null : currentRevisions.get(currentRevisions.size() - 1);
         PublicationRevision revision;
         
         // if the last revision is not the latest published, it means it's a draft we want to override
-        if (!lastRevision.isLatestPublished()) {
+        if (lastRevision != null && !lastRevision.isLatestPublished()) {
             revision = lastRevision;
         } else {
             revision = new PublicationRevision();

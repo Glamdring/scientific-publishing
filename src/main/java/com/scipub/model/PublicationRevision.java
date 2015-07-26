@@ -61,8 +61,8 @@ public class PublicationRevision {
         return publication;
     }
 
-    public void setPublication(Publication paper) {
-        this.publication = paper;
+    public void setPublication(Publication publication) {
+        this.publication = publication;
     }
 
     public User getSubmitter() {

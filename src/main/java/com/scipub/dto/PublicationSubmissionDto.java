@@ -11,7 +11,7 @@ public class PublicationSubmissionDto {
     private Set<Integer> branchIds = new HashSet<>();
     private Set<String> authorIds = new HashSet<>();
     private Long submitterId;
-    private Set<String> nonRegisteredAuthors;
+    private Set<String> nonRegisteredAuthors = new HashSet<>();
     private PublicationStatus status;
     private Set<String> tags = new HashSet<>();
     private String followUpTo;
