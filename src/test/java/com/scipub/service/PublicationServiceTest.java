@@ -2,12 +2,13 @@ package com.scipub.service;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.isA;
-import static org.mockito.Matchers.argThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -15,7 +16,7 @@ import java.util.Collections;
 import java.util.UUID;
 
 import org.junit.Test;
-import org.mockito.ArgumentMatcher;
+import org.mockito.ArgumentCaptor;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import com.scipub.dao.jpa.PublicationDao;
@@ -55,6 +56,7 @@ public class PublicationServiceTest {
         verify(dao, times(3)).persist(isA(PublicationRevision.class));
     }
 
+    @Test
     public void submitDraftTest() {
         PublicationDao dao = mock(PublicationDao.class);
         PublicationService service = createMockService(dao);
@@ -65,13 +67,40 @@ public class PublicationServiceTest {
 
         String uri = service.submitPublication(dto, USER_ID);
         assertThat(uri, is(notNullValue()));
-        
+
+        ArgumentCaptor<PublicationRevision> argument = ArgumentCaptor.forClass(PublicationRevision.class);
         // test new draft revision is created
-        verify(dao).persist(argThat(new DraftMatcher()));
+        verify(dao, atLeastOnce()).persist(argument.capture());
+        assertThat(argument.getValue().isLatestPublished(), is(false));
+    }
+    
+    @Test
+    public void overrideDraft() {
+        PublicationDao dao = mock(PublicationDao.class);
+        PublicationService service = createMockService(dao);
         
-        // test overriding of the draft (times(2) - one from above, and one from this invocation)
+        PublicationSubmissionDto dto = new PublicationSubmissionDto();
+        dto.setStatus(PublicationStatus.DRAFT);
+        dto.setTitle("Foo");
+        
+        // test overriding of the draft
         service.submitPublication(dto, USER_ID);
-        verify(dao, times(2)).persist(argThat(new DraftMatcher()));
+        ArgumentCaptor<PublicationRevision> argument = ArgumentCaptor.forClass(PublicationRevision.class);
+        verify(dao, atLeastOnce()).persist(argument.capture());
+        assertThat(argument.getValue().isLatestPublished(), is(false));
+    }
+    
+    @Test
+    public void publishDraft() {
+        PublicationDao dao = mock(PublicationDao.class);
+        PublicationService service = createMockService(dao);
+        
+        PublicationSubmissionDto dto = new PublicationSubmissionDto();
+        dto.setStatus(PublicationStatus.DRAFT);
+        dto.setTitle("Foo");
+
+        String uri = service.submitPublication(dto, USER_ID);
+        assertThat(uri, is(notNullValue()));
         
         // test publishing a draft
         PublicationRevision revision = new PublicationRevision();
@@ -83,22 +112,17 @@ public class PublicationServiceTest {
         when(dao.getRevisions(any())).thenReturn(Collections.singletonList(revision));
         
         dto.setUri(p.getUri());
+        dto.setStatus(PublicationStatus.PUBLISHED);
+        
         service.submitPublication(dto, USER_ID);
         
-        verify(dao).persist(argThat(new NonDraftMatcher()));
-    }
-    
-    private static class DraftMatcher extends ArgumentMatcher<PublicationRevision> {
-        public boolean matches(Object revision) {
-            PublicationRevision rev = (PublicationRevision) revision;
-            return !rev.isLatestPublished();
-        }
-    }
-    private static class NonDraftMatcher extends ArgumentMatcher<PublicationRevision> {
-        public boolean matches(Object revision) {
-            PublicationRevision rev = (PublicationRevision) revision;
-            return rev.isLatestPublished();
-        }
+        ArgumentCaptor<PublicationRevision> argument = ArgumentCaptor.forClass(PublicationRevision.class);
+        verify(dao, atLeastOnce()).persist(argument.capture());
+        
+        // double-cast due to mockito's inability to have multiple argument captors for multiple classes
+        assertThat(((Publication) (Object) argument.getAllValues().get(2)).getStatus(), is(PublicationStatus.PUBLISHED));
+        assertThat(argument.getValue().isLatestPublished(), is(true));
+        assertThat(argument.getValue().getRevision(), is(2));
     }
     
     private PublicationService createMockService(PublicationDao dao) {
@@ -111,8 +135,12 @@ public class PublicationServiceTest {
         when(dao.getRevisions(any())).thenReturn(Collections.emptyList());
         when(dao.getById(User.class, USER_ID)).thenReturn(user);
         
+        UserService mockUserService = mock(UserService.class);
+        when(mockUserService.isAuthor(any(), any())).thenReturn(true);
+        
         PublicationService service = new PublicationService();
         ReflectionTestUtils.setField(service, "dao", dao);
+        ReflectionTestUtils.setField(service, "userService", mockUserService);
         return service;
     }
 }

@@ -136,4 +136,12 @@ public class PublicationRevision {
     public void setContentLink(String contentLink) {
         this.contentLink = contentLink;
     }
+
+    @Override
+    public String toString() {
+        return "PublicationRevision [id=" + id + ", publication=" + publication + ", submitter=" + submitter
+                + ", revision=" + revision + ", title=" + title + ", publicationAbstract=" + publicationAbstract
+                + ", content=" + content + ", contentLink=" + contentLink + ", latestPublished=" + latestPublished
+                + ", created=" + created + ", originalFilename=" + originalFilename + "]";
+    }
 }
