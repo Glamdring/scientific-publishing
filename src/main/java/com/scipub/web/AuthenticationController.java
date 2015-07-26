@@ -78,9 +78,9 @@ public class AuthenticationController {
         return signInController.signIn(providerId, request);
     }
 
-    @RequestMapping("/signup")
-    public String signupPage() {
-        return "signup";
+    @RequestMapping("/signin")
+    public String signinPage() {
+        return "signin";
     }
     
     @RequestMapping("/socialSignUp")
