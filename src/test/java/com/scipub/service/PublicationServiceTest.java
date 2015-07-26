@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.isA;
+import static org.mockito.Matchers.argThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -14,6 +15,7 @@ import java.util.Collections;
 import java.util.UUID;
 
 import org.junit.Test;
+import org.mockito.ArgumentMatcher;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import com.scipub.dao.jpa.PublicationDao;
@@ -46,7 +48,7 @@ public class PublicationServiceTest {
         revision.setPublication(p);
         
         when(dao.getRevisions(any())).thenReturn(Collections.singletonList(revision));
-        String uri2 = service.submitPublication(dto, USER_ID);
+        service.submitPublication(dto, USER_ID);
         
         // 1 time for the first submission with no previous revisions, and 2 times for the next one (one to save the old
         // revision as non-latest, and one for the new)
@@ -54,9 +56,49 @@ public class PublicationServiceTest {
     }
 
     public void submitDraftTest() {
+        PublicationDao dao = mock(PublicationDao.class);
+        PublicationService service = createMockService(dao);
+        
+        PublicationSubmissionDto dto = new PublicationSubmissionDto();
+        dto.setStatus(PublicationStatus.DRAFT);
+        dto.setTitle("Foo");
+
+        String uri = service.submitPublication(dto, USER_ID);
+        assertThat(uri, is(notNullValue()));
+        
         // test new draft revision is created
-        // test overriding of the draft
-        // test publishing of the draft
+        verify(dao).persist(argThat(new DraftMatcher()));
+        
+        // test overriding of the draft (times(2) - one from above, and one from this invocation)
+        service.submitPublication(dto, USER_ID);
+        verify(dao, times(2)).persist(argThat(new DraftMatcher()));
+        
+        // test publishing a draft
+        PublicationRevision revision = new PublicationRevision();
+        revision.setContent("foo");
+        revision.setLatestPublished(false);
+        Publication p = new Publication();
+        p.setUri(UUID.randomUUID().toString());
+        revision.setPublication(p);
+        when(dao.getRevisions(any())).thenReturn(Collections.singletonList(revision));
+        
+        dto.setUri(p.getUri());
+        service.submitPublication(dto, USER_ID);
+        
+        verify(dao).persist(argThat(new NonDraftMatcher()));
+    }
+    
+    private static class DraftMatcher extends ArgumentMatcher<PublicationRevision> {
+        public boolean matches(Object revision) {
+            PublicationRevision rev = (PublicationRevision) revision;
+            return !rev.isLatestPublished();
+        }
+    }
+    private static class NonDraftMatcher extends ArgumentMatcher<PublicationRevision> {
+        public boolean matches(Object revision) {
+            PublicationRevision rev = (PublicationRevision) revision;
+            return rev.isLatestPublished();
+        }
     }
     
     private PublicationService createMockService(PublicationDao dao) {
