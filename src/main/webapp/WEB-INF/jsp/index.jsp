@@ -26,7 +26,7 @@
 								itemprop="datePublished" class="">3 hrs</time></span>
 						<h3>
 							<a rel="canonical"
-								href="TODO"
+								href="${root}/publication?uri=${publication.uri}"
 								class="link-hover tooltip-hover" itemprop="name">${publication.currentRevision.title}</a>
 						</h3>
 					</header>

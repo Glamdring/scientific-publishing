@@ -11,6 +11,7 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,8 +19,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.common.io.Files;
+import com.scipub.dto.PeerReviewDto;
 import com.scipub.dto.PublicationSubmissionDto;
 import com.scipub.model.Language;
+import com.scipub.model.Publication;
 import com.scipub.model.PublicationStatus;
 import com.scipub.service.PublicationService;
 import com.scipub.tools.BranchJsonGenerator;
@@ -54,19 +57,26 @@ public class PublicationController {
     }
     
     @RequestMapping("/submit")
-    public void submit(PublicationSubmissionDto dto, HttpSession session) {
-        
+    public String submit(PublicationSubmissionDto dto, HttpSession session) {
         fillFileDetails(dto, session);
         dto.setStatus(PublicationStatus.PUBLISHED);
-        publicationService.submitPublication(dto, userContext.getUser().getId());
+        String uri = publicationService.submitPublication(dto, userContext.getUser().getId());
+        return "redirct:/publication?uri=" + uri;
     }
     
     @RequestMapping("/saveDraft")
+    @ResponseBody
     private void saveDraft(PublicationSubmissionDto dto, HttpSession session) {
-        
         fillFileDetails(dto, session);
         dto.setStatus(PublicationStatus.DRAFT);
         publicationService.submitPublication(dto, userContext.getUser().getId());
+    }
+    
+    @RequestMapping(value={"", "/"}, params="uri")
+    private String getPublication(@RequestParam String uri, Model model) {
+        Publication publication = publicationService.getPublication(uri);
+        model.addAttribute("publication", publication);
+        return "publication";
     }
     
     private void fillFileDetails(PublicationSubmissionDto dto, HttpSession session) {

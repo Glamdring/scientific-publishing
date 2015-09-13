@@ -229,4 +229,9 @@ public class PublicationService {
         //TODO map
         return Collections.emptyList();
     }
+
+    @Transactional(readOnly = true)
+    public Publication getPublication(String uri) {
+        return dao.getById(Publication.class, uri);
+    }
 }
