@@ -246,7 +246,6 @@
             </div>
             
 	        - send invites to non registered editors
-	        - invite reviewers
         </form>
     </jsp:body>
 </t:template>
