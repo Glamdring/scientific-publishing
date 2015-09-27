@@ -9,13 +9,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
 @Entity
+@Table(name="users")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 978398160453380686L;
@@ -81,6 +84,7 @@ public class User implements Serializable {
     private boolean loginAutomatically;
 
     @OneToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_branches")
     private Set<Branch> branches = new HashSet<>();
 
     // deliberately no "gender" - it's irrelevant

@@ -17,7 +17,7 @@ public class BranchExtractor {
     public static void main(String[] args) throws Exception {
         List<Branch> branches = extractBranches();
         for (Branch branch : branches) {
-            System.out.println("INSERT INTO `branch` VALUES (" + branch.getId() + ",\""
+            System.out.println("INSERT INTO `branches` VALUES (" + branch.getId() + ",\""
                     + branch.name.replace("\"", "'") + "\"," + getParentId(branch) + ");");
         }
     }

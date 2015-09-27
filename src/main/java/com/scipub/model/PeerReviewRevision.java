@@ -6,8 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="peer_review_revisions")
 public class PeerReviewRevision {
 
     @GeneratedValue(strategy = GenerationType.AUTO)

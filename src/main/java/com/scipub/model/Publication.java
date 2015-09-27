@@ -17,6 +17,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
@@ -27,12 +28,14 @@ import org.hibernate.annotations.Type;
                 query = "SELECT p FROM Publication p WHERE :branchId IN elements(p.branches) OR :branchId IN elements(p.parentBranches) ORDER BY p.created"),
         @NamedQuery(name = "Publication.getRevisions",
                 query = "SELECT r FROM PublicationRevision r WHERE r.publication = :publication") })
+@Table(name="publications")
 public class Publication {
 
     @Id
     private String uri;
 
     @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "publication_authors")
     private Set<User> authors = new HashSet<>();
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -51,13 +54,14 @@ public class Publication {
     private Set<Branch> branches = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "publication_parent_branches")
-    private Set<Branch> parentBranches = new HashSet<>();
+    @JoinTable(name = "publication_top_level_branches")
+    private Set<Branch> topLevelBranches = new HashSet<>();
 
     @ManyToOne
     private Branch primaryBranch;
 
     @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name="publication_tags")
     private Set<Tag> tags = new HashSet<>();
 
     @ManyToOne
@@ -224,11 +228,11 @@ public class Publication {
     }
 
     public Set<Branch> getParentBranches() {
-        return parentBranches;
+        return topLevelBranches;
     }
 
     public void setParentBranches(Set<Branch> parentBranches) {
-        this.parentBranches = parentBranches;
+        this.topLevelBranches = parentBranches;
     }
 
     @Override

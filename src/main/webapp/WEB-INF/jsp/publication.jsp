@@ -6,7 +6,13 @@
 <t:template>
 
 	<jsp:attribute name="header"></jsp:attribute>
-
+        <script type="text/javascript">
+           $("#clarity, #novelty, #methods, #quality, #importance").slider({
+        	   range: true,
+        	   min: 0,
+        	   max: 5
+           });
+        </script>
 	<jsp:body>
 	
     <article class="rel anonymous" itemtype="http://schema.org/Question" itemscope="">
@@ -63,14 +69,24 @@
 		  
 		  <section>
 		      <h3>Write a peer review</h3>
-		      1-5
-              clarity of background and rationale, 
-              field importance, 
-              study design and methods, 
-              novelty of conclusions 
-              quality of presentation.
+
+              <label id="clarityLabel">Clarity of background and rationale</label>
+              <div id="clarity"></div>
               
-              declare I have no conflict of interests		      
+              <label id="importanceLabel">Field importance</label>
+              <div id="importance"></div>
+              
+              <label id="methodsLabel">Study design and methods</label>
+              <div id="methods"></div>
+              
+              <label id="noveltyLabel">Novelty of conclusions</label>
+              <div id="novelty"></div>
+              
+              <label id="qualityLabel">Quality of presentation</label>
+              <div id="quality"></div>
+              
+              
+              declare I have no conflict of interests      
 		  </section>
 		  - invite reviewers
 		  
