@@ -13,7 +13,7 @@ import org.hibernate.annotations.Type;
 @Entity
 public class Following {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private long id;
     

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name = "tags")
 public class Tag {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private long id;
     

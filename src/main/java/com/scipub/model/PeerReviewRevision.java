@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name="peer_review_revisions")
 public class PeerReviewRevision {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private long id;
 

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name="organizations")
 public class Organization {
 
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
     private long id;
     

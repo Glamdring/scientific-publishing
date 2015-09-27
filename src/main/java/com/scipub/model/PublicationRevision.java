@@ -18,7 +18,7 @@ import org.hibernate.annotations.Type;
 public class PublicationRevision {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @ManyToOne
