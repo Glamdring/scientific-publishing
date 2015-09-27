@@ -1,10 +1,10 @@
 package com.scipub.web;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.scipub.dto.PeerReviewDto;
@@ -26,7 +26,13 @@ public class PeerReviewController {
     
     @RequestMapping("/submit")
     @ResponseBody
-    private void submitReview(PeerReviewDto dto, HttpSession session) {
+    private void submitReview(PeerReviewDto dto) {
         peerReviewService.submitPeerReview(dto, userContext.getUser().getId());
+    }
+    
+    @RequestMapping("/submitPreliminary")
+    private String submitPreliminaryReview(@RequestParam String publicationUri, @RequestParam boolean acceptable) {
+        peerReviewService.submitPreliminaryReview(userContext.getUser().getId(), publicationUri, acceptable);
+        return "redirect:/";
     }
 }

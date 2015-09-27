@@ -65,8 +65,12 @@
 		  <section>
               <h3>Quick assessment</h3>
               Does this publication meet the basic criteria for scientific work?
-              <input type="button" value="Yes" />
-              <input type="button" value="No" />                            
+              <form action="${root}/peerReview/submitPreliminary" method="POST">
+                  <input type="hidden" name="acceptable" id="acceptable" />
+                  <input type="hidden" name="publicationUri" id="${param.uri}" />
+	              <input type="submit" value="Yes" onclick="$('#acceptable').val('true');"/>
+	              <input type="submit" value="No" onclick="$('#acceptable').val('false');"/>
+              </form>          
           </section>
 		  
 		  <section>
