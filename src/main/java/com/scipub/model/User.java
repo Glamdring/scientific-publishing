@@ -19,7 +19,7 @@ import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name="users")
-public class User implements Serializable {
+public class User extends BaseTimedEntity implements Serializable {
 
     private static final long serialVersionUID = 978398160453380686L;
 
@@ -76,9 +76,6 @@ public class User implements Serializable {
 
     @Type(type = "com.scipub.util.PersistentLocalDateTime")
     private LocalDateTime lastLoginTime;
-
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
-    private LocalDateTime registrationTime;
 
     @Column(nullable = false)
     private boolean loginAutomatically;
@@ -215,14 +212,6 @@ public class User implements Serializable {
 
     public void setLastLoginTime(LocalDateTime lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
-    }
-
-    public LocalDateTime getRegistrationTime() {
-        return registrationTime;
-    }
-
-    public void setRegistrationTime(LocalDateTime registrationTime) {
-        this.registrationTime = registrationTime;
     }
 
     public boolean isLoginAutomatically() {

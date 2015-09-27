@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="peer_review_revisions")
-public class PeerReviewRevision {
+public class PeerReviewRevision extends BaseTimedEntity {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -22,8 +22,6 @@ public class PeerReviewRevision {
     @Column
     private String content;
     
-    //TODO time?
-
     public long getId() {
         return id;
     }

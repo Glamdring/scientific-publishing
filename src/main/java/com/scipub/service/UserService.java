@@ -107,7 +107,7 @@ public class UserService {
         for (long branchId : dto.getBranchIds()) {
             user.getBranches().add(dao.getById(Branch.class, branchId));
         }
-        user.setRegistrationTime(LocalDateTime.now());
+        user.setCreated(LocalDateTime.now());
         
         user = dao.persist(user);
         if (dto.getConnection() != null) {

@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="organizations")
-public class Organization {
+public class Organization extends BaseTimedEntity {
 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id

@@ -29,7 +29,7 @@ import org.hibernate.annotations.Type;
         @NamedQuery(name = "Publication.getRevisions",
                 query = "SELECT r FROM PublicationRevision r WHERE r.publication = :publication") })
 @Table(name="publications")
-public class Publication {
+public class Publication extends BaseTimedEntity {
 
     @Id
     private String uri;
@@ -43,9 +43,6 @@ public class Publication {
 
     @ManyToOne(cascade = CascadeType.ALL)
     private PublicationRevision currentRevision;
-
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
-    private LocalDateTime created;
 
     @Enumerated(EnumType.STRING)
     private PublicationStatus status;
@@ -121,14 +118,6 @@ public class Publication {
 
     public void setCurrentRevision(PublicationRevision currentRevision) {
         this.currentRevision = currentRevision;
-    }
-
-    public LocalDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
     }
 
     public PublicationStatus getStatus() {
@@ -238,7 +227,7 @@ public class Publication {
     @Override
     public String toString() {
         return "Publication [uri=" + uri + ", authors=" + authors + ", nonRegisteredAuthors=" + nonRegisteredAuthors
-                + ", currentRevision=" + currentRevision + ", created=" + created + ", status=" + status
+                + ", currentRevision=" + currentRevision + ", created=" + getCreated() + ", status=" + status
                 + ", branches=" + branches + ", primaryBranch=" + primaryBranch + ", tags=" + tags + ", followUpTo="
                 + followUpTo + ", followUpToLink=" + followUpToLink + ", followUpToDoi=" + followUpToDoi
                 + ", citations=" + citations + ", language=" + language + ", source=" + source + "]";

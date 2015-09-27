@@ -17,7 +17,7 @@ import org.hibernate.annotations.Type;
  */
 @Entity
 @Table(name = "inline_comments")
-public class InlineComment {
+public class InlineComment extends BaseTimedEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,9 +28,6 @@ public class InlineComment {
     @ManyToOne
     private User commenter;
     
-    @Type(type="com.scipub.util.PersistentLocalDateTime")
-    private LocalDateTime created;
-
     public long getId() {
         return id;
     }
@@ -53,13 +50,5 @@ public class InlineComment {
 
     public void setCommenter(User commenter) {
         this.commenter = commenter;
-    }
-
-    public LocalDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
     }
 }

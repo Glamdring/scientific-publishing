@@ -18,7 +18,7 @@ import org.hibernate.annotations.Type;
  */
 @Entity
 @Table(name="comments")
-public class Comment {
+public class Comment extends BaseTimedEntity {
 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
@@ -29,9 +29,6 @@ public class Comment {
     
     @ManyToOne
     private PeerReview peerReview;
-    
-    @Type(type="com.scipub.util.PersistentLocalDateTime")
-    private LocalDateTime created;
     
     @Lob
     private String content;
@@ -58,14 +55,6 @@ public class Comment {
 
     public void setPeerReview(PeerReview peerReview) {
         this.peerReview = peerReview;
-    }
-
-    public LocalDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
     }
 
     public String getContent() {

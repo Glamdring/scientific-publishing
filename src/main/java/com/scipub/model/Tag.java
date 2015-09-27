@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tags")
-public class Tag {
+public class Tag extends BaseTimedEntity {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

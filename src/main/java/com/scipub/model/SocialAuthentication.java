@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "social_authentications")
-public class SocialAuthentication {
+public class SocialAuthentication extends BaseTimedEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

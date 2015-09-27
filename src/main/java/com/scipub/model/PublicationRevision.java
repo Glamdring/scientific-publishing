@@ -11,11 +11,9 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-
 @Entity
 @Table(name="publication_revisions")
-public class PublicationRevision {
+public class PublicationRevision extends BaseTimedEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,9 +42,6 @@ public class PublicationRevision {
     
     @Column(nullable = false)
     private boolean latestPublished;
-
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
-    private LocalDateTime created;
 
     @Column
     private String originalFilename;
@@ -115,14 +110,6 @@ public class PublicationRevision {
         this.latestPublished = latest;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
-    }
-
     public String getOriginalFilename() {
         return originalFilename;
     }
@@ -144,6 +131,6 @@ public class PublicationRevision {
         return "PublicationRevision [id=" + id + ", publication=" + publication + ", submitter=" + submitter
                 + ", revision=" + revision + ", title=" + title + ", publicationAbstract=" + publicationAbstract
                 + ", content=" + content + ", contentLink=" + contentLink + ", latestPublished=" + latestPublished
-                + ", created=" + created + ", originalFilename=" + originalFilename + "]";
+                + ", created=" + getCreated() + ", originalFilename=" + originalFilename + "]";
     }
 }

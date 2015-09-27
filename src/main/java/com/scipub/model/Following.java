@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import org.hibernate.annotations.Type;
 
 @Entity
-public class Following {
+public class Following extends BaseTimedEntity {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -23,9 +23,6 @@ public class Following {
     @ManyToOne
     private User follower;
     
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
-    private LocalDateTime created;
-
     public long getId() {
         return id;
     }
@@ -48,13 +45,5 @@ public class Following {
 
     public void setFollower(User follower) {
         this.follower = follower;
-    }
-
-    public LocalDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
     }
 }

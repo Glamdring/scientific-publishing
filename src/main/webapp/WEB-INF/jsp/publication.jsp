@@ -94,8 +94,10 @@
               <label id="dataAnalysisLabel">Quality of data analysis</label>
               <div id="dataAnalysis"></div>
               
+              <textarea id="reviewContent" name="reviewContent"></textarea>
               
-              declare I have no conflict of interests      
+              <input type="checkbox" id="conflictOfInterestDeclaration"><label for="conflictOfInterestDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
+                    
 		  </section>
 		  - invite reviewers
 		  

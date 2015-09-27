@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="resources")
-public class Resource {
+public class Resource extends BaseTimedEntity {
 
     @Id
     private String uri;
