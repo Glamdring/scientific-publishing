@@ -1,5 +1,6 @@
 package com.scipub.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -37,6 +38,9 @@ public class PeerReview extends BaseTimedEntity {
     @Column(nullable = false)
     private int qualityOfPresentation;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    private PeerReviewRevision currentRevision;
+    
     public String getUri() {
         return uri;
     }
@@ -107,5 +111,13 @@ public class PeerReview extends BaseTimedEntity {
 
     public void setQualityOfPresentation(int qualityOfPresentation) {
         this.qualityOfPresentation = qualityOfPresentation;
+    }
+
+    public PeerReviewRevision getCurrentRevision() {
+        return currentRevision;
+    }
+
+    public void setCurrentRevision(PeerReviewRevision currentRevision) {
+        this.currentRevision = currentRevision;
     }
 }

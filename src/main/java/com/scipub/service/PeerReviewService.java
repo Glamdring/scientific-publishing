@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.scipub.dao.jpa.PeerReviewDao;
 import com.scipub.dto.PeerReviewDto;
 import com.scipub.model.PeerReview;
+import com.scipub.model.PeerReviewRevision;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationPreliminaryReview;
 import com.scipub.model.User;
@@ -24,7 +25,15 @@ public class PeerReviewService {
     @Transactional
     public String submitPeerReview(PeerReviewDto dto, String reviewerId) {
         PeerReview review = dtoToEntity(dto, reviewerId);
+        
+        PeerReviewRevision revision = new PeerReviewRevision();
+        revision.setPeerReview(review);
+        revision.setContent(dto.getContent());
+
+        review.setCurrentRevision(revision);
+        
         review = dao.persist(review);
+        
         return review.getUri();
     }
 

@@ -19,6 +19,8 @@ public class PeerReviewDto {
     
     private int qualityOfPresentation;
 
+    private String content;
+    
     public String getUri() {
         return uri;
     }
@@ -81,5 +83,13 @@ public class PeerReviewDto {
 
     public void setQualityOfPresentation(int qualityOfPresentation) {
         this.qualityOfPresentation = qualityOfPresentation;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
