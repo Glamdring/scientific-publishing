@@ -22,11 +22,11 @@ import org.hibernate.annotations.Type;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "Publication.getLatestByBranch", 
+        @NamedQuery(
+                name = "Publication.getLatestByBranch",
                 query = "SELECT p FROM Publication p WHERE :branchId IN elements(p.branches) OR :branchId IN elements(p.parentBranches) ORDER BY p.created"),
-    @NamedQuery(name = "Publication.getRevisions",
-                query = "SELECT r FROM PublicationRevision r WHERE r.publication = :publication")
-})
+        @NamedQuery(name = "Publication.getRevisions",
+                query = "SELECT r FROM PublicationRevision r WHERE r.publication = :publication") })
 public class Publication {
 
     @Id
@@ -38,7 +38,7 @@ public class Publication {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> nonRegisteredAuthors = new HashSet<>();
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     private PublicationRevision currentRevision;
 
     @Type(type = "com.scipub.util.PersistentLocalDateTime")
@@ -46,44 +46,47 @@ public class Publication {
 
     @Enumerated(EnumType.STRING)
     private PublicationStatus status;
-    
+
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Branch> branches = new HashSet<>();
-    
+
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name="publication_parent_branches")
+    @JoinTable(name = "publication_parent_branches")
     private Set<Branch> parentBranches = new HashSet<>();
-    
+
     @ManyToOne
     private Branch primaryBranch;
-    
+
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Tag> tags = new HashSet<>();
-    
+
     @ManyToOne
     private Publication followUpTo;
-    
-    @Column
-    private String followUpToLink;
-    
-    @Column
-    private String followUpToDoi;
-    
-    @Column
-    private int citations;
 
     @Column
+    private String followUpToLink;
+
+    @Column
+    private String followUpToDoi;
+
+    @Column(nullable = false)
+    private int citations;
+
+    @Column(nullable = false)
     private int reviews;
-    
+
+    @Column(nullable = false)
+    private int preliminaryReviewScore;
+
     @Enumerated(EnumType.STRING)
     private Language language;
-    
+
     @Enumerated(EnumType.STRING)
     private PublicationSource source;
-    
+
     @Column
     private String doi;
-    
+
     public String getUri() {
         return uri;
     }
@@ -155,7 +158,6 @@ public class Publication {
     public void setFollowUpTo(Publication followUpTo) {
         this.followUpTo = followUpTo;
     }
-
 
     public String getFollowUpToLink() {
         return followUpToLink;
