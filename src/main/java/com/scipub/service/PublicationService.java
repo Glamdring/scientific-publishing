@@ -120,8 +120,8 @@ public class PublicationService {
         
         Map<String, List<Publication>> publications = new LinkedHashMap<>();
         for (long branchId : branchIds) {
-            publications.put(branchDao.getById(Branch.class, branchId).getName(), 
-                             dao.getLatestPapers(branchId, PAPERS_PER_BRANCH));
+            Branch branch = branchDao.getById(Branch.class, branchId);
+            publications.put(branch.getName(), dao.getLatestPapers(branch, PAPERS_PER_BRANCH));
         }
         return publications;
     }

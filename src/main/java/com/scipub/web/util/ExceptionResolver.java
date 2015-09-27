@@ -19,12 +19,10 @@ public class ExceptionResolver implements HandlerExceptionResolver {
     public ModelAndView resolveException(HttpServletRequest request,
             HttpServletResponse response, Object handler, Exception ex) {
 
-        // the stacktrace will be printed by spring's DispatcherServlet
-        // we are only logging the request url and headeres here
         logger.warn("An exception occurred when invoking the following URL: "
                 + request.getRequestURL() + " . Requester IP is "
                 + request.getRemoteAddr() + ", User-Agent: "
-                + request.getHeader("User-Agent"));
+                + request.getHeader("User-Agent"), ex);
 
         if (ex instanceof MaxUploadSizeExceededException) {
             return new ModelAndView("error/maxFileSizeExceeded");

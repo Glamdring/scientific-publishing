@@ -50,7 +50,7 @@
 
 <link rel="stylesheet" type="text/css" href="${staticRoot}/css/print.css" media="print" />
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.4.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 

@@ -5,13 +5,16 @@
 <c:set var="currentPage" value="home" scope="request" />
 <t:template>
 
-	<jsp:attribute name="header"></jsp:attribute>
+	<jsp:attribute name="header">
         <script type="text/javascript">
-           $("#clarity, #novelty, #methods, #quality, #importance, #dataAnalysis").slider({
-        	   min: 0,
-        	   max: 5
+           $(document).ready(function() {
+	           $("#clarity, #novelty, #methods, #quality, #importance, #dataAnalysis").slider({
+	        	   max: 5
+	           });
            });
         </script>
+    </jsp:attribute>
+    
 	<jsp:body>
 	
     <article class="rel anonymous" itemtype="http://schema.org/Question" itemscope="">

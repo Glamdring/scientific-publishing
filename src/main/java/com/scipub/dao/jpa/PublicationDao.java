@@ -7,6 +7,7 @@ import javax.persistence.FlushModeType;
 
 import org.springframework.stereotype.Repository;
 
+import com.scipub.model.Branch;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
@@ -23,10 +24,10 @@ public class PublicationDao extends Dao {
         return findByQuery(query);
     }
 
-    public List<Publication> getLatestPapers(long branchId, int publicationsPerBranch) {
+    public List<Publication> getLatestPapers(Branch branch, int publicationsPerBranch) {
         QueryDetails<Publication> query = new QueryDetails<Publication>().setQueryName("Publication.getLatestByBranch")
-                .setParamNames("branchId")
-                .setParamValues(branchId)
+                .setParamNames("branch")
+                .setParamValues(branch)
                 .setCount(publicationsPerBranch)
                 .setResultClass(Publication.class);
             
