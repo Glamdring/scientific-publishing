@@ -7,8 +7,7 @@
 
 	<jsp:attribute name="header"></jsp:attribute>
         <script type="text/javascript">
-           $("#clarity, #novelty, #methods, #quality, #importance").slider({
-        	   range: true,
+           $("#clarity, #novelty, #methods, #quality, #importance, #dataAnalysis").slider({
         	   min: 0,
         	   max: 5
            });
@@ -84,6 +83,9 @@
               
               <label id="qualityLabel">Quality of presentation</label>
               <div id="quality"></div>
+              
+              <label id="dataAnalysisLabel">Quality of data analysis</label>
+              <div id="dataAnalysis"></div>
               
               
               declare I have no conflict of interests      

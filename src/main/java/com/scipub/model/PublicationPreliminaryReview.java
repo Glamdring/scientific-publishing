@@ -26,6 +26,9 @@ public class PublicationPreliminaryReview {
     @ManyToOne
     private User reviewer;
     
+    @ManyToOne
+    private Publication publication;
+    
     @Type(type = "com.scipub.util.PersistentLocalDateTime")
     private LocalDateTime created;
 
@@ -51,5 +54,21 @@ public class PublicationPreliminaryReview {
 
     public void setReviewer(User reviewer) {
         this.reviewer = reviewer;
+    }
+
+    public Publication getPublication() {
+        return publication;
+    }
+
+    public void setPublication(Publication publication) {
+        this.publication = publication;
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
     }
 }

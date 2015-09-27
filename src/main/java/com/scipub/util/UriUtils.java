@@ -10,10 +10,15 @@ import java.util.UUID;
 public class UriUtils {
 
     private static final String PREFIX = "scipub:";
+    private static final String REVIEW_PREFIX = "scipub:review:";
     private static final String DOI_PREFIX = "http://dx.doi.org/";
     
     public static String generateUri() {
         return PREFIX + UUID.randomUUID().toString();
+    }
+    
+    public static String generateReviewUri() {
+        return REVIEW_PREFIX + UUID.randomUUID().toString();
     }
     
     public static String getDoiUri(String doi) {

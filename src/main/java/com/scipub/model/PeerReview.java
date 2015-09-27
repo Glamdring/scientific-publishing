@@ -51,16 +51,16 @@ public class PeerReview {
         return uri;
     }
 
-    public void setUri(String doi) {
-        this.uri = doi;
+    public void setUri(String uri) {
+        this.uri = uri;
     }
 
     public Publication getPublication() {
         return publication;
     }
 
-    public void setPublication(Publication paper) {
-        this.publication = paper;
+    public void setPublication(Publication publication) {
+        this.publication = publication;
     }
 
     public User getReviewer() {
