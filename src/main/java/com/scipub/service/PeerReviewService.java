@@ -26,8 +26,13 @@ public class PeerReviewService {
     
     @Transactional
     public String submitPeerReview(PeerReviewDto dto, String reviewerId) {
-        PeerReview review = dtoToEntity(dto, reviewerId);
+        User reviewer = getUser(reviewerId);
+        Publication publication = getPublication(reviewerId);
         
+        PeerReview review = dao.getPeerReview(reviewer, publication).orElse(new PeerReview());
+        
+        fillEntity(dto, review, reviewer, publication);
+     
         PeerReviewRevision revision = new PeerReviewRevision();
         revision.setPeerReview(review);
         revision.setContent(dto.getContent());
@@ -108,13 +113,10 @@ public class PeerReviewService {
     }
 
 
-    private PeerReview dtoToEntity(PeerReviewDto dto, String reviewerId) {
+    private void fillEntity(PeerReviewDto dto, PeerReview review, User reviewer, Publication publication) {
         Preconditions.checkNotNull(dto);
+        Preconditions.checkNotNull(review);
         
-        User reviewer = dao.getById(User.class, reviewerId);
-        Publication publication = dao.getById(Publication.class, dto.getPublicationUri());
-        
-        PeerReview review = new PeerReview();
         review.setUri(UriUtils.generateReviewUri());        
         review.setPublication(publication);
         review.setReviewer(reviewer);
@@ -128,7 +130,5 @@ public class PeerReviewService {
         
         
         review.setCreated(LocalDateTime.now());
-        
-        return review;
     }
 }

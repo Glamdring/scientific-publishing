@@ -9,6 +9,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.junit.Test;
@@ -21,15 +22,22 @@ import com.scipub.dao.jpa.PeerReviewDao;
 import com.scipub.dto.PeerReviewDto;
 import com.scipub.model.PeerReview;
 import com.scipub.model.Publication;
+import com.scipub.model.User;
 
 public class PeerReviewServiceTest {
 
     private static String USER_ID = UUID.randomUUID().toString();
+    private static User user = new User();
+    static {
+        user.setId(USER_ID);
+    }
     
     @Test
     public void submitPeerReviewTest() {
         PeerReviewService service = new PeerReviewService();
         PeerReviewDao dao = mock(PeerReviewDao.class);
+        when(dao.getById(eq(User.class), any())).thenReturn(user);
+        when(dao.getPeerReview(any(), any())).thenReturn(Optional.empty());
         
         Publication publication = new Publication();
         String publicationUri = "scipub:foo";
