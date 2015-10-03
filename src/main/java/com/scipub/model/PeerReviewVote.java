@@ -1,7 +1,5 @@
 package com.scipub.model;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,11 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-
 @Entity
 @Table(name="peer_review_votes")
-public class PeerReviewVote {
+public class PeerReviewVote extends BaseTimedEntity {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -26,9 +22,6 @@ public class PeerReviewVote {
     @Column(nullable = false)
     private int score;
 
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
-    private LocalDateTime created;
-    
     public long getId() {
         return id;
     }

@@ -15,8 +15,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-
 @Entity
 @Table(name="users")
 public class User extends BaseTimedEntity implements Serializable {
@@ -74,7 +72,6 @@ public class User extends BaseTimedEntity implements Serializable {
     @Column
     private String loginSeries;
 
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
     private LocalDateTime lastLoginTime;
 
     @Column(nullable = false)

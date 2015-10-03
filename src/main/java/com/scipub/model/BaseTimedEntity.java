@@ -4,15 +4,11 @@ import java.time.LocalDateTime;
 
 import javax.persistence.MappedSuperclass;
 
-import org.hibernate.annotations.Type;
-
 @MappedSuperclass
 public abstract class BaseTimedEntity {
 
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
     private LocalDateTime created;
     
-    @Type(type = "com.scipub.util.PersistentLocalDateTime")
     private LocalDateTime modified;
 
     public LocalDateTime getCreated() {
