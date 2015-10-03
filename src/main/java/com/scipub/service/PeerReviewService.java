@@ -1,12 +1,14 @@
 package com.scipub.service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.google.common.base.Preconditions;
 import com.scipub.dao.jpa.PeerReviewDao;
 import com.scipub.dto.PeerReviewDto;
 import com.scipub.model.PeerReview;
@@ -40,17 +42,75 @@ public class PeerReviewService {
     
     @Transactional
     public void submitPreliminaryReview(String reviewerId, String publicationUri, boolean acceptable) {
-        User reviewer = dao.getById(User.class, reviewerId);
-        Publication publication = dao.getById(Publication.class, publicationUri);
+        User reviewer = getUser(reviewerId);
+        Publication publication = getPublication(publicationUri);
+        
+        // cleanup any previous vote
+        dao.getPreliminaryReview(reviewer, publication).ifPresent(pr -> dao.delete(pr));
         
         PublicationPreliminaryReview preliminaryReview = new PublicationPreliminaryReview();
         preliminaryReview.setAcceptable(acceptable);
         preliminaryReview.setReviewer(reviewer);
         preliminaryReview.setPublication(publication);
         preliminaryReview.setCreated(LocalDateTime.now());
+        
+        dao.persist(preliminaryReview);
     }
     
+    @Transactional(readOnly = true)
+    public Optional<Boolean> getPreliminaryReview(String userId, String publicationUri) {
+        User user = getUser(userId);
+        Publication publication = getPublication(publicationUri);
+        
+        Optional<PublicationPreliminaryReview> review = dao.getPreliminaryReview(user, publication);
+        return review.map(r -> r.isAcceptable());
+    }
+    
+    @Transactional(readOnly = true)
+    public Optional<PeerReviewDto> getPeerReview(String userId, String publicationUri) {
+        User user = getUser(userId);
+        Publication publication = getPublication(publicationUri);
+        
+        Optional<PeerReview> review = dao.getPeerReview(user, publication);
+        return review.map(r -> entityToDto(r));
+    }
+
+
+    private Publication getPublication(String publicationUri) {
+        Preconditions.checkNotNull(publicationUri, "publicationUri can't be null");
+        Publication publication = dao.getById(Publication.class, publicationUri);
+        Preconditions.checkNotNull(publication, "Publication not found");
+        return publication;
+    }
+
+
+    private User getUser(String userId) {
+        Preconditions.checkNotNull(userId, "userId can't be null");
+        User user = dao.getById(User.class, userId);
+        Preconditions.checkNotNull(user, "User not found");
+        return user;
+    }
+    
+    private PeerReviewDto entityToDto(PeerReview peerReview) {
+        Preconditions.checkNotNull(peerReview);
+        PeerReviewDto dto = new PeerReviewDto();
+        dto.setClarityOfBackground(peerReview.getClarityOfBackground());
+        dto.setDataAnalysis(peerReview.getDataAnalysis());
+        dto.setImportance(peerReview.getImportance());
+        dto.setNoveltyOfConclusions(peerReview.getNoveltyOfConclusions());
+        dto.setQualityOfPresentation(peerReview.getQualityOfPresentation());
+        dto.setStudyDesignAndMethods(peerReview.getStudyDesignAndMethods());
+        
+        dto.setPublicationUri(peerReview.getPublication().getUri());
+        dto.setUri(peerReview.getUri());
+        
+        return dto;
+    }
+
+
     private PeerReview dtoToEntity(PeerReviewDto dto, String reviewerId) {
+        Preconditions.checkNotNull(dto);
+        
         User reviewer = dao.getById(User.class, reviewerId);
         Publication publication = dao.getById(Publication.class, dto.getPublicationUri());
         

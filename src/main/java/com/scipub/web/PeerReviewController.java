@@ -31,8 +31,7 @@ public class PeerReviewController {
     }
     
     @RequestMapping("/submitPreliminary")
-    private String submitPreliminaryReview(@RequestParam String publicationUri, @RequestParam boolean acceptable) {
+    private void submitPreliminaryReview(@RequestParam String publicationUri, @RequestParam boolean acceptable) {
         peerReviewService.submitPreliminaryReview(userContext.getUser().getId(), publicationUri, acceptable);
-        return "redirect:/";
     }
 }

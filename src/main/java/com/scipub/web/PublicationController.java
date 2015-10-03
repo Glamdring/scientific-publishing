@@ -19,11 +19,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.common.io.Files;
-import com.scipub.dto.PeerReviewDto;
 import com.scipub.dto.PublicationSubmissionDto;
 import com.scipub.model.Language;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationStatus;
+import com.scipub.service.PeerReviewService;
 import com.scipub.service.PublicationService;
 import com.scipub.tools.BranchJsonGenerator;
 import com.scipub.util.FormatConverter;
@@ -39,6 +39,9 @@ public class PublicationController {
     
     @Inject
     private PublicationService publicationService;
+   
+    @Inject
+    private PeerReviewService peerReviewService;
     
     @Inject
     private UserContext userContext;
@@ -76,6 +79,12 @@ public class PublicationController {
     private String getPublication(@RequestParam String uri, Model model) {
         Publication publication = publicationService.getPublication(uri);
         model.addAttribute("publication", publication);
+        
+        peerReviewService.getPeerReview(userContext.getUser().getId(), uri)
+            .ifPresent(pr -> model.addAttribute("ownPeerReview", pr));
+        peerReviewService.getPreliminaryReview(userContext.getUser().getId(), uri)
+            .ifPresent(acceptable -> model.addAttribute("ownPreliminaryReview", acceptable));
+        
         return "publication";
     }
     

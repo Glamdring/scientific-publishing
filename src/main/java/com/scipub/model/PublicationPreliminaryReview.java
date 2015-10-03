@@ -6,10 +6,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="publication_preliminary_reviews")
+@NamedQueries(
+        @NamedQuery(
+                name = "PublicationPreliminaryReview.getByReviewerAndPublication",
+                query = "SELECT pr FROM PublicationPreliminaryReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication"))
 public class PublicationPreliminaryReview extends BaseTimedEntity {
 
     @Id

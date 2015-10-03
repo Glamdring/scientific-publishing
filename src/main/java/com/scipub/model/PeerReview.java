@@ -5,10 +5,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="peer_reviews")
+@Table(name = "peer_reviews")
+@NamedQueries(
+        @NamedQuery(
+                name = "PeerReview.getByReviewerAndPublication",
+                query = "SELECT pr FROM PeerReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication"))
 public class PeerReview extends BaseTimedEntity {
 
     @Id
@@ -22,25 +28,25 @@ public class PeerReview extends BaseTimedEntity {
 
     @Column(nullable = false)
     private int clarityOfBackground;
-    
+
     @Column(nullable = false)
     private int importance;
-    
+
     @Column(nullable = false)
     private int studyDesignAndMethods;
-    
+
     @Column(nullable = false)
     private int dataAnalysis;
-    
+
     @Column(nullable = false)
     private int noveltyOfConclusions;
-    
+
     @Column(nullable = false)
     private int qualityOfPresentation;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private PeerReviewRevision currentRevision;
-    
+
     public String getUri() {
         return uri;
     }

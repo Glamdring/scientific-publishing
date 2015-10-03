@@ -1,15 +1,13 @@
 package com.scipub.dao.jpa;
 
-import java.time.LocalDateTime;
 import java.util.List;
-
-import javax.persistence.FlushModeType;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
 import com.scipub.model.PeerReview;
 import com.scipub.model.Publication;
-import com.scipub.model.PublicationSource;
+import com.scipub.model.PublicationPreliminaryReview;
 import com.scipub.model.User;
 
 @Repository
@@ -18,5 +16,21 @@ public class PeerReviewDao extends Dao {
     public List<PeerReview> getPeerReviews(User user) {
         //TODO
         return null;
+    }
+    
+    public Optional<PeerReview> getPeerReview(User user, Publication publication) {
+        QueryDetails<PeerReview> details = new QueryDetails<>();
+        details.setQueryName("PeerReview.getByReviewerAndPublication");
+        details.setParamNames(new String[]{"reviewer", "publication"});
+        details.setParamValues(new Object[] {user, publication});
+        return Optional.ofNullable(getSingleResult(findByQuery(details)));
+    }
+
+    public Optional<PublicationPreliminaryReview> getPreliminaryReview(User user, Publication publication) {
+        QueryDetails<PublicationPreliminaryReview> details = new QueryDetails<>();
+        details.setQueryName("PublicationPreliminaryReview.getByReviewerAndPublication");
+        details.setParamNames(new String[]{"reviewer", "publication"});
+        details.setParamValues(new Object[] {user, publication});
+        return Optional.ofNullable(getSingleResult(findByQuery(details)));
     }
 }
