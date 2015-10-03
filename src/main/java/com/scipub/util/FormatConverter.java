@@ -32,16 +32,14 @@ public class FormatConverter {
             List<String> args =
                     Lists.newArrayList("pandoc", "-f", from.getArgument(), "-t", to.getArgument(), inFile.getAbsolutePath());
             Process process = new ProcessBuilder(args).start();
-            try (OutputStream out = new BufferedOutputStream(process.getOutputStream())) {
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                ByteStreams.copy(new BufferedInputStream(process.getInputStream()), baos);
-                byte[] result = baos.toByteArray();
-                if (result.length == 0) {
-                    ByteStreams.copy(new BufferedInputStream(process.getErrorStream()), baos);
-                    throw new IllegalStateException(new String(baos.toByteArray(), "UTF-8"));
-                } else {
-                    return result;
-                }
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ByteStreams.copy(new BufferedInputStream(process.getInputStream()), baos);
+            byte[] result = baos.toByteArray();
+            if (result.length == 0) {
+                ByteStreams.copy(new BufferedInputStream(process.getErrorStream()), baos);
+                throw new IllegalStateException(new String(baos.toByteArray(), "UTF-8"));
+            } else {
+                return result;
             }
         } catch (IOException e) {
             throw new IllegalStateException(e);

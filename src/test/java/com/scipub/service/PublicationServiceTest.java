@@ -2,7 +2,6 @@ package com.scipub.service;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.isA;
@@ -28,7 +27,8 @@ import com.scipub.model.User;
 
 public class PublicationServiceTest {
 
-    private static String USER_ID = UUID.randomUUID().toString(); 
+    private static String USER_ID = UUID.randomUUID().toString();
+    
     @Test
     public void submitPublicationTest() {
         PublicationDao dao = mock(PublicationDao.class);

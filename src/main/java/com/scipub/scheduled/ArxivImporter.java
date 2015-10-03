@@ -424,5 +424,6 @@ public class ArxivImporter {
      * Exception used to indicate that parsing should stop
      */
     public static class StopParsing extends SAXException {
+        private static final long serialVersionUID = 8603377522411408500L;
     }
 }
