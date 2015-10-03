@@ -40,7 +40,7 @@ public class UserService {
     
     @Inject
     private SearchService searchService;
-
+    
     @Transactional(readOnly = true)
     boolean isAuthor(User user, String publicationUri) {
         Publication publication = dao.getById(Publication.class, publicationUri);
@@ -174,7 +174,7 @@ public class UserService {
         List<User> byName = searchService.search(start.trim(), User.class, SearchType.START, "names");
         return extractUserDetails(byName);
     }
-
+    
     private List<UserDetails> extractUserDetails(List<User> users) {
         return users.stream().map(u -> {
             UserDetails details = new UserDetails();

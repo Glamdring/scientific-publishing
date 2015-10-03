@@ -23,6 +23,7 @@ public class PeerReviewDao extends Dao {
         details.setQueryName("PeerReview.getByReviewerAndPublication");
         details.setParamNames(new String[]{"reviewer", "publication"});
         details.setParamValues(new Object[] {user, publication});
+        details.setCount(1);
         return Optional.ofNullable(getSingleResult(findByQuery(details)));
     }
 
@@ -31,6 +32,7 @@ public class PeerReviewDao extends Dao {
         details.setQueryName("PublicationPreliminaryReview.getByReviewerAndPublication");
         details.setParamNames(new String[]{"reviewer", "publication"});
         details.setParamValues(new Object[] {user, publication});
+        details.setCount(1);
         return Optional.ofNullable(getSingleResult(findByQuery(details)));
     }
 }
