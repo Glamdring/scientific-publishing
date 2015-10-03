@@ -42,9 +42,9 @@ public class UserService {
     private SearchService searchService;
 
     @Transactional(readOnly = true)
-    public boolean isAuthor(User user, String paperUri) {
-        Publication paper = dao.getById(Publication.class, paperUri);
-        return paper.getAuthors().contains(user);
+    boolean isAuthor(User user, String publicationUri) {
+        Publication publication = dao.getById(Publication.class, publicationUri);
+        return publication.getAuthors().contains(user);
     }
 
     @Transactional(readOnly = true)

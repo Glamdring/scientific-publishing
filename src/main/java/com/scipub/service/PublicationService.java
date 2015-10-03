@@ -155,7 +155,7 @@ public class PublicationService {
         }
         
         for (Integer branchId : dto.getBranchIds()) {
-            publication.getBranches().add(dao.getById(Branch.class, branchId));
+            publication.getBranches().add(branchDao.getById(Branch.class, branchId));
         }
         
         for (String tag : dto.getTags()) {

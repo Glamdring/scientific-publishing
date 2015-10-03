@@ -4,10 +4,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.eq;
 import static org.mockito.Matchers.isA;
+import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -18,8 +19,11 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import com.google.common.collect.Sets;
+import com.scipub.dao.jpa.BranchDao;
 import com.scipub.dao.jpa.PublicationDao;
 import com.scipub.dto.PublicationSubmissionDto;
+import com.scipub.model.Branch;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationStatus;
@@ -32,12 +36,19 @@ public class PublicationServiceTest {
     @Test
     public void submitPublicationTest() {
         PublicationDao dao = mock(PublicationDao.class);
-        PublicationService service = createMockService(dao);
+        BranchDao branchDao = mock(BranchDao.class);
+        when(branchDao.getById(eq(Branch.class), any())).thenReturn(new Branch());
+        
+        PublicationService service = createMockService(dao, branchDao);
         
         PublicationSubmissionDto dto = new PublicationSubmissionDto();
         dto.setStatus(PublicationStatus.PUBLISHED);
         dto.setTitle("Foo");
-
+        dto.setAuthorIds(Sets.newHashSet("authorId"));
+        dto.setNonRegisteredAuthors(Sets.newHashSet("name"));
+        dto.setFollowUpTo("followUpToUri");
+        dto.setBranchIds(Sets.newHashSet(1));
+        
         String uri = service.submitPublication(dto, USER_ID);
         assertThat(uri, is(notNullValue()));
         
@@ -49,6 +60,8 @@ public class PublicationServiceTest {
         revision.setPublication(p);
         
         when(dao.getRevisions(any())).thenReturn(Collections.singletonList(revision));
+        
+        
         service.submitPublication(dto, USER_ID);
         
         // 1 time for the first submission with no previous revisions, and 2 times for the next one (one to save the old
@@ -124,9 +137,23 @@ public class PublicationServiceTest {
         assertThat(argument.getValue().isLatestPublished(), is(true));
         assertThat(argument.getValue().getRevision(), is(2));
     }
+
+    
+    @Test
+    public void getPublicationTest() {
+        // very simple test to see if the dao is actually called
+        PublicationDao dao = mock(PublicationDao.class);
+        PublicationService service = createMockService(dao);
+        String uri = "uri";
+        service.getPublication(uri);
+        verify(dao).getById(Publication.class, uri);
+    }
     
     private PublicationService createMockService(PublicationDao dao) {
-        
+        return createMockService(dao, null);
+    }
+    
+    private PublicationService createMockService(PublicationDao dao, BranchDao branchDao) {
         User user = new User();
         user.setId(USER_ID);
         user.setFirstName("Test user");
@@ -141,6 +168,9 @@ public class PublicationServiceTest {
         PublicationService service = new PublicationService();
         ReflectionTestUtils.setField(service, "dao", dao);
         ReflectionTestUtils.setField(service, "userService", mockUserService);
+        if (branchDao != null) {
+            ReflectionTestUtils.setField(service, "branchDao", branchDao);
+        }
         return service;
     }
 }
