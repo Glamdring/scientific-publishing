@@ -49,7 +49,7 @@ public class PeerReviewServiceTest {
                 return invocation.getArgumentAt(0, PeerReview.class);
             }
         });
-        when(dao.getById(eq(Publication.class), any())).thenReturn(publication);
+        when(dao.getById(eq(Publication.class), eq(publicationUri))).thenReturn(publication);
         ArgumentCaptor<PeerReview> argument = ArgumentCaptor.forClass(PeerReview.class);
         
         PeerReviewDto dto = new PeerReviewDto();
