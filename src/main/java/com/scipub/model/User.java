@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +23,7 @@ public class User extends BaseTimedEntity implements Serializable {
     private static final long serialVersionUID = 978398160453380686L;
 
     @Id
-    private String id;
+    private UUID id;
 
     @Column(unique = true)
     private String email;
@@ -163,11 +164,11 @@ public class User extends BaseTimedEntity implements Serializable {
         this.bio = bio;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String userId) {
+    public void setId(UUID userId) {
         this.id = userId;
     }
 

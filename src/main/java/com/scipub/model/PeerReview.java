@@ -11,10 +11,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "peer_reviews")
-@NamedQueries(
+@NamedQueries({
         @NamedQuery(
                 name = "PeerReview.getByReviewerAndPublication",
-                query = "SELECT pr FROM PeerReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication"))
+                query = "SELECT pr FROM PeerReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication")})
 public class PeerReview extends BaseTimedEntity {
 
     @Id

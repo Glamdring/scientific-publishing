@@ -24,7 +24,9 @@ import javax.persistence.Table;
                 name = "Publication.getLatestByBranch",
                 query = "SELECT p FROM Publication p WHERE :branch IN elements(p.branches) OR :branch IN elements(p.topLevelBranches) ORDER BY p.created"),
         @NamedQuery(name = "Publication.getRevisions",
-                query = "SELECT r FROM PublicationRevision r WHERE r.publication = :publication") })
+                query = "SELECT r FROM PublicationRevision r WHERE r.publication = :publication"),
+            @NamedQuery(name = "Publication.getPublicationsOfUser",
+                query = "SELECT p FROM Publication p WHERE :user in elements(p.authors)") })
 @Table(name="publications")
 public class Publication extends BaseTimedEntity {
 

@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
@@ -56,7 +57,7 @@ public class PublicationService {
      * @return the URI of the saved publication
      */
     @Transactional
-    public String submitPublication(PublicationSubmissionDto dto, String userId) {
+    public String submitPublication(PublicationSubmissionDto dto, UUID userId) {
         User user = dao.getById(User.class, userId);
         if (dto.getUri() != null && !userService.isAuthor(user, dto.getUri())) {
             throw new IllegalStateException("User is not an author of the paper he's submitting");
@@ -195,7 +196,7 @@ public class PublicationService {
         return dao.persist(revision);
     }
     
-    private void assignIdentifiers(Publication publication, PublicationSubmissionDto dto, String userId) {
+    private void assignIdentifiers(Publication publication, PublicationSubmissionDto dto, UUID userId) {
         if (publication.getUri() == null) {
             publication.setUri(UriUtils.generateUri());
         }

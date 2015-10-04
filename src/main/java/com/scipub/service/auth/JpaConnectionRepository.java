@@ -1,6 +1,7 @@
 package com.scipub.service.auth;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionData;
@@ -21,9 +22,9 @@ public class JpaConnectionRepository implements ConnectionRepository {
     private UserService userService;
     private UserDao userDao;
     private ConnectionFactoryLocator locator;
-    private Long userId;
+    private UUID userId;
 
-    public JpaConnectionRepository(Long userId, UserService userService, UserDao userDao, ConnectionFactoryLocator locator) {
+    public JpaConnectionRepository(UUID userId, UserService userService, UserDao userDao, ConnectionFactoryLocator locator) {
         this.userId = userId;
         this.userService = userService;
         this.userDao = userDao;

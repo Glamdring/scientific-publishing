@@ -1,6 +1,7 @@
 package com.scipub.dao.jpa;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.scipub.model.SocialAuthentication;
 import com.scipub.model.User;
+import com.scipub.service.auth.AuthenticationProvider;
 
 @Repository
 public class UserDao extends Dao {
@@ -31,7 +33,7 @@ public class UserDao extends Dao {
         return auths;
     }
 
-    public void deleteSocialAuthentication(Long userId, String providerId) {
+    public void deleteSocialAuthentication(UUID userId, String providerId) {
         Query query = getEntityManager().createQuery("DELETE FROM SocialAuthentication WHERE user.id=:userId AND providerId=:providerId");
         query.setParameter("userId", userId);
         query.setParameter("providerId", providerId);
@@ -57,5 +59,14 @@ public class UserDao extends Dao {
         .setResultClass(SocialAuthentication.class));
 
         return getSingleResult(result);
+    }
+
+    public void forgetUser(User user) {
+        for (AuthenticationProvider provider : AuthenticationProvider.values()) {
+            if (provider != AuthenticationProvider.PERSONA) {
+                deleteSocialAuthentication(user.getId(), provider.getKey());
+            }
+        }
+        delete(user);
     }
 }

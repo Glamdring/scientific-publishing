@@ -31,7 +31,7 @@ import com.scipub.model.User;
 
 public class PublicationServiceTest {
 
-    private static String USER_ID = UUID.randomUUID().toString();
+    private static UUID USER_ID = UUID.randomUUID();
     
     @Test
     public void submitPublicationTest() {

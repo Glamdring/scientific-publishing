@@ -11,6 +11,7 @@ import com.scipub.model.Branch;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
+import com.scipub.model.User;
 
 @Repository
 public class PublicationDao extends Dao {
@@ -40,6 +41,16 @@ public class PublicationDao extends Dao {
             persist(publication);
         }
     }
+    
+    public List<Publication> getPublicationsByUser(User user) {
+        QueryDetails<Publication> query = new QueryDetails<>();
+        
+        query.setQueryName("Publication.getPublicationsOfUser")
+             .setParamNames(new String[] {"user"})
+             .setParamValues(new Object[] {user});
+        
+        return findByQuery(query);
+    }
 
     public LocalDateTime getLastImportDate(PublicationSource source) {
         QueryDetails<LocalDateTime> query = new QueryDetails<LocalDateTime>()
@@ -51,5 +62,11 @@ public class PublicationDao extends Dao {
         
         return getSingleResult(findByQuery(query));
         
+    }
+
+    public void deletePublications(User user) {
+        List<Publication> publications = getPublicationsByUser(user);
+        // delete only the ones where the user is a single registered author
+        publications.stream().filter(p -> p.getAuthors().size() == 1).forEach(p -> delete(p));
     }
 }

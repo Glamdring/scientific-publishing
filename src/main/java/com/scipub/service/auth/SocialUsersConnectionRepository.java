@@ -2,6 +2,8 @@ package com.scipub.service.auth;
 
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
@@ -28,11 +30,11 @@ public class SocialUsersConnectionRepository implements UsersConnectionRepositor
     public List<String> findUserIdsWithConnection(Connection<?> connection) {
         List<SocialAuthentication> auths = userDao.getSocialAuthentications(connection.getKey()
                 .getProviderId(), connection.getKey().getProviderUserId());
-        List<String> userIds = Lists.newArrayList();
+        List<UUID> userIds = Lists.newArrayList();
         for (SocialAuthentication auth : auths) {
             userIds.add(auth.getUser().getId());
         }
-        return userIds;
+        return userIds.stream().map(id -> id.toString()).collect(Collectors.toList());
     }
 
     @Override
@@ -43,6 +45,6 @@ public class SocialUsersConnectionRepository implements UsersConnectionRepositor
 
     @Override
     public ConnectionRepository createConnectionRepository(String userId) {
-        return new JpaConnectionRepository(Long.parseLong(userId), userService, userDao, locator);
+        return new JpaConnectionRepository(UUID.fromString(userId), userService, userDao, locator);
     }
 }

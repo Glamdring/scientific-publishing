@@ -24,7 +24,7 @@ public class UserServiceTest {
     public void isAuthorTest() {
         UserDao dao = mock(UserDao.class);
         User author = new User();
-        author.setId("userId");
+        author.setId(UUID.randomUUID());
         
         Publication ownedPublication = new Publication();
         ownedPublication.setAuthors(Sets.newHashSet(author));
@@ -46,7 +46,7 @@ public class UserServiceTest {
         UserService service = createUserService(dao);
         
         User user = new User();
-        user.setId("userId");
+        user.setId(UUID.randomUUID());
         
         String series = "series";
         service.fillUserWithNewTokens(user, series);

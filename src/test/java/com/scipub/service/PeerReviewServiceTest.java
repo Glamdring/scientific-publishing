@@ -26,7 +26,7 @@ import com.scipub.model.User;
 
 public class PeerReviewServiceTest {
 
-    private static String USER_ID = UUID.randomUUID().toString();
+    private static UUID USER_ID = UUID.randomUUID();
     private static User user = new User();
     static {
         user.setId(USER_ID);

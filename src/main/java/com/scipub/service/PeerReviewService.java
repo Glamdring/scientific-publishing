@@ -2,6 +2,7 @@ package com.scipub.service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
+import java.util.UUID;
 
 import javax.inject.Inject;
 
@@ -25,9 +26,9 @@ public class PeerReviewService {
     private PeerReviewDao dao;
     
     @Transactional
-    public String submitPeerReview(PeerReviewDto dto, String reviewerId) {
+    public String submitPeerReview(PeerReviewDto dto, UUID reviewerId) {
         User reviewer = getUser(reviewerId);
-        Publication publication = getPublication(reviewerId);
+        Publication publication = getPublication(dto.getPublicationUri());
         
         PeerReview review = dao.getPeerReview(reviewer, publication).orElse(new PeerReview());
         
@@ -46,7 +47,7 @@ public class PeerReviewService {
 
     
     @Transactional
-    public void submitPreliminaryReview(String reviewerId, String publicationUri, boolean acceptable) {
+    public void submitPreliminaryReview(UUID reviewerId, String publicationUri, boolean acceptable) {
         User reviewer = getUser(reviewerId);
         Publication publication = getPublication(publicationUri);
         
@@ -63,7 +64,7 @@ public class PeerReviewService {
     }
     
     @Transactional(readOnly = true)
-    public Optional<Boolean> getPreliminaryReview(String userId, String publicationUri) {
+    public Optional<Boolean> getPreliminaryReview(UUID userId, String publicationUri) {
         User user = getUser(userId);
         Publication publication = getPublication(publicationUri);
         
@@ -72,7 +73,7 @@ public class PeerReviewService {
     }
     
     @Transactional(readOnly = true)
-    public Optional<PeerReviewDto> getPeerReview(String userId, String publicationUri) {
+    public Optional<PeerReviewDto> getPeerReview(UUID userId, String publicationUri) {
         User user = getUser(userId);
         Publication publication = getPublication(publicationUri);
         
@@ -89,7 +90,7 @@ public class PeerReviewService {
     }
 
 
-    private User getUser(String userId) {
+    private User getUser(UUID userId) {
         Preconditions.checkNotNull(userId, "userId can't be null");
         User user = dao.getById(User.class, userId);
         Preconditions.checkNotNull(user, "User not found");

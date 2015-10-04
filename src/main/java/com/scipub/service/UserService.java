@@ -64,7 +64,7 @@ public class UserService {
     private String hmacKey;
 
     @Transactional
-    public void connect(Long userId, SocialAuthentication auth) {
+    public void connect(UUID userId, SocialAuthentication auth) {
         List<SocialAuthentication> existingAuths =
                 dao.getSocialAuthentications(auth.getProviderId(), auth.getProviderUserId());
         if (existingAuths.isEmpty()) {
@@ -81,7 +81,7 @@ public class UserService {
     }
 
     @Transactional
-    public void deleteSocialAuthentication(Long userId, String providerId) {
+    public void deleteSocialAuthentication(UUID userId, String providerId) {
         dao.deleteSocialAuthentication(userId, providerId);
     }
 
@@ -98,7 +98,7 @@ public class UserService {
     @Transactional
     public User completeUserRegistration(RegistrationDto dto) {
         User user = new User();
-        user.setId(UUID.randomUUID().toString());
+        user.setId(UUID.randomUUID());
         user.setEmail(dto.getEmail());
         user.setFirstName(dto.getFirstName());
         user.setLastName(dto.getLastName());
