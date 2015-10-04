@@ -15,7 +15,7 @@
 
     <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
-    <context:property-placeholder location="classpath:/application.properties,file:${scipub.config.location}/scipub.properties"
+    <context:property-placeholder location="classpath:/application.properties,file:${scipub.config.location?:/config}/scipub.properties"
         system-properties-mode="OVERRIDE" />
         
     <!-- import the dataSource definition -->

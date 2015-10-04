@@ -23,19 +23,23 @@ public class PeerReviewDao extends Dao {
     
     public Optional<PeerReview> getPeerReview(User user, Publication publication) {
         QueryDetails<PeerReview> details = new QueryDetails<>();
-        details.setQueryName("PeerReview.getByReviewerAndPublication");
-        details.setParamNames(new String[]{"reviewer", "publication"});
-        details.setParamValues(new Object[] {user, publication});
-        details.setCount(1);
+        details.setQueryName("PeerReview.getByReviewerAndPublication")
+               .setParamNames(new String[]{"reviewer", "publication"})
+               .setParamValues(new Object[] {user, publication})
+               .setCount(1)
+               .setResultClass(PeerReview.class);
+        
         return Optional.ofNullable(getSingleResult(findByQuery(details)));
     }
 
     public Optional<PublicationPreliminaryReview> getPreliminaryReview(User user, Publication publication) {
         QueryDetails<PublicationPreliminaryReview> details = new QueryDetails<>();
-        details.setQueryName("PublicationPreliminaryReview.getByReviewerAndPublication");
-        details.setParamNames(new String[]{"reviewer", "publication"});
-        details.setParamValues(new Object[] {user, publication});
-        details.setCount(1);
+        details.setQueryName("PublicationPreliminaryReview.getByReviewerAndPublication")
+               .setParamNames(new String[]{"reviewer", "publication"})
+               .setParamValues(new Object[] {user, publication})
+               .setCount(1)
+               .setResultClass(PublicationPreliminaryReview.class);
+        
         return Optional.ofNullable(getSingleResult(findByQuery(details)));
     }
 

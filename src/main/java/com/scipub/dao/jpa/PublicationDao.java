@@ -47,7 +47,8 @@ public class PublicationDao extends Dao {
         
         query.setQueryName("Publication.getPublicationsOfUser")
              .setParamNames(new String[] {"user"})
-             .setParamValues(new Object[] {user});
+             .setParamValues(new Object[] {user})
+             .setResultClass(Publication.class);
         
         return findByQuery(query);
     }

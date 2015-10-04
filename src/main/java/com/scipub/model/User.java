@@ -12,9 +12,11 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name="users")
@@ -23,6 +25,7 @@ public class User extends BaseTimedEntity implements Serializable {
     private static final long serialVersionUID = 978398160453380686L;
 
     @Id
+    @Type(type="uuid-char")
     private UUID id;
 
     @Column(unique = true)
@@ -78,7 +81,7 @@ public class User extends BaseTimedEntity implements Serializable {
     @Column(nullable = false)
     private boolean loginAutomatically;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_branches")
     private Set<Branch> branches = new HashSet<>();
 
