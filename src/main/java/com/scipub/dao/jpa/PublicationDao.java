@@ -64,10 +64,22 @@ public class PublicationDao extends Dao {
         return getSingleResult(findByQuery(query));
         
     }
+    
+    public List<PublicationRevision> getAllRevisions(Publication publication) {
+        return getListByPropertyValue(PublicationRevision.class, "publication", publication);
+    }
+    
 
     public void deletePublications(User user) {
         List<Publication> publications = getPublicationsByUser(user);
         // delete only the ones where the user is a single registered author
-        publications.stream().filter(p -> p.getAuthors().size() == 1).forEach(p -> delete(p));
+        publications.stream().filter(p -> p.getAuthors().size() == 1).forEach(p -> {
+            if (p.getCurrentRevision() != null) {
+                p.setCurrentRevision(null);
+            }
+            // delete all the revisions
+            getAllRevisions(p).stream().forEach(r -> delete(r));
+            delete(p);   
+        });
     }
 }

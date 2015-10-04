@@ -62,9 +62,14 @@ public class PublicationController {
     @RequestMapping("/submit")
     public String submit(PublicationSubmissionDto dto, HttpSession session) {
         fillFileDetails(dto, session);
+        String uri = submitPublication(dto);
+        return "redirect:/publication?uri=" + uri;
+    }
+    
+    String submitPublication(PublicationSubmissionDto dto) {
         dto.setStatus(PublicationStatus.PUBLISHED);
         String uri = publicationService.submitPublication(dto, userContext.getUser().getId());
-        return "redirct:/publication?uri=" + uri;
+        return uri;
     }
     
     @RequestMapping("/saveDraft")
@@ -76,16 +81,19 @@ public class PublicationController {
     }
     
     @RequestMapping(value={"", "/"}, params="uri")
-    private String getPublication(@RequestParam String uri, Model model) {
+    public String getPublication(@RequestParam String uri, Model model) {
         Publication publication = publicationService.getPublication(uri);
-        model.addAttribute("publication", publication);
-        
-        peerReviewService.getPeerReview(userContext.getUser().getId(), uri)
-            .ifPresent(pr -> model.addAttribute("ownPeerReview", pr));
-        peerReviewService.getPreliminaryReview(userContext.getUser().getId(), uri)
-            .ifPresent(acceptable -> model.addAttribute("ownPreliminaryReview", acceptable));
-        
-        return "publication";
+        if (publication != null) {
+            model.addAttribute("publication", publication);
+            
+            peerReviewService.getPeerReview(userContext.getUser().getId(), uri)
+                .ifPresent(pr -> model.addAttribute("ownPeerReview", pr));
+            peerReviewService.getPreliminaryReview(userContext.getUser().getId(), uri)
+                .ifPresent(acceptable -> model.addAttribute("ownPreliminaryReview", acceptable));
+            return "publication";
+        } else {
+            return "redirect:/";
+        }
     }
     
     private void fillFileDetails(PublicationSubmissionDto dto, HttpSession session) {

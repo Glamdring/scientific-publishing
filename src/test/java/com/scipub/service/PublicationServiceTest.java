@@ -44,10 +44,10 @@ public class PublicationServiceTest {
         PublicationSubmissionDto dto = new PublicationSubmissionDto();
         dto.setStatus(PublicationStatus.PUBLISHED);
         dto.setTitle("Foo");
-        dto.setAuthorIds(Sets.newHashSet("authorId"));
+        dto.setAuthorIds(Sets.newHashSet(UUID.randomUUID()));
         dto.setNonRegisteredAuthors(Sets.newHashSet("name"));
         dto.setFollowUpTo("followUpToUri");
-        dto.setBranchIds(Sets.newHashSet(1));
+        dto.setBranchIds(Sets.newHashSet(1L));
         
         String uri = service.submitPublication(dto, USER_ID);
         assertThat(uri, is(notNullValue()));

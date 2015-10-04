@@ -2,15 +2,16 @@ package com.scipub.dto;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 import com.scipub.model.PublicationStatus;
 
 public class PublicationSubmissionDto {
 
     private String uri; 
-    private Set<Integer> branchIds = new HashSet<>();
-    private Set<String> authorIds = new HashSet<>();
-    private Long submitterId;
+    private Set<Long> branchIds = new HashSet<>();
+    private Long primaryBranch;
+    private Set<UUID> authorIds = new HashSet<>();
     private Set<String> nonRegisteredAuthors = new HashSet<>();
     private PublicationStatus status;
     private Set<String> tags = new HashSet<>();
@@ -18,7 +19,7 @@ public class PublicationSubmissionDto {
     private String followUpToLink;
     private String followUpToDoi;
     private String title;
-    private String paperAbstract;
+    private String publicationAbstract;
     private String content;
     private String contentLink;
     private String originalFilename;
@@ -31,23 +32,17 @@ public class PublicationSubmissionDto {
     public void setUri(String uri) {
         this.uri = uri;
     }
-    public Set<Integer> getBranchIds() {
+    public Set<Long> getBranchIds() {
         return branchIds;
     }
-    public void setBranchIds(Set<Integer> branchIds) {
+    public void setBranchIds(Set<Long> branchIds) {
         this.branchIds = branchIds;
     }
-    public Set<String> getAuthorIds() {
+    public Set<UUID> getAuthorIds() {
         return authorIds;
     }
-    public void setAuthorIds(Set<String> authorIds) {
+    public void setAuthorIds(Set<UUID> authorIds) {
         this.authorIds = authorIds;
-    }
-    public Long getSubmitterId() {
-        return submitterId;
-    }
-    public void setSubmitterId(Long submitterId) {
-        this.submitterId = submitterId;
     }
     public Set<String> getNonRegisteredAuthors() {
         return nonRegisteredAuthors;
@@ -91,11 +86,11 @@ public class PublicationSubmissionDto {
     public void setTitle(String title) {
         this.title = title;
     }
-    public String getPaperAbstract() {
-        return paperAbstract;
+    public String getPublicationAbstract() {
+        return publicationAbstract;
     }
-    public void setPaperAbstract(String paperAbstract) {
-        this.paperAbstract = paperAbstract;
+    public void setPublicationAbstract(String publicationAbstract) {
+        this.publicationAbstract = publicationAbstract;
     }
     public String getContent() {
         return content;
@@ -126,5 +121,11 @@ public class PublicationSubmissionDto {
     }
     public void setContentLink(String contentLink) {
         this.contentLink = contentLink;
+    }
+    public Long getPrimaryBranch() {
+        return primaryBranch;
+    }
+    public void setPrimaryBranch(Long primaryBranch) {
+        this.primaryBranch = primaryBranch;
     }
 }

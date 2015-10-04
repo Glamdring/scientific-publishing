@@ -29,8 +29,8 @@ public class ForgetUserService {
     public void foretUser(UUID userId) {
         Preconditions.checkNotNull(userId);
         User user = userDao.getById(User.class, userId);
-        publicationDao.deletePublications(user);
         peerReviewDao.deleteAllReviews(user);
+        publicationDao.deletePublications(user);
         //TODO comments, inline comments, resources,
         userDao.forgetUser(user);
     }

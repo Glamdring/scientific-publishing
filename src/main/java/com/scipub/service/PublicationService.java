@@ -86,6 +86,7 @@ public class PublicationService {
         
         if (dto.getStatus() == PublicationStatus.PUBLISHED) {
             publication.setCurrentRevision(revision);
+            dao.persist(publication);
         }
         
         if (user.getArxivUsername() != null && dto.isPushToArxiv()) {
@@ -144,7 +145,7 @@ public class PublicationService {
             publication.setCreated(LocalDateTime.now());
         }
         
-        for (String authorId : dto.getAuthorIds()) {
+        for (UUID authorId : dto.getAuthorIds()) {
             publication.getAuthors().add(dao.getById(User.class, authorId));
         }
         for (String nonRegisteredAuthorName : dto.getNonRegisteredAuthors()) {
@@ -155,8 +156,11 @@ public class PublicationService {
             publication.setFollowUpTo(dao.getById(Publication.class, dto.getFollowUpTo()));
         }
         
-        for (Integer branchId : dto.getBranchIds()) {
+        for (Long branchId : dto.getBranchIds()) {
             publication.getBranches().add(branchDao.getById(Branch.class, branchId));
+        }
+        if (dto.getPrimaryBranch() != null) {
+            publication.setPrimaryBranch(branchDao.getById(Branch.class, dto.getPrimaryBranch()));
         }
         
         for (String tag : dto.getTags()) {
@@ -188,7 +192,7 @@ public class PublicationService {
         revision.setPublication(publication);
         revision.setOriginalFilename(dto.getOriginalFilename());
         revision.setContent(dto.getContent()); //extracted by convertContentToMarkdown
-        revision.setPublicationAbstract(dto.getPaperAbstract());
+        revision.setPublicationAbstract(dto.getPublicationAbstract());
         revision.setTitle(dto.getTitle());
         revision.setRevision(revisionIdx);
         revision.setSubmitter(user);
