@@ -133,9 +133,11 @@ public class PublicationServiceTest {
         verify(dao, atLeastOnce()).persist(argument.capture());
         
         // double-cast due to mockito's inability to have multiple argument captors for multiple classes
-        assertThat(((Publication) (Object) argument.getAllValues().get(2)).getStatus(), is(PublicationStatus.PUBLISHED));
-        assertThat(argument.getValue().isLatestPublished(), is(true));
-        assertThat(argument.getValue().getRevision(), is(2));
+        // (the last .persist() is called to store the revision to the publication)
+        assertThat(((Publication) (Object) argument.getAllValues().get(5)).getStatus(), is(PublicationStatus.PUBLISHED));
+        PublicationRevision persistedRevision = argument.getAllValues().get(4);
+        assertThat(persistedRevision.isLatestPublished(), is(true));
+        assertThat(persistedRevision.getRevision(), is(2));
     }
 
     
