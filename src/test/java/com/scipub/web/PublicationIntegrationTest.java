@@ -140,6 +140,14 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
         assertThat(publication.getStatus(), is(PublicationStatus.DRAFT));
     }
 
+    @Test
+    public void missingPublicationTest() {
+        ExtendedModelMap model = new ExtendedModelMap();
+        String redirect = publicationController.getPublication("missing", model);
+        assertThat(redirect, is(Constants.REDIRECT_HOME));
+        //TODO check if error attribute is set
+    }
+    
     private Publication getPublication(String uri) {
         ExtendedModelMap model = new ExtendedModelMap();
         publicationController.getPublication(uri, model);
