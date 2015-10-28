@@ -259,4 +259,15 @@ public class User extends BaseTimedEntity implements Serializable {
             return false;
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", email=" + email + ", orcid=" + orcid + ", firstName=" + firstName
+                + ", middleName=" + middleName + ", lastName=" + lastName + ", degree=" + degree + ", organization="
+                + organization + ", smallPhotoUri=" + smallPhotoUri + ", largePhotoUri=" + largePhotoUri + ", bio="
+                + bio + ", arxivUsername=" + arxivUsername + ", arxivPassword=" + arxivPassword + ", loginToken="
+                + loginToken + ", loginSeries=" + loginSeries + ", lastLoginTime=" + lastLoginTime
+                + ", loginAutomatically=" + loginAutomatically + ", branches=" + branches + "]";
+    }
+    
 }

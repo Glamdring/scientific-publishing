@@ -42,6 +42,9 @@ public class Publication extends BaseTimedEntity {
 
     @ManyToOne(cascade = CascadeType.ALL)
     private PublicationRevision currentRevision;
+    
+    @ManyToOne(cascade = CascadeType.ALL)
+    private PublicationRevision currentDraft;
 
     @Enumerated(EnumType.STRING)
     private PublicationStatus status;
@@ -221,6 +224,14 @@ public class Publication extends BaseTimedEntity {
 
     public void setParentBranches(Set<Branch> parentBranches) {
         this.topLevelBranches = parentBranches;
+    }
+
+    public PublicationRevision getCurrentDraft() {
+        return currentDraft;
+    }
+
+    public void setCurrentDraft(PublicationRevision currentDraft) {
+        this.currentDraft = currentDraft;
     }
 
     @Override

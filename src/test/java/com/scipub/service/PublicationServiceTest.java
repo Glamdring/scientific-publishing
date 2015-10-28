@@ -84,7 +84,7 @@ public class PublicationServiceTest {
         ArgumentCaptor<PublicationRevision> argument = ArgumentCaptor.forClass(PublicationRevision.class);
         // test new draft revision is created
         verify(dao, atLeastOnce()).persist(argument.capture());
-        assertThat(argument.getValue().isLatestPublished(), is(false));
+        assertThat(argument.getAllValues().get(1).isLatestPublished(), is(false));
     }
     
     @Test
@@ -100,7 +100,7 @@ public class PublicationServiceTest {
         service.submitPublication(dto, USER_ID);
         ArgumentCaptor<PublicationRevision> argument = ArgumentCaptor.forClass(PublicationRevision.class);
         verify(dao, atLeastOnce()).persist(argument.capture());
-        assertThat(argument.getValue().isLatestPublished(), is(false));
+        assertThat(argument.getAllValues().get(1).isLatestPublished(), is(false));
     }
     
     @Test
@@ -134,7 +134,7 @@ public class PublicationServiceTest {
         
         // double-cast due to mockito's inability to have multiple argument captors for multiple classes
         // (the last .persist() is called to store the revision to the publication)
-        assertThat(((Publication) (Object) argument.getAllValues().get(5)).getStatus(), is(PublicationStatus.PUBLISHED));
+        assertThat(((Publication) (Object) argument.getAllValues().get(6)).getStatus(), is(PublicationStatus.PUBLISHED));
         PublicationRevision persistedRevision = argument.getAllValues().get(4);
         assertThat(persistedRevision.isLatestPublished(), is(true));
         assertThat(persistedRevision.getRevision(), is(2));

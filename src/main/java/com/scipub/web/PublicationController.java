@@ -28,6 +28,7 @@ import com.scipub.service.PublicationService;
 import com.scipub.tools.BranchJsonGenerator;
 import com.scipub.util.FormatConverter;
 import com.scipub.util.FormatConverter.Format;
+import com.scipub.web.util.Constants;
 
 @Controller
 @RequestMapping("/publication")
@@ -74,16 +75,24 @@ public class PublicationController {
     
     @RequestMapping("/saveDraft")
     @ResponseBody
-    private void saveDraft(PublicationSubmissionDto dto, HttpSession session) {
+    public String saveDraft(PublicationSubmissionDto dto, HttpSession session) {
         fillFileDetails(dto, session);
+        return submitDraft(dto);
+    }
+    
+    String submitDraft(PublicationSubmissionDto dto) {
         dto.setStatus(PublicationStatus.DRAFT);
-        publicationService.submitPublication(dto, userContext.getUser().getId());
+        return publicationService.submitPublication(dto, userContext.getUser().getId());        
     }
     
     @RequestMapping(value={"", "/"}, params="uri")
     public String getPublication(@RequestParam String uri, Model model) {
         Publication publication = publicationService.getPublication(uri);
         if (publication != null) {
+            // if it's a draft and the current user is not an author, don't show
+            if (publication.getStatus() == PublicationStatus.DRAFT && !publication.getAuthors().contains(userContext.getUser())) {
+                return Constants.REDIRECT_HOME;
+            }
             model.addAttribute("publication", publication);
             
             peerReviewService.getPeerReview(userContext.getUser().getId(), uri)
@@ -92,7 +101,7 @@ public class PublicationController {
                 .ifPresent(acceptable -> model.addAttribute("ownPreliminaryReview", acceptable));
             return "publication";
         } else {
-            return "redirect:/";
+            return Constants.REDIRECT_HOME;
         }
     }
     

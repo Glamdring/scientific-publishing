@@ -81,11 +81,15 @@ public class PublicationService {
             }
         }
         
-        // create revision
+        // create/update revision
         PublicationRevision revision = saveRevision(dto, publication, user, revisions);
         
         if (dto.getStatus() == PublicationStatus.PUBLISHED) {
             publication.setCurrentRevision(revision);
+            publication.setCurrentDraft(null);
+            dao.persist(publication);
+        } else if (dto.getStatus() == PublicationStatus.DRAFT) {
+            publication.setCurrentDraft(revision);
             dao.persist(publication);
         }
         
