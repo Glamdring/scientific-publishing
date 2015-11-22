@@ -58,6 +58,7 @@
                 <property name="vendorProperties">
                     <util:map>
                         <entry key="hibernate.generate_statistics" value="${hibernate.statistics.enabled}" />
+                        <!-- TODO this doesn't work; maybe should be part of a maven task to prepare the database? -->
                         <entry key="hibernate.hbm2ddl.import_files" value="/sql/science_branches.sql" />
                         <entry key="net.sf.ehcache.configurationResourceName" value="ehcache.xml" />
                     </util:map>
