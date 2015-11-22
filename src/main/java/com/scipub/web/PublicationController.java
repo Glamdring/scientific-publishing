@@ -110,7 +110,7 @@ public class PublicationController {
             // get all peer reviews for this publication
             model.addAttribute(PRELIMINARY_REVIEWS_KEY, peerReviewService.getPreliminaryReviews(uri));
             model.addAttribute(PEER_REVIEWS_KEY, peerReviewService.getPeerReviews(uri));
-            return PUBLICATION_KEY;
+            return "publication";
         } else {
             return Constants.REDIRECT_HOME;
         }

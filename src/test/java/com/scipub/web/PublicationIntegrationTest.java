@@ -25,6 +25,7 @@ import com.google.common.collect.Sets;
 import com.scipub.dto.PublicationSubmissionDto;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
+import com.scipub.model.PublicationSource;
 import com.scipub.model.PublicationStatus;
 import com.scipub.model.User;
 import com.scipub.web.util.Constants;
@@ -133,6 +134,8 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
 
     private void assertPublicationFields(PublicationSubmissionDto dto, Publication publication, PublicationRevision revision) {
         assertThat(publication, is(notNullValue()));
+        
+        assertThat(publication.getSource(), is(PublicationSource.SUBMITTED));
         
         assertThat(publication.getAuthors(), contains(user));
         assertThat(publication.getBranches()

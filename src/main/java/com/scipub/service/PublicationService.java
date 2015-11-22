@@ -174,6 +174,7 @@ public class PublicationService {
         publication.setFollowUpToLink(dto.getFollowUpToLink());
         publication.setFollowUpToDoi(dto.getFollowUpToDoi());
         publication.setStatus(dto.getStatus());
+        publication.setSource(PublicationSource.SUBMITTED);
         
         return publication;
     }
