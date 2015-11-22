@@ -102,4 +102,62 @@ public class PeerReviewDto {
     public void setConflictOfInterestsDeclaration(boolean conflictOfInterestsDeclaration) {
         this.conflictOfInterestsDeclaration = conflictOfInterestsDeclaration;
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + clarityOfBackground;
+        result = prime * result + (conflictOfInterestsDeclaration ? 1231 : 1237);
+        result = prime * result + ((content == null) ? 0 : content.hashCode());
+        result = prime * result + dataAnalysis;
+        result = prime * result + importance;
+        result = prime * result + noveltyOfConclusions;
+        result = prime * result + ((publicationUri == null) ? 0 : publicationUri.hashCode());
+        result = prime * result + qualityOfPresentation;
+        result = prime * result + studyDesignAndMethods;
+        result = prime * result + ((uri == null) ? 0 : uri.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        PeerReviewDto other = (PeerReviewDto) obj;
+        if (clarityOfBackground != other.clarityOfBackground)
+            return false;
+        if (conflictOfInterestsDeclaration != other.conflictOfInterestsDeclaration)
+            return false;
+        if (content == null) {
+            if (other.content != null)
+                return false;
+        } else if (!content.equals(other.content))
+            return false;
+        if (dataAnalysis != other.dataAnalysis)
+            return false;
+        if (importance != other.importance)
+            return false;
+        if (noveltyOfConclusions != other.noveltyOfConclusions)
+            return false;
+        if (publicationUri == null) {
+            if (other.publicationUri != null)
+                return false;
+        } else if (!publicationUri.equals(other.publicationUri))
+            return false;
+        if (qualityOfPresentation != other.qualityOfPresentation)
+            return false;
+        if (studyDesignAndMethods != other.studyDesignAndMethods)
+            return false;
+        if (uri == null) {
+            if (other.uri != null)
+                return false;
+        } else if (!uri.equals(other.uri))
+            return false;
+        return true;
+    }
 }

@@ -21,16 +21,12 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ExtendedModelMap;
 
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.scipub.dto.PublicationSubmissionDto;
-import com.scipub.dto.RegistrationDto;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationStatus;
 import com.scipub.model.User;
-import com.scipub.service.ForgetUserService;
-import com.scipub.service.UserService;
 import com.scipub.web.util.Constants;
 
 /**
@@ -43,48 +39,28 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
     
     private static final Long BRANCH_ID = 3L;
     
-    @Inject
-    private ForgetUserService forgetUserService;
-    
-    @Inject
-    private UserService userService;
-    
     // Controllers = entry points
     @Inject
     private PublicationController publicationController;
-    
-    private User user;
 
+    private User user;
+    
     @Before
     public void setUp() {
-        try {
-            RegistrationDto registration = new RegistrationDto();
-            registration.setDegree("PhD");
-            registration.setEmail(UUID.randomUUID() + "@example.com");
-            registration.setFirstName("John");
-            registration.setLastName("Doe" + UUID.randomUUID());
-            registration.setBranchIds(Lists.newArrayList(BRANCH_ID));
-            user = userService.completeUserRegistration(registration);
-        } catch (Exception ex) {
-            LOGGER.error("Failure during setup", ex);
-        }
+        user = registerUser();
     }
     
     @After
     public void tearDown() {
-        try {
-            forgetUserService.foretUser(user.getId());
-        } catch (Exception ex) {
-            LOGGER.error("Failure during tear-down. Manual cleanup needed", ex);
-        }
+        forgetUser(user);
     }
     
     @Test
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public void publicationSubmissionIntegrationTest() {
-        PublicationSubmissionDto dto = createdPublication();
+        PublicationSubmissionDto dto = createPublication(user);
         
-        ReflectionTestUtils.setField(publicationController, "userContext", createUserContext());
+        ReflectionTestUtils.setField(publicationController, "userContext", createUserContext(user));
         
         String uri = publicationController.submitPublication(dto);
 
@@ -97,9 +73,9 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
     @Test
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public void draftSubmissionIntegrationTest() {
-        PublicationSubmissionDto dto = createdPublication();
+        PublicationSubmissionDto dto = createPublication(user);
         
-        ReflectionTestUtils.setField(publicationController, "userContext", createUserContext());
+        ReflectionTestUtils.setField(publicationController, "userContext", createUserContext(user));
         
         String uri = publicationController.submitDraft(dto);
         
@@ -123,7 +99,7 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
         assertThat(secondDraftPublication.getCurrentDraft().getContent(), is(dto.getContent()));
         
         // first set another user and try to obtain draft. Should fail.
-        UserContext anotherUserContext = createUserContext();
+        UserContext anotherUserContext = createUserContext(user);
         User newUser = new User();
         newUser.setId(UUID.randomUUID());
         anotherUserContext.setUser(newUser);
@@ -133,7 +109,7 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
         assertThat(redirectUri, is(Constants.REDIRECT_HOME));
         
         // restore the original user
-        ReflectionTestUtils.setField(publicationController, "userContext", createUserContext());
+        ReflectionTestUtils.setField(publicationController, "userContext", createUserContext(user));
         Publication publication = getPublication(uri);
         
         assertPublicationFields(dto, publication, publication.getCurrentDraft());
@@ -151,7 +127,7 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
     private Publication getPublication(String uri) {
         ExtendedModelMap model = new ExtendedModelMap();
         publicationController.getPublication(uri, model);
-        Publication publication = (Publication) model.get("publication");
+        Publication publication = (Publication) model.get(PublicationController.PUBLICATION_KEY);
         return publication;
     }
 
@@ -171,7 +147,7 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
         assertThat(revision.getContent(), is(dto.getContent()));
     }
 
-    private PublicationSubmissionDto createdPublication() {
+    public static PublicationSubmissionDto createPublication(User user) {
         PublicationSubmissionDto dto = new PublicationSubmissionDto();
         dto.setAuthorIds(Sets.newHashSet(user.getId()));
         dto.setBranchIds(Sets.newHashSet(BRANCH_ID));
@@ -185,11 +161,5 @@ public class PublicationIntegrationTest extends BaseIntegrationTest {
         dto.setPublicationAbstract(publicationAbstract);
         dto.setTitle(title);
         return dto;
-    }
-    
-    private UserContext createUserContext() {
-        UserContext ctx = new UserContext();
-        ctx.setUser(user);
-        return ctx;
     }
 }

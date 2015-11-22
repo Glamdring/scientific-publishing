@@ -34,6 +34,12 @@ import com.scipub.web.util.Constants;
 @RequestMapping("/publication")
 public class PublicationController {
 
+    static final String PUBLICATION_KEY = "publication";
+    static final String OWN_PRELIMINARY_REVIEW_KEY = "ownPreliminaryReview";
+    static final String OWN_PEER_REVIEW_KEY = "ownPeerReview";
+    static final String PEER_REVIEWS_KEY = "peerReviews";
+    static final String PRELIMINARY_REVIEWS_KEY = "preliminaryReviews";
+
     private static final Logger logger = LoggerFactory.getLogger(PublicationController.class);
     
     private static final String LAST_UPLOADED_FILE_KEY = "lastUploadedFile";
@@ -93,13 +99,18 @@ public class PublicationController {
             if (publication.getStatus() == PublicationStatus.DRAFT && !publication.getAuthors().contains(userContext.getUser())) {
                 return Constants.REDIRECT_HOME;
             }
-            model.addAttribute("publication", publication);
+            model.addAttribute(PUBLICATION_KEY, publication);
             
+            // get peer reviews submitted by the current user
             peerReviewService.getPeerReview(userContext.getUser().getId(), uri)
-                .ifPresent(pr -> model.addAttribute("ownPeerReview", pr));
+                .ifPresent(pr -> model.addAttribute(OWN_PEER_REVIEW_KEY, pr));
             peerReviewService.getPreliminaryReview(userContext.getUser().getId(), uri)
-                .ifPresent(acceptable -> model.addAttribute("ownPreliminaryReview", acceptable));
-            return "publication";
+                .ifPresent(acceptable -> model.addAttribute(OWN_PRELIMINARY_REVIEW_KEY, acceptable));
+            
+            // get all peer reviews for this publication
+            model.addAttribute(PRELIMINARY_REVIEWS_KEY, peerReviewService.getPreliminaryReviews(uri));
+            model.addAttribute(PEER_REVIEWS_KEY, peerReviewService.getPeerReviews(uri));
+            return PUBLICATION_KEY;
         } else {
             return Constants.REDIRECT_HOME;
         }

@@ -109,7 +109,7 @@
 	              
 	            <input type="checkbox" id="conflictOfInterestsDeclaration"><label for="conflictOfInterestsDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
 	            
-                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val())"/>
+                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val());"/>
              </form>
 		  </section>
 		  - invite reviewers

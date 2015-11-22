@@ -26,12 +26,12 @@ public class PeerReviewController {
     
     @RequestMapping("/submit")
     @ResponseBody
-    private void submitReview(PeerReviewDto dto) {
+    public void submitReview(PeerReviewDto dto) {
         peerReviewService.submitPeerReview(dto, userContext.getUser().getId());
     }
     
     @RequestMapping("/submitPreliminary")
-    private void submitPreliminaryReview(@RequestParam String publicationUri, @RequestParam boolean acceptable) {
+    public void submitPreliminaryReview(@RequestParam String publicationUri, @RequestParam boolean acceptable) {
         peerReviewService.submitPreliminaryReview(userContext.getUser().getId(), publicationUri, acceptable);
     }
 }

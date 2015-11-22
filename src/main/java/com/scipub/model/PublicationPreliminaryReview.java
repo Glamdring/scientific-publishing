@@ -12,10 +12,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="publication_preliminary_reviews")
-@NamedQueries(
+@NamedQueries({
         @NamedQuery(
                 name = "PublicationPreliminaryReview.getByReviewerAndPublication",
-                query = "SELECT pr FROM PublicationPreliminaryReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication"))
+                query = "SELECT pr FROM PublicationPreliminaryReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication"),
+        @NamedQuery(
+                name = "PublicationPreliminaryReview.getByPublication",
+                query = "SELECT pr FROM PublicationPreliminaryReview pr WHERE pr.publication=:publication")})
 public class PublicationPreliminaryReview extends BaseTimedEntity {
 
     @Id

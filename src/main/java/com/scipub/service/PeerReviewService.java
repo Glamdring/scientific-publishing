@@ -1,8 +1,11 @@
 package com.scipub.service;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 
@@ -129,7 +132,27 @@ public class PeerReviewService {
         review.setQualityOfPresentation(dto.getQualityOfPresentation());
         review.setStudyDesignAndMethods(dto.getStudyDesignAndMethods());
         
-        
         review.setCreated(LocalDateTime.now());
+    }
+
+
+    /**
+     * Returns a map preliminary reviews
+     * 
+     * @param publicationUri
+     * @return reviewerId -> preliminary acceptability map
+     */
+    @Transactional(readOnly = true)
+    public Map<UUID, Boolean> getPreliminaryReviews(String publicationUri) {
+        //TODO pass string instead of a full publication?
+        return dao.getPreliminaryReviewsByPublication(getPublication(publicationUri));
+    }
+
+    @Transactional(readOnly = true)
+    public List<PeerReviewDto> getPeerReviews(String publicationUri) {
+        //TODO pass string instead of a full publication?
+        return dao.getPeerReviewsByPublication(getPublication(publicationUri))
+                .stream().map(pr -> entityToDto(pr))
+                .collect(Collectors.toList());
     }
 }
