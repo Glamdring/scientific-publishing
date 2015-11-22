@@ -14,8 +14,6 @@ import javax.inject.Inject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,8 +34,6 @@ import com.scipub.web.util.Constants;
  */
 public class PublicationIntegrationTest extends BaseIntegrationTest {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(PublicationIntegrationTest.class);
-    
     private static final Long BRANCH_ID = 3L;
     
     // Controllers = entry points

@@ -50,6 +50,8 @@
                     } else if (selected == "doi") {
                         $("#followUpToDoi").show();
                         $("#followUpToLink,#followUpToInternal").hide();
+                    } else {
+                    	$("#followUpToLink,#followUpToInternal,#followUpToDoi").hide();
                     }
                     
                 });
@@ -75,8 +77,10 @@
 			
 			      function saveDraft() {
 			         fillAuthors();
+			         fillContent();
 			         var params = $("#submissionForm").serialize();
 			         $.post("${root}/publication/saveDraft", params)
+			         //TODO parse response and set a publicationUri hidden
 			      }
             });
             
@@ -98,6 +102,11 @@
                 });
                 $("#authorIds").val(authorIds);
                 $("#nonRegisteredAuthors").val(nonRegisteredAuthors);
+            }
+            
+            function fillContent() {
+            	$("#publicationAbstract").val($("#wmd-input1").val());
+            	$("#content").val($("#wmd-input2").val());
             }
             
             function handlePrimaryBranchOptions() {
@@ -131,6 +140,7 @@
 		        <c:set var="includeResources" value="true" />
 		        <label>Abstract</label>
 		        <%@include file="editor.jsp" %>
+		        <input type="hidden" id="publicationAbstract" name="publicationAbstract" />
 	        </div>
 	        
 	         <div class="form-group">
@@ -162,6 +172,7 @@
 		        <c:set var="includeResources" value="false" />
 		        <label>Content</label>
 		        <%@include file="editor.jsp" %>
+		        <input type="hidden" id="content" name="content" />
 	        </div>
 	        
             <div class="form-group" id="externalContent" style="display: none;">
@@ -216,8 +227,8 @@
                 <label>This publication is a follow-up to:</label>
 
                 <div class="radio">
-                    <input type="radio" id="followUpTypeNone" name="followUpType" value="">
-                    <label for="followUpTypeLink">Not a follow-up</label><br />
+                    <input type="radio" id="followUpTypeNone" name="followUpType" value="" checked>
+                    <label for="followUpTypeNone">Not a follow-up</label><br />
                 </div>
                                 
                 <div class="radio">
@@ -242,7 +253,7 @@
             </div>
             
             <div class="form-group">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" onclick="fillAuthors(); fillContent();">
             </div>
             
 	        - send invites to non registered editors
