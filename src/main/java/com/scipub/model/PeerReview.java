@@ -14,7 +14,10 @@ import javax.persistence.Table;
 @NamedQueries({
         @NamedQuery(
                 name = "PeerReview.getByReviewerAndPublication",
-                query = "SELECT pr FROM PeerReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication")})
+                query = "SELECT pr FROM PeerReview pr WHERE pr.reviewer=:reviewer AND pr.publication=:publication"),
+        @NamedQuery(
+                name = "PeerReview.getByPublication",
+                query = "SELECT pr FROM PeerReview pr WHERE pr.publication=:publication ORDER BY pr.created DESC")})
 public class PeerReview extends BaseTimedEntity {
 
     @Id
@@ -47,6 +50,9 @@ public class PeerReview extends BaseTimedEntity {
     @ManyToOne(cascade = CascadeType.ALL)
     private PeerReviewRevision currentRevision;
 
+    @Column(nullable = false)
+    private boolean conflictOfInterestsDeclaration;
+    
     public String getUri() {
         return uri;
     }
@@ -125,5 +131,13 @@ public class PeerReview extends BaseTimedEntity {
 
     public void setCurrentRevision(PeerReviewRevision currentRevision) {
         this.currentRevision = currentRevision;
+    }
+
+    public boolean isConflictOfInterestsDeclaration() {
+        return conflictOfInterestsDeclaration;
+    }
+
+    public void setConflictOfInterestsDeclaration(boolean conflictOfInterestsDeclaration) {
+        this.conflictOfInterestsDeclaration = conflictOfInterestsDeclaration;
     }
 }

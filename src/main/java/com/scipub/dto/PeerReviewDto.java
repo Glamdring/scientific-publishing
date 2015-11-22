@@ -160,4 +160,13 @@ public class PeerReviewDto {
             return false;
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "PeerReviewDto [uri=" + uri + ", publicationUri=" + publicationUri + ", clarityOfBackground="
+                + clarityOfBackground + ", importance=" + importance + ", studyDesignAndMethods="
+                + studyDesignAndMethods + ", dataAnalysis=" + dataAnalysis + ", noveltyOfConclusions="
+                + noveltyOfConclusions + ", qualityOfPresentation=" + qualityOfPresentation + ", content=" + content
+                + ", conflictOfInterestsDeclaration=" + conflictOfInterestsDeclaration + "]";
+    }
 }

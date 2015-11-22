@@ -3,6 +3,7 @@ package com.scipub.dao.jpa;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.FlushModeType;
 
 import org.springframework.stereotype.Repository;
@@ -16,6 +17,9 @@ import com.scipub.model.User;
 @Repository
 public class PublicationDao extends Dao {
 
+    @Inject
+    private PeerReviewDao peerReviewDao;
+    
     public List<PublicationRevision> getRevisions(Publication publication) {
         QueryDetails<PublicationRevision> query = new QueryDetails<PublicationRevision>().setQueryName("Publication.getRevisions")
             .setParamNames("publication")
@@ -78,8 +82,11 @@ public class PublicationDao extends Dao {
                 p.setCurrentRevision(null);
             }
             // delete all the revisions
-            getAllRevisions(p).stream().forEach(r -> delete(r));
-            delete(p);   
+            getAllRevisions(p).forEach(r -> delete(r));
+            // delete all associated peer reviews (even those by other authors) TODO maybe just mark them as deleted/orhaned?
+            peerReviewDao.deletePeerReviewsForPublication(p);
+            peerReviewDao.deletePreliminaryReviewsForPublication(p);
+            delete(p);
         });
     }
 }

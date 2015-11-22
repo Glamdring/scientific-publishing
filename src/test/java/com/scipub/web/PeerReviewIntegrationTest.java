@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.aMapWithSize;
 import static org.hamcrest.Matchers.hasEntry;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.equalTo;
 
 import java.util.List;
 import java.util.Map;
@@ -83,7 +84,7 @@ public class PeerReviewIntegrationTest extends BaseIntegrationTest {
         // the uri should be the only difference, as it is empty when submitted, so we make them equal and then compare
         submittedPeerReview.setUri(peerReview.getUri());
         
-        assertThat(peerReview, is(submittedPeerReview));
+        assertThat(peerReview, is(equalTo(submittedPeerReview)));
     }
 
     private PeerReviewDto createPeerReview(String publicationUri) {
