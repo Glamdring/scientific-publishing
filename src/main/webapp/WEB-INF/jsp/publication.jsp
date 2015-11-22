@@ -6,6 +6,7 @@
 <t:template>
 
 	<jsp:attribute name="header">
+        <script type="text/javascript" src="${staticRoot}/js/jQuery.highligther.js"></script>
         <script type="text/javascript">
            $(document).ready(function() {
 	           $("#clarity, #novelty, #methods, #quality, #importance, #dataAnalysis").slider({
@@ -77,30 +78,39 @@
           </section>
 		  
 		  <section>
-		      <h3>Write a peer review</h3>
-
-              <label id="clarityLabel">Clarity of background and rationale</label>
-              <div id="clarity"></div>
-              
-              <label id="importanceLabel">Field importance</label>
-              <div id="importance"></div>
-              
-              <label id="methodsLabel">Study design and methods</label>
-              <div id="methods"></div>
-              
-              <label id="noveltyLabel">Novelty of conclusions</label>
-              <div id="novelty"></div>
-              
-              <label id="qualityLabel">Quality of presentation</label>
-              <div id="quality"></div>
-              
-              <label id="dataAnalysisLabel">Quality of data analysis</label>
-              <div id="dataAnalysis"></div>
-              
-              <textarea id="reviewContent" name="reviewContent"></textarea>
-              
-              <input type="checkbox" id="conflictOfInterestDeclaration"><label for="conflictOfInterestDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
-                    
+            <form>
+	            <h3>Write a peer review</h3>
+	
+	            <label id="clarityLabel">Clarity of background and rationale</label>
+	            <div id="clarity"></div>
+	              
+	            <label id="importanceLabel">Field importance</label>
+	            <div id="importance"></div>
+	            
+	            <label id="methodsLabel">Study design and methods</label>
+	            <div id="methods"></div>
+	             
+	            <label id="noveltyLabel">Novelty of conclusions</label>
+	            <div id="novelty"></div>
+	              
+	            <label id="qualityLabel">Quality of presentation</label>
+	            <div id="quality"></div>
+	              
+	            <label id="dataAnalysisLabel">Quality of data analysis</label>
+	            <div id="dataAnalysis"></div>
+	              
+	            <div class="form-group" id="reviewContent">
+	                <c:set var="editorSuffix" value="1" />
+	                <c:set var="includeResources" value="true" />
+	                <label>Review content</label>
+	                <%@include file="editor.jsp"%>
+	                <input type="hidden" name="content" id="content" />
+	            </div>
+	              
+	            <input type="checkbox" id="conflictOfInterestsDeclaration"><label for="conflictOfInterestsDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
+	            
+                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val())"/>
+             </form>
 		  </section>
 		  - invite reviewers
 		  

@@ -21,6 +21,8 @@ public class PeerReviewDto {
 
     private String content;
     
+    private boolean conflictOfInterestsDeclaration;
+    
     public String getUri() {
         return uri;
     }
@@ -91,5 +93,13 @@ public class PeerReviewDto {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public boolean isConflictOfInterestsDeclaration() {
+        return conflictOfInterestsDeclaration;
+    }
+
+    public void setConflictOfInterestsDeclaration(boolean conflictOfInterestsDeclaration) {
+        this.conflictOfInterestsDeclaration = conflictOfInterestsDeclaration;
     }
 }

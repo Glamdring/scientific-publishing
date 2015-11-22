@@ -1,0 +1,5 @@
+package com.scipub.model;
+
+public enum NotificationType {
+    NEW_COMMENT, NEW_PEER_REVIEW, NEW_PRELIMINARY_REVIEW, NEW_FOLLOWED_PUBLICATION_VERSION, NEW_PUBLICATION
+}
