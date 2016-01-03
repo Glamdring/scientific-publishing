@@ -101,11 +101,13 @@ public class PublicationController {
             }
             model.addAttribute(PUBLICATION_KEY, publication);
             
-            // get peer reviews submitted by the current user
-            peerReviewService.getPeerReview(userContext.getUser().getId(), uri)
-                .ifPresent(pr -> model.addAttribute(OWN_PEER_REVIEW_KEY, pr));
-            peerReviewService.getPreliminaryReview(userContext.getUser().getId(), uri)
-                .ifPresent(acceptable -> model.addAttribute(OWN_PRELIMINARY_REVIEW_KEY, acceptable));
+            if (userContext.getUser() != null) {
+                // get peer reviews submitted by the current user
+                peerReviewService.getPeerReview(userContext.getUser().getId(), uri)
+                    .ifPresent(pr -> model.addAttribute(OWN_PEER_REVIEW_KEY, pr));
+                peerReviewService.getPreliminaryReview(userContext.getUser().getId(), uri)
+                    .ifPresent(acceptable -> model.addAttribute(OWN_PRELIMINARY_REVIEW_KEY, acceptable));
+            }
             
             // get all peer reviews for this publication
             model.addAttribute(PRELIMINARY_REVIEWS_KEY, peerReviewService.getPreliminaryReviews(uri));

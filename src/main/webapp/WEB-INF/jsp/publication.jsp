@@ -15,7 +15,7 @@
            });
            
            function postPreliminaryReview(acceptable) {
-        	   $.post("${root}/peerReview/submitPreliminary", {acceptable: acceptable}, function() {
+        	   $.post("${root}/peerReview/submitPreliminary", {acceptable: acceptable, publicationUri: '${publication.uri}'}, function() {
         		   alert("Your submission is successful");
         	   });
            }
@@ -67,52 +67,61 @@
 		  </section>
 		  </article>
 		 
-		 <!-- Limit the text to a fixed-height portion -->
+		  <!-- Limit the text to a fixed-height portion -->
 		 
-		  <section>
-              <h3>Quick assessment</h3>
-              Does this publication meet the basic criteria for scientific work?
-              <input type="hidden" name="publicationUri" id="${param.uri}" />
-              <input type="button" value="Yes" onclick="postPreliminaryReview(true);"/>
-              <input type="button" value="No" onclick="postPreliminaryReview(false)"/>
-          </section>
+		  <c:if test="${userLoggedIn}">
+		      <c:if test="${ownPreliminaryReview == null}">
+				  <section>
+		              <h3>Quick assessment</h3>
+		              Does this publication meet the basic criteria for scientific work?
+		              <input type="hidden" name="publicationUri" id="${param.uri}" />
+		              <input type="button" value="Yes" onclick="postPreliminaryReview(true);"/>
+		              <input type="button" value="No" onclick="postPreliminaryReview(false)"/>
+		          </section>
+	          </c:if>
+			  
+			  <section>
+	            <form>
+	               <!-- TODO load peer review from ${ownPeerReview} -->
+		            <h3>Write a peer review</h3>
+		
+		            <label id="clarityLabel">Clarity of background and rationale</label>
+		            <div id="clarity"></div>
+		              
+		            <label id="importanceLabel">Field importance</label>
+		            <div id="importance"></div>
+		            
+		            <label id="methodsLabel">Study design and methods</label>
+		            <div id="methods"></div>
+		             
+		            <label id="noveltyLabel">Novelty of conclusions</label>
+		            <div id="novelty"></div>
+		              
+		            <label id="qualityLabel">Quality of presentation</label>
+		            <div id="quality"></div>
+		              
+		            <label id="dataAnalysisLabel">Quality of data analysis</label>
+		            <div id="dataAnalysis"></div>
+		              
+		            <div class="form-group" id="reviewContent">
+		                <c:set var="editorSuffix" value="1" />
+		                <c:set var="includeResources" value="true" />
+		                <label>Review content</label>
+		                <%@include file="editor.jsp"%>
+		                <input type="hidden" name="content" id="content" />
+		            </div>
+		              
+		            <input type="checkbox" id="conflictOfInterestsDeclaration"><label for="conflictOfInterestsDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
+		            
+	                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val());"/>
+	             </form>
+			  </section>
+			  - invite reviewers
+		  </c:if>
 		  
-		  <section>
-            <form>
-	            <h3>Write a peer review</h3>
-	
-	            <label id="clarityLabel">Clarity of background and rationale</label>
-	            <div id="clarity"></div>
-	              
-	            <label id="importanceLabel">Field importance</label>
-	            <div id="importance"></div>
-	            
-	            <label id="methodsLabel">Study design and methods</label>
-	            <div id="methods"></div>
-	             
-	            <label id="noveltyLabel">Novelty of conclusions</label>
-	            <div id="novelty"></div>
-	              
-	            <label id="qualityLabel">Quality of presentation</label>
-	            <div id="quality"></div>
-	              
-	            <label id="dataAnalysisLabel">Quality of data analysis</label>
-	            <div id="dataAnalysis"></div>
-	              
-	            <div class="form-group" id="reviewContent">
-	                <c:set var="editorSuffix" value="1" />
-	                <c:set var="includeResources" value="true" />
-	                <label>Review content</label>
-	                <%@include file="editor.jsp"%>
-	                <input type="hidden" name="content" id="content" />
-	            </div>
-	              
-	            <input type="checkbox" id="conflictOfInterestsDeclaration"><label for="conflictOfInterestsDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
-	            
-                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val());"/>
-             </form>
-		  </section>
-		  - invite reviewers
+		  <c:if test="${!userLoggedIn}">
+		      <a href="${root}/signin">Want to leave a review? Sign up</a>
+		  </c:if>
 		  
        <!-- content #end -->
 </jsp:body>

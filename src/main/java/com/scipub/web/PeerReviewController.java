@@ -31,6 +31,7 @@ public class PeerReviewController {
     }
     
     @RequestMapping("/submitPreliminary")
+    @ResponseBody
     public void submitPreliminaryReview(@RequestParam String publicationUri, @RequestParam boolean acceptable) {
         peerReviewService.submitPreliminaryReview(userContext.getUser().getId(), publicationUri, acceptable);
     }
