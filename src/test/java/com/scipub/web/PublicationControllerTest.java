@@ -17,12 +17,10 @@
  */
 package com.scipub.web;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+
+import org.junit.Test;
 
 import com.scipub.model.Language;
 
@@ -39,7 +37,7 @@ public class PublicationControllerTest {
         PublicationController controller = new PublicationController();
         try {
             //TODO check conversion
-            controller.importFile(null, null);
+            //controller.importFile(null, null);
         } catch (Exception e) {
             e.printStackTrace();
         }
