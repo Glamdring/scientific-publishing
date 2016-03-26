@@ -35,6 +35,9 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.RelationTargetAuditMode;
+
 @Entity
 @NamedQueries({
         @NamedQuery(
@@ -45,6 +48,7 @@ import javax.persistence.Table;
             @NamedQuery(name = "Publication.getPublicationsOfUser",
                 query = "SELECT p FROM Publication p WHERE :user in elements(p.authors)") })
 @Table(name="publications")
+@Audited
 public class Publication extends BaseTimedEntity {
 
     @Id
@@ -58,26 +62,32 @@ public class Publication extends BaseTimedEntity {
     private Set<String> nonRegisteredAuthors = new HashSet<>();
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @Audited(targetAuditMode=RelationTargetAuditMode.NOT_AUDITED)
     private PublicationRevision currentRevision;
     
     @ManyToOne(cascade = CascadeType.ALL)
+    @Audited(targetAuditMode=RelationTargetAuditMode.NOT_AUDITED)
     private PublicationRevision currentDraft;
 
     @Enumerated(EnumType.STRING)
     private PublicationStatus status;
 
     @ManyToMany(fetch = FetchType.EAGER)
+    @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private Set<Branch> branches = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "publication_top_level_branches")
+    @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private Set<Branch> topLevelBranches = new HashSet<>();
 
     @ManyToOne
+    @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private Branch primaryBranch;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name="publication_tags")
+    @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private Set<Tag> tags = new HashSet<>();
 
     @ManyToOne

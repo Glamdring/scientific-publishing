@@ -26,6 +26,9 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.RelationTargetAuditMode;
+
 @Entity
 @Table(name = "peer_reviews")
 @NamedQueries({
@@ -35,6 +38,7 @@ import javax.persistence.Table;
         @NamedQuery(
                 name = "PeerReview.getByPublication",
                 query = "SELECT pr FROM PeerReview pr WHERE pr.publication=:publication ORDER BY pr.created DESC")})
+@Audited
 public class PeerReview extends BaseTimedEntity {
 
     @Id
@@ -65,6 +69,7 @@ public class PeerReview extends BaseTimedEntity {
     private int qualityOfPresentation;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @Audited(targetAuditMode=RelationTargetAuditMode.NOT_AUDITED)
     private PeerReviewRevision currentRevision;
 
     @Column(nullable = false)

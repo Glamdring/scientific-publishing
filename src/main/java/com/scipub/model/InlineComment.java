@@ -24,12 +24,16 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.RelationTargetAuditMode;
+
 /**
  * Inline comment valid for a particular revision of a publication
  * @author bozhanov
  */
 @Entity
 @Table(name = "inline_comments")
+@Audited
 public class InlineComment extends BaseTimedEntity {
 
     @Id
@@ -37,6 +41,7 @@ public class InlineComment extends BaseTimedEntity {
     private long id;
     
     @ManyToOne
+    @Audited(targetAuditMode=RelationTargetAuditMode.NOT_AUDITED)
     private PublicationRevision revision;
     
     @ManyToOne

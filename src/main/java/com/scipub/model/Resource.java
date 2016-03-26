@@ -25,8 +25,11 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+
 @Entity
 @Table(name="resources")
+@Audited
 public class Resource extends BaseTimedEntity {
 
     @Id

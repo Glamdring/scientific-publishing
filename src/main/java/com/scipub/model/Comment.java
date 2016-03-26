@@ -26,6 +26,9 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.RelationTargetAuditMode;
+
 /**
  * A comment at either a publication or a peer review
  * 
@@ -33,6 +36,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "comments")
+@Audited
 public class Comment extends BaseTimedEntity {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,9 +44,11 @@ public class Comment extends BaseTimedEntity {
     private long id;
 
     @ManyToOne
+    @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
     private PublicationRevision publication;
 
     @ManyToOne
+    @Audited(targetAuditMode=RelationTargetAuditMode.NOT_AUDITED)
     private PeerReviewRevision peerReview;
 
     @Lob

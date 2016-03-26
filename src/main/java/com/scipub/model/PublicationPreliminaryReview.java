@@ -27,6 +27,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+
 @Entity
 @Table(name="publication_preliminary_reviews")
 @NamedQueries({
@@ -36,6 +38,7 @@ import javax.persistence.Table;
         @NamedQuery(
                 name = "PublicationPreliminaryReview.getByPublication",
                 query = "SELECT pr FROM PublicationPreliminaryReview pr WHERE pr.publication=:publication")})
+@Audited
 public class PublicationPreliminaryReview extends BaseTimedEntity {
 
     @Id

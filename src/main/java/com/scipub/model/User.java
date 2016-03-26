@@ -34,9 +34,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.RelationTargetAuditMode;
 
 @Entity
 @Table(name="users")
+@Audited
 public class User extends BaseTimedEntity implements Serializable {
 
     private static final long serialVersionUID = 978398160453380686L;
@@ -100,6 +103,7 @@ public class User extends BaseTimedEntity implements Serializable {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_branches")
+    @Audited(targetAuditMode=RelationTargetAuditMode.NOT_AUDITED)
     private Set<Branch> branches = new HashSet<>();
 
     // deliberately no "gender" - it's irrelevant
