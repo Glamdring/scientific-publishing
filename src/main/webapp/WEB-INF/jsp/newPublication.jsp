@@ -111,6 +111,7 @@
             
             function handlePrimaryBranchOptions() {
                 $("#submissionForm input[name='scienceBranch']").change(function(){
+                	$("#primaryBranchGroup").show();
                     var input = $(this);
                     if (input.prop("checked")) {
                         $("#primaryBranch").append($("<option></option>")
@@ -131,7 +132,7 @@
             style="width: 400px;" onsubmit="fillAuthors();" action="${root}/publication/submit" method="POST">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" />
+                <input type="text" name="title" id="title" style="width: 100%;"/>
             </div>
         
         
@@ -146,6 +147,8 @@
 	         <div class="form-group">
                 <label>Content input type</label>
 
+                <!-- TODO add authore integration? -->
+                
                 <div class="radio">
                     <input type="radio" id="contentInputTypeDirect" name="contentInputType" value="direct" checked>
                     <label for="contentInputTypeDirect">Direct input</label>
@@ -196,7 +199,7 @@
 		        </script>
 	        </div>
 	       
-	        <div class="form-group">
+	        <div class="form-group" id="primaryBranchGroup" style="display: none;">
                <label for="primaryBranch">Primary branch</label>
                <select id="primaryBranch" name="primaryBranch"></select>
             </div>

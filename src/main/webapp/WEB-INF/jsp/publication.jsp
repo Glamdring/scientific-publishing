@@ -10,7 +10,10 @@
         <script type="text/javascript">
            $(document).ready(function() {
 	           $("#clarity, #novelty, #methods, #quality, #importance, #dataAnalysis").slider({
-	        	   max: 5
+	        	   max: 5,
+	        	   change: function(event, ui) {
+	        		   $(event.target).parent().find(".val").text($(this).slider("value"));   
+	        	   }
 	           });
            });
            
@@ -85,23 +88,41 @@
 	               <!-- TODO load peer review from ${ownPeerReview} -->
 		            <h3>Write a peer review</h3>
 		
-		            <label id="clarityLabel">Clarity of background and rationale</label>
-		            <div id="clarity"></div>
+		            <div>
+			            <label id="clarityLabel" class="review-sliderLabel">Clarity of background and rationale</label>
+			             <span class="val">0</span>
+     		             <div id="clarity" class="review-slider"></div>
+		            </div>
 		              
-		            <label id="importanceLabel">Field importance</label>
-		            <div id="importance"></div>
+		            <div>
+			            <label id="importanceLabel" class="review-sliderLabel">Field importance</label>
+			            <span class="val">0</span>
+			            <div id="importance" class="review-slider"></div>
+		            </div>
 		            
-		            <label id="methodsLabel">Study design and methods</label>
-		            <div id="methods"></div>
+		            <div>
+			            <label id="methodsLabel" class="review-sliderLabel">Study design and methods</label>
+			            <span class="val">0</span>
+			            <div id="methods" class="review-slider"></div>
+		            </div>
 		             
-		            <label id="noveltyLabel">Novelty of conclusions</label>
-		            <div id="novelty"></div>
+		            <div>
+			            <label id="noveltyLabel" class="review-sliderLabel">Novelty of conclusions</label>
+			            <span class="val">0</span>
+			            <div id="novelty" class="review-slider"></div>
+		            </div>
+		            
+		            <div>  
+			            <label id="qualityLabel" class="review-sliderLabel">Quality of presentation</label>
+			            <span class="val">0</span>
+			            <div id="quality" class="review-slider"></div>
+		            </div>
 		              
-		            <label id="qualityLabel">Quality of presentation</label>
-		            <div id="quality"></div>
-		              
-		            <label id="dataAnalysisLabel">Quality of data analysis</label>
-		            <div id="dataAnalysis"></div>
+		            <div>
+			            <label id="dataAnalysisLabel" class="review-sliderLabel">Quality of data analysis</label>
+			            <span class="val">0</span>
+			            <div id="dataAnalysis" class="review-slider"></div>
+		            </div>
 		              
 		            <div class="form-group" id="reviewContent">
 		                <c:set var="editorSuffix" value="1" />

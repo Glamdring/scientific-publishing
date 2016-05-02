@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.scipub.web;
+package com.scipub.web.interceptors;
 
 import javax.inject.Inject;
 import javax.servlet.http.Cookie;
@@ -29,6 +29,8 @@ import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 
 import com.scipub.model.User;
 import com.scipub.service.UserService;
+import com.scipub.web.SocialSignInAdapter;
+import com.scipub.web.UserContext;
 
 @Component
 public class AutoLoginInterceptor extends HandlerInterceptorAdapter {

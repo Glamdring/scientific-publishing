@@ -32,11 +32,11 @@ import org.springframework.web.context.request.NativeWebRequest;
 
 import com.scipub.model.User;
 import com.scipub.service.UserService;
+import com.scipub.web.util.WebUtils;
 
 @Component
 public class SocialSignInAdapter implements SignInAdapter {
 
-    private static final int COOKIE_AGE = DateTimeConstants.SECONDS_PER_WEEK;
     public static final String AUTH_TOKEN_COOKIE_NAME = "authToken";
     public static final String AUTH_TOKEN_SERIES_COOKIE_NAME = "authSeries";
 
@@ -66,16 +66,10 @@ public class SocialSignInAdapter implements SignInAdapter {
     }
 
     public void addPermanentCookies(User user, HttpServletResponse response) {
-        Cookie authTokenCookie = new Cookie(AUTH_TOKEN_COOKIE_NAME, user.getLoginToken());
-        authTokenCookie.setMaxAge(COOKIE_AGE);
-        authTokenCookie.setPath("/");
-        authTokenCookie.setDomain(".computoser.com");
+        Cookie authTokenCookie = WebUtils.createCookie(user, AUTH_TOKEN_COOKIE_NAME, user.getLoginToken());
         response.addCookie(authTokenCookie);
 
-        Cookie seriesCookie = new Cookie(AUTH_TOKEN_SERIES_COOKIE_NAME, user.getLoginSeries());
-        seriesCookie.setMaxAge(COOKIE_AGE);
-        seriesCookie.setPath("/");
-        seriesCookie.setDomain(".computoser.com");
+        Cookie seriesCookie = WebUtils.createCookie(user, AUTH_TOKEN_SERIES_COOKIE_NAME, user.getLoginSeries());
         response.addCookie(seriesCookie);
     }
 }

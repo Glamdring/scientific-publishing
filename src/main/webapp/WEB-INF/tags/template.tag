@@ -133,8 +133,10 @@
 			</div>
 			<aside class="fr ta-right">
 				 <p>
-                    Welcome
-                    <a href="${root}/signin">Sign in</a>
+                    Welcome <a href="${root}/profile">${userContext.user.firstName}</a>
+                    <c:if test="${!userLoggedIn}">
+                        <a href="${root}/signin">Sign in</a>
+                    </c:if>
                      <c:if test="${userLoggedIn}">
                         <a href="${root}/logout">Logout</a>
                      </c:if>
@@ -175,7 +177,7 @@
 							</nav>
 						</div>
 						<div class="fr header-nav-toggle">
-							<a href="/about"><span>About</span><span class="not-small">&nbsp;Sceination</span>
+							<a href="/about"><span>About Sceination</span>
 								<span class="arrow-right-header"></span></a>
 						</div>
 					</div>
@@ -187,7 +189,7 @@
 				<aside class="column left">
 				    <nav>
 						<div class="nav main">
-							<a href="/" class="all nav-icon active"><span class="title">AllPosts</span></a>
+							<a href="/" class="all active"><span class="title">All Posts</span></a>
 						</div>
 						<div class="nav topics rel">
 							<h6 class="block-header dib">Topics</h6>

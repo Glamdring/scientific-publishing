@@ -210,7 +210,7 @@ public class AuthenticationController {
         Cookie cookie = WebUtils.getCookie(request, SocialSignInAdapter.AUTH_TOKEN_COOKIE_NAME);
         if (cookie != null) {
             cookie.setMaxAge(0);
-            cookie.setDomain(".computoser.com");
+            cookie.setDomain(com.scipub.web.util.WebUtils.ROOT_DOMAIN);
             cookie.setPath("/");
             response.addCookie(cookie);
         }
@@ -218,7 +218,7 @@ public class AuthenticationController {
         cookie = WebUtils.getCookie(request, SocialSignInAdapter.AUTH_TOKEN_SERIES_COOKIE_NAME);
         if (cookie != null) {
             cookie.setMaxAge(0);
-            cookie.setDomain(".computoser.com");
+            cookie.setDomain(com.scipub.web.util.WebUtils.ROOT_DOMAIN);
             cookie.setPath("/");
             response.addCookie(cookie);
         }
