@@ -11,6 +11,9 @@
         <script src="${staticRoot}/js/jquery.iframe.transport.js"></script>
         <script src="${staticRoot}/js/jquery.fileupload.js"></script>
         
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+        
         <script type="text/javascript">
 	        $(function () {
 			    $('#fileimport').fileupload({
@@ -22,6 +25,8 @@
 			});
 			
             $(document).ready(function() {
+            	$("#language").select2({ width: '100%' });
+            	
                 $("#authors").fcbkcomplete({
                     json_url: "${root}/users/autocompleteList",
                     cache: false,
@@ -194,14 +199,17 @@
 		        <script type="text/javascript">
 		          $(document).ready(function() {
 		              // this snippet is here, because if it's put in the header, the branches are not yet loaded
-		              handlePrimaryBranchOptions();
+		              // timeout, as loading the branches is also postponed
+		              setTimeout(function() {
+		            	  handlePrimaryBranchOptions();
+		              }, 2000);
 		          });
 		        </script>
 	        </div>
 	       
 	        <div class="form-group" id="primaryBranchGroup" style="display: none;">
                <label for="primaryBranch">Primary branch</label>
-               <select id="primaryBranch" name="primaryBranch"></select>
+               <select id="primaryBranch" name="primaryBranch" style="width: 100%;"></select>
             </div>
             
             <div class="checkbox"> 
