@@ -46,6 +46,7 @@ import com.scipub.tools.BranchJsonGenerator;
 import com.scipub.util.FormatConverter;
 import com.scipub.util.FormatConverter.Format;
 import com.scipub.web.util.Constants;
+import com.scipub.web.util.RequireUserLoggedIn;
 
 @Controller
 @RequestMapping("/publication")
@@ -76,7 +77,9 @@ public class PublicationController {
     public void init() throws Exception {
         branchesJson = BranchJsonGenerator.getBranchJson(false).replace("'", "\\'");
     }
+    
     @RequestMapping("/new")
+    @RequireUserLoggedIn
     public String newPublication(HttpSession session) {
         // cleanup any previously uploaded file
         session.removeAttribute(LAST_UPLOADED_FILE_KEY);
@@ -84,6 +87,7 @@ public class PublicationController {
     }
     
     @RequestMapping("/submit")
+    @RequireUserLoggedIn
     public String submit(PublicationSubmissionDto dto, HttpSession session) {
         fillFileDetails(dto, session);
         String uri = submitPublication(dto);
@@ -98,6 +102,7 @@ public class PublicationController {
     
     @RequestMapping("/saveDraft")
     @ResponseBody
+    @RequireUserLoggedIn
     public String saveDraft(PublicationSubmissionDto dto, HttpSession session) {
         fillFileDetails(dto, session);
         return submitDraft(dto);

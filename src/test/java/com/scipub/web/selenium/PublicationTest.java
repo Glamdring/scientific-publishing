@@ -17,12 +17,14 @@
  */
 package com.scipub.web.selenium;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
 public class PublicationTest extends BaseTest {
 
     @Test
+    @Ignore
     public void newPublicationTest() {
         webDriver.get(getWebsiteUrl());
         webDriver.findElement(By.id("title")).sendKeys("Title");

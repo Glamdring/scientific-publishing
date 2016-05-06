@@ -60,6 +60,10 @@
             <mvc:mapping path="/**" />
             <ref bean="autoLoginInterceptor" />
         </mvc:interceptor>
+         <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <ref bean="requireLoggedInUserInterceptor" />
+        </mvc:interceptor>
     </mvc:interceptors>
 
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">

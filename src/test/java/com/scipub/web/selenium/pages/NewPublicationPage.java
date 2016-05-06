@@ -17,6 +17,8 @@
  */
 package com.scipub.web.selenium.pages;
 
+import org.openqa.selenium.support.FindBy;
+
 public class NewPublicationPage {
 
     @FindBy(id = "title")

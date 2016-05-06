@@ -44,13 +44,15 @@ public class BaseTest {
         profile.setPreference("datareporting.healthreport.uploadEnabled", false);
         profile.setPreference("datareporting.healthreport.service.enabled", false);
         profile.setPreference("datareporting.healthreport.service.firstRun", false);
-        webDriver = new FirefoxDriver(profile);
+        webDriver = new FirefoxDriver(profile); //TODO headless? phantom js?
         webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @After
     public void tearDown() {
-        webDriver.quit();
+        if (webDriver != null) {
+            webDriver.quit();
+        }
     }
     
     protected String getWebsiteUrl() {

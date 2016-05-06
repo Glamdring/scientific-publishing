@@ -344,7 +344,14 @@
             <version>2.44.0</version>
             <scope>test</scope>
         </dependency>
-        
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+            <scope>test</scope> <!-- needed by Selenium -->
+        </dependency>
+
+
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>

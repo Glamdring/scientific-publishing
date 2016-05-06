@@ -23,7 +23,6 @@ import java.net.InetSocketAddress;
 import java.util.Collections;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import lbms.plugins.mldht.DHTConfiguration;
@@ -43,9 +42,8 @@ import lbms.plugins.mldht.kad.messages.GetPeersRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class DHTService {
 
     private static final Logger logger = LoggerFactory.getLogger(DHTService.class);
