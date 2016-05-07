@@ -52,8 +52,8 @@
 			</header>
 			<div>
 				<div>
-					<p class="expandable" itemprop="text">${publication.currentRevision.publicationAbstract} 
-					     <span class="read-more light-gray">Read more</span>
+					<p class="expandable" itemprop="text">
+					   ${publication.currentRevision.publicationAbstract} 
 					</p>
 					<aside class="meta-action dib">
 						<div class="tooltip-hover dib rel">
@@ -77,7 +77,8 @@
                 <!-- Limit the text to a fixed-height portion -->				
 				<c:if test="${publication.currentRevision.contentSource == 'EXTERNAL'}">
 				    <div id="linkHolder">
-				        <!-- TODO icon --><a href="${publication.currentRevision.contentLink}" target="_blank" rel="noopener noreferer">Read publication</a>
+				        <!-- TODO icon -->
+				        <a href="${publication.currentRevision.contentLink}" target="_blank" rel="noopener noreferer" class="link-hover">Read publication</a>
 				    </div>
 				</c:if>
 				<div id="pdfPreview"></div>

@@ -852,7 +852,7 @@ button.yellow.w-full {
     transition: color 0.15s ease-in-out 0s;
 }
 .link-hover:visited {
-    color: #8e3dd4;
+    color: #0371a1;
 }
 .link-hover:visited:hover {
     color: #7731b5;
@@ -1530,7 +1530,7 @@ article.main {
 .review-slider {
 	margin-bottom: 5px;
 }
-.pdfobject-container #pdfPreview { 
+.pdfobject-container { 
 	height: 500px;
 }
 .heavy {
