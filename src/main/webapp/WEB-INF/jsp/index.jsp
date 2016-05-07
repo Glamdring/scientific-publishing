@@ -15,7 +15,7 @@
          <c:forEach items="${entry.value}" var="publication">
           <li>
             <article class="rel anonymous" itemtype="http://schema.org/Question" itemscope="">
-			<section class="question">
+			<section class="publication">
 					<header>
 				        <span class="branches">
                            <c:forEach items="${publication.branches}" var="branch">

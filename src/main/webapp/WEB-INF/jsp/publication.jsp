@@ -7,6 +7,7 @@
 
 	<jsp:attribute name="header">
         <script type="text/javascript" src="${staticRoot}/js/jQuery.highligther.js"></script>
+        <script type="text/javascript" src="${staticRoot}/js/pdfobject.min.js"></script>
         <script type="text/javascript">
            $(document).ready(function() {
 	           $("#clarity, #novelty, #methods, #quality, #importance, #dataAnalysis").slider({
@@ -15,6 +16,12 @@
 	        		   $(event.target).parent().find(".val").text($(this).slider("value"));   
 	        	   }
 	           });
+	           
+	           <c:if test="${publication.currentRevision.contentSource == 'EXTERNAL'}">
+	              <c:if test="${publication.currentRevision.contentLink.contains('pdf')}">
+                     PDFObject.embed("${publication.currentRevision.contentLink}", "#pdfPreview");
+                  </c:if>
+	           </c:if>
            });
            
            function postPreliminaryReview(acceptable) {
@@ -28,7 +35,7 @@
 	<jsp:body>
 	
     <article class="rel anonymous" itemtype="http://schema.org/Question" itemscope="">
-	   <section class="question">
+	   <section class="publication">
 			<header>
 		        <span class="branches">
                          <c:forEach items="${publication.branches}" var="branch">
@@ -66,84 +73,90 @@
 						</div>
 					</aside>
 				</div>
+
+                <!-- Limit the text to a fixed-height portion -->				
+				<c:if test="${publication.currentRevision.contentSource == 'EXTERNAL'}">
+				    <div id="linkHolder">
+				        <!-- TODO icon --><a href="${publication.currentRevision.contentLink}" target="_blank" rel="noopener noreferer">Read publication</a>
+				    </div>
+				</c:if>
+				<div id="pdfPreview"></div>
 			</div>
 		  </section>
-		  </article>
+	  </article>
 		 
-		  <!-- Limit the text to a fixed-height portion -->
-		 
-		  <c:if test="${userLoggedIn}">
-		      <c:if test="${ownPreliminaryReview == null}">
-				  <section>
-		              <h3>Quick assessment</h3>
-		              Does this publication meet the basic criteria for scientific work?
-		              <input type="hidden" name="publicationUri" id="${param.uri}" />
-		              <input type="button" value="Yes" onclick="postPreliminaryReview(true);"/>
-		              <input type="button" value="No" onclick="postPreliminaryReview(false)"/>
-		          </section>
-	          </c:if>
-			  
+	  <c:if test="${userLoggedIn}">
+	      <c:if test="${ownPreliminaryReview == null}">
 			  <section>
-	            <form>
-	               <!-- TODO load peer review from ${ownPeerReview} -->
-		            <h3>Write a peer review</h3>
-		
-		            <div>
-			            <label id="clarityLabel" class="review-sliderLabel">Clarity of background and rationale</label>
-			             <span class="val">0</span>
-     		             <div id="clarity" class="review-slider"></div>
-		            </div>
-		              
-		            <div>
-			            <label id="importanceLabel" class="review-sliderLabel">Field importance</label>
-			            <span class="val">0</span>
-			            <div id="importance" class="review-slider"></div>
-		            </div>
-		            
-		            <div>
-			            <label id="methodsLabel" class="review-sliderLabel">Study design and methods</label>
-			            <span class="val">0</span>
-			            <div id="methods" class="review-slider"></div>
-		            </div>
-		             
-		            <div>
-			            <label id="noveltyLabel" class="review-sliderLabel">Novelty of conclusions</label>
-			            <span class="val">0</span>
-			            <div id="novelty" class="review-slider"></div>
-		            </div>
-		            
-		            <div>  
-			            <label id="qualityLabel" class="review-sliderLabel">Quality of presentation</label>
-			            <span class="val">0</span>
-			            <div id="quality" class="review-slider"></div>
-		            </div>
-		              
-		            <div>
-			            <label id="dataAnalysisLabel" class="review-sliderLabel">Quality of data analysis</label>
-			            <span class="val">0</span>
-			            <div id="dataAnalysis" class="review-slider"></div>
-		            </div>
-		              
-		            <div class="form-group" id="reviewContent">
-		                <c:set var="editorSuffix" value="1" />
-		                <c:set var="includeResources" value="true" />
-		                <label>Review content</label>
-		                <%@include file="editor.jsp"%>
-		                <input type="hidden" name="content" id="content" />
-		            </div>
-		              
-		            <input type="checkbox" id="conflictOfInterestsDeclaration"><label for="conflictOfInterestsDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
-		            
-	                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val());"/>
-	             </form>
-			  </section>
-			  - invite reviewers
-		  </c:if>
+	              <h3>Quick assessment</h3>
+	              Does this publication meet the basic criteria for scientific work?
+	              <input type="hidden" name="publicationUri" id="${param.uri}" />
+	              <input type="button" value="Yes" onclick="postPreliminaryReview(true);"/>
+	              <input type="button" value="No" onclick="postPreliminaryReview(false)"/>
+	          </section>
+          </c:if>
 		  
-		  <c:if test="${!userLoggedIn}">
-		      <a href="${root}/signin">Want to leave a review? Sign up</a>
-		  </c:if>
-		  
+		  <section>
+            <form>
+               <!-- TODO load peer review from ${ownPeerReview} -->
+	            <h3>Write a peer review</h3>
+	
+	            <div>
+		            <label id="clarityLabel" class="review-sliderLabel">Clarity of background and rationale</label>
+		             <span class="val">0</span>
+    		             <div id="clarity" class="review-slider"></div>
+	            </div>
+	              
+	            <div>
+		            <label id="importanceLabel" class="review-sliderLabel">Field importance</label>
+		            <span class="val">0</span>
+		            <div id="importance" class="review-slider"></div>
+	            </div>
+	            
+	            <div>
+		            <label id="methodsLabel" class="review-sliderLabel">Study design and methods</label>
+		            <span class="val">0</span>
+		            <div id="methods" class="review-slider"></div>
+	            </div>
+	             
+	            <div>
+		            <label id="noveltyLabel" class="review-sliderLabel">Novelty of conclusions</label>
+		            <span class="val">0</span>
+		            <div id="novelty" class="review-slider"></div>
+	            </div>
+	            
+	            <div>  
+		            <label id="qualityLabel" class="review-sliderLabel">Quality of presentation</label>
+		            <span class="val">0</span>
+		            <div id="quality" class="review-slider"></div>
+	            </div>
+	              
+	            <div>
+		            <label id="dataAnalysisLabel" class="review-sliderLabel">Quality of data analysis</label>
+		            <span class="val">0</span>
+		            <div id="dataAnalysis" class="review-slider"></div>
+	            </div>
+	              
+	            <div class="form-group" id="reviewContent">
+	                <c:set var="editorSuffix" value="1" />
+	                <c:set var="includeResources" value="true" />
+	                <label>Review content</label>
+	                <%@include file="editor.jsp"%>
+	                <input type="hidden" name="content" id="content" />
+	            </div>
+	              
+	            <input type="checkbox" id="conflictOfInterestsDeclaration"><label for="conflictOfInterestsDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
+	            
+                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val());"/>
+             </form>
+		  </section>
+		  - invite reviewers
+	  </c:if>
+	  
+	  <c:if test="${!userLoggedIn}">
+	      <a href="${root}/signin">Want to leave a review? Sign up</a>
+	  </c:if>
+
        <!-- content #end -->
 </jsp:body>
 </t:template>

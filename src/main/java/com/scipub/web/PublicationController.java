@@ -158,6 +158,7 @@ public class PublicationController {
     @RequestMapping("/importFile")
     @ResponseBody
     public UploadResult importFile(@RequestParam MultipartFile file, HttpSession session) throws IOException {
+        //TODO store uploaded original?
         String extension = Files.getFileExtension(file.getOriginalFilename());
         logger.info("Received file " + file.getOriginalFilename() + " of type " + file.getContentType() + " and size "
                 + file.getSize() + " and ext " + extension);

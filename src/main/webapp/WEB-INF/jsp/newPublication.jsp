@@ -64,13 +64,13 @@
                 $("input[name='contentInputType']").change(function() {
                     var selected = $('input[name=contentInputType]:checked').val();
                     if (selected == "direct") {
-                        $("#contentEditor,#fileImport").show();
+                        $("#contentEditor,#fileImport,#pushToArxivGroup").show();
                         $("#externalContent,#fileUpload").hide();
                     } else if (selected == "link") {
                         $("#externalContent").show();
-                        $("#contentEditor,#fileImport,#fileUpload").hide();
+                        $("#contentEditor,#fileImport,#fileUpload,#pushToArxivGroup").hide();
                     } else if (selected == "upload") {
-                        $("#fileUpload").show();
+                        $("#fileUpload,#pushToArxivGroup").show();
                         $("#contentEditor,#fileImport,#externalContent").hide();
                     }
                 });
@@ -152,21 +152,19 @@
 	         <div class="form-group">
                 <label>Content input type</label>
 
-                <!-- TODO add authore integration? -->
+                <div class="radio">
+                    <input type="radio" id="contentInputTypeLink" name="contentInputType" value="link" checked>
+                    <label for="contentInputTypeLink">External Link (e.g. <a href="https://authorea.com">Authorea</a>, <a href="https://docs.google.com/">Google docs</a>, <a href="https://academia.edu">Academia.edu</a>)</label>
+                </div>
                 
                 <div class="radio">
-                    <input type="radio" id="contentInputTypeDirect" name="contentInputType" value="direct" checked>
+                    <input type="radio" id="contentInputTypeDirect" name="contentInputType" value="direct">
                     <label for="contentInputTypeDirect">Direct input</label>
                 </div>
                 
                 <div class="radio">
                     <input type="radio" id="contentInputTypeUpload" name="contentInputType" value="upload">
-                    <label for="contentInputTypeUpload">Upload</label>
-                </div>
-                
-                <div class="radio">
-                    <input type="radio" id="contentInputTypeLink" name="contentInputType" value="link">
-                    <label for="contentInputTypeLink">External Link</label>
+                    <label for="contentInputTypeUpload">Upload (will be converted to Markdown)</label>
                 </div>
             </div>
             
@@ -175,7 +173,7 @@
                 <input id="fileimport" type="file" name="file" data-url="${root}/publication/importFile"><br />
             </div>
             
-	        <div class="form-group" id="contentEditor">
+	        <div class="form-group" id="contentEditor" style="display: none;">
 		        <c:set var="editorSuffix" value="2" />
 		        <c:set var="includeResources" value="false" />
 		        <label>Content</label>
@@ -212,10 +210,9 @@
                <select id="primaryBranch" name="primaryBranch" style="width: 100%;"></select>
             </div>
             
-            <div class="checkbox"> 
-               <div class="checkbox">
-	               <input type="checkbox" id="pushToArxiv" /><label for="pushToArxiv">Push to arxiv</label>
-               </div>
+            <div class="form-groups" id="pushToArxivGroup" style="display: none;"> 
+               <input type="checkbox" id="pushToArxiv" />
+               <label for="pushToArxiv">Push to arxiv</label>
 	        </div>
 	
             <div class="form-group">

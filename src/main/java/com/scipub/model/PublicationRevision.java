@@ -19,6 +19,8 @@ package com.scipub.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -37,6 +39,9 @@ public class PublicationRevision extends BaseTimedEntity {
     @ManyToOne
     private Publication publication;
 
+    @Enumerated(EnumType.STRING)
+    private ContentSource contentSource;
+    
     @ManyToOne
     private User submitter;
     
@@ -139,6 +144,14 @@ public class PublicationRevision extends BaseTimedEntity {
 
     public void setContentLink(String contentLink) {
         this.contentLink = contentLink;
+    }
+
+    public ContentSource getContentSource() {
+        return contentSource;
+    }
+
+    public void setContentSource(ContentSource contentSource) {
+        this.contentSource = contentSource;
     }
 
     @Override

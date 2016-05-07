@@ -55,6 +55,7 @@ import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
 import com.scipub.dao.jpa.BranchDao;
 import com.scipub.model.Branch;
+import com.scipub.model.ContentSource;
 import com.scipub.model.Language;
 import com.scipub.model.PublicationStatus;
 import com.scipub.model.Publication;
@@ -383,6 +384,7 @@ public class ArxivImporter {
                     if (type != null && type.equals("application/pdf")) {
                         currentPublication.getCurrentRevision().setContentLink(
                                 currentAttributes.getValue(currentAttributes.getIndex("href")));
+                        currentPublication.getCurrentRevision().setContentSource(ContentSource.EXTERNAL);
                     }
                 } else if (currentElement.equals("doi")) {
                     currentPublication.setDoi(value);

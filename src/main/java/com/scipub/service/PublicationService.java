@@ -36,6 +36,7 @@ import com.scipub.dao.jpa.BranchDao;
 import com.scipub.dao.jpa.PublicationDao;
 import com.scipub.dto.PublicationSubmissionDto;
 import com.scipub.model.Branch;
+import com.scipub.model.ContentSource;
 import com.scipub.model.Publication;
 import com.scipub.model.PublicationRevision;
 import com.scipub.model.PublicationSource;
@@ -218,6 +219,8 @@ public class PublicationService {
         revision.setTitle(dto.getTitle());
         revision.setRevision(revisionIdx);
         revision.setSubmitter(user);
+        revision.setContentLink(dto.getContentLink());
+        revision.setContentSource(dto.getContentLink() != null ? ContentSource.EXTERNAL : ContentSource.DIRECT_INPUT);
         
         return dao.persist(revision);
     }
