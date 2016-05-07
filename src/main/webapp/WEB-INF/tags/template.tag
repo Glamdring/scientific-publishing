@@ -166,7 +166,7 @@
 					<div class="inner clearfix" style="">
 						<div class="fl">
 							<nav role="navigation">
-							  <div id="feed-tabs" class="inner">
+							  <div id="menu-tabs" class="inner">
 								<ul class="clearfix">
 									<li><a class="tab heavy<c:if test="${currentPage == 'home'}"> active</c:if>" href="${root}/">Home</a></li>
 		                            <li><a class="tab heavy<c:if test="${currentPage == 'branches'}"> active</c:if>" href="${root}/branches">Branches</a></li>		                                
