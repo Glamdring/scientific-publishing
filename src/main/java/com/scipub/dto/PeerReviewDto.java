@@ -26,7 +26,7 @@ public class PeerReviewDto {
 
     private int clarityOfBackground;
     
-    private int importance;
+    private int significance;
     
     private int studyDesignAndMethods;
     
@@ -64,12 +64,12 @@ public class PeerReviewDto {
         this.clarityOfBackground = clarityOfBackground;
     }
 
-    public int getImportance() {
-        return importance;
+    public int getSignificance() {
+        return significance;
     }
 
-    public void setImportance(int importance) {
-        this.importance = importance;
+    public void setSignificance(int importance) {
+        this.significance = importance;
     }
 
     public int getStudyDesignAndMethods() {
@@ -128,7 +128,7 @@ public class PeerReviewDto {
         result = prime * result + (conflictOfInterestsDeclaration ? 1231 : 1237);
         result = prime * result + ((content == null) ? 0 : content.hashCode());
         result = prime * result + dataAnalysis;
-        result = prime * result + importance;
+        result = prime * result + significance;
         result = prime * result + noveltyOfConclusions;
         result = prime * result + ((publicationUri == null) ? 0 : publicationUri.hashCode());
         result = prime * result + qualityOfPresentation;
@@ -157,7 +157,7 @@ public class PeerReviewDto {
             return false;
         if (dataAnalysis != other.dataAnalysis)
             return false;
-        if (importance != other.importance)
+        if (significance != other.significance)
             return false;
         if (noveltyOfConclusions != other.noveltyOfConclusions)
             return false;
@@ -181,7 +181,7 @@ public class PeerReviewDto {
     @Override
     public String toString() {
         return "PeerReviewDto [uri=" + uri + ", publicationUri=" + publicationUri + ", clarityOfBackground="
-                + clarityOfBackground + ", importance=" + importance + ", studyDesignAndMethods="
+                + clarityOfBackground + ", importance=" + significance + ", studyDesignAndMethods="
                 + studyDesignAndMethods + ", dataAnalysis=" + dataAnalysis + ", noveltyOfConclusions="
                 + noveltyOfConclusions + ", qualityOfPresentation=" + qualityOfPresentation + ", content=" + content
                 + ", conflictOfInterestsDeclaration=" + conflictOfInterestsDeclaration + "]";

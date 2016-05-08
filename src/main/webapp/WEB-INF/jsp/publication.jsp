@@ -10,7 +10,7 @@
         <script type="text/javascript" src="${staticRoot}/js/pdfobject.min.js"></script>
         <script type="text/javascript">
            $(document).ready(function() {
-	           $("#clarity, #novelty, #methods, #quality, #importance, #dataAnalysis").slider({
+	           $("#clarity, #novelty, #methods, #quality, #significance, #dataAnalysis").slider({
 	        	   max: 5,
 	        	   change: function(event, ui) {
 	        		   $(event.target).parent().find(".val").text($(this).slider("value"));   
@@ -80,8 +80,11 @@
 				        <!-- TODO icon -->
 				        <a href="${publication.currentRevision.contentLink}" target="_blank" rel="noopener noreferer" class="link-hover">Read publication</a>
 				    </div>
+				    <div id="pdfPreview"></div>
+				    <c:if test="!${publication.currentRevision.contentLink.contains('pdf')}">
+				        <iframe src="${publication.currentRevision.contentLink}"></iframe>
+				    </c:if>
 				</c:if>
-				<div id="pdfPreview"></div>
 			</div>
 		  </section>
 	  </article>
@@ -109,9 +112,9 @@
 	            </div>
 	              
 	            <div>
-		            <label id="importanceLabel" class="review-sliderLabel">Field importance</label>
+		            <label id="significanceLabel" class="review-sliderLabel">Significance to the field</label>
 		            <span class="val">0</span>
-		            <div id="importance" class="review-slider"></div>
+		            <div id="significance" class="review-slider"></div>
 	            </div>
 	            
 	            <div>

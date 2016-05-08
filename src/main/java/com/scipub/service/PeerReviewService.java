@@ -122,7 +122,7 @@ public class PeerReviewService {
         PeerReviewDto dto = new PeerReviewDto();
         dto.setClarityOfBackground(peerReview.getClarityOfBackground());
         dto.setDataAnalysis(peerReview.getDataAnalysis());
-        dto.setImportance(peerReview.getImportance());
+        dto.setSignificance(peerReview.getSignificance());
         dto.setNoveltyOfConclusions(peerReview.getNoveltyOfConclusions());
         dto.setQualityOfPresentation(peerReview.getQualityOfPresentation());
         dto.setStudyDesignAndMethods(peerReview.getStudyDesignAndMethods());
@@ -147,7 +147,7 @@ public class PeerReviewService {
         review.setClarityOfBackground(dto.getClarityOfBackground());
         review.setDataAnalysis(dto.getDataAnalysis());
         review.setNoveltyOfConclusions(dto.getNoveltyOfConclusions());
-        review.setImportance(dto.getImportance());
+        review.setSignificance(dto.getSignificance());
         review.setQualityOfPresentation(dto.getQualityOfPresentation());
         review.setStudyDesignAndMethods(dto.getStudyDesignAndMethods());
         review.setConflictOfInterestsDeclaration(dto.isConflictOfInterestsDeclaration());

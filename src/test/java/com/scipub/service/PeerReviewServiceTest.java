@@ -75,7 +75,7 @@ public class PeerReviewServiceTest {
         dto.setClarityOfBackground(1);
         dto.setContent(content);
         dto.setDataAnalysis(1);
-        dto.setImportance(1);
+        dto.setSignificance(1);
         dto.setNoveltyOfConclusions(1);
         dto.setQualityOfPresentation(1);
         dto.setPublicationUri(publicationUri);
@@ -90,7 +90,7 @@ public class PeerReviewServiceTest {
         assertThat(entity.getClarityOfBackground(), is(1));
         assertThat(entity.getDataAnalysis(), is(1));
         assertThat(entity.getNoveltyOfConclusions(), is(1));
-        assertThat(entity.getImportance(), is(1));
+        assertThat(entity.getSignificance(), is(1));
         assertThat(entity.getQualityOfPresentation(), is(1));
         assertThat(entity.getStudyDesignAndMethods(), is(1));
         assertThat(entity.getCurrentRevision().getContent(), is(content));

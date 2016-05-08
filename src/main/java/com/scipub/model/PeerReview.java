@@ -54,7 +54,7 @@ public class PeerReview extends BaseTimedEntity {
     private int clarityOfBackground;
 
     @Column(nullable = false)
-    private int importance;
+    private int significance;
 
     @Column(nullable = false)
     private int studyDesignAndMethods;
@@ -107,12 +107,12 @@ public class PeerReview extends BaseTimedEntity {
         this.clarityOfBackground = clarityOfBackground;
     }
 
-    public int getImportance() {
-        return importance;
+    public int getSignificance() {
+        return significance;
     }
 
-    public void setImportance(int importance) {
-        this.importance = importance;
+    public void setSignificance(int significance) {
+        this.significance = significance;
     }
 
     public int getStudyDesignAndMethods() {
