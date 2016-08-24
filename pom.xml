@@ -17,8 +17,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Spring -->
-        <spring-framework.version>4.2.1.RELEASE</spring-framework.version>
-        <spring-data-jpa.version>1.7.1.RELEASE</spring-data-jpa.version>
+        <spring-framework.version>4.3.2.RELEASE</spring-framework.version>
+        <spring-data-jpa.version>1.10.2.RELEASE</spring-data-jpa.version>
 
 
         <!-- Java EE / Java SE dependencies -->
@@ -28,7 +28,7 @@
         <jaxb-impl.version>2.2.7</jaxb-impl.version>
 
         <!-- Hibernate / JPA -->
-        <hibernate.version>5.1.0.Final</hibernate.version>
+        <hibernate.version>5.2.2.Final</hibernate.version>
 
         <!-- Bean validation -->
         <hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
