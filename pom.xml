@@ -34,7 +34,6 @@
         <hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
 
         <!-- Database access -->
-        <tomcat-jdbc.version>7.0.42</tomcat-jdbc.version>
         <ehcache.version>2.6.10</ehcache.version>
         <hsqldb.version>2.3.2</hsqldb.version>
 
@@ -59,7 +58,7 @@
         <webjars-jquery.version>2.0.3-1</webjars-jquery.version>
         <dandelion.version>0.10.1</dandelion.version>
 
-        <mysql.version>5.1.22</mysql.version>
+        <mysql.version>5.1.39</mysql.version>
         <argLine>-Dfile.encoding=${project.build.sourceEncoding}</argLine>
     </properties>
 
@@ -236,8 +235,6 @@
         </dependency>
 
         <!-- Databases - Uses HSQL by default -->
-        <!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> <version>${mysql.version}</version> 
-            </dependency> -->
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
@@ -245,17 +242,23 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- For MySql only -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
+        
         <!-- HIBERNATE -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${hibernate.version}</version>
+            <exclusions>
+            	<exclusion>
+            		<artifactId>el-api</artifactId>
+            		<groupId>javax.el</groupId>
+            	</exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -392,13 +395,13 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/Vuze_5501-31_pluginapi.jar</systemPath>
         </dependency>
-        <dependency>
+        <!-- dependency>
             <groupId>vuze</groupId>
             <artifactId>Vuze_5501-31</artifactId>
             <version>5501-31</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/Vuze_5501-31.jar</systemPath>
-        </dependency>
+        </dependency-->
 
     </dependencies>
     <dependencyManagement>
