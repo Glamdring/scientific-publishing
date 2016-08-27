@@ -10,6 +10,12 @@
         <script type="text/javascript" src="${staticRoot}/js/pdfobject.min.js"></script>
         <script type="text/javascript">
            $(document).ready(function() {
+        	   var converter = new showdown.Converter();
+        	   $(".review-content-output").each(function(idx, elem) {
+        		   var html = converter.makeHtml($(elem).html())
+        		   $(elem).html(html);
+        	   })
+        	   
 	           $("#clarity, #novelty, #methods, #quality, #significance, #dataAnalysis").slider({
 	        	   max: 5,
 	        	   change: function(event, ui) {
@@ -44,8 +50,7 @@
 	   <article class="clearfix">
                   <h2><a href="${root}/publication?uri=${publication.uri}">${publication.currentRevision.title}</a></h2>
                   <div class="post-date">
-                      <time datetime="2015-06-27T04:59:20.982Z" content="2015-06-27T04:59:20.982Z"
-                                itemprop="datePublished" class="">3 hrs</time>
+                      <time datetime="${publication.created}" class="timeago"><javatime:format value="${publication.created}" style="MM" /></time>
                        | Published by:
                        <c:forEach items="${publication.authors}" var="author"> 
                           <strong><a href="TODO" title="TODO" rel="author">${author.firstName} ${author.lastName}</a></strong>
@@ -54,7 +59,7 @@
                           <strong><a href="TODO" title="TODO" rel="author">${author}</a></strong>
                        </c:forEach>
                        
-                       <a href="">${publication.reviews} reviews</a></span>
+                       <a href="">${publication.reviews} review(s)</a></span>
                   </div>
                   <span class="branches">
                      <c:forEach items="${publication.branches}" var="branch">
@@ -112,7 +117,7 @@
                 <a href="">${peerReview.reviewer.displayName}</a>
                 <span> ..time | <!-- TODO vote --></span>
               </h4>
-              <p>${peerReview.content}</p>
+              <p class="review-content-output">${peerReview.content}</p>
             </div>
           </article>
         </c:forEach>

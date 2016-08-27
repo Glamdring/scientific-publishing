@@ -16,8 +16,7 @@
               <article class="clearfix">
                   <h2><a href="${root}/publication?uri=${publication.uri}">${publication.currentRevision.title}</a></h2>
                   <div class="post-date">
-                      <time datetime="2015-06-27T04:59:20.982Z" content="2015-06-27T04:59:20.982Z"
-                                itemprop="datePublished" class="">3 hrs</time>
+                      <time datetime="${publication.created}" class="timeago"><javatime:format value="${publication.created}" style="MM" /></time>
                        | Published by:
                        <c:forEach items="${publication.authors}" var="author"> 
                           <strong><a href="TODO" title="TODO" rel="author">${author.displayName}</a></strong>

@@ -55,7 +55,8 @@
 
 <script type="text/javascript" src="${staticRoot}/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${staticRoot}/js/placeholders.min.js"></script>
-
+<script type="text/javascript" src="${staticRoot}/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.3/showdown.min.js"></script>
 
 <link rel="canonical" href="TODO" />
 
@@ -94,6 +95,9 @@
 				//window.location.href = "${root}/logout";
 			}
 		});
+		// Display original dates older than 1 year
+		jQuery.timeago.settings.cutoff = 1000*60*60*24 * 365;
+		jQuery("time.timeago").timeago();
 	});
 </script>
 
