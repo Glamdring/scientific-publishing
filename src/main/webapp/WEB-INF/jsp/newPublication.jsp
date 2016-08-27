@@ -37,7 +37,7 @@
                     addontab: true,
                     addoncomma: true,
                     addonblur: true,
-                    maxitems: 5,
+                    maxitems: 7,
                     bricket: false,
                     width: "auto"
                 });
@@ -133,11 +133,10 @@
     <jsp:body>
         <h1 class="page_head">Publication</h1>
         
-        <form role="form" id="submissionForm" class="post-form" 
-            style="width: 400px;" onsubmit="fillAuthors();" action="${root}/publication/submit" method="POST">
+        <form role="form" id="submissionForm" onsubmit="fillAuthors();" action="${root}/publication/submit" method="POST">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" style="width: 100%;"/>
+                <input type="text" name="title" id="title" class="form-control input-lg" style="width: 100%;"/>
             </div>
         
         
@@ -153,17 +152,17 @@
                 <label>Content input type</label>
 
                 <div class="radio">
-                    <input type="radio" id="contentInputTypeLink" name="contentInputType" value="link" checked>
+                    <input type="radio" id="contentInputTypeLink" name="contentInputType" class="radio" value="link" checked>
                     <label for="contentInputTypeLink">External Link (e.g. <a href="https://authorea.com">Authorea</a>, <a href="https://docs.google.com/">Google docs</a>, <a href="https://academia.edu">Academia.edu</a>)</label>
                 </div>
                 
                 <div class="radio">
-                    <input type="radio" id="contentInputTypeDirect" name="contentInputType" value="direct">
+                    <input type="radio" id="contentInputTypeDirect" name="contentInputType" class="radio" value="direct">
                     <label for="contentInputTypeDirect">Direct input</label>
                 </div>
                 
                 <div class="radio">
-                    <input type="radio" id="contentInputTypeUpload" name="contentInputType" value="upload">
+                    <input type="radio" id="contentInputTypeUpload" name="contentInputType" class="radio" value="upload">
                     <label for="contentInputTypeUpload">Upload (will be converted to Markdown)</label>
                 </div>
             </div>
@@ -183,12 +182,12 @@
 	        
             <div class="form-group" id="externalContent" style="display: none;">
                 <label>Link to external content</label>
-                <input type="text" name="contentLink" placeholder="http://" />
+                <input type="text" name="contentLink" class="form-control input-lg" placeholder="http://" />
             </div>
             
             <div id="fileUpload" style="display: none;">
                 <label for="fileupload">Select file to upload</label>
-                <input id="fileupload" type="file" name="fileUpload" data-url="${root}/publication/uploadFile"><br />
+                <input id="fileupload" type="file" name="fileUpload" class="form-control" data-url="${root}/publication/uploadFile"><br />
             </div>
 	        
 	        <div class="form-group">
@@ -207,17 +206,17 @@
 	       
 	        <div class="form-group" id="primaryBranchGroup" style="display: none;">
                <label for="primaryBranch">Primary branch</label>
-               <select id="primaryBranch" name="primaryBranch" style="width: 100%;"></select>
+               <select id="primaryBranch" name="primaryBranch" class="form-control"></select>
             </div>
             
-            <div class="form-groups" id="pushToArxivGroup" style="display: none;"> 
+            <div class="form-group checkbox" id="pushToArxivGroup" style="display: none;"> 
                <input type="checkbox" id="pushToArxiv" />
                <label for="pushToArxiv">Push to arxiv</label>
 	        </div>
 	
             <div class="form-group">
                 <label for="language">Language</label>
-		        <select name="language" id="language">
+		        <select name="language" id="language" class="form-control">
 		            <c:forEach items="${languages}" var="lang">
 		                <option value="${lang.code}">${lang.name}</option>
 		            </c:forEach>
@@ -261,7 +260,7 @@
             </div>
             
             <div class="form-group">
-                <input type="submit" value="Submit" onclick="fillAuthors(); fillContent();">
+                <input type="submit" value="Submit" class="btn btn-block" onclick="fillAuthors(); fillContent();">
             </div>
             
 	        - send invites to non registered editors

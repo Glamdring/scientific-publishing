@@ -123,6 +123,6 @@
        })();
    </script>
 </head>
-<input type="text" class="ui-input ui-widget form-control" id="branchSearchBox" style="width: 650px;" placeholder="Search..." />
-<div id="branches" style="height: 310px; width: 650px; overflow: auto;">
+<input type="text" class="ui-input ui-widget form-control" id="branchSearchBox" placeholder="Search..." />
+<div id="branches" style="height: 310px; overflow: auto;">
 </div>

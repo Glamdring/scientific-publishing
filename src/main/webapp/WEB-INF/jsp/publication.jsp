@@ -35,58 +35,46 @@
 	<jsp:body>
 	
     <article class="rel anonymous" itemtype="http://schema.org/Question" itemscope="">
-	   <section class="publication">
-			<header>
-		        <span class="branches">
-                         <c:forEach items="${publication.branches}" var="branch">
-                             <a class="light-gray hover-blue" href="TODO">${branch.name}</a>
-                         </c:forEach>
-                      </span>
-				<time datetime="2015-06-27T04:59:20.982Z" content="2015-06-27T04:59:20.982Z"
-						itemprop="datePublished" class="">3 hrs</time></span>
-				<h3>
-					<a rel="canonical"
-						href="TODO"
-						class="link-hover tooltip-hover" itemprop="name">${publication.currentRevision.title}</a>
-				</h3>
-			</header>
-			<div>
-				<div>
-					<p class="expandable" itemprop="text">
-					   ${publication.currentRevision.publicationAbstract} 
-					</p>
-					<aside class="meta-action dib">
-						<div class="tooltip-hover dib rel">
-							<span class="appreciate-button rel icon-bell"> <a href="">${publication.reviews} </a> Reviews </span>
-							<p>
-                                 <span class="user">
-                                      Published by:
-                                      <c:forEach items="${publication.authors}" var="author"> 
-                                         <strong><a href="TODO" title="TODO" rel="author">${author.firstName} ${author.lastName}</a></strong>
-                                      </c:forEach>
-                                      <c:forEach items="${publication.nonRegisteredAuthors}" var="author"> 
-                                         <strong><a href="TODO" title="TODO" rel="author">${author}</a></strong>
-                                      </c:forEach>
-                                 </span> 
-                                 <span class="views"><b>1111 </b> views </span> 
-                             </p>
-						</div>
-					</aside>
-				</div>
-
-                <!-- Limit the text to a fixed-height portion -->				
-				<c:if test="${publication.currentRevision.contentSource == 'EXTERNAL'}">
-				    <div id="linkHolder">
-				        <!-- TODO icon -->
-				        <a href="${publication.currentRevision.contentLink}" target="_blank" rel="noopener noreferer" class="link-hover">Read publication</a>
-				    </div>
-				    <div id="pdfPreview"></div>
-				    <c:if test="!${publication.currentRevision.contentLink.contains('pdf')}">
-				        <iframe src="${publication.currentRevision.contentLink}"></iframe>
-				    </c:if>
-				</c:if>
-			</div>
-		  </section>
+	   <article class="clearfix">
+                  <h2><a href="${root}/publication?uri=${publication.uri}">${publication.currentRevision.title}</a></h2>
+                  <div class="post-date">
+                      <time datetime="2015-06-27T04:59:20.982Z" content="2015-06-27T04:59:20.982Z"
+                                itemprop="datePublished" class="">3 hrs</time>
+                       | Published by:
+                       <c:forEach items="${publication.authors}" var="author"> 
+                          <strong><a href="TODO" title="TODO" rel="author">${author.firstName} ${author.lastName}</a></strong>
+                       </c:forEach>
+                       <c:forEach items="${publication.nonRegisteredAuthors}" var="author"> 
+                          <strong><a href="TODO" title="TODO" rel="author">${author}</a></strong>
+                       </c:forEach>
+                       
+                       <a href="">${publication.reviews} reviews</a></span>
+                  </div>
+                  <span class="branches">
+                     <c:forEach items="${publication.branches}" var="branch">
+                         <a class="light-gray hover-blue" href="TODO">${branch.name}</a>
+                     </c:forEach>
+                  </span>
+                        
+                  <p>${publication.currentRevision.publicationAbstract}
+                  
+                  <!-- Limit the text to a fixed-height portion -->             
+                  <c:if test="${publication.currentRevision.contentSource == 'EXTERNAL'}">
+                    <div id="linkHolder">
+                        <!-- TODO icon -->
+                        <a href="${publication.currentRevision.contentLink}" target="_blank" rel="noopener noreferer" class="link-hover">Read publication</a>
+                    </div>
+                    <div id="pdfPreview"></div>
+                    <c:if test="!${publication.currentRevision.contentLink.contains('pdf')}">
+                        <iframe src="${publication.currentRevision.contentLink}"></iframe>
+                    </c:if>
+                  </c:if>
+                  
+                  <c:if test="${publication.currentRevision.contentSource != 'EXTERNAL'}">
+                    ${publication.currentRevision.content}
+                  </c:if>
+                  
+              </article>
 	  </article>
 		 
 	  <c:if test="${userLoggedIn}">
@@ -151,7 +139,7 @@
 	              
 	            <input type="checkbox" id="conflictOfInterestsDeclaration"><label for="conflictOfInterestsDeclaration">I declare that I am not in a conflict of interests (e.g. reviewing a friend's paper)</label>
 	            
-                <input type="submit" value="Submit peer review" onclick="$('content').val($('#wmd-input1').val());"/>
+                <input type="submit" value="Submit peer review" class="btn btn-block" onclick="$('content').val($('#wmd-input1').val());"/>
              </form>
 		  </section>
 		  - invite reviewers
