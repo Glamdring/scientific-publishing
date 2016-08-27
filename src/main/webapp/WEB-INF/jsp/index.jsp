@@ -20,7 +20,7 @@
                                 itemprop="datePublished" class="">3 hrs</time>
                        | Published by:
                        <c:forEach items="${publication.authors}" var="author"> 
-                          <strong><a href="TODO" title="TODO" rel="author">${author.firstName} ${author.lastName}</a></strong>
+                          <strong><a href="TODO" title="TODO" rel="author">${author.displayName}</a></strong>
                        </c:forEach>
                        <c:forEach items="${publication.nonRegisteredAuthors}" var="author"> 
                           <strong><a href="TODO" title="TODO" rel="author">${author}</a></strong>
@@ -30,11 +30,11 @@
                   </div>
                   <span class="branches">
                      <c:forEach items="${publication.branches}" var="branch">
-                         <a class="light-gray hover-blue" href="TODO">${branch.name}</a>
+                         [<a href="TODO">${branch.name}</a>]
                      </c:forEach>
                   </span>
                         
-                  <p>${publication.currentRevision.publicationAbstract} <a class="" href="${root}/publication?uri=${publication.uri}">Read more</a>
+                  <p>${publication.currentRevision.publicationAbstract} <a href="${root}/publication?uri=${publication.uri}">Read more</a>
                   </p>
                   
               </article>

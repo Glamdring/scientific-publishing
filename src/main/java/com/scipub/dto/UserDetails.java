@@ -17,6 +17,8 @@
  */
 package com.scipub.dto;
 
+import com.scipub.model.User;
+
 public class UserDetails {
 
     private String id;
@@ -26,6 +28,20 @@ public class UserDetails {
     private String organization;
     private String smallPhotoUri;
     private String largePhotoUri;
+    
+    public UserDetails() {
+    }
+    
+    public UserDetails(User entity) {
+        this.firstName = entity.getFirstName();
+        this.lastName = entity.getLastName();
+        this.degree = entity.getDegree();
+        this.smallPhotoUri = entity.getSmallPhotoUri();
+        this.largePhotoUri = entity.getLargePhotoUri();
+        if (entity.getOrganization() != null) {
+            this.organization = entity.getOrganization().getName();
+        }
+    }
     
     public String getId() {
         return id;
@@ -68,5 +84,9 @@ public class UserDetails {
     }
     public void setLargePhotoUri(String largePhotoUri) {
         this.largePhotoUri = largePhotoUri;
+    }
+    
+    public String getDisplayName() {
+        return  firstName + " " + lastName + (degree != null ? ", " + degree : ""); 
     }
 }

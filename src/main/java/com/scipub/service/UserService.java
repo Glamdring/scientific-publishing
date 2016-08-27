@@ -193,15 +193,6 @@ public class UserService {
     }
     
     private List<UserDetails> extractUserDetails(List<User> users) {
-        return users.stream().map(u -> {
-            UserDetails details = new UserDetails();
-            details.setFirstName(u.getFirstName());
-            details.setLastName(u.getLastName());
-            details.setDegree(u.getDegree());
-            details.setSmallPhotoUri(u.getSmallPhotoUri());
-            details.setLargePhotoUri(u.getLargePhotoUri());
-            details.setOrganization(u.getOrganization().getName());
-            return details;
-        }).collect(Collectors.toList());
+        return users.stream().map(u -> new UserDetails(u)).collect(Collectors.toList());
     }
 }

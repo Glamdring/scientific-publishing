@@ -735,6 +735,9 @@ footer .copyright {
 .heavy {
     text-transform: uppercase;
 }
+#reviewContent {
+	margin-top: 10px;
+}
 
 /* ------------------------------ Media -------------------------- */
 @media (min-width: 600px) {

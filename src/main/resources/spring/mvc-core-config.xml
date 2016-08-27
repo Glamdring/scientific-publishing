@@ -60,9 +60,13 @@
             <mvc:mapping path="/**" />
             <ref bean="autoLoginInterceptor" />
         </mvc:interceptor>
-         <mvc:interceptor>
+        <mvc:interceptor>
             <mvc:mapping path="/**" />
             <ref bean="requireLoggedInUserInterceptor" />
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <ref bean="loggingInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 

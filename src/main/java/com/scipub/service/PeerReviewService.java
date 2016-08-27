@@ -32,6 +32,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.google.common.base.Preconditions;
 import com.scipub.dao.jpa.PeerReviewDao;
 import com.scipub.dto.PeerReviewDto;
+import com.scipub.dto.UserDetails;
 import com.scipub.model.PeerReview;
 import com.scipub.model.PeerReviewRevision;
 import com.scipub.model.Publication;
@@ -50,6 +51,7 @@ public class PeerReviewService {
         User reviewer = getUser(reviewerId);
         Publication publication = getPublication(dto.getPublicationUri());
         
+        // we allow only one peer review per reviewer per publication, so a new submission means a new revision
         PeerReview review = dao.getPeerReview(reviewer, publication).orElse(new PeerReview());
         
         fillEntity(dto, review, reviewer, publication);
@@ -132,6 +134,8 @@ public class PeerReviewService {
         dto.setPublicationUri(peerReview.getPublication().getUri());
         dto.setUri(peerReview.getUri());
         
+        dto.setReviewer(new UserDetails(peerReview.getReviewer()));
+        
         return dto;
     }
 
@@ -140,7 +144,9 @@ public class PeerReviewService {
         Preconditions.checkNotNull(dto);
         Preconditions.checkNotNull(review);
         
-        review.setUri(UriUtils.generateReviewUri());        
+        if (review.getUri() == null) {
+            review.setUri(UriUtils.generateReviewUri());
+        }
         review.setPublication(publication);
         review.setReviewer(reviewer);
         

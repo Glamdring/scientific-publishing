@@ -253,7 +253,7 @@ public class User extends BaseTimedEntity implements Serializable {
     }
 
     public String getDisplayName() {
-        return firstName + " " + lastName;
+        return  firstName + " " + lastName + (degree != null ? ", " + degree : "");
     }
     
     @Override

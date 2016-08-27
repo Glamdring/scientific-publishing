@@ -21,24 +21,16 @@ package com.scipub.dto;
 public class PeerReviewDto {
 
     private String uri;
-
     private String publicationUri;
-
     private int clarityOfBackground;
-    
     private int significance;
-    
     private int studyDesignAndMethods;
-    
     private int dataAnalysis;
-    
     private int noveltyOfConclusions;
-    
     private int qualityOfPresentation;
-
     private String content;
-    
     private boolean conflictOfInterestsDeclaration;
+    private UserDetails reviewer;
     
     public String getUri() {
         return uri;
@@ -118,6 +110,14 @@ public class PeerReviewDto {
 
     public void setConflictOfInterestsDeclaration(boolean conflictOfInterestsDeclaration) {
         this.conflictOfInterestsDeclaration = conflictOfInterestsDeclaration;
+    }
+    
+    public UserDetails getReviewer() {
+        return reviewer;
+    }
+
+    public void setReviewer(UserDetails reviewer) {
+        this.reviewer = reviewer;
     }
 
     @Override
