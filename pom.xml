@@ -358,6 +358,12 @@
 			<version>1.4.01</version>
 			<scope>test</scope> <!-- needed by Selenium -->
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope> <!-- used only for standalone tools -->
+		</dependency>
 
 
 		<dependency>

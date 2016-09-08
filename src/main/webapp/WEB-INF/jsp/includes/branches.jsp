@@ -123,6 +123,6 @@
        })();
    </script>
 </head>
-<input type="text" class="ui-input ui-widget form-control" id="branchSearchBox" placeholder="Search..." />
+<input type="text" class="form-control input-lg" id="branchSearchBox" placeholder="Search..." />
 <div id="branches" style="height: 310px; overflow: auto;">
 </div>

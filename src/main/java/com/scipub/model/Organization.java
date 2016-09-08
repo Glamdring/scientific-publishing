@@ -39,8 +39,11 @@ public class Organization extends BaseTimedEntity {
     private String name;
     
     @Column
-    private String city;
+    private String country;
 
+    @Column
+    private String website;
+    
     public long getId() {
         return id;
     }
@@ -57,11 +60,19 @@ public class Organization extends BaseTimedEntity {
         this.name = name;
     }
 
-    public String getCity() {
-        return city;
+    public String getCountry() {
+        return country;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
     }
 }

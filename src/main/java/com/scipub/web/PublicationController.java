@@ -70,13 +70,9 @@ public class PublicationController {
     
     @Inject
     private UserContext userContext;
-    
-    private String branchesJson; 
-    
-    @PostConstruct
-    public void init() throws Exception {
-        branchesJson = BranchJsonGenerator.getBranchJson(false).replace("'", "\\'");
-    }
+
+    @Inject
+    private BranchController branchController;
     
     @RequestMapping("/new")
     @RequireUserLoggedIn
@@ -179,7 +175,7 @@ public class PublicationController {
     
     @ModelAttribute("scienceBranchesJson")
     public String getScienceBranchesJson() {
-        return branchesJson;
+        return branchController.getScienceBranchesJson();
     }
     
     @ModelAttribute("languages")

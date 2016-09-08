@@ -136,7 +136,7 @@
         <form role="form" id="submissionForm" onsubmit="fillAuthors();" action="${root}/publication/submit" method="POST">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" class="form-control input-lg" style="width: 100%;"/>
+                <input type="text" name="title" id="title" class="form-control input-lg"/>
             </div>
         
         
@@ -192,7 +192,7 @@
 	        
 	        <div class="form-group">
 	            <label>Classification</label>
-		        <jsp:include page="branches.jsp" />
+		        <jsp:include page="includes/branches.jsp" />
 		        <script type="text/javascript">
 		          $(document).ready(function() {
 		              // this snippet is here, because if it's put in the header, the branches are not yet loaded
