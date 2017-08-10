@@ -44,6 +44,9 @@ public class Organization extends BaseTimedEntity {
     @Column
     private String website;
     
+    @Column
+    private String secret;
+    
     public long getId() {
         return id;
     }
@@ -74,5 +77,13 @@ public class Organization extends BaseTimedEntity {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
     }
 }
